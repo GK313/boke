@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--适配移动端-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--一CDN方式引入Semantic UI-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+    <title>关于我</title>
+</head>
+<body>
+<!--导航-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui olive header item" style="font-family: STSong">boke</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="clock icon"></i>时间轴</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="music icon"></i>音乐盒</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="book icon"></i>留言板</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友人帐</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="image icon"></i>照片墙</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+            <!--搜索框-->
+            <div class="right m-item item">
+                <form name="search" action="#" method="post" target="_blank">
+                    <div class="ui icon transparent input m-margin-tb-tiny" style="color: white">
+                        <input style="color: white" type="text" name="query" placeholder="Search....">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--设置手机端时隐藏导航内容-->
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+
+</nav>
+
+<!--中间内容-->
+<div class="m-padded-tb-big">
+    <!---->
+    <div class="ui container">
+        <div class="ui stackable grid">
+            <!--左边图片部分-->
+            <div class="eleven wide column">
+                <div class="ui segment">
+                    <img src="../static/image/backgroud.jpg" class="ui rounded image" alt="">
+                </div>
+            </div>
+            <!--右边部分-->
+            <div class="five wide column">
+                <div class="ui top attached segment">
+                    <div class="ui header">关于我</div>
+                </div>
+                <!--文字描述-->
+                <div class="ui attached segment">
+                    <p class="m-text-mini">maisohumaisinbabfdbankdnfjd</p>
+                </div>
+                <!--标签1-->
+                <div class="ui attached segment">
+                    <div class="ui orange basic left pointing label">Spring</div>
+                    <div class="ui orange basic left pointing label">SSM</div>
+                    <div class="ui orange basic left pointing label">SpringMVC</div>
+                    <div class="ui orange basic left pointing label">MyBatis</div>
+                </div>
+                <!--标签2-->
+                <div class="ui attached segment">
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">编程</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">写作</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">运动</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">游戏</div>
+                </div>
+                <!--底部-->
+                <div class="ui bottom attached segment">
+                    <a href="#" class="ui circular icon  button"><i class="github icon"></i></a>
+                    <a href="#" class="ui wechat circular icon  button"><i class="weixin icon"></i></a>
+                    <a href="#" class="ui circular icon  button" data-content="2319012470"><i class="qq icon"></i></a>
+                </div>
+
+                <!--点击微信qq图标弹出二维码-->
+                <div class="ui wechat-qr flowing popup transition hidden">
+                    <img class="ui rounded image" src="../static/image/wechat.png" alt="" style="width:100px;height:100px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--置顶图标-->
+<div class="m-padded-tb-large m-fixed m-right-bottom">
+    <a href="#" class="ui icon button"><i class="chevron up icon"></i> </a>
+</div>
+
+<!--底部栏-->
+<footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+
+            <div class="four wide column">
+                <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系我</div>
+                <div class="ui inverted link list">
+                    <div href="#" class="m-text-thin">Email：onestarlr@hotmail.com</div>
+                    <div href="#" class="m-text-thin">QQ：2390232432</div>
+                </div>
+            </div>
+
+            <div class="four wide column" >
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <!--微信二维码-->
+                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >关注公众号</div>
+                        <img src="#"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="four wide column" >
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <!--微信二维码-->
+                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >问题交流（QQ群）</div>
+                        <img src=""  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="four wide column" >
+                <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">客栈信息</div>
+                <!--<p id="htmer_time" class="item m-text-thin"></p>-->
+                <div id="blog-message">
+                    <div class="ui inverted link list" style="align-content: center;margin-top: 10px">
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px;">
+                            文章总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;"> 14 </h2> 篇
+                        </div>
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                            访问总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;"> 14 </h2> 次
+                        </div>
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                            评论总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;"> 14 </h2> 条
+                        </div>
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                            留言总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;"> 14 </h2> 条
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--分割线-->
+        <div class="ui inverted section divider"></div>
+        <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备20004408号-1</a>
+    </div>
+</footer>
+
+<!--以CDN方式引入jQuery-->
+<script src="../static/jQuery/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script>
+    $('.menu.toggle').click(function(){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.wechat').popup({
+        popup: $('.wechat-qr'),
+        position: 'bottom center'
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+  mvc:
+    #配置访问静态资源
+    view:
+      prefix: /templates/
+      suffix: .html
+    static-path-pattern: /**
