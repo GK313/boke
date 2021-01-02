@@ -4,7 +4,7 @@ spring:
   profiles:
     active: dev
   mvc:
-    #配置访问静态资源
+    #配置访问静态资源(重点)
     view:
       prefix: /templates/
       suffix: .html

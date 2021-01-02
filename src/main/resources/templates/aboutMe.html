@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments::head(~{::title})">
     <meta charset="UTF-8">
     <!--适配移动端-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -50,7 +50,7 @@
             <!--左边图片部分-->
             <div class="eleven wide column">
                 <div class="ui segment">
-                    <img src="../static/image/backgroud.jpg" class="ui rounded image" alt="">
+                    <img src="../static/image/backgroud.jpg" th:src="@{/image/backgroud.jpg}" class="ui rounded image" alt="">
                 </div>
             </div>
             <!--右边部分-->
@@ -85,7 +85,8 @@
 
                 <!--点击微信qq图标弹出二维码-->
                 <div class="ui wechat-qr flowing popup transition hidden">
-                    <img class="ui rounded image" src="../static/image/wechat.png" alt="" style="width:100px;height:100px">
+                    <img class="ui rounded image" src="../static/image/wechat.png" th:src="@{/image/wechat.png}" alt=""
+                         style="width:100px;height:100px">
                 </div>
             </div>
         </div>
@@ -115,7 +116,9 @@
                     <div class="item">
                         <!--微信二维码-->
                         <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >关注公众号</div>
-                        <img src="#"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                        <img src="../static/image/wechat.png" th:src="@{/image/wechat.png}"  class="ui m-margin-top rounded image" alt=""
+                             style="width:
+                        110px">
                     </div>
                 </div>
             </div>
@@ -159,7 +162,7 @@
 </footer>
 
 <!--以CDN方式引入jQuery-->
-<script src="../static/jQuery/jquery-3.4.1.js"></script>
+<script src="../static/jQuery/jquery-3.4.1.js" th:src="@{/jQuery/jquery-3.4.1.js}"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 <script>
     $('.menu.toggle').click(function(){
