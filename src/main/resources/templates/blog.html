@@ -6,6 +6,7 @@
     <!--适配移动端-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--一CDN方式引入Semantic UI-->
+    <!--<link rel="stylesheet" href="../static/semantic/semantic.min.css" th:href="@{/semantic/semantic.min.css}">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="../static/css/me.css">
     <!--引入排版样式-->
@@ -17,17 +18,14 @@
 </head>
 <body>
 <!--导航-->
-<nav class="ui inverted attached segment m-padded-tb-mini">
+<nav th:replace="_fragments::menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui olive header item" style="font-family: STSong">boke</h2>
             <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="clock icon"></i>时间轴</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="music icon"></i>音乐盒</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="book icon"></i>留言板</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友人帐</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="image icon"></i>照片墙</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="clock icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="music icon"></i>归档</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
             <!--搜索框-->
             <div class="right m-item item">
@@ -72,7 +70,7 @@
         </div>
         <!--图片区域-->
         <div class="ui attached segment">
-            <img src="../static/image/backgroud.jpg" th:src="@{/image/backgroud.jpg}" alt="" class="ui fluid rounded image">
+            <img src="https://picsum.photos/id/264/4912/3264" alt="" class="ui fluid rounded image">
         </div>
         <!--文章内容-->
         <div class="ui attached padded segment">
@@ -84,10 +82,10 @@
             <h2 class="ui center aligned header">文章标题</h2>
             <!--文章内容-->
             <div class="m-padded-lr-responsive m-padded-tb-large typo typo-selection" id="content">
-
+                index`index`
                 <h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
 
-                <pre><code class="language-css">p { color: red }</code></pre>
+                <pre><code class="language-css"></code></pre>
 
                 <pre><code class="language-css">p { color: red }</code></pre>
 
@@ -510,9 +508,10 @@ h5,h6{font-size:1em;}
 <br>
 <br>
 <!--底部栏-->
-<footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
+<footer th:replace="_fragments:: footer" class="ui inverted vertical segment m-padded-tb-massive m-opacity">
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
+
             <div class="four wide column">
                 <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系我</div>
                 <div class="ui inverted link list">
@@ -526,7 +525,10 @@ h5,h6{font-size:1em;}
                     <div class="item">
                         <!--微信二维码-->
                         <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >关注公众号</div>
-                        <img src="#"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                        <img src="../static/image/wechat.png"
+                             class="ui m-margin-top rounded image" alt=""
+                             style="width:
+                        110px">
                     </div>
                 </div>
             </div>
@@ -536,7 +538,8 @@ h5,h6{font-size:1em;}
                     <div class="item">
                         <!--微信二维码-->
                         <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >问题交流（QQ群）</div>
-                        <img src="../statoc/image/wechat.png" th:src="@{/image/wechat.png}" class="ui m-margin-top rounded image" alt=""
+                        <img src="../static/image/wechat.png"
+                             class="ui m-margin-top rounded image" alt=""
                              style="width:
                         110px">
                     </div>
@@ -572,7 +575,7 @@ h5,h6{font-size:1em;}
 </footer>
 
 <!--以CDN方式引入jQuery-->
-<script src="../static/jQuery/jquery-3.4.1.js" th:src="@{/jQuery/jquery-3.4.1.js}"></script>
+<script src="../static/jQuery/jquery-3.4.1.min.js" th:src="@{/jQuery/jquery-3.4.1.min.js}"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 <!--引入prism代码高亮-->
 <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>

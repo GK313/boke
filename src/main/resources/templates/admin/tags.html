@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--适配移动端-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--一CDN方式引入Semantic UI-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--<link rel="stylesheet" href="../../static/semantic/semantic.min.css" th:href="@{/semantic/semantic.min.css}">-->
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}" >
+    <title>标签管理</title>
+</head>
+<body>
+<!--导航-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui olive header item" style="font-family: STSong">博客管理</h2>
+            <a href="#" th:href="@{/admin/index}" class="m-item item m-mobile-hide"><i
+                    class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/admin/blogList}" class="m-item item m-mobile-hide"><i class="home icon"></i>博客</a>
+            <a href="#" th:href="@{/admin/types}" class=" m-item item m-mobile-hide"><i class="clone outline icon"></i>
+                分类</a>
+            <a href="#" th:href="@{/admin/TagsList}" class="active m-item item m-mobile-hide"><i
+                    class="clock icon active"></i>标签</a>
+            <!--导航栏右头像部分-->
+            <div class="right m-item m-mobile-hide menu">
+                <div class="ui dropdown item ">
+                    <div class="text">
+                        <img class="ui avatar image" src="../../static/image/header.png"
+                             th:src="@{${session.user.avatar}}">
+                        <span th:text="${session.user.nickname}">GJY</span>
+                    </div>
+                    <!--下拉图标-->
+                    <i class="dropdown icon"></i>
+                    <!--下拉菜单-->
+                    <div class="menu">
+                        <a href="#" th:href="@{/loginOut}" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--设置手机端时隐藏导航内容-->
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+
+</nav>
+
+<!--二级导航-->
+<div class="ui attached pointing menu m-shadow-small">
+    <div class="ui container">
+        <div class="right menu">
+            <a href="#" th:href="@{/admin/AddTag}" class="teal item">新增</a>
+            <a href="#" th:href="@{/admin/TagsList}" class="teal active item">标签列表</a>
+        </div>
+    </div>
+</div>
+
+<!--中间内容-->
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+            <i class="close icon"></i>
+            <div class="header">提示：</div>
+            <p th:text="${message}">操作成功</p>
+        </div>
+        <!--博客表格-->
+        <table class="ui compact teal table">
+            <!--表头-->
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>标签名称</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!--获取后端传递过来的page，获取并遍历page中每个type-->
+            <tr th:each="tags : ${tagpage.getList()}">
+                <td th:text="${tags.getId()}">1</td>
+                <td th:text="${tags.getName()}">Springboot</td>
+                <td>
+                    <!--获取当前所要删除或者编辑的分类编号,然后拼接到请求后端的URL后面，后端根据前端传递的分类编号进行删除或者更新-->
+                    <a href="#" th:href="@{/admin/tag/{id}/tagDelete(id=${tags.getId()})}"
+                       class="ui mini teal basic button">删除
+                    </a>
+                    <!--获取当前所要编辑的分类名称，传递到后端，后端根据分类名称进行update-->
+                    <a href="#" th:href="@{/admin/tag/{id}/tagEdit(id=${tags.getId()})}" class="ui mini red basic button">编辑
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+            <!--表格底部-->
+            <tfoot>
+            <tr>
+                <!--合并6列单元格-->
+                <th colspan="6">
+                    <!--上下分页-->
+                    <!--page.getPage()获取分页后的总页数，如果总页数大于1，则显示上一页，下一页按钮-->
+                    <div class="ui mini left pagination menu"th:if="${tagpage.getPages()>1}">
+                        <!--用page.isIsFirstPage判断当前页是否时第一页如果是第一页的话则，不显示上一页按钮-->
+                        <a class="item" th:unless="${tagpage.isFirstPage}"
+                           th:href="@{/admin/TagsList/(pageNum=${tagpage.getPrePage()})}">上一页
+                        </a>
+                        <!--通过page获取相对于当前页的下一个的码数，传递给后端，后端根据所要查询的页码，查询出数据，存到model中并返回到显示页面-->
+                        <a class="item" th:unless="${tagpage.isLastPage}"
+                           th:href="@{/admin/TagsList/(pageNum=${tagpage.getNextPage()})}">下一页
+                        </a>
+                    </div>
+                    <a href="#" th:href="@{/admin/AddTag}" class="ui mini right floated teal basic button">新增</a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<!--置顶图标-->
+<div class="m-padded-tb-large m-fixed m-right-bottom">
+    <a href="#" class="ui icon button"><i class="chevron up icon"></i> </a>
+</div>
+
+<!--底部栏-->
+<footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+
+            <div class="four wide column">
+                <div style="font-size: large;font-weight: bold"
+                     class="ui inverted m-text-thin m-text-spaced m-margin-top-max">联系我
+                </div>
+                <div class="ui inverted link list">
+                    <div href="#" class="m-text-thin">Email：onestarlr@hotmail.com</div>
+                    <div href="#" class="m-text-thin">QQ：2390232432</div>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <!--微信二维码-->
+                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced ">
+                            关注公众号
+                        </div>
+                        <img src="../../static/image/wechat.png" th:src="@{/image/wechat.png}" class="ui m-margin-top rounded image"
+                             alt=""
+                             style="width:
+                        110px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <!--微信二维码-->
+                        <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced ">
+                            问题交流（QQ群）
+                        </div>
+                        <img src="../../static/image/wechat.png" th:src="@{/image/wechat.png}" class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <div style="font-size: large;font-weight: bold"
+                     class="ui inverted  m-text-thin m-text-spaced m-margin-top">客栈信息
+                </div>
+                <!--<p id="htmer_time" class="item m-text-thin"></p>-->
+                <div id="blog-message">
+                    <div class="ui inverted link list" style="align-content: center;margin-top: 10px">
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px;">
+                            文章总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;"> 14 </h2> 篇
+                        </div>
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                            访问总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;"> 14 </h2> 次
+                        </div>
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                            评论总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;"> 14 </h2> 条
+                        </div>
+                        <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                            留言总数： <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                      style="font-size:medium;"> 14 </h2> 条
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--分割线-->
+        <div class="ui inverted section divider"></div>
+        <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备20004408号-1</a>
+    </div>
+</footer>
+
+<!--以CDN方式引入jQuery-->
+<script src="../../static/jQuery/jquery-3.4.1.min.js" th:src="@{/jQuery/jquery-3.4.1.min.js}"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    /*初始化下拉列表*/
+    $('.ui.dropdown')
+        .dropdown({
+            on : 'hover'
+        });
+
+    /*消息提示关闭初始化*/
+    $('.message .close')
+        .on('click', function() {
+            $(this)
+                .closest('.message')
+                .transition('fade')
+            ;
+        })
+    ;
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>博客管理登录</title>
+    <!--适配移动端-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--一CDN方式引入Semantic UI-->
+    <!--<link rel="stylesheet" href="../../static/semantic/semantic.min.css" th:href="@{/semantic/semantic.min.css}">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
+    <!--引入editor.md的css样式-->
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.css" th:href="@{/lib/editormd/css/editormd.css}"/>
+    <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="m-container-small m-padded-tb-massive" style="max-width:30em !important;">
+    <div class="ur container">
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <h2 class="ui teal image header">
+                    <img src="../../static/image/header.png" th:src="@{/image/header.png}" class="image">
+                    <div class="content">
+                        管理后台登录
+                    </div>
+                </h2>
+                <form class="ui large form" method="post" action="#" th:action="@{/login}">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="username" placeholder="用户名">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" placeholder="密码">
+                            </div>
+                        </div>
+                        <button class="ui fluid large teal submit button">登录</button>
+                    </div>
+                    <!--用户名密码输入错误提示-->
+                    <div class="ui error mini message"></div>
+                    <div class="ui mini negative message " th:unless="${#strings.isEmpty(message)}" th:text="${message}"></div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--以CDN方式引入jQuery-->
+<script src="../../static/jQuery/jquery-3.4.1.min.js" th:src="@{/jQuery/jquery-3.4.1.min.js}"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js" ></script>
+<!--引入editor.md-->
+<script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
+<script>
+    /*表单验证*/
+    $('.ui.form').form({
+        fields: {
+            /*指定username和password的验证规则*/
+            username: {
+                indentifier: 'username',
+                rules: [{
+                    type: 'empty',
+                    /*提示信息*/
+                    prompt: '请输入用户名',
+
+                }]
+            },
+
+            password: {
+                indentifier: 'password',
+                rules: [{
+                    type: 'empty',
+                    /*提示信息*/
+                    prompt: '请输入密码',
+
+                }]
+            }
+        }
+    })
+</script>
+</body>
+</html>

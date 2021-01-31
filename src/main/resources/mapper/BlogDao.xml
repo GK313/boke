@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gjy.boke.dao.BlogDao">
+  <resultMap id="BaseResultMap" type="com.gjy.boke.entity.Blog">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="firstPicture" jdbcType="VARCHAR" property="firstpicture" />
+    <result column="flag" jdbcType="VARCHAR" property="flag" />
+    <result column="views" jdbcType="INTEGER" property="views" />
+    <result column="commentCount" jdbcType="INTEGER" property="commentcount" />
+    <result column="appreciation" jdbcType="CHAR" property="appreciation" />
+    <result column="shareStatement" jdbcType="CHAR" property="sharestatement" />
+    <result column="commentabled" jdbcType="CHAR" property="commentabled" />
+    <result column="published" jdbcType="CHAR" property="published" />
+    <result column="recommend" jdbcType="CHAR" property="recommend" />
+    <result column="createTime" jdbcType="DATE" property="createtime" />
+    <result column="updateTime" jdbcType="DATE" property="updatetime" />
+    <result column="typeId" jdbcType="BIGINT" property="typeid" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="tagId" jdbcType="BIGINT" property="tagid" />
+  </resultMap>
+
+  <resultMap id="Blog_Type" type="com.gjy.boke.entity.Blog">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="firstPicture" jdbcType="VARCHAR" property="firstpicture" />
+    <result column="flag" jdbcType="VARCHAR" property="flag" />
+    <result column="views" jdbcType="INTEGER" property="views" />
+    <result column="commentCount" jdbcType="INTEGER" property="commentcount" />
+    <result column="appreciation" jdbcType="CHAR" property="appreciation" />
+    <result column="shareStatement" jdbcType="CHAR" property="sharestatement" />
+    <result column="commentabled" jdbcType="CHAR" property="commentabled" />
+    <result column="published" jdbcType="CHAR" property="published" />
+    <result column="recommend" jdbcType="CHAR" property="recommend" />
+    <result column="createTime"  property="createtime" />
+    <result column="updateTime"  property="updatetime" />
+    <result column="typeId" jdbcType="BIGINT" property="typeid" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="tagId" jdbcType="BIGINT" property="tagid" />
+    <!--一对多关系映射
+    <collection property="tags" ofType="com.gjy.boke.entity.Tag">
+      <id property="id" column="id"></id>
+      <result property="name" column="name"></result>
+    </collection>-->
+    <!--一对一关系映射-->
+    <association property="type" column="id" javaType="com.gjy.boke.entity.Type">
+      <id property="id" column="id"></id>
+      <result column="name" property="name"></result>
+    </association>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, title, content, firstPicture, flag, views, commentCount, appreciation, shareStatement, 
+    commentabled, published, recommend, createTime, updateTime, typeId, userId, description, 
+    tagId
+  </sql>
+
+  <resultMap id="blog_tag" type="com.gjy.boke.queryvo.BlogQuery">
+    <result property="id" column="id"></result>
+    <result property="tagids" column="tagids"></result>
+  </resultMap>
+
+  <resultMap id="BlogTypeVo" type="com.gjy.boke.queryvo.BlogTypeQuery">
+    <result property="id" column="id"></result>
+    <result property="name" column="name"></result>
+    <result property="total" column="total"></result>
+  </resultMap>
+
+  <select id="GetBlogById" resultType="com.gjy.boke.entity.Blog">
+    select *from t_blog where id=#{id};
+  </select>
+  <!--
+  问题：多表连接后的数据如何获取，返回的结果集不只是有Blog的信息，还有来自Tag，Type类的信息
+  更换主从表关系，分别查询出对应的信息（太麻烦）
+  使用MyBatis的多表连接查询
+  -->
+  <select id="GetAllBlog" resultMap="Blog_Type">
+    SELECT t_type.name,t_blog.* FROM t_blog
+	JOIN t_type ON t_type.id=t_blog.typeId ;
+  </select>
+  <select id="GetBlogByTitleAndTypeNameAndRecommend" resultMap="Blog_Type">
+    SELECT t_type.name,t_blog.title,t_blog.updateTime,t_blog.recommend,t_blog.id FROM t_blog
+	JOIN t_type ON t_type.id=t_blog.typeId
+	<where>
+      <if test="title!=null">
+        and t_blog.title=#{title}
+      </if>
+      <if test="name!=null">
+        and t_type.name=#{name}
+      </if>
+      <if test="recommend!=null">
+        and t_blog.recommend=#{recommend}
+      </if>
+    </where>
+  </select>
+  <select id="GetBlogByUpdateTimeLimit" resultMap="BaseResultMap">
+    SELECT * FROM t_blog ORDER BY updateTime DESC LIMIT 9;
+  </select>
+  <select id="GetBlogquery" resultMap="blog_tag">
+     select id,tagids from t_blog;
+  </select>
+  <select id="GetBlogNumber" resultType="java.lang.Integer">
+    SELECT COUNT(*) FROM t_blog WHERE published!='草稿'
+  </select>
+  <select id="getBlogTypeQuery" resultMap="BlogTypeVo">
+    SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog
+	JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5
+
+  </select>
+
+  <insert id="SaveBlog" parameterType="com.gjy.boke.entity.Blog">
+        insert into t_blog (title, content, firstPicture,
+      flag, views, commentCount,
+      appreciation, shareStatement, commentabled,
+      published, recommend, createTime,
+      updateTime, typeId, userId,
+      description, tagId,tagids)
+    values (#{title}, #{content}, #{firstpicture},
+      #{flag}, #{views}, #{commentcount},
+      #{appreciation}, #{sharestatement}, #{commentabled},
+      #{published}, #{recommend}, #{createtime},
+      #{updatetime}, #{typeid}, #{userid},
+      #{description}, #{tagid},#{tagids})
+  </insert>
+  <update id="EditBlog" parameterType="com.gjy.boke.entity.Blog" >
+    update t_blog
+    set title = #{blog.title},
+      content = #{blog.content},
+      firstPicture = #{blog.firstpicture},
+      flag = #{blog.flag},
+      views = #{blog.views},
+      commentCount = #{blog.commentcount},
+      appreciation = #{blog.appreciation},
+      shareStatement = #{blog.sharestatement},
+      commentabled = #{blog.commentabled},
+      published = #{blog.published},
+      recommend = #{blog.recommend},
+      createTime = #{blog.createtime},
+      updateTime = #{blog.updatetime},
+      typeId = #{blog.typeid},
+      userId = #{blog.userid},
+      description = #{blog.description},
+      tagId = #{blog.tagid},
+      tagids=#{blog.tagids}
+    where id = #{id}
+  </update>
+  <delete id="DeleteBlog" parameterType="java.lang.Long">
+    delete from t_blog where id=#{id};
+  </delete>
+</mapper>
