@@ -1,6 +1,8 @@
 package com.gjy.boke.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * t_tag
@@ -10,6 +12,16 @@ public class Tag implements Serializable {
     private Long id;
 
     private String name;
+
+    private List<Blog> blogs = new ArrayList<>();
+
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
+    }
 
     private static final long serialVersionUID = 1L;
 

@@ -1,8 +1,9 @@
 body{
-    background-image: url("../image/bg.png");
+    background-image: url("../image/indexp.jpg");
     background-attachment:fixed;
     background-size: 100%;
     no-repeat: center top;
+    font: 14px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
     height: 100%;
     width: 100%;
 }
@@ -140,7 +141,7 @@ body{
     margin-top: 2em !important;
 }
 .m-margin-top-max {
-    margin-top: 35px !important;
+    margin-top: 5px !important;
 }
 
 .m-margin-top-maxx {
@@ -237,6 +238,7 @@ body{
 
 /*------shadow------*/
 .m-shadow-small {
+
     -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
 }
@@ -550,3 +552,4 @@ body{
     background-image: url(https://a-oss.zmki.cn/2020/20200212-fcf30f3d33625.gif);
     background-size: 100% 100%;
 }
+

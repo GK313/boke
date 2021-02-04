@@ -1,6 +1,7 @@
 package com.gjy.boke.service;
 
 import com.gjy.boke.entity.Blog;
+import com.gjy.boke.entity.Tag;
 import com.gjy.boke.queryvo.BlogTypeQuery;
 
 import java.util.List;
@@ -72,4 +73,21 @@ public interface BlogService {
      * @return
      */
     List<BlogTypeQuery> getBlogTypeQueryVO();
+
+    /**
+     * 根据分类id获取该分类下的所有博客
+     * @param typeId
+     * @return
+     */
+    List<Blog> getBlogByTypeId(Long typeId);
+
+    /**
+     * 获取每个标签所对应的博客
+     */
+    List<Tag> getBlogInTag();
+
+    /**
+     * 根据标签id获取该标签下的所有博客
+     */
+    List<Tag> getBlogInTagByTagId(Long id);
 }

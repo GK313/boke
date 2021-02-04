@@ -58,4 +58,9 @@ public interface TagService {
      * @return
      */
     List<Tag> getTagByLimit();
+
+    /**
+     * 统计所有标签的数量
+     */
+    int GetTagNumber();
 }

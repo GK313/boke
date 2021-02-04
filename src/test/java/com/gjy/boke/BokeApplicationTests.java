@@ -91,8 +91,8 @@ class BokeApplicationTests {
 
     @Test
     public void test6(){
-        List<BlogTypeQuery> blogTypeQuery = blogDao.getBlogTypeQuery();
-        System.out.println(blogTypeQuery);
+        List<Type> allTypeAndBlog = typeDao.getAllTypeAndBlog();
+        System.out.println(allTypeAndBlog);
     }
 
     @Test
@@ -135,5 +135,10 @@ class BokeApplicationTests {
             System.out.println(tag.getId() + ":" + tag.getName());
         }
 */
+        List<Tag> tagInBlogList = blogDao.getTagInBlogList();
+        for (Tag tag : tagInBlogList) {
+            System.out.println(tag.getBlogs());
+        }
+
     }
 }

@@ -67,4 +67,11 @@ public interface TagDao {
      * @return
      */
     List<Tag> getTagByLimit();
+
+
+    /**
+     * 获取所有标签的数量
+     * @return
+     */
+    int getTagNumber();
 }

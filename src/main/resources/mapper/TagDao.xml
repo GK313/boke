@@ -61,8 +61,11 @@
   <select id="getTagByLimit" resultMap="BaseResultMap">
     select name from t_tag limit 4;
   </select>
+    <select id="getTagNumber" resultType="java.lang.Integer">
+      select Count(*) from t_tag;
+    </select>
 
-  <insert id="saveTag" parameterType="java.lang.String">
+    <insert id="saveTag" parameterType="java.lang.String">
   insert into t_tag (name)
     values (#{name});
   </insert>

@@ -24,9 +24,13 @@
         <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui olive header item" style="font-family: STSong">boke</h2>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="clone outline icon"></i>标签</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="clock icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'" th:href="@{/}"><i
+                    class="home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"
+               th:href="@{/tag/tagBlog}"><i
+                    class="clone outline icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'" th:href="@{/type/typeBlog}"><i
+                    class="clock icon"></i>分类</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="music icon"></i>归档</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i>关于我</a>
             <!--搜索框-->

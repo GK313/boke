@@ -75,130 +75,134 @@
 
                 </div>
                 <!--博文列表-->
-                <div class="ui padded segment m-padded-tb-large m-opacity">
-                    <div class="ui middle aligned mobile reversed stackable grid" th:each="blog:${blogs}">
-                        <!--博文信息-->
-                        <div class="eleven wide column ">
-                            <h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
-                                                      class="m-black"
-                                                      th:text="${blog.title}">大圣，此去欲何?
-                            </a></h3>
-                            <p class="m-text m-margin-top-max" th:text="${blog.description}"
-                            >戴上金箍，没法爱你；放下金箍，没法保护你。我知道上天不会给我第二次机会，曾经我们说好的永远，原来也仅仅只有，十二画，而已。“大圣，此去欲何?”“踏南天，碎凌霄。”“若一去不回……”“便一去不回” 其实很多时候，我们都是有机会的，最后真正放弃的，是我们自己。......</p>
-                            <div class="ui m-margin-top-max grid">
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <!--作者头像-->
-                                            <img src="../static/image/header.png" th:src="@{${blog.firstpicture}}"
-                                                 alt=""
-                                                 class="ui avatar image">
-                                            <div class="content"><a href="#" target="_blank" class="header" >oneStar</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i><span
-                                                th:text="${#dates.format(blog.updatetime ,'yyyy-MM-dd HH:mm:ss')}">2020-01
+                <div class=" ui attached teal segment">
+                    <div class="ui padded segment m-padded-tb-large m-opacity" th:each="blog:${blogs}">
+                        <div class="ui aligned mobile reversed stackable grid" >
+                            <!--博文信息-->
+                            <div class="eleven wide column ">
+                                <h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"
+                                                          class="m-black"
+                                                          th:text="${blog.title}">大圣，此去欲何?
+                                </a></h3>
+                                <p class="m-text m-margin-top-max" th:text="${blog.description}"
+                                >戴上金箍，没法爱你；放下金箍，没法保护你。我知道上天不会给我第二次机会，曾经我们说好的永远，原来也仅仅只有，十二画，而已。“大圣，此去欲何?”“踏南天，碎凌霄。”“若一去不回……”“便一去不回” 其实很多时候，我们都是有机会的，最后真正放弃的，是我们自己。......</p>
+                                <div class="ui m-margin-top-max grid">
+                                    <div class="eleven wide column">
+                                        <!--博文下方信息栏-->
+                                        <div class="ui mini horizontal link list">
+                                            <div class="item">
+                                                <!--作者头像-->
+                                                <img src="../static/image/header.png" th:src="@{${blog.firstpicture}}"
+                                                     alt=""
+                                                     class="ui avatar image">
+                                                <div class="content"><a href="#" target="_blank" class="header" >oneStar</a></div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar alternate outline icon"></i><span
+                                                    th:text="${#dates.format(blog.updatetime ,'yyyy-MM-dd HH:mm:ss')}">2020-01
                                             -01</span>
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i> <span th:text="${blog.views}">2222</span>
-                                        </div>
-                                        <div class="item">
-                                            <i class="comment outline icon"></i> <span th:text="${blog.commentcount}">2222</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin"
-                                    th:text="${blog.type.name}">好文</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--博文图片-->
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="/image/backgroud.jpg" th:src="@{${blog.firstpicture}}" alt=""
-                                     class="ui rounded image">
-                            </a>
-                        </div>
-                    </div>
-
-                   <!-- <div class="ui large aligned mobile reversed stackable grid">
-                        &lt;!&ndash;博文信息&ndash;&gt;
-                        <div class="eleven wide column ">
-                            <h3 class="ui header" ><a href="#" target="_blank" class="m-black">大圣，此去欲何?</a></h3>
-                            <p class="m-text m-margin-top-max">戴上金箍，没法爱你；放下金箍，没法保护你。我知道上天不会给我第二次机会，曾经我们说好的永远，原来也仅仅只有，十二画，而已。“大圣，此去欲何?”“踏南天，碎凌霄。”“若一去不回……”“便一去不回” 其实很多时候，我们都是有机会的，最后真正放弃的，是我们自己。......</p>
-                            <div class="ui m-margin-top-max grid">
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <img src="../static/image/header.png" th:src="@{/image/header.png}" alt=""
-                                                 class="ui avatar image">
-                                            <div class="content"><a href="#" target="_blank" class="header" >oneStar</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i><span>2020-01-01</span>
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i> <span>2222</span>
-                                        </div>
-                                        <div class="item">
-                                            <i class="comment outline icon"></i> <span>2222</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i> <span th:text="${blog.views}">2222</span>
+                                            </div>
+                                            <div class="item">
+                                                <i class="comment outline icon"></i> <span th:text="${blog.commentcount}">2222</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">好文</a>
-                                </div>
-                            </div>
-                        </div>
-                        &lt;!&ndash;博文图片&ndash;&gt;
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="/image/backgroud.jpg" alt="" class="ui rounded image">
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="ui large aligned mobile reversed stackable grid">
-                        &lt;!&ndash;博文信息&ndash;&gt;
-                        <div class="eleven wide column ">
-                            <h3 class="ui header" ><a href="#" target="_blank" class="m-black">大圣，此去欲何?</a></h3>
-                            <p class="m-text m-margin-top-max">戴上金箍，没法爱你；放下金箍，没法保护你。我知道上天不会给我第二次机会，曾经我们说好的永远，原来也仅仅只有，十二画，而已。“大圣，此去欲何?”“踏南天，碎凌霄。”“若一去不回……”“便一去不回” 其实很多时候，我们都是有机会的，最后真正放弃的，是我们自己。......</p>
-                            <div class="ui m-margin-top-max grid">
-                                <div class="eleven wide column">
-                                    <div class="ui mini horizontal link list">
-                                        <div class="item">
-                                            <img src="../static/image/header.png" th:src="@{/image/header.png}" alt=""
-                                                 class="ui avatar image">
-                                            <div class="content"><a href="#" target="_blank" class="header" >oneStar</a></div>
-                                        </div>
-                                        <div class="item">
-                                            <i class="calendar icon"></i><span>2020-01-01</span>
-                                        </div>
-                                        <div class="item">
-                                            <i class="eye icon"></i> <span>2222</span>
-                                        </div>
-                                        <div class="item">
-                                            <i class="comment outline icon"></i> <span>2222</span>
-                                        </div>
+                                    <div class="right aligned five wide column">
+                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin"
+                                           th:text="${blog.type.name}">好文</a>
                                     </div>
                                 </div>
-                                <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">好文</a>
-                                </div>
+                            </div>
+                            <!--博文图片-->
+                            <div class="five wide column">
+                                <a href="#" target="_blank">
+                                    <img src="/image/backgroud.jpg" th:src="@{${blog.firstpicture}}" alt=""
+                                         class="ui rounded image">
+                                </a>
                             </div>
                         </div>
-                        &lt;!&ndash;博文图片&ndash;&gt;
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="/image/backgroud.jpg" alt="" class="ui rounded image">
-                            </a>
-                        </div>
 
+                        <!-- <div class="ui large aligned mobile reversed stackable grid">
+                             &lt;!&ndash;博文信息&ndash;&gt;
+                             <div class="eleven wide column ">
+                                 <h3 class="ui header" ><a href="#" target="_blank" class="m-black">大圣，此去欲何?</a></h3>
+                                 <p class="m-text m-margin-top-max">戴上金箍，没法爱你；放下金箍，没法保护你。我知道上天不会给我第二次机会，曾经我们说好的永远，原来也仅仅只有，十二画，而已。“大圣，此去欲何?”“踏南天，碎凌霄。”“若一去不回……”“便一去不回” 其实很多时候，我们都是有机会的，最后真正放弃的，是我们自己。......</p>
+                                 <div class="ui m-margin-top-max grid">
+                                     <div class="eleven wide column">
+                                         <div class="ui mini horizontal link list">
+                                             <div class="item">
+                                                 <img src="../static/image/header.png" th:src="@{/image/header.png}" alt=""
+                                                      class="ui avatar image">
+                                                 <div class="content"><a href="#" target="_blank" class="header" >oneStar</a></div>
+                                             </div>
+                                             <div class="item">
+                                                 <i class="calendar icon"></i><span>2020-01-01</span>
+                                             </div>
+                                             <div class="item">
+                                                 <i class="eye icon"></i> <span>2222</span>
+                                             </div>
+                                             <div class="item">
+                                                 <i class="comment outline icon"></i> <span>2222</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="right aligned five wide column">
+                                         <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">好文</a>
+                                     </div>
+                                 </div>
+                             </div>
+                             &lt;!&ndash;博文图片&ndash;&gt;
+                             <div class="five wide column">
+                                 <a href="#" target="_blank">
+                                     <img src="/image/backgroud.jpg" alt="" class="ui rounded image">
+                                 </a>
+                             </div>
+
+                         </div>
+                         <div class="ui large aligned mobile reversed stackable grid">
+                             &lt;!&ndash;博文信息&ndash;&gt;
+                             <div class="eleven wide column ">
+                                 <h3 class="ui header" ><a href="#" target="_blank" class="m-black">大圣，此去欲何?</a></h3>
+                                 <p class="m-text m-margin-top-max">戴上金箍，没法爱你；放下金箍，没法保护你。我知道上天不会给我第二次机会，曾经我们说好的永远，原来也仅仅只有，十二画，而已。“大圣，此去欲何?”“踏南天，碎凌霄。”“若一去不回……”“便一去不回” 其实很多时候，我们都是有机会的，最后真正放弃的，是我们自己。......</p>
+                                 <div class="ui m-margin-top-max grid">
+                                     <div class="eleven wide column">
+                                         <div class="ui mini horizontal link list">
+                                             <div class="item">
+                                                 <img src="../static/image/header.png" th:src="@{/image/header.png}" alt=""
+                                                      class="ui avatar image">
+                                                 <div class="content"><a href="#" target="_blank" class="header" >oneStar</a></div>
+                                             </div>
+                                             <div class="item">
+                                                 <i class="calendar icon"></i><span>2020-01-01</span>
+                                             </div>
+                                             <div class="item">
+                                                 <i class="eye icon"></i> <span>2222</span>
+                                             </div>
+                                             <div class="item">
+                                                 <i class="comment outline icon"></i> <span>2222</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="right aligned five wide column">
+                                         <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">好文</a>
+                                     </div>
+                                 </div>
+                             </div>
+                             &lt;!&ndash;博文图片&ndash;&gt;
+                             <div class="five wide column">
+                                 <a href="#" target="_blank">
+                                     <img src="/image/backgroud.jpg" alt="" class="ui rounded image">
+                                 </a>
+                             </div>
+
+                         </div>
+                         -->
                     </div>
-                    -->
                 </div>
+
 
 
                 <!--分页-->
@@ -220,17 +224,17 @@
                     <div class="ui secondary segment">
                         <div class="ui two column grid">
                             <div class="column">
-                                <i class="idea icon"></i>分类
+                                <i class="clipboard list icon"></i>分类
                             </div>
                             <div class="right aligned column">
-                               <a href="#" th:href="@{/moreType}"><i class="angle double right icon"></i> more</a>
+                               <a href="#" th:href="@{/type/typeBlog}"><i class="angle double right icon"></i> more</a>
                             </div>
                         </div>
                     </div>
                     <!--分类栏中的内容-->
                     <div class="ui teal segment">
                         <div class="ui fluid vertical menu" th:each="blogtypeVo:${types}">
-                            <a href="#" class="item">
+                            <a href="#" class="item" th:href="@{/type/{id}(id=${blogtypeVo.getId()})}">
                                 <span th:text="${blogtypeVo.getName()}">学习日志</span>
                                 <div class="ui teal basic left pointing label" th:text="${blogtypeVo.getTotal()}">13</div>
                             </a>
@@ -240,37 +244,24 @@
 
                 <!--标签-->
                 <div class="ui segments m-margin-top-large">
+                    <!--头部-->
                     <div class="ui secondary segment">
                         <div class="ui two column grid">
                             <div class="column">
-                                <i class="idea icon"></i>标签
+                                <i class="tags icon"></i>标签
                             </div>
                             <div class="right aligned column">
-                                <a href="#" th:href="@{/moreTag}"><i class="angle double right icon"></i> more</a>
+                                <a href="#" th:href="@{/tag/tagBlog}"><i class="angle double right icon"></i> more</a>
                             </div>
                         </div>
                     </div>
                     <!--标签栏中的内容-->
                     <div class="ui teal segment">
-                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
-                            后端
+                        <a href="#" th:href="@{/tag/bloglist/{id}(id=${tag.id})}" target="_blank" th:each="tag:${blogsInTag}"
+                           class="ui teal basic left pointing label m-margin-tb-tiny">
+                            <span th:text="${tag.name}">Spring</span>
                             <!--描述该类标签中的文章数量-->
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
-                           前端
-                            <!--描述该类标签中的文章数量-->
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
-                            SpringBoot
-                            <!--描述该类标签中的文章数量-->
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
-                            Spring Cloud
-                            <!--描述该类标签中的文章数量-->
-                            <div class="detail">23</div>
+                            <div class="detail" th:text="${tag.blogs.size()}">23</div>
                         </a>
 
                     </div>
@@ -281,23 +272,17 @@
                 <div class="ui segments m-margin-top-large">
                     <div class="ui secondary segment">
                         <div class="column">
-                            <i class="idea icon"></i>最新推荐
+                            <i class="thumbs up icon"></i>最新推荐
                         </div>
-                        <div class="ui segment" >
-                            <a href="#" target="_blank" class="m-black m-text-thin">SpringBoot从入门到入土</a>
+                        <div class="ui segment" th:each="bloglimit:${blogLimits}" >
+                            <a href="#" th:href="@{/blog/{id}(id=${bloglimit.id})}" target="_blank" class="m-black m-text-thin">
+                                <span th:text="${bloglimit.title}">SpringBoot 从入门到入土</span>
+                                <div class="ui orange basic left pointing label" th:text="${bloglimit.flag}">13
+                                </div>
+                            </a>
+
                         </div>
-                        <div class="ui segment" >
-                            <a href="#" target="_blank" class="m-black m-text-thin">数据库原理概论</a>
-                        </div>
-                        <div class="ui segment" >
-                            <a href="#" target="_blank" class="m-black m-text-thin">操作系统</a>
-                        </div>
-                        <div class="ui segment" >
-                            <a href="#" target="_blank" class="m-black m-text-thin">Python</a>
-                        </div>
-                        <div class="ui segment" >
-                            <a href="#" target="_blank" class="m-black m-text-thin">Android</a>
-                        </div>
+
                     </div>
                 </div>
 

@@ -58,16 +58,16 @@
     tagId
   </sql>
 
-  <resultMap id="blog_tag" type="com.gjy.boke.queryvo.BlogQuery">
+  <resultMap id="blog_tag" type="com.gjy.boke.entity.Blog">
     <result property="id" column="id"></result>
     <result property="tagids" column="tagids"></result>
   </resultMap>
 
   <resultMap id="BlogTypeVo" type="com.gjy.boke.queryvo.BlogTypeQuery">
-    <result property="id" column="id"></result>
-    <result property="name" column="name"></result>
-    <result property="total" column="total"></result>
-  </resultMap>
+  <result property="id" column="id"></result>
+  <result property="name" column="name"></result>
+  <result property="total" column="total"></result>
+</resultMap>
 
   <select id="GetBlogById" resultType="com.gjy.boke.entity.Blog">
     select *from t_blog where id=#{id};
@@ -97,9 +97,9 @@
     </where>
   </select>
   <select id="GetBlogByUpdateTimeLimit" resultMap="BaseResultMap">
-    SELECT * FROM t_blog ORDER BY updateTime DESC LIMIT 9;
+    SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9;
   </select>
-  <select id="GetBlogquery" resultMap="blog_tag">
+  <select id="GetBlogIdAndTagids" resultMap="blog_tag">
      select id,tagids from t_blog;
   </select>
   <select id="GetBlogNumber" resultType="java.lang.Integer">
@@ -110,6 +110,13 @@
 	JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5
 
   </select>
+  <select id="GetBlogByTypeId" resultMap="Blog_Type">
+    SELECT t_blog.*,t_type.`id`,t_type.name FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` WHERE t_blog.typeId=#{typeId}
+  </select>
+  <select id="getNewestBlogId" resultType="java.lang.Long">
+    select t_blog.id from t_blog ORDER BY updateTime DESC LIMIT 1 ;
+  </select>
+
 
   <insert id="SaveBlog" parameterType="com.gjy.boke.entity.Blog">
         insert into t_blog (title, content, firstPicture,
@@ -124,6 +131,9 @@
       #{published}, #{recommend}, #{createtime},
       #{updatetime}, #{typeid}, #{userid},
       #{description}, #{tagid},#{tagids})
+  </insert>
+  <insert id="insert_blog_tag">
+    insert into blog_tag value (#{param1},#{param2});
   </insert>
   <update id="EditBlog" parameterType="com.gjy.boke.entity.Blog" >
     update t_blog
@@ -150,4 +160,48 @@
   <delete id="DeleteBlog" parameterType="java.lang.Long">
     delete from t_blog where id=#{id};
   </delete>
+
+
+  <!--获取每个标签对应的所有博客-->
+  <resultMap id="Tag_Blog" type="com.gjy.boke.entity.Tag">
+    <id column="id" property="id"></id>
+    <result column="name" property="name"></result>
+    <collection property="blogs" ofType="com.gjy.boke.entity.Blog">
+      <id column="bid" jdbcType="BIGINT" property="id" />
+      <result column="title" jdbcType="VARCHAR" property="title" />
+      <result column="content" jdbcType="VARCHAR" property="content" />
+      <result column="firstPicture" jdbcType="VARCHAR" property="firstpicture" />
+      <result column="flag" jdbcType="VARCHAR" property="flag" />
+      <result column="views" jdbcType="INTEGER" property="views" />
+      <result column="commentCount" jdbcType="INTEGER" property="commentcount" />
+      <result column="appreciation" jdbcType="CHAR" property="appreciation" />
+      <result column="shareStatement" jdbcType="CHAR" property="sharestatement" />
+      <result column="commentabled" jdbcType="CHAR" property="commentabled" />
+      <result column="published" jdbcType="CHAR" property="published" />
+      <result column="recommend" jdbcType="CHAR" property="recommend" />
+      <result column="createTime" jdbcType="DATE" property="createtime" />
+      <result column="updateTime" jdbcType="DATE" property="updatetime" />
+      <result column="typeId" jdbcType="BIGINT" property="typeid" />
+      <result column="userId" jdbcType="BIGINT" property="userid" />
+      <result column="description" jdbcType="VARCHAR" property="description" />
+      <result column="tagId" jdbcType="BIGINT" property="tagid" />
+    </collection>
+  </resultMap>
+  <select id="getTagInBlogList" resultMap="Tag_Blog">
+     SELECT t_blog.id as
+    bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog
+        INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id`
+        RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid`
+  </select>
+  <!--传入一个标签id，获取该标签下的所有博客-->
+  <select id="GetBlogInTagByTagId" resultMap="Tag_Blog">
+    SELECT t_blog.id as
+    bid,t_blog.title,t_blog.content,t_tag.id,t_tag.name,t_blog.firstpicture,t_blog.flag,t_blog.views,t_blog.commentCount,t_blog.createTime,t_blog.updateTime,t_blog.typeId,t_blog.userId,t_blog.description FROM
+    t_blog
+    INNER JOIN
+    blog_tag ON
+    blog_tag.`blogid`=t_blog.`id`
+			RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` where blog_tag.`tagid`=#{tagId};
+  </select>
+
 </mapper>

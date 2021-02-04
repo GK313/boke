@@ -5,6 +5,7 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
   </resultMap>
+
   <sql id="Base_Column_List">
     id, `name`
   </sql>
@@ -29,6 +30,25 @@
   <select id="getTypeOrderByBlogNumber" resultMap="BaseResultMap">
     SELECT t_type.name,t_type.id,COUNT(*) AS 'total' FROM t_blog
 	JOIN t_type ON t_type.id=t_blog.typeId GROUP BY t_blog.typeId ORDER BY total DESC LIMIT 5;
+  </select>
+
+  <resultMap id="type" type="com.gjy.boke.entity.Type">
+    <id column="id" property="id"></id>
+    <result property="name" column="name"></result>
+    <collection property="blogs" ofType="com.gjy.boke.entity.Blog">
+      <!--从表Blog中的主键id名称和主表Type中的主键id名称重复，所以将从表Blog的主键id起别名为bid-->
+      <id column="bid" property="id"></id>
+      <result property="title" column="title"></result>
+      <result property="typeid" column="typeId"></result>
+    </collection>
+  </resultMap>
+  <!--
+    问题：
+      返回的Type中的Blogs集合都只有一条记录？？？？
+  -->
+  <select id="getAllTypeAndBlog" resultMap="type">
+SELECT t_type.*,t_blog.`id`,t_blog.`title`,t_blog.`typeId`
+    FROM t_type left JOIN t_blog ON t_blog.`typeId`=t_type.`id`
   </select>
   <delete id="deleteTypeById">
     delete from t_type where id=#{id};

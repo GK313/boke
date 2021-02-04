@@ -1,6 +1,7 @@
 package com.gjy.boke.dao;
 
 import com.gjy.boke.entity.Blog;
+import com.gjy.boke.entity.Tag;
 import com.gjy.boke.queryvo.BlogQuery;
 import com.gjy.boke.queryvo.BlogTypeQuery;
 import org.springframework.stereotype.Repository;
@@ -72,9 +73,9 @@ public interface BlogDao  {
     List<Blog> GetBlogByUpdateTimeLimit();
 
     /**
-     *获取封装有博客id和其对应的标签的blogQuery
+     *获取封装有博客id和其对应的标签的
      */
-    List<BlogQuery> GetBlogquery();
+    List<Blog> GetBlogIdAndTagids();
 
     /**
      * 计算已发布博客数量
@@ -86,4 +87,28 @@ public interface BlogDao  {
      * 获取包含BlogTypeQuery集合
      */
     List<BlogTypeQuery> getBlogTypeQuery();
+
+    /**
+     * 根据分类id获取该分类下的所有博客
+     * @return
+     */
+    List<Blog> GetBlogByTypeId(Long typeId);
+
+    /**
+     * 根获取最新的博客的id
+     */
+    Long getNewestBlogId();
+
+    void insert_blog_tag(Long blogid,Long tagid);
+
+    /**
+     * 获取每个标签所对应的博客，以及当前标签的名称
+     * 若当前标签下有博客，则包含id，否则标签id为null
+     */
+    List<Tag> getTagInBlogList();
+
+    /**
+     * 根据标签id获取该标签下的所有博客
+     */
+    List<Tag> GetBlogInTagByTagId(Long tagId);
 }

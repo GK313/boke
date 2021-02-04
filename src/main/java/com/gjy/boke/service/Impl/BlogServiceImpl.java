@@ -2,12 +2,15 @@ package com.gjy.boke.service.Impl;
 
 import com.gjy.boke.dao.BlogDao;
 import com.gjy.boke.entity.Blog;
+import com.gjy.boke.entity.Tag;
 import com.gjy.boke.exception.NotFoundException;
 import com.gjy.boke.queryvo.BlogTypeQuery;
 import com.gjy.boke.service.BlogService;
+import com.gjy.boke.utils.MarkdownUtil;
 import com.gjy.boke.utils.MyBeanUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.yaml.snakeyaml.error.Mark;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -25,7 +28,11 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Blog getBlogById(Long id) {
-        return blogDao.GetBlogById(id);
+        Blog blog = blogDao.GetBlogById(id);
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        b.setContent(MarkdownUtil.markdownToHtmlExtensions(blog.getContent()));
+        return b;
     }
 
     @Override
@@ -39,7 +46,16 @@ public class BlogServiceImpl implements BlogService {
         blog.setCreatetime(new Date());
         blog.setViews(0);;
         blog.setCommentcount(0);
-        return blogDao.SaveBlog(blog);
+        int i = blogDao.SaveBlog(blog);
+        //获取最新的博客的id
+        Long newBlogid = blogDao.getNewestBlogId();
+        //将博客id和当前的该博客所对应的标签id保存到blog_tag表中
+        //(1)遍历当前博客的tagids
+        String[] tagids = blog.getTagids().split(",");
+        for (String tagid : tagids) {
+            blogDao.insert_blog_tag(newBlogid,Long.parseLong(tagid));
+        }
+        return i;
     }
 
     @Override
@@ -57,7 +73,14 @@ public class BlogServiceImpl implements BlogService {
         //过滤掉新的blog中那些属性值为空的属性，将新blog的属性值copy到原来的blog中对应的属性
         BeanUtils.copyProperties(newblog,oldblog,MyBeanUtils.getNullPropertiesName(newblog));
         oldblog.setUpdatetime(new Date());*/
-        return blogDao.EditBlog(id,newblog);
+        int i = blogDao.EditBlog(id, newblog);
+        //将博客id和当前的该博客所对应的标签id保存到blog_tag表中
+        //(1)遍历当前博客的tagids
+        String[] tagids = newblog.getTagids().split(",");
+        for (String tagid : tagids) {
+            blogDao.insert_blog_tag(id,Long.parseLong(tagid));
+        }
+        return i;
     }
 
     @Override
@@ -83,5 +106,20 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public List<BlogTypeQuery> getBlogTypeQueryVO() {
         return blogDao.getBlogTypeQuery();
+    }
+
+    @Override
+    public List<Blog> getBlogByTypeId(Long typeId) {
+        return blogDao.GetBlogByTypeId(typeId);
+    }
+
+    @Override
+    public List<Tag> getBlogInTag() {
+        return blogDao.getTagInBlogList();
+    }
+
+    @Override
+    public List<Tag> getBlogInTagByTagId(Long id) {
+        return blogDao.GetBlogInTagByTagId(id);
     }
 }

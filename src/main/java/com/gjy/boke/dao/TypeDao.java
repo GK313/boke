@@ -87,5 +87,9 @@ public interface TypeDao {
      */
     List<Type> getTypeOrderByBlogNumber();
 
+    /**
+     *获取所有分类和对应的博客
+     */
+    List<Type> getAllTypeAndBlog();
     
 }

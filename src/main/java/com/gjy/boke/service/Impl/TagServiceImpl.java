@@ -53,5 +53,9 @@ public class TagServiceImpl implements TagService {
         return tagDao.getTagByLimit();
     }
 
-
+    @Override
+    public int GetTagNumber() {
+        return tagDao.getTagNumber();
+    }
 }
+

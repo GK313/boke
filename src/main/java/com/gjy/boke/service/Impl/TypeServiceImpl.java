@@ -79,5 +79,10 @@ public class TypeServiceImpl implements TypeService {
         return typeDao.getTypeOrderByBlogNumber();
     }
 
+    @Override
+    public List<Type> getAllTypeAndBlog() {
+        return typeDao.getAllTypeAndBlog();
+    }
+
 
 }

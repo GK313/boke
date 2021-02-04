@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../static/css/animate.css">
     <!--引入prism（代码高亮）-->
     <link rel="stylesheet" href="../static/lib/prism/prism.css">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
 </head>
 <body>
 <!--导航-->
@@ -58,34 +59,35 @@
                     <div class="content"><a href="#" target="_blank" class="header" >oneStar</a></div>
                 </div>
                 <div class="item">
-                    <i class="calendar icon"></i><span>2020-01-01</span>
+                    <i class="calendar icon"></i><span th:text="${#dates.format(blog.getUpdatetime(),'yyyy-MM-dd HH:mm:ss')}">2020-01-01</span>
                 </div>
                 <div class="item">
-                    <i class="eye icon"></i> <span>2222</span>
+                    <i class="eye icon"></i> <span th:text="${blog.views}">2222</span>
                 </div>
                 <div class="item">
-                    <i class="comment outline icon"></i> <span>2222</span>
+                    <i class="comment outline icon"></i> <span th:text="${blog.commentcount}">2222</span>
                 </div>
             </div>
         </div>
         <!--图片区域-->
         <div class="ui attached segment">
-            <img src="https://picsum.photos/id/264/4912/3264" alt="" class="ui fluid rounded image">
+            <img src="https://picsum.photos/id/264/4912/3264" th:src="@{${blog.firstpicture}}" alt=""
+                 class="ui fluid rounded image">
         </div>
         <!--文章内容-->
         <div class="ui attached padded segment">
             <!--文章为转载或原创-->
             <div class="ui right aligned basic segment">
-                <div class="ui orange basic label">原创</div>
+                <div class="ui orange basic label" th:text="${blog.flag}">原创</div>
             </div>
             <!--文章标题-->
-            <h2 class="ui center aligned header">文章标题</h2>
+            <h2 class="ui center aligned header" th:text="${blog.title}">文章标题</h2>
             <!--文章内容-->
-            <div class="m-padded-lr-responsive m-padded-tb-large typo typo-selection" id="content">
-                index`index`
+            <div id="content" class="typo  typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large" th:utext="${blog.content}">
+
                 <h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
 
-                <pre><code class="language-css"></code></pre>
+                <pre><code class="language-css">p { color: red }</code></pre>
 
                 <pre><code class="language-css">p { color: red }</code></pre>
 
@@ -96,6 +98,67 @@
                     Yahoo、Eric Meyer 和 Alice base.css 中采用的 Reset 都没有很好地考虑中文排版。<i class="serif">Typo.css</i> 要做的就是解决中文排版的问题。</p>
 
                 <p><strong><i class="serif">Typo.css</i> 测试于如下平台：</strong></p>
+                <table class="ui table" summary="Typo.css 的测试平台列表">
+                    <thead>
+                    <tr>
+                        <th>OS/浏览器</th>
+                        <th>Firefox</th>
+                        <th>Chrome</th>
+                        <th>Safari</th>
+                        <th>Opera</th>
+                        <th>IE9</th>
+                        <th>IE8</th>
+                        <th>IE7</th>
+                        <th>IE6</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>OS X</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Win 7</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Win XP</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>-</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <td>Ubuntu</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>-</td>
+                        <td>✔</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    </tbody>
+                </table>
 
                 <h4>中文排版的重点和难点</h4>
 
@@ -131,7 +194,78 @@
                     </small>
                 </p>
 
+                <h4>本篇引语</h4>
 
+                <p>
+                    《学而》是《论语》第一篇的篇名。《论语》中各篇一般都是以第一章的前二三个字作为该篇的篇名。《学而》一篇包括16章，内容涉及诸多方面。其中重点是「吾日三省吾身」；「节用而爱人，使民以时」；「礼之用，和为贵」以及仁、孝、信等道德范畴。 </p>
+
+                <h4>原文</h4>
+
+                <p>子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」 </p>
+
+                <h4>译文</h4>
+
+                <p>孔子说：「学了又时常温习和练习，不是很愉快吗？有志同道合的人从远方来，不是很令人高兴的吗？人家不了解我，我也不怨恨、恼怒，不也是一个有德的君子吗？」 </p>
+
+                <h4>评析</h4>
+
+                <p>宋代著名学者<u class="typo-u">朱熹</u>对此章评价极高，说它是「入道之门，积德之基」。本章这三句话是人们非常熟悉的。历来的解释都是：学了以后，又时常温习和练习，不也高兴吗等等。三句话，一句一个意思，前后句子也没有什么连贯性。但也有人认为这样解释不符合原义，指出这里的「学」不是指学习，而是指学说或主张；「时」不能解为时常，而是时代或社会的意思，「习」不是温习，而是使用，引申为采用。而且，这三句话不是孤立的，而是前后相互连贯的。这三句的意思是：自己的学说，要是被社会采用了，那就太高兴了；退一步说，要是没有被社会所采用，可是很多朋友赞同<abbr
+                        title="张燕婴">我</abbr>的学说，纷纷到我这里来讨论问题，我也感到快乐；再退一步说，即使社会不采用，人们也不理解我，我也不怨恨，这样做，不也就是君子吗？（见《齐鲁学刊》1986年第6期文）这种解释可以自圆其说，而且也有一定的道理，供读者在理解本章内容时参考。
+                </p>
+
+                <p>此外，在对「人不知，而不愠」一句的解释中，也有人认为，「人不知」的后面没有宾语，人家不知道什么呢？当时因为孔子有说话的特定环境，他不需要说出知道什么，别人就可以理解了，却给后人留下一个谜。有人说，这一句是接上一句说的，从远方来的朋友向我求教，我告诉他，他还不懂，我却不怨恨。这样，「人不知」就是「人家不知道我所讲述的」了。这样的解释似乎有些牵强。</p>
+
+                <p>总之，本章提出以学习为乐事，做到人不知而不愠，反映出孔子学而不厌、诲人不倦、注重修养、严格要求自己的主张。这些思想主张在《论语》书中多处可见，有助于对第一章内容的深入了解。</p>
+
+                <h3 id="section2-2">例2：英文排版</h3>
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum.</p>
+                <blockquote>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </blockquote>
+
+                <h4>The standard Lorem Ipsum passage, used since the 1500s</h4>
+
+                <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+                <h4>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h4>
+
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                    velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
+                    ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+                    vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+
+                <h4>List style in action</h4>
+                <ul>
+                    <li>If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as
+                        your brother and hope as your sentry.
+                        <p>如果你希望成功，当以恒心为良友，以经验为参谋，以谨慎为兄弟，以希望为哨兵。</p>
+                    </li>
+                    <li>Sometimes one pays most for the things one gets for nothing.
+                        <p>有时候一个人为不花钱得到的东西付出的代价最高。</p>
+                    </li>
+                    <li>Only those who have the patience to do simple things perfectly ever acquire the skill to do difficult things
+                        easily.
+                        <p>只有有耐心圆满完成简单工作的人，才能够轻而易举的完成困难的事。</p>
+                    </li>
+                </ul>
+
+                <h4>You may want to create a perfect <code>&lt;hr /&gt;</code> line, despite the fact that there will never have one
+                </h4>
+                <hr/>
                 <p><abbr title="法国作家罗切福考尔德">La Racheforcauld</abbr> said:
                     <mark>"Few things are impossible in themselves; and it is often for want of will, rather than of means, that man fails
                         to succeed".
@@ -308,9 +442,14 @@ h5,h6{font-size:1em;}
                     </tbody>
                 </table>
 
+                <h5 id="appendix2">2、开源许可</h5>
+
             </div>
 
+            <div class="ui horizontal divider">end</div>
+
             <!--文章标签-->
+            <!--遍历显示所有标签-->
             <div class="m-padded-lr-responsive">
                 <div class="ui basic teal left pointing label">SprigBoot</div>
             </div>
@@ -492,11 +631,17 @@ h5,h6{font-size:1em;}
 <!--右底部锚点按钮-->
 <div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
     <div class="ui vertical icon buttons ">
-        <button type="button" class="ui teal button">目录</button>
+        <button type="button" class="ui toc teal button">目录</button>
         <a href="#comment-container" class="ui teal button">留言</a>
         <button class="ui wechat icon button"><i class="weixin icon"></i></button>
         <div id="toTop-button" href="#" class="ui icon button"><i class="chevron up icon"></i></div>
     </div>
+</div>
+
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px!important;">
+    <ol class="js-toc">
+
+    </ol>
 </div>
 
 <!--点击微信qq图标弹出二维码-->
@@ -585,11 +730,30 @@ h5,h6{font-size:1em;}
 <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
 <!--映入waypoints滚动检测插件-->
 <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
-
+<!--引入自动生成目录插件-->
+<!--/*<script src="../static/lib/tocbot/tocbot.min.js"></script>*/-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <script>
+
     $('.menu.toggle').click(function(){
         $('.m-item').toggleClass('m-mobile-hide');
     });
+
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+    });
+
+    $('.toc.button').popup({
+        popup : $('.toc-container.popup'),
+        on : 'click',
+        position: 'left center'
+    });
+
 
     $('#payButton').popup({
        popup: $('.payQR.popup'),

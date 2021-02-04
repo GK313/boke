@@ -72,4 +72,9 @@ public interface TypeService {
      */
     List<Type> GetTypeOrderByBlogNumber();
 
+    /**
+     * 获取所有分类和对应的博客
+     */
+    List<Type> getAllTypeAndBlog();
+
 }
