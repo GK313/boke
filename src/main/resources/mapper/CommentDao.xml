@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gjy.boke.dao.CommentDao">
+  <resultMap id="BaseResultMap" type="com.gjy.boke.entity.Comment">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="createTime" jdbcType="DATE" property="createtime" />
+    <result column="blogId" jdbcType="BIGINT" property="blogid" />
+    <result column="parentCommentId" jdbcType="BIGINT" property="parentcommentid" />
+    <result column="parentNickname" jdbcType="VARCHAR" property="parentnickname" />
+    <result column="adminComment" jdbcType="BIT" property="admincomment" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, nickname, email, content, avatar, createTime, blogId, parentCommentId, parentNickname, 
+    adminComment
+  </sql>
+  <insert id="saveComment">
+    insert into t_comment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="nickname != null">
+        nickname,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="avatar != null">
+        avatar,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="blogid != null">
+        blogId,
+      </if>
+      <if test="parentcommentid != null">
+        parentCommentId,
+      </if>
+      <if test="parentnickname != null">
+        parentNickname,
+      </if>
+      <if test="admincomment != null">
+        adminComment,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="avatar != null">
+        #{avatar,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=DATE},
+      </if>
+      <if test="blogid != null">
+        #{blogid,jdbcType=BIGINT},
+      </if>
+      <if test="parentcommentid != null">
+        #{parentcommentid,jdbcType=BIGINT},
+      </if>
+      <if test="parentnickname != null">
+        #{parentnickname,jdbcType=VARCHAR},
+      </if>
+      <if test="admincomment != null">
+        #{admincomment,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <select id="listCommentByBlogIdInParentCommentIdNull" resultMap="BaseResultMap">
+    select *from t_comment where blogId=#{blogid} and parentCommentId=#{parentCommentId} ORDER BY createTime DESC;
+  </select>
+  <select id="getCommentById" resultType="com.gjy.boke.entity.Comment">
+    select * from t_Comment where id=#{id};
+  </select>
+  <select id="listCommentByBlogIdInParentCommentIdNotNull" resultMap="BaseResultMap">
+    select *from t_comment where blogId=#{blogid} and parentCommentId=#{parentCommentId} ORDER BY createTime DESC;
+  </select>
+  <select id="listChildCommentByBlogIdAndCommentId" resultMap="BaseResultMap">
+    select *from t_comment where blogID=#{BlogId} and id=#{CommentId} ORDER BY createTime DESC;
+  </select>
+    <select id="listCommentByBlogId" resultMap="BaseResultMap">
+      select *from t_comment where blogId=#{blodId};
+    </select>
+
+
+    <!--<select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+      select
+      <include refid="Base_Column_List" />
+      from t_comment
+      where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+      delete from t_comment
+      where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.gjy.boke.entity.Comment" useGeneratedKeys="true">
+      insert into t_comment (nickname, email, content,
+        avatar, createTime, blogId,
+        parentCommentId, parentNickname, adminComment
+        )
+      values (#{nickname,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR},
+        #{avatar,jdbcType=VARCHAR}, #{createtime,jdbcType=DATE}, #{blogid,jdbcType=BIGINT},
+        #{parentcommentid,jdbcType=BIGINT}, #{parentnickname,jdbcType=VARCHAR}, #{admincomment,jdbcType=BIT}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.gjy.boke.entity.Comment" useGeneratedKeys="true">
+      insert into t_comment
+      <trim prefix="(" suffix=")" suffixOverrides=",">
+        <if test="nickname != null">
+          nickname,
+        </if>
+        <if test="email != null">
+          email,
+        </if>
+        <if test="content != null">
+          content,
+        </if>
+        <if test="avatar != null">
+          avatar,
+        </if>
+        <if test="createtime != null">
+          createTime,
+        </if>
+        <if test="blogid != null">
+          blogId,
+        </if>
+        <if test="parentcommentid != null">
+          parentCommentId,
+        </if>
+        <if test="parentnickname != null">
+          parentNickname,
+        </if>
+        <if test="admincomment != null">
+          adminComment,
+        </if>
+      </trim>
+      <trim prefix="values (" suffix=")" suffixOverrides=",">
+        <if test="nickname != null">
+          #{nickname,jdbcType=VARCHAR},
+        </if>
+        <if test="email != null">
+          #{email,jdbcType=VARCHAR},
+        </if>
+        <if test="content != null">
+          #{content,jdbcType=VARCHAR},
+        </if>
+        <if test="avatar != null">
+          #{avatar,jdbcType=VARCHAR},
+        </if>
+        <if test="createtime != null">
+          #{createtime,jdbcType=DATE},
+        </if>
+        <if test="blogid != null">
+          #{blogid,jdbcType=BIGINT},
+        </if>
+        <if test="parentcommentid != null">
+          #{parentcommentid,jdbcType=BIGINT},
+        </if>
+        <if test="parentnickname != null">
+          #{parentnickname,jdbcType=VARCHAR},
+        </if>
+        <if test="admincomment != null">
+          #{admincomment,jdbcType=BIT},
+        </if>
+      </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.gjy.boke.entity.Comment">
+      update t_comment
+      <set>
+        <if test="nickname != null">
+          nickname = #{nickname,jdbcType=VARCHAR},
+        </if>
+        <if test="email != null">
+          email = #{email,jdbcType=VARCHAR},
+        </if>
+        <if test="content != null">
+          content = #{content,jdbcType=VARCHAR},
+        </if>
+        <if test="avatar != null">
+          avatar = #{avatar,jdbcType=VARCHAR},
+        </if>
+        <if test="createtime != null">
+          createTime = #{createtime,jdbcType=DATE},
+        </if>
+        <if test="blogid != null">
+          blogId = #{blogid,jdbcType=BIGINT},
+        </if>
+        <if test="parentcommentid != null">
+          parentCommentId = #{parentcommentid,jdbcType=BIGINT},
+        </if>
+        <if test="parentnickname != null">
+          parentNickname = #{parentnickname,jdbcType=VARCHAR},
+        </if>
+        <if test="admincomment != null">
+          adminComment = #{admincomment,jdbcType=BIT},
+        </if>
+      </set>
+      where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.gjy.boke.entity.Comment">
+      update t_comment
+      set nickname = #{nickname,jdbcType=VARCHAR},
+        email = #{email,jdbcType=VARCHAR},
+        content = #{content,jdbcType=VARCHAR},
+        avatar = #{avatar,jdbcType=VARCHAR},
+        createTime = #{createtime,jdbcType=DATE},
+        blogId = #{blogid,jdbcType=BIGINT},
+        parentCommentId = #{parentcommentid,jdbcType=BIGINT},
+        parentNickname = #{parentnickname,jdbcType=VARCHAR},
+        adminComment = #{admincomment,jdbcType=BIT}
+      where id = #{id,jdbcType=BIGINT}
+    </update>-->
+</mapper>

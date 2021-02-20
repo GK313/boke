@@ -2,20 +2,15 @@ package com.gjy.boke;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.gjy.boke.dao.BlogDao;
-import com.gjy.boke.dao.TagDao;
-import com.gjy.boke.dao.TypeDao;
-import com.gjy.boke.dao.UserDao;
-import com.gjy.boke.entity.Blog;
-import com.gjy.boke.entity.Tag;
-import com.gjy.boke.entity.Type;
-import com.gjy.boke.entity.User;
+import com.gjy.boke.dao.*;
+import com.gjy.boke.entity.*;
 import com.gjy.boke.queryvo.BlogQuery;
 import com.gjy.boke.queryvo.BlogTypeQuery;
 import com.gjy.boke.service.BlogService;
 import com.gjy.boke.service.Impl.TypeServiceImpl;
 import com.gjy.boke.service.TagService;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 
@@ -32,8 +27,8 @@ class BokeApplicationTests {
     @Resource
     BlogService blogService;
 
-    @Resource
-    BlogDao blogDao;
+    @Autowired
+    CommentDao commentDao;
 
     @Resource
     TagDao tagDao;
@@ -135,10 +130,7 @@ class BokeApplicationTests {
             System.out.println(tag.getId() + ":" + tag.getName());
         }
 */
-        List<Tag> tagInBlogList = blogDao.getTagInBlogList();
-        for (Tag tag : tagInBlogList) {
-            System.out.println(tag.getBlogs());
-        }
+
 
     }
 }

@@ -1,10 +1,12 @@
 package com.gjy.boke.controller;
 
 import com.gjy.boke.entity.Blog;
+import com.gjy.boke.entity.Comment;
 import com.gjy.boke.entity.Tag;
 import com.gjy.boke.entity.Type;
 import com.gjy.boke.queryvo.BlogTypeQuery;
 import com.gjy.boke.service.BlogService;
+import com.gjy.boke.service.CommentService;
 import com.gjy.boke.service.TagService;
 import com.gjy.boke.service.TypeService;
 import org.springframework.stereotype.Controller;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -30,7 +34,7 @@ public class indexController {
     @Resource
     private TypeService typeService;
     @Resource
-    private TagService tagService;
+    private CommentService commentService;
 
     @RequestMapping("/")
     public String index(Model model){
@@ -41,7 +45,6 @@ public class indexController {
 
         //获取标签中对应的博客及其数量
         List<Tag> blogsInTag = blogService.getBlogInTag();
-
         //按照更新时间查询前9条博客信息(设置为推荐的博客)
         List<Blog> blogLimit = blogService.getBlogByUpdateTimeLimit();
 
@@ -63,7 +66,9 @@ public class indexController {
     public String getBlogByid(@PathVariable Long id,Model model){
         //根据id获取博客信息
         Blog blog = blogService.getBlogById(id);
+        List<Comment> comments = commentService.listCommentByBlogIdParentIdNull(id,null);
         model.addAttribute("blog",blog);
+        model.addAttribute("comments",comments);
         return "blog";
     }
 
@@ -71,7 +76,7 @@ public class indexController {
      * 根据分类id获取该分类下的所有博客
      */
     @GetMapping("/type/{id}")
-    public String getBlogByTypeId(@PathVariable Long id, RedirectAttributes attributes,Model model){
+    public String getBlogByTypeId(@PathVariable Long id, Model model){
         List<Blog> blogs = blogService.getBlogByTypeId(id);
         List<Type> types = typeService.getAllTypeAndBlog();
         if(blogs.size()!=0){
@@ -86,5 +91,6 @@ public class indexController {
         model.addAttribute("types",types);
         /*attributes.addFlashAttribute("types",types);*/
         return "types";
+
     }
 }

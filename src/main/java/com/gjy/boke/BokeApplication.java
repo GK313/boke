@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.gjy.boke.dao")
-public class BokeApplication {
+public class                                                                                                                                                                                                                                                                                                            BokeApplication {
     public static void main(String[] args) {
         SpringApplication.run(BokeApplication.class, args);
     }

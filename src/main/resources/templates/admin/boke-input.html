@@ -64,7 +64,7 @@
 
 <!--中间内容-->
 <div class="m-container m-padded-tb-big">
-    <div class="ui container">
+    <div class="ui  segment">
         <form id="blog-form" action="#" th:object="${blog}"
               th:action="*{id}==null ? @{/admin/addBlog} : @{/admin/addBlog/{id}(id=*{id})}" method="post" class="ui form">
             <!--标题-->
@@ -95,100 +95,102 @@
                     <textarea style="display:none;" placeholder="博客内容" name="content" th:text="*{content}"></textarea>
                 </div>
             </div>
-            <!--标签、分类选择框-->
-            <div class="two fields">
-                <!--标签-->
-                <div class="field">
-                    <div class="ui left labeled action input ">
-                        <label class="ui compact teal basic label">标签</label>
-                        <!--search实现搜索、multiple实现多选 -->
-                        <div class="ui fluid multiple search selection dropdown">
-                            <!--新增-->
-                            <input type="hidden" name="tagId" >
-                            <i class="dropdown icon"></i>
-                            <!--编辑-->
-                            <input type="hidden" name="tag.id">
-                            <div class="default text">标签</div>
-                            <div class="menu">
-                                <div class="item" th:each="tag:${tags}" th:data-value="${tag.id}"
-                                     th:text="${tag.getName()}">Java</div>
+                <div calss="required field">
+                    <!--标签、分类选择框-->
+                    <div class="two fields">
+                        <!--标签-->
+                        <div class="field">
+                            <div class="ui left labeled action input ">
+                                <label class="ui compact teal basic label">标签</label>
+                                <!--search实现搜索、multiple实现多选 -->
+                                <div class="ui fluid multiple search selection dropdown">
+                                    <!--新增-->
+                                    <input type="hidden" name="tagId" >
+                                    <i class="dropdown icon"></i>
+                                    <!--编辑-->
+                                    <input type="hidden" name="tag.id">
+                                    <div class="default text">标签</div>
+                                    <div class="menu">
+                                        <div class="item" th:each="tag:${tags}" th:data-value="${tag.id}"
+                                             th:text="${tag.getName()}">Java</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--分类-->
+                        <div class="required field">
+                            <div class="ui left labeled action input">
+                                <label class="ui compact teal basic label">分类</label>
+                                <div class="ui fluid selection dropdown">
+                                    <!--新增-->
+                                    <input type="hidden" name="typeid">
+                                    <!--编辑-->
+                                    <input type="hidden" name="typeID" >
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">分类</div>
+                                    <div class="menu">
+                                        <div class="item" th:each="type:${types}" th:data-value="${type.id}"
+                                             th:text="${type.name}">错误日志</div>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--分类-->
-                <div class="required field">
-                    <div class="ui left labeled action input">
-                        <label class="ui compact teal basic label">分类</label>
-                        <div class="ui fluid selection dropdown">
-                            <!--新增-->
-                            <input type="hidden" name="typeid">
-                            <!--编辑-->
-                            <input type="hidden" name="typeID" >
-                            <i class="dropdown icon"></i>
-                            <div class="default text">分类</div>
-                            <div class="menu">
-                                <div class="item" th:each="type:${types}" th:data-value="${type.id}"
-                                     th:text="${type.name}">错误日志</div>
-
-                            </div>
-
+                    <!--首图的引用地址-->
+                    <div class="required ui field">
+                        <div class="ui left labeled input">
+                            <label class="ui teal basic label">首图</label>
+                            <input type="text" name="firstpicture" placeholder="首图引用地址" th:value="*{firstpicture}">
                         </div>
                     </div>
-                </div>
-            </div>
-            <!--首图的引用地址-->
-            <div class="required ui field">
-                <div class="ui left labeled input">
-                    <label class="ui teal basic label">首图</label>
-                    <input type="text" name="firstpicture" placeholder="首图引用地址" th:value="*{firstpicture}">
-                </div>
-            </div>
-            <!--输入错误信息提示-->
-            <div class="ui error message" name="messageinfo"></div>
-            <!--博客描述-->
-            <div class="required field">
-                <textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>
-            </div>
-            <!--博文是否为转载、原创、是否支持评论-->
-            <div class="inline fields">
-                <div class="field">
-                    <div class="ui checkbox">
-                        <input type="checkbox" name="recommend" id="recommend" class="hidden" th:checked="*{recommend}">
-                        <label for="recommend">推荐</label>
+                    <!--输入错误信息提示-->
+                    <div class="ui error message" name="messageinfo"></div>
+                    <!--博客描述-->
+                    <div class="required  field">
+                        <textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>
+                    </div>
+                    <!--博文是否为转载、原创、是否支持评论-->
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="recommend" id="recommend" class="hidden" th:checked="*{recommend}">
+                                <label for="recommend">推荐</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <!--博客信息-->
+                                <input type="checkbox" name="sharestatement" id="shareInfo" class="hidden" th:checked="*{sharestatement}">
+                                <label for="shareInfo">转载声明</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="appreciation" id="appreciation" class="hidden" th:checked="*{appreciation}">
+                                <label for="appreciation">赞赏</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox ">
+                                <!--留言-->
+                                <input type="checkbox" name="commentabled" id="commend" checked class="hidden"
+                                       th:checked="*{commentabled}">
+                                <label for="commend">评论</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--按钮-->
+                    <div class="ui right aligned  container">
+                        <!--返回按钮,返回上一个页面-->
+                        <button type="button" class="ui teal basic button" onclick="window.history.go(-1)">返回</button>
+                        <!--保存按钮-->
+                        <button type="button" id="save-btn" class="ui secondary button" >保存</button>
+                        <button  type="button" id="published-btn" class="ui teal basic secondary button">发布
+                        </button>
                     </div>
                 </div>
-                <div class="field">
-                    <div class="ui checkbox">
-                        <!--博客信息-->
-                        <input type="checkbox" name="sharestatement" id="shareInfo" class="hidden" th:checked="*{sharestatement}">
-                        <label for="shareInfo">转载声明</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui checkbox">
-                        <input type="checkbox" name="appreciation" id="appreciation" class="hidden" th:checked="*{appreciation}">
-                        <label for="appreciation">赞赏</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui checkbox ">
-                        <!--留言-->
-                        <input type="checkbox" name="commentabled" id="commend" checked class="hidden"
-                               th:checked="*{commentabled}">
-                        <label for="commend">评论</label>
-                    </div>
-                </div>
-            </div>
-            <!--按钮-->
-            <div class="ui right aligned  container">
-                <!--返回按钮,返回上一个页面-->
-                <button type="button" class="ui teal basic button" onclick="window.history.go(-1)">返回</button>
-                <!--保存按钮-->
-                <button type="button" id="save-btn" class="ui secondary button" >保存</button>
-                <button  type="button" id="published-btn" class="ui teal basic secondary button">发布
-                </button>
-            </div>
         </form>
     </div>
 </div>
@@ -220,7 +222,7 @@
                         <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced ">
                             关注公众号
                         </div>
-                        <img src="#" class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                        <img src="../static/image/wechat.png"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
                     </div>
                 </div>
             </div>
@@ -232,7 +234,7 @@
                         <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced ">
                             问题交流（QQ群）
                         </div>
-                        <img src="" class="ui m-margin-top rounded image" alt="" style="width: 110px">
+                        <img src="../static/image/wechat.png" class="ui m-margin-top rounded image" alt="" style="width: 110px">
                     </div>
                 </div>
             </div>
