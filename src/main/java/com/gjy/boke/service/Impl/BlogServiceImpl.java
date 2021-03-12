@@ -122,4 +122,35 @@ public class BlogServiceImpl implements BlogService {
     public List<Tag> getBlogInTagByTagId(Long id) {
         return blogDao.GetBlogInTagByTagId(id);
     }
+
+    @Override
+    public int updateBlogCommentCountsAddOneByBlogId(Long BlogId) {
+        return blogDao.updateBlogCommentCountsAddOneByBlogId(BlogId);
+    }
+
+    @Override
+    public int updateBlogCommentCountsCutOneByBlogId(Long BlogId) {
+        return blogDao.updateBlogCommentCountsCutOneByBlogId(BlogId);
+    }
+
+    @Override
+    public void updateBlogViewsAddOneByBlogId(Long blogId) {
+        blogDao.updateBlogViewsAddOneByBlogId(blogId);
+    }
+
+    @Override
+    public List<Blog> ListBlogOrderByUpdateTime() {
+        return blogDao.listBlogOrderByUpdateTime();
+    }
+
+    @Override
+    public List<Blog> ListBlogOrderByBlogViewsAndCommentCount() {
+        return blogDao.listBlogOrderByBlogViewsAndCommentCount();
+    }
+
+    @Override
+    public List<Blog> listBlogSearchByQuery(String query) {
+        String query2="%"+query+"%";
+        return blogDao.listBlogBySearchQuery(query2);
+    }
 }

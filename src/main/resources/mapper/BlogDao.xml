@@ -78,11 +78,13 @@
   使用MyBatis的多表连接查询
   -->
   <select id="GetAllBlog" resultMap="Blog_Type">
-    SELECT t_type.name,t_blog.* FROM t_blog
+    SELECT
+    t_type.name,t_blog.* FROM
+    t_blog
 	JOIN t_type ON t_type.id=t_blog.typeId ;
   </select>
   <select id="GetBlogByTitleAndTypeNameAndRecommend" resultMap="Blog_Type">
-    SELECT t_type.name,t_blog.title,t_blog.updateTime,t_blog.recommend,t_blog.id FROM t_blog
+    SELECT t_type.name,t_blog.title,t_blog.updateTime,t_blog.recommend,t_blog.id,t_blog.published FROM t_blog
 	JOIN t_type ON t_type.id=t_blog.typeId
 	<where>
       <if test="title!=null">
@@ -157,6 +159,15 @@
       tagids=#{blog.tagids}
     where id = #{id}
   </update>
+  <update id="updateBlogCommentCountsCutOneByBlogId">
+    update t_blog set commentCount=commentCount-1 where id=#{BlogId};
+  </update>
+  <update id="updateBlogCommentCountsAddOneByBlogId">
+    update t_blog set commentCount=commentCount+1 where id=#{BlogId};
+  </update>
+  <update id="updateBlogViewsAddOneByBlogId">
+    update t_blog set views=views+1 where id=#{BlogId};
+  </update>
   <delete id="DeleteBlog" parameterType="java.lang.Long">
     delete from t_blog where id=#{id};
   </delete>
@@ -201,7 +212,20 @@
     INNER JOIN
     blog_tag ON
     blog_tag.`blogid`=t_blog.`id`
-			RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` where blog_tag.`tagid`=#{tagId};
+			RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` where blog_tag.`tagid`=#{tagId} ;
+  </select>
+  <select id="listBlogOrderByUpdateTime" resultMap="Blog_Type">
+    SELECT t_type.name,t_blog.* FROM t_blog
+	JOIN t_type ON t_type.id=t_blog.typeId order by updatetime desc;
+  </select>
+  <select id="listBlogOrderByBlogViewsAndCommentCount" resultMap="Blog_Type">
+    SELECT t_type.name,t_blog.* FROM t_blog
+	JOIN t_type ON t_type.id=t_blog.typeId ORDER BY views AND commentCount DESC;
+  </select>
+  <select id="listBlogBySearchQuery" resultMap="Blog_Type">
+      select t_type.name,t_blog.* from t_blog Join  t_type on t_type.id=t_blog.typeId
+          where t_blog.title like #{query} or t_blog.content like #{query} or t_blog.description like #{query};
+
   </select>
 
 </mapper>

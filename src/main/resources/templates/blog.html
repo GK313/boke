@@ -29,7 +29,7 @@
             <a href="#" class="m-item item m-mobile-hide"><i class="music icon"></i>归档</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
             <!--搜索框-->
-            <div class="right m-item item">
+            <div class="m-item item  right">
                 <form name="search" action="#" method="post" target="_blank">
                     <div class="ui icon transparent input m-margin-tb-tiny" style="color: white">
                         <input style="color: white" type="text" name="query" placeholder="Search....">
@@ -56,7 +56,7 @@
             <div class="ui mini horizontal link list">
                 <div class="item">
                     <img src="../static/image/header.png" th:src="@{/image/header.png}" alt="" class="ui avatar image">
-                    <div class="content"><a href="#" target="_blank" class="header">oneStar</a></div>
+                    <div class="content"><a href="#" target="_blank" class="header">俊跃</a></div>
                 </div>
                 <div class="item">
                     <i class="calendar icon"></i><span
@@ -526,7 +526,8 @@ h5,h6{font-size:1em;}
         </div>
 
         <!--留言区域-->
-        <div class="ui bottom attached segment">
+        <!--应该根据当前博客的commentabled属性，判断当前博文是否支持评论，不支持的话不显示留言区域-->
+        <div class="ui bottom attached segment" th:if="${blog.commentabled}=='on'">
             <div id="comment-contain" class="ui bottom attached segment">
                 <div th:fragment="commentList">
                     <!--留言区列表-->
@@ -544,6 +545,9 @@ h5,h6{font-size:1em;}
                                 </a>
                                 <div class="content">
                                     <a class="author" th:text="${comment.nickname}">Matter</a>
+                                    <div class="ui mini basic teal left pointing label m-padded-mini"
+                                         th:if="${comment.getAdmincomment()}">博主
+                                    </div>
                                     <div class="metadata">
                                         <span class="date"
                                               th:text="${#dates.format(comment.createtime ,'yyyy-MM-dd HH:mm:ss')}">昨天上午12
@@ -557,7 +561,12 @@ h5,h6{font-size:1em;}
                                            th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}"
                                            onclick="reply(this)"><font
                                                 style="vertical-align: inherit;"><font
-                                                style="vertical-align: inherit;">回复</font></font></a>
+                                                style="vertical-align: inherit;">回复</font></font>
+                                        </a>
+                                        <a class="delete" href="#"
+                                           th:href="@{/comment/operate/{param1}/{param2}/delete(param1=${comment.blogid},param2=${comment.id})}"
+                                           onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')"
+                                           th:if="${session.user}">删除</a>
                                     </div>
                                 </div>
                                 <!--子留言-->
@@ -570,7 +579,7 @@ h5,h6{font-size:1em;}
                                             <a class="author">
                                                 <span th:text="${reply.nickname}">珍妮·赫斯（Jenny Hess）</span>
                                                 <div class="ui mini basic teal left pointing label m-padded-mini"
-                                                     th:if="${reply.getAdmincomment()}">栈主
+                                                     th:if="${reply.getAdmincomment()}">博主
                                                 </div>
                                                 <span th:text="|@ ${reply.parentnickname}|" class="m-teal">@ 小白</span>
                                             </a>
@@ -592,9 +601,11 @@ h5,h6{font-size:1em;}
                                                         style="vertical-align: inherit;"><font
                                                         style="vertical-align: inherit;">回复</font></font>
                                                 </a>
-                                                <a class="reply"
-                                                   onclick="delete(this)">删除
-                                                </a>
+                                                <!--实际情况中只有博主自己能删除评论-->
+                                                <a class="delete" href="#"
+                                                   th:href="@{/comment/operate/{param1}/{param2}/delete(param1=${reply.blogid},param2=${reply.id})}"
+                                                   onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')"
+                                                   th:if="${session.user}">删除</a>
                                             </div>
                                         </div>
                                     </div>
@@ -619,14 +630,16 @@ h5,h6{font-size:1em;}
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <div class="ui left icon input">
                             <i class="user icon"></i>
-                            <input type="text" name="nickname" placeholder="姓名">
+                            <input type="text" name="nickname" placeholder="姓名"
+                                   th:value="${session.user}!=null ? ${session.user.nickname}">
                         </div>
                     </div>
                     <!--邮箱-->
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <div class="ui left icon input">
                             <i class="mail icon"></i>
-                            <input type="text" name="email" placeholder="邮箱">
+                            <input type="text" name="email" placeholder="邮箱"
+                                   th:value="${session.user}!=null ? ${session.user.email}">
                         </div>
                     </div>
                     <!--提交留言信息-->
@@ -641,6 +654,18 @@ h5,h6{font-size:1em;}
 
             </div>
         </div>
+        <div class="ui bottom attached segment" th:if="${blog.commentabled}=='off'">
+            <div class="ui info message">
+                <i class="close icon"></i>
+                <div class="header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                    该文章暂不支持评论哦
+                </font></font></div>
+                <ul class="list">
+                    <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很高兴再次见到你。</font></font></li>
+                    <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">你知道已经有一段时间了吗？</font></font></li>
+                </ul>
+            </div>
+        </div>
 
     </div>
 </div>
@@ -650,7 +675,7 @@ h5,h6{font-size:1em;}
 <div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
     <div class="ui vertical icon buttons ">
         <button type="button" class="ui toc teal button">目录</button>
-        <a href="#comment-container" class="ui teal button">留言</a>
+        <a href="#comment-contain" class="ui teal button">留言</a>
         <button class="ui wechat icon button"><i class="weixin icon"></i></button>
         <div id="toTop-button" href="#" class="ui icon button"><i class="chevron up icon"></i></div>
     </div>
@@ -767,6 +792,7 @@ h5,h6{font-size:1em;}
 <script>
 
     $('.menu.toggle').click(function () {
+
         $('.m-item').toggleClass('m-mobile-hide');
     });
 
@@ -906,6 +932,7 @@ h5,h6{font-size:1em;}
         $(window).scrollTo($('#comment-form'), 500);
     };
 
+    /*进入blog页面时自动加载评论列表*/
     $(function () {
         $("#comment-contain").load(/*[[@{/commentList/{blogId}(id=${blog.id})}]]*/"commentList/7");
     });

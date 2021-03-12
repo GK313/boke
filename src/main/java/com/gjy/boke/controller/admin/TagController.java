@@ -19,19 +19,19 @@ import java.util.List;
  * @Version 1.0
  */
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("admin")
 public class TagController {
     @Resource
     TagServiceImpl tagService;
 
     @GetMapping("tags")
     public String s_tags(){
-        return "admin/tags";
+        return "/admin/tags";
     }
 
-    @RequestMapping("/index")
+    @RequestMapping("index")
     public String index(){
-        return "admin/index";
+        return "/admin/index";
     }
 
     /**
@@ -84,7 +84,7 @@ public class TagController {
      * 根据前端传递的id，删除标签
      * @return
      */
-    @GetMapping("/tag/{id}/tagDelete")
+    @GetMapping("tag/{id}/tagDelete")
     public String deleteTagById(@PathVariable Long id,RedirectAttributes attributes){
         int i = tagService.deleteTag(id);
         if(i==1){
@@ -98,18 +98,18 @@ public class TagController {
     }
 
     //点击编辑，按钮，携带要修改的分类id,跳转到tag-input页面，进行编辑
-    @GetMapping("/tag/{id}/tagEdit")
+    @GetMapping("tag/{id}/tagEdit")
     public String tagEdit(@PathVariable  Long id,Model model){
         System.out.println("到达");
         //根据前端获取的编号id，查询到对应的分类名称，填充到input页面
         model.addAttribute("tag",tagService.getTagById(id));
-        return "admin/tag-input";
+        return "/admin/tag-input";
     }
 
     /**
      * 编辑修改标签名称
      */
-    @PostMapping("/saveTag/{id}")
+    @PostMapping("saveTag/{id}")
     public String  TagEdit(@PathVariable Long id,@RequestParam String tagname,RedirectAttributes attributes){
         //提交修改标签名前应该判断该新标签名是否已经存在
         Tag tagByName = tagService.getTagByName(tagname);

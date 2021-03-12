@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -37,32 +39,12 @@ public class TagShowController {
     @RequestMapping("/tagBlog")
     public String tagblog(Model model){
         List<Tag> blogsList = blogService.getBlogInTag();
+        Collections.sort(blogsList);
         List<Blog> blogs = blogService.getAllBlog();
         model.addAttribute("blogsList",blogsList);
         model.addAttribute("blogs",blogs);
         return "tags";
     }
 
-    /**
-     * 根据标签id获取对应的所有博客
-     * @param model
-     * @return
-     */
-    @RequestMapping("/bloglist/{id}")
-    public String getBlogByTagId(Model model, @PathVariable Long id) {
-        List<Tag> blogsList = blogService.getBlogInTag();
-        List<Tag> blog_tagList = blogService.getBlogInTagByTagId(id);
-        if(blog_tagList.size()!=0){
-            List<Blog> blogs = blog_tagList.get(0).getBlogs();
-            //为该标签下的每个blog赋type属性
-            for (Blog blog : blog_tagList.get(0).getBlogs()) {
-                blog.setType(typeService.getTypeById(blog.getTypeid()));
-            }
-            model.addAttribute("blogs",blogs);
-        }else{
-            model.addAttribute("message","该标签下还没有文章，关注博主，等待博主更新吧@_@");
-        }
-        model.addAttribute("blogsList",blogsList);
-        return "tags";
-    }
+
 }

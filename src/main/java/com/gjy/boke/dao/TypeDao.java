@@ -1,9 +1,6 @@
 package com.gjy.boke.dao;
 
 import com.gjy.boke.entity.Type;
-import javafx.scene.control.Pagination;
-import org.apache.ibatis.annotations.Mapper;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;

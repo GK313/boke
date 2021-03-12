@@ -20,7 +20,7 @@ import java.util.List;
  * @Version 1.0
  */
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("admin")
 public class TypeController {
     @Resource
     private TypeService typeService;
@@ -29,7 +29,7 @@ public class TypeController {
      * 点击admin下的types下的新增按钮，跳转到新增分类页面
      * @return
      */
-    @GetMapping("/type/input")
+    @GetMapping("type/input")
     public String input(Model model){
         model.addAttribute("type",new Type());
         return "admin/type-input";
@@ -40,7 +40,7 @@ public class TypeController {
      * @param name
      * @return
      */
-    @PostMapping("/saveTypes")
+    @PostMapping("saveTypes")
     public String  blog(@RequestParam String name, RedirectAttributes attributes){
         //新增分类之前查看该分类是否已经存在
         Type type = typeService.getTypeByName(name);
@@ -65,7 +65,7 @@ public class TypeController {
     }
 
     //分页查询
-    @GetMapping("/types")
+    @GetMapping("types")
     public String list(Model model, @RequestParam(defaultValue = "1",name="pageNum") Integer pageNum) {
         //pageNum为前端传递过来的分页后的“当前处在第几页”，默认在第一页
         //pageSize，表示每页存放的记录数
@@ -78,7 +78,7 @@ public class TypeController {
     }
 
     //删除分类
-    @GetMapping("/types/{id}/delete")
+    @GetMapping("types/{id}/delete")
     public String deleteTypeById(@PathVariable Long id,RedirectAttributes attributes) {
         int i = typeService.deleteByName(id);
         if (i == 1) {
@@ -92,7 +92,7 @@ public class TypeController {
     }
 
     //点击编辑，按钮，携带要修改的分类id,跳转到type-input页面，进行编辑
-    @GetMapping("/types/{id}/edit")
+    @GetMapping("types/{id}/edit")
     public String editType0(@PathVariable  Long id,Model model){
         //根据前端获取的编号id，查询到对应的分类名称，填充到input页面
         model.addAttribute("type",typeService.getTypeById(id));
@@ -106,7 +106,7 @@ public class TypeController {
      * @param attributes
      * @return
      */
-    @PostMapping("/saveTypes/{id}")
+    @PostMapping("saveTypes/{id}")
     public String updateType(@PathVariable Long id,@RequestParam String name,RedirectAttributes  attributes) {
         //提交表单的时候验证该分类名称是否已经存在
         Type type = typeService.getTypeByName(name);

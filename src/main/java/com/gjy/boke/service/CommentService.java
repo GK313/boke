@@ -27,6 +27,16 @@ public interface CommentService {
      */
     List<Comment> listCommentByBlogIdParentIdNull(Long blogId,Long parentCommentId);
 
-
+    /**
+     * 根据博客id查询Comment
+     * @param blogId
+     * @return
+     */
     List<Comment> listCommentByBlogId(Long blogId);
+
+    /**
+     * 根据博客id和评论id删除评论
+     * @return
+     */
+    void deleteCommentByBlogIdAndCommentId(Long BlogId,Long CommentId);
 }

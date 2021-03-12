@@ -43,10 +43,10 @@ public interface CommentDao {
 
     /**
      * 根据commentId查询Comment
-     * @param id
+     * @param byid
      * @return
      */
-    Comment getCommentById(Long id);
+    Comment getCommentById(Long byid);
 
     /**
      * 根据博客id和父博客id查询出子博客
@@ -58,8 +58,14 @@ public interface CommentDao {
 
     /**
      * 根据博客id查询Comment
-     * @param blodId
+     * @param blogId
      * @return
      */
-    List<Comment> listCommentByBlogId(Long blodId);
+    List<Comment> listCommentByBlogId(Long blogId);
+
+    /**
+     * 根据博客id和评论id删除评论
+     * @return
+     */
+    int deleteCommentByBlogIdAndCommentId(Long BlogId,Long CommentId);
 }

@@ -6,6 +6,7 @@ import com.gjy.boke.queryvo.BlogQuery;
 import com.gjy.boke.queryvo.BlogTypeQuery;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
@@ -110,5 +111,40 @@ public interface BlogDao  {
     /**
      * 根据标签id获取该标签下的所有博客
      */
+    @Transactional
     List<Tag> GetBlogInTagByTagId(Long tagId);
+
+    /**
+     * 根据博客id，将博客的评论数-1
+     */
+    @Transactional
+    int updateBlogCommentCountsCutOneByBlogId(Long BlogId);
+
+    /**
+     * 根据博客id，将博客的评论数+1
+     */
+    @Transactional
+    int updateBlogCommentCountsAddOneByBlogId(Long BlogId);
+
+    /**
+     * 文章访问数量自增
+     */
+    void updateBlogViewsAddOneByBlogId(Long BlogId);
+
+    /**
+     * 根据文章的更新时间对文章集合进行排序
+     * @return
+     */
+    List<Blog> listBlogOrderByUpdateTime();
+
+    /**
+     * 根据文章的评论数和文章的浏览数量对文章集合进行排序
+     * @return
+     */
+    List<Blog> listBlogOrderByBlogViewsAndCommentCount();
+
+    /**
+     * 全局搜索
+     */
+    List<Blog> listBlogBySearchQuery(String query);
 }

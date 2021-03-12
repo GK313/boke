@@ -7,9 +7,10 @@ import com.gjy.boke.service.BlogService;
 import com.gjy.boke.service.TypeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -34,12 +35,16 @@ public class TypeShowController {
        /* //获取所有分类以及每个分类对应的博客数量，即BlogTypeQuery
         List<BlogTypeQuery> types = blogService.getBlogTypeQueryVO();*/
         List<Type> types = typeService.getAllTypeAndBlog();
+        Collections.sort(types);
         //获取所有博客
         List<Blog> blogs = blogService.getAllBlog();
         model.addAttribute("types",types);
         model.addAttribute("blogs",blogs);
         return "types";
     }
+
+
+
 
 
 }

@@ -7,11 +7,11 @@
     <!--一CDN方式引入Semantic UI-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="../static/css/me.css">
-    <title>分类</title>
+    <title>搜索结果</title>
 </head>
 <body>
 <!--导航-->
-<nav th:replace="_fragments::menu(3)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+<nav th:replace="_fragments::menu(0)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui olive header item" style="font-family: STSong">boke</h2>
@@ -46,31 +46,17 @@
         <div class="ui top attached segment">
             <div class="ui middle aligned two column grid">
                 <div class="column">
-                    <i class="bookmark icon"></i>分类
+                    <i class="bookmark icon"></i><span style="font-weight: bold " >搜索结果</span>
                 </div>
                 <div class="right aligned column">
-                    共<h3 class="ui orange header m-inline-block" th:text="${types.size()}">12</h3>个
+                    共<h3 class="ui orange header m-inline-block" th:text="${blogs.size()}" >12</h3>个
                 </div>
             </div>
         </div>
-        <!--放置分类segment-->
-        <div class="ui attached orange segment m-padded-tb-large">
-            <!--分类-->
-            <div class="ui labeled button m-margin-tb-tiny" th:each="type:${types}">
 
-                <a  href="" th:href="@{${type.id}}"   class="ui  basic large label m-margin-tb-tiny"
-                   th:text="${type.name}"  th:classappend="${type.id==activeTypeId} ? 'teal'">
-                    SpringBoot</a>
 
-                <!--该分类下的博文数量-->
-                <div class="ui basic left pointing label" th:classappend="${type.id==activeTypeId} ? 'teal'"
-                     th:text="${#arrays.length(type.blogs)}">23</div>
-            </div>
-
-        </div>
-
-        <!-- 分类所对应的博客列表-->
-        <div class="ui top attached teal segment" th:fragment="blogListByType">
+        <!-- 搜索结果博客列表-->
+        <div class="ui top attached teal segment" >
             <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
                 <i class="close icon"></i>
                 <div class="header">提示：</div>
@@ -125,17 +111,7 @@
         </div>
 
 
-        <!--分页-->
-        <div class="ui bottom attached segment">
-            <div class="ui middle aligned two column grid">
-                <div class="column">
-                    <a href="#" class="ui mini teal basic button">上一页</a>
-                </div>
-                <div class="right aligned column">
-                    <a  href="#" class="ui mini teal basic button">下一页</a>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
 

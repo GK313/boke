@@ -4,6 +4,7 @@ import com.gjy.boke.entity.Blog;
 import com.gjy.boke.entity.Tag;
 import com.gjy.boke.queryvo.BlogTypeQuery;
 
+import java.awt.image.Kernel;
 import java.util.List;
 
 /**
@@ -90,4 +91,26 @@ public interface BlogService {
      * 根据标签id获取该标签下的所有博客
      */
     List<Tag> getBlogInTagByTagId(Long id);
+
+    int updateBlogCommentCountsAddOneByBlogId(Long BlogId);
+    int updateBlogCommentCountsCutOneByBlogId(Long BlogId);
+    //文章浏览次数自增
+    void updateBlogViewsAddOneByBlogId(Long blogId);
+
+    /**
+     * 根据文章的更新时间对文章集合进行排序
+     * @return
+     */
+    List<Blog> ListBlogOrderByUpdateTime();
+
+    /**
+     * 根据文章的评论数和文章的浏览数量对文章集合进行排序
+     * @return
+     */
+    List<Blog> ListBlogOrderByBlogViewsAndCommentCount();
+
+    /**
+     * 全局搜索
+     */
+    List<Blog> listBlogSearchByQuery(String query);
 }

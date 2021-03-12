@@ -8,7 +8,7 @@ import java.util.List;
  * t_type
  * @author 
  */
-public class Type implements Serializable {
+public class Type implements Serializable,Comparable<Type> {
     private Long id;
 
     private String name;
@@ -39,5 +39,10 @@ public class Type implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int compareTo(Type o) {
+        return o.getBlogs().size()-this.blogs.size();
     }
 }

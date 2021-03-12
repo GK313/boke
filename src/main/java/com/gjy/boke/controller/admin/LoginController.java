@@ -38,7 +38,7 @@ public class LoginController {
             //不把密码传递到前端
             user.setPassword(null);
             session.setAttribute("user",user);
-            return "/admin/index";
+            return "admin/index";
         }else{
             //因为是重定向，所以需要使用RedirectAttribute将message传递到前端，用Model无法实现
             attributes.addFlashAttribute("message","用户名和密码错误");

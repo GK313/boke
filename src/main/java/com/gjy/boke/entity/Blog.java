@@ -47,7 +47,7 @@ public class Blog implements Serializable {
 
     @DateTimeFormat
     private Date createtime;
-
+    @DateTimeFormat
     private Date updatetime;
 
     private Long typeid;

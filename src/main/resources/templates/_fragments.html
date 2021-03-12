@@ -17,6 +17,8 @@
     <!--引入editor.md的css样式-->
     <link rel="stylesheet" href="../static/lib/editormd/css/editormd.css" th:href="@{/lib/editormd/css/editormd.css}"/>
     <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon"/>
+    <!--网站图标error中-->
+    <link rel="shortcut icon" href="../static/favicon.ico" th:href="@{/static/favicon.ico}"/>
 </head>
 <body>
 <!--导航-->
@@ -28,19 +30,54 @@
                     class="home icon"></i>首页</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"
                th:href="@{/tag/tagBlog}"><i
-                    class="clone outline icon"></i>标签</a>
+                    class="tags icon"></i>标签</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'" th:href="@{/type/typeBlog}"><i
                     class="clock icon"></i>分类</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="music icon"></i>归档</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i>关于我</a>
             <!--搜索框-->
-            <div class="right m-item item">
-                <form name="search" action="#" method="post" target="_blank">
-                    <div class="ui icon transparent input m-margin-tb-tiny" style="color: white">
-                        <input style="color: white" type="text" name="query" placeholder="Search....">
-                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+            <div class="right m-item item m-mobile-hide">
+                <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon input m-margin-tb-tiny">
+                        <input  type="text" name="query" placeholder="搜索文章...." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class=" search link icon"></i>
                     </div>
                 </form>
+                &nbsp;
+                &nbsp;
+               <!-- &lt;!&ndash;写文章&ndash;&gt;
+                <button class="ui blue button m-margin-tb-tiny" ><font style="color: white">写文章</font></button>
+                &nbsp;
+                &nbsp;
+                &lt;!&ndash;登录按钮&ndash;&gt;
+                <button class="ui olive button m-margin-tb-tiny" th:if="${session.user}==null"><font style="color:
+                white">登录</font></button>-->
+
+                <!--用户头像-->
+                <!--<div class="ui horizontal list" th:if="${session.user}">
+                    <a class="ui olive image label">
+                        <img th:src="@{${session.user.avatar}}" width="150em" height="100em"> <font
+                            style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;" th:text="${session.user.nickname}">
+                        乔
+                    </font></font></a>
+                </div>-->
+                <!--下拉图标-->
+                <div class="right m-item m-mobile-hide menu" th:if="${session.user}">
+                    <div class="ui dropdown item ">
+                        <div class="text">
+                            <img class="ui avatar image"
+                                 th:src="@{${session.user.avatar}}">
+                            <span th:text="${session.user.nickname}">GJY</span>
+                        </div>
+                        <!--下拉图标-->
+                        <i class="dropdown icon"></i>
+                        <!--下拉菜单-->
+                        <div class="menu">
+                            <a href="#" th:href="@{/loginOut}" class="item">注销</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -115,5 +152,16 @@
         <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备20004408号-1</a>
     </div>
 </footer>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    /*初始化下拉列表*/
+    $('.ui.dropdown')
+        .dropdown({
+            on : 'hover'
+        });
+</script>
 </body>
+
 </html>

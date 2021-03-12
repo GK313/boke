@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.lang.reflect.Array;
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -29,8 +32,10 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public int saveComment(Comment comment) {
         comment.setCreatetime(new Date());
+
         comment.setAvatar("https://picsum.photos/id/274/3824/2520");
         Long parentcommentid = comment.getParentcommentid();
+
         if(parentcommentid!=Long.parseLong("-1")){
             //如果当前的评论的getParentcommentid不为-1，即不为默认值，则该评论有父评论
             //根据parentcommentid找出该当前评论的父评论
@@ -66,6 +71,11 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public List<Comment> listCommentByBlogId(Long blogId) {
         return commentDao.listCommentByBlogId(blogId);
+    }
+
+    @Override
+    public void deleteCommentByBlogIdAndCommentId(Long BlogId, Long CommentId) {
+        commentDao.deleteCommentByBlogIdAndCommentId(BlogId,CommentId);
     }
 
     /**

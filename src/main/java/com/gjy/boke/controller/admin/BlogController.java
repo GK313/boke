@@ -99,8 +99,6 @@ public class BlogController {
     @PostMapping("/addBlog")
     public String AddBlog(Blog blog, @RequestParam() String tagId, Model model, HttpSession session,
                           RedirectAttributes attributes) {
-        System.out.println(tagId);
-
         //根据tagid获取对应的Type实体,并将获取的实体填充到Blog的type属性中
         blog.setType(typeService.getTypeById(blog.getTypeid()));
         //从session中获取userid,并填充到Blog的userid属性中

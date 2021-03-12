@@ -1,5 +1,8 @@
 package com.gjy.boke.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,6 +12,7 @@ import java.util.List;
  * t_comment
  * @author 
  */
+@Table(name="t_comment")
 public class Comment implements Serializable {
     private Long id;
 
@@ -19,7 +23,7 @@ public class Comment implements Serializable {
     private String content;
 
     private String avatar;
-
+    @DateTimeFormat
     private Date createtime;
 
     private Long blogid;

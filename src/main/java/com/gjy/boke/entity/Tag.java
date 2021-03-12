@@ -8,7 +8,7 @@ import java.util.List;
  * t_tag
  * @author 
  */
-public class Tag implements Serializable {
+public class Tag implements Serializable,Comparable<Tag> {
     private Long id;
 
     private String name;
@@ -39,5 +39,16 @@ public class Tag implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+
+    /**
+     * 重写排序规则
+     * @param o
+     * @return
+     */
+    @Override
+    public int compareTo(Tag o) {
+        return o.getBlogs().size()-this.getBlogs().size();
     }
 }

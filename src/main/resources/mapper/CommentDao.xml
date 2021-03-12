@@ -1,97 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gjy.boke.dao.CommentDao">
-  <resultMap id="BaseResultMap" type="com.gjy.boke.entity.Comment">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
-    <result column="email" jdbcType="VARCHAR" property="email" />
-    <result column="content" jdbcType="VARCHAR" property="content" />
-    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
-    <result column="createTime" jdbcType="DATE" property="createtime" />
-    <result column="blogId" jdbcType="BIGINT" property="blogid" />
-    <result column="parentCommentId" jdbcType="BIGINT" property="parentcommentid" />
-    <result column="parentNickname" jdbcType="VARCHAR" property="parentnickname" />
-    <result column="adminComment" jdbcType="BIT" property="admincomment" />
-  </resultMap>
-  <sql id="Base_Column_List">
+    <resultMap id="BaseResultMap" type="com.gjy.boke.entity.Comment">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="avatar" jdbcType="VARCHAR" property="avatar"/>
+        <result column="createTime" jdbcType="DATE" property="createtime"/>
+        <result column="blogId" jdbcType="BIGINT" property="blogid"/>
+        <result column="parentCommentId" jdbcType="BIGINT" property="parentcommentid"/>
+        <result column="parentNickname" jdbcType="VARCHAR" property="parentnickname"/>
+        <result column="adminComment" jdbcType="BIT" property="admincomment"/>
+    </resultMap>
+    <sql id="Base_Column_List">
     id, nickname, email, content, avatar, createTime, blogId, parentCommentId, parentNickname, 
     adminComment
   </sql>
-  <insert id="saveComment">
-    insert into t_comment
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="nickname != null">
-        nickname,
-      </if>
-      <if test="email != null">
-        email,
-      </if>
-      <if test="content != null">
-        content,
-      </if>
-      <if test="avatar != null">
-        avatar,
-      </if>
-      <if test="createtime != null">
-        createTime,
-      </if>
-      <if test="blogid != null">
-        blogId,
-      </if>
-      <if test="parentcommentid != null">
-        parentCommentId,
-      </if>
-      <if test="parentnickname != null">
-        parentNickname,
-      </if>
-      <if test="admincomment != null">
-        adminComment,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="nickname != null">
-        #{nickname,jdbcType=VARCHAR},
-      </if>
-      <if test="email != null">
-        #{email,jdbcType=VARCHAR},
-      </if>
-      <if test="content != null">
-        #{content,jdbcType=VARCHAR},
-      </if>
-      <if test="avatar != null">
-        #{avatar,jdbcType=VARCHAR},
-      </if>
-      <if test="createtime != null">
-        #{createtime,jdbcType=DATE},
-      </if>
-      <if test="blogid != null">
-        #{blogid,jdbcType=BIGINT},
-      </if>
-      <if test="parentcommentid != null">
-        #{parentcommentid,jdbcType=BIGINT},
-      </if>
-      <if test="parentnickname != null">
-        #{parentnickname,jdbcType=VARCHAR},
-      </if>
-      <if test="admincomment != null">
-        #{admincomment,jdbcType=BIT},
-      </if>
-    </trim>
-  </insert>
-  <select id="listCommentByBlogIdInParentCommentIdNull" resultMap="BaseResultMap">
-    select *from t_comment where blogId=#{blogid} and parentCommentId=#{parentCommentId} ORDER BY createTime DESC;
+    <insert id="saveComment">
+        insert into t_comment
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="nickname != null">
+                nickname,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="avatar != null">
+                avatar,
+            </if>
+            <if test="createtime != null">
+                createTime,
+            </if>
+            <if test="blogid != null">
+                blogId,
+            </if>
+            <if test="parentcommentid != null">
+                parentCommentId,
+            </if>
+            <if test="parentnickname != null">
+                parentNickname,
+            </if>
+            <if test="admincomment != null">
+                adminComment,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="nickname != null">
+                #{nickname,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="avatar != null">
+                #{avatar,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                #{createtime,jdbcType=DATE},
+            </if>
+            <if test="blogid != null">
+                #{blogid,jdbcType=BIGINT},
+            </if>
+            <if test="parentcommentid != null">
+                #{parentcommentid,jdbcType=BIGINT},
+            </if>
+            <if test="parentnickname != null">
+                #{parentnickname,jdbcType=VARCHAR},
+            </if>
+            <if test="admincomment != null">
+                #{admincomment,jdbcType=BIT},
+            </if>
+        </trim>
+    </insert>
+    <delete id="deleteCommentByBlogIdAndCommentId">
+        DELETE FROM t_comment WHERE id=#{CommentId} AND blogId=#{BlogId};
+  </delete>
+    <select id="listCommentByBlogIdInParentCommentIdNull" resultMap="BaseResultMap">
+    select *from t_comment where blogId=#{blogid} and parentCommentId=#{parentCommentId} ORDER BY createTime Asc;
   </select>
-  <select id="getCommentById" resultType="com.gjy.boke.entity.Comment">
-    select * from t_Comment where id=#{id};
+    <select id="getCommentById" resultType="com.gjy.boke.entity.Comment">
+    select * from t_comment where id=#{byid};
   </select>
-  <select id="listCommentByBlogIdInParentCommentIdNotNull" resultMap="BaseResultMap">
-    select *from t_comment where blogId=#{blogid} and parentCommentId=#{parentCommentId} ORDER BY createTime DESC;
+    <select id="listCommentByBlogIdInParentCommentIdNotNull" resultMap="BaseResultMap">
+    select *from t_comment where blogId=#{blogid} and parentCommentId=#{parentCommentId} ORDER BY createTime Asc;
   </select>
-  <select id="listChildCommentByBlogIdAndCommentId" resultMap="BaseResultMap">
-    select *from t_comment where blogID=#{BlogId} and id=#{CommentId} ORDER BY createTime DESC;
+    <select id="listChildCommentByBlogIdAndCommentId" resultMap="BaseResultMap">
+    select *from t_comment where blogID=#{BlogId} and id=#{CommentId} ORDER BY createTime Asc;
   </select>
     <select id="listCommentByBlogId" resultMap="BaseResultMap">
-      select *from t_comment where blogId=#{blodId};
+      select *from t_comment where blogId=#{blogId};
     </select>
 
 
