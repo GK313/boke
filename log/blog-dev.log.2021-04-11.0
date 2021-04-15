@@ -1,0 +1,1204 @@
+2021-04-11 14:27:43.383  INFO 1564 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 1564 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 14:27:43.398 DEBUG 1564 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 14:27:43.398  INFO 1564 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 14:27:43.586  INFO 1564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 14:27:43.586  INFO 1564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 14:27:45.648  INFO 1564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:27:45.648  INFO 1564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 14:27:45.804  INFO 1564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 0 JPA repository interfaces.
+2021-04-11 14:27:45.866  INFO 1564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:27:45.866  INFO 1564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 14:27:45.976  INFO 1564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 0 Redis repository interfaces.
+2021-04-11 14:27:48.133  INFO 1564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 14:27:48.155  INFO 1564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 14:27:48.155  INFO 1564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 14:27:48.171  INFO 1564 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 14:27:48.171  INFO 1564 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 14:27:48.171  INFO 1564 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 14:27:48.202  INFO 1564 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 14:27:48.598  INFO 1564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 14:27:48.598  INFO 1564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5012 ms
+2021-04-11 14:27:49.388  INFO 1564 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-11 14:27:52.111  INFO 1564 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 14:27:52.298  INFO 1564 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-11 14:27:52.688  INFO 1564 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-11 14:27:53.001  INFO 1564 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 14:27:53.470  INFO 1564 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 14:27:53.501  INFO 1564 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 14:27:53.719  WARN 1564 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 14:27:57.352  INFO 1564 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a8ce3ff, org.springframework.security.web.context.SecurityContextPersistenceFilter@5abafa4a, org.springframework.security.web.header.HeaderWriterFilter@52e1ec4e, org.springframework.security.web.csrf.CsrfFilter@5d4657a0, org.springframework.security.web.authentication.logout.LogoutFilter@45f8c1e3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@419738d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@535dd421, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a54badb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1184330c, org.springframework.security.web.session.SessionManagementFilter@d751082, org.springframework.security.web.access.ExceptionTranslationFilter@63ed5659, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@75961561]
+2021-04-11 14:27:57.975  INFO 1564 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 14:27:58.338  INFO 1564 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 14:28:01.079  INFO 1564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 14:28:01.157  INFO 1564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 14:28:01.188  INFO 1564 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 19.263 seconds (JVM running for 25.006)
+2021-04-11 14:28:15.982  INFO 1564 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 14:28:15.984  INFO 1564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 14:28:15.987  INFO 1564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-04-11 14:28:16.352 DEBUG 1564 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 14:28:16.392 DEBUG 1564 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 14:28:16.466 DEBUG 1564 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 14:28:16.469 DEBUG 1564 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-11 14:28:16.469 DEBUG 1564 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-11 14:28:16.474 DEBUG 1564 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-11 14:28:16.474 DEBUG 1564 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-11 14:28:16.474 DEBUG 1564 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-11 14:28:16.484 DEBUG 1564 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-11 14:28:16.486 DEBUG 1564 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-11 14:28:16.486 DEBUG 1564 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-11 14:28:16.499 DEBUG 1564 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-11 14:28:16.501 DEBUG 1564 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-11 14:28:16.501 DEBUG 1564 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-11 14:28:16.504 DEBUG 1564 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-11 14:28:16.506  INFO 1564 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-11 14:28:17.557 DEBUG 1564 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 14:28:17.559 DEBUG 1564 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 14:28:17.577 DEBUG 1564 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 14:28:17.578 DEBUG 1564 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-11 14:28:17.580 DEBUG 1564 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-11 14:28:17.584 DEBUG 1564 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-11 14:28:17.585 DEBUG 1564 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-11 14:28:17.586 DEBUG 1564 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-11 14:28:17.596 DEBUG 1564 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-11 14:28:17.597 DEBUG 1564 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-11 14:28:17.598 DEBUG 1564 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-11 14:28:17.608 DEBUG 1564 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-11 14:28:17.609 DEBUG 1564 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-11 14:28:17.610 DEBUG 1564 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-11 14:28:17.612 DEBUG 1564 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-11 14:28:17.613  INFO 1564 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-11 14:28:22.418 DEBUG 1564 --- [http-nio-8080-exec-10] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 14:28:22.420 DEBUG 1564 --- [http-nio-8080-exec-10] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 7(Long)
+2021-04-11 14:28:22.488 DEBUG 1564 --- [http-nio-8080-exec-10] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 14:28:22.490 DEBUG 1564 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 14:28:22.490 DEBUG 1564 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 7(Long)
+2021-04-11 14:28:22.495 DEBUG 1564 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 14:28:22.689 DEBUG 1564 --- [http-nio-8080-exec-10] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:28:22.689 DEBUG 1564 --- [http-nio-8080-exec-10] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 7(Long), -1(Long)
+2021-04-11 14:28:22.697 DEBUG 1564 --- [http-nio-8080-exec-10] listCommentByBlogIdInParentCommentIdNull : <==      Total: 3
+2021-04-11 14:28:22.697 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:28:22.697 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 73(Long)
+2021-04-11 14:28:22.705 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 2
+2021-04-11 14:28:22.705 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:28:22.705 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 76(Long)
+2021-04-11 14:28:22.705 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:28:22.713 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:28:22.713 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 77(Long)
+2021-04-11 14:28:22.713 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:28:22.713 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:28:22.721 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 86(Long)
+2021-04-11 14:28:22.721 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:28:22.721 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:28:22.721 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 87(Long)
+2021-04-11 14:28:22.729 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 14:28:22.729 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:28:22.729 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 88(Long)
+2021-04-11 14:28:22.729 DEBUG 1564 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:28:22.729  INFO 1564 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 14:29:36.895 DEBUG 1564 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 14:29:36.895 DEBUG 1564 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 7(Long)
+2021-04-11 14:29:36.967 DEBUG 1564 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 14:29:36.967 DEBUG 1564 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 14:29:36.967 DEBUG 1564 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 7(Long)
+2021-04-11 14:29:36.967 DEBUG 1564 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 14:29:36.975 DEBUG 1564 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:29:36.975 DEBUG 1564 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 7(Long), -1(Long)
+2021-04-11 14:29:36.975 DEBUG 1564 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : <==      Total: 3
+2021-04-11 14:29:36.975 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:29:36.975 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 73(Long)
+2021-04-11 14:29:36.983 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 2
+2021-04-11 14:29:36.983 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:29:36.983 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 76(Long)
+2021-04-11 14:29:36.983 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:29:36.983 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:29:36.983 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 77(Long)
+2021-04-11 14:29:36.983 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:29:36.991 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:29:36.991 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 86(Long)
+2021-04-11 14:29:36.991 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:29:36.991 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:29:36.991 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 87(Long)
+2021-04-11 14:29:36.991 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 14:29:36.991 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:29:36.999 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 88(Long)
+2021-04-11 14:29:36.999 DEBUG 1564 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:29:36.999  INFO 1564 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 14:30:26.698 DEBUG 1564 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-11 14:30:26.698 DEBUG 1564 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-11 14:30:26.706 DEBUG 1564 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-11 14:30:27.232 DEBUG 1564 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 14:30:27.232 DEBUG 1564 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 14:30:27.248 DEBUG 1564 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 14:30:27.248  INFO 1564 --- [http-nio-8080-exec-9] com.gjy.boke.aspect.LogAspect            : Result tags
+2021-04-11 14:30:37.072 DEBUG 1564 --- [http-nio-8080-exec-7] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 14:30:37.072 DEBUG 1564 --- [http-nio-8080-exec-7] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 7(Long)
+2021-04-11 14:30:37.128 DEBUG 1564 --- [http-nio-8080-exec-7] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 14:30:37.128 DEBUG 1564 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 14:30:37.128 DEBUG 1564 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 7(Long)
+2021-04-11 14:30:37.136 DEBUG 1564 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 14:30:37.136 DEBUG 1564 --- [http-nio-8080-exec-7] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:37.136 DEBUG 1564 --- [http-nio-8080-exec-7] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 7(Long), -1(Long)
+2021-04-11 14:30:37.136 DEBUG 1564 --- [http-nio-8080-exec-7] listCommentByBlogIdInParentCommentIdNull : <==      Total: 3
+2021-04-11 14:30:37.144 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:37.144 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 73(Long)
+2021-04-11 14:30:37.152 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 2
+2021-04-11 14:30:37.152 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:37.152 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 76(Long)
+2021-04-11 14:30:37.152 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:30:37.152 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:37.152 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 77(Long)
+2021-04-11 14:30:37.152 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:30:37.160 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:37.160 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 86(Long)
+2021-04-11 14:30:37.160 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:30:37.160 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:37.160 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 87(Long)
+2021-04-11 14:30:37.168 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 14:30:37.168 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:37.168 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 88(Long)
+2021-04-11 14:30:37.168 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:30:37.168  INFO 1564 --- [http-nio-8080-exec-7] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 14:30:46.793 DEBUG 1564 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-11 14:30:46.793 DEBUG 1564 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-11 14:30:46.809 DEBUG 1564 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-11 14:30:48.824 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.b.dao.BlogDao.GetBlogInTagByTagId    : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_blog.content,t_tag.id,t_tag.name,t_blog.firstpicture,t_blog.flag,t_blog.views,t_blog.commentCount,t_blog.createTime,t_blog.updateTime,t_blog.typeId,t_blog.userId,t_blog.description FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` where blog_tag.`tagid`=? ; 
+2021-04-11 14:30:48.824 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.b.dao.BlogDao.GetBlogInTagByTagId    : ==> Parameters: 3(Long)
+2021-04-11 14:30:48.832 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.b.dao.BlogDao.GetBlogInTagByTagId    : <==      Total: 13
+2021-04-11 14:30:48.840 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:48.840 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 4(Long)
+2021-04-11 14:30:48.848 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:50.288 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:50.296 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 10(Long)
+2021-04-11 14:30:50.296 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:51.012 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:51.012 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 4(Long)
+2021-04-11 14:30:51.020 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:51.654 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:51.654 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 4(Long)
+2021-04-11 14:30:51.654 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:52.208 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:52.208 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2021-04-11 14:30:52.208 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:52.710 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:52.710 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2021-04-11 14:30:52.718 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:52.977 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:52.977 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2021-04-11 14:30:52.985 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:53.187 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:53.195 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 3(Long)
+2021-04-11 14:30:53.195 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:53.411 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:53.411 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 3(Long)
+2021-04-11 14:30:53.411 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:53.574 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==>  Preparing: select id, `name` from t_type where id = ? 
+2021-04-11 14:30:53.574 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : ==> Parameters: 2(Long)
+2021-04-11 14:30:53.574 DEBUG 1564 --- [http-nio-8080-exec-4] c.g.boke.dao.TypeDao.selectByPrimaryKey  : <==      Total: 1
+2021-04-11 14:30:53.839  INFO 1564 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result tags
+2021-04-11 14:30:59.391 DEBUG 1564 --- [http-nio-8080-exec-7] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 14:30:59.391 DEBUG 1564 --- [http-nio-8080-exec-7] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 1(Long)
+2021-04-11 14:30:59.439 DEBUG 1564 --- [http-nio-8080-exec-7] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 14:30:59.439 DEBUG 1564 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 14:30:59.439 DEBUG 1564 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 1(Long)
+2021-04-11 14:30:59.447 DEBUG 1564 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 14:30:59.455 DEBUG 1564 --- [http-nio-8080-exec-7] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:59.455 DEBUG 1564 --- [http-nio-8080-exec-7] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 1(Long), -1(Long)
+2021-04-11 14:30:59.455 DEBUG 1564 --- [http-nio-8080-exec-7] listCommentByBlogIdInParentCommentIdNull : <==      Total: 2
+2021-04-11 14:30:59.455 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:59.455 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 78(Long)
+2021-04-11 14:30:59.463 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 14:30:59.463 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:59.463 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 79(Long)
+2021-04-11 14:30:59.471 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:30:59.471 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:59.471 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 84(Long)
+2021-04-11 14:30:59.471 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 14:30:59.471 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:30:59.471 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 85(Long)
+2021-04-11 14:30:59.471 DEBUG 1564 --- [http-nio-8080-exec-7] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:30:59.479  INFO 1564 --- [http-nio-8080-exec-7] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 14:34:46.123  INFO 1564 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 14:34:46.170  INFO 1564 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 14:34:46.170  INFO 1564 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-11 14:34:46.186  INFO 1564 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-11 14:43:24.290  INFO 7912 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 7912 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 14:43:24.290 DEBUG 7912 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 14:43:24.290  INFO 7912 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 14:43:24.416  INFO 7912 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 14:43:24.416  INFO 7912 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 14:43:26.179  INFO 7912 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:43:26.179  INFO 7912 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 14:43:26.258  INFO 7912 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 0 JPA repository interfaces.
+2021-04-11 14:43:26.289  INFO 7912 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:43:26.289  INFO 7912 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 14:43:26.367  INFO 7912 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 0 Redis repository interfaces.
+2021-04-11 14:43:27.998  INFO 7912 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 14:43:28.014  INFO 7912 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 14:43:28.014  INFO 7912 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 14:43:28.029  INFO 7912 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 14:43:28.029  INFO 7912 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 14:43:28.029  INFO 7912 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 14:43:28.029  INFO 7912 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 14:43:28.386  INFO 7912 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 14:43:28.386  INFO 7912 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3954 ms
+2021-04-11 14:43:29.077  INFO 7912 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-11 14:43:31.015  INFO 7912 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 14:43:31.155  INFO 7912 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-11 14:43:31.499  INFO 7912 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-11 14:43:31.801  INFO 7912 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 14:43:32.191  INFO 7912 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 14:43:32.207  INFO 7912 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 14:43:32.365  WARN 7912 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 14:43:35.133  INFO 7912 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3173a68f, org.springframework.security.web.context.SecurityContextPersistenceFilter@62e39b77, org.springframework.security.web.header.HeaderWriterFilter@6055967c, org.springframework.security.web.csrf.CsrfFilter@47d093aa, org.springframework.security.web.authentication.logout.LogoutFilter@1f5b992b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7d6cc53, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@437925f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51c26fb1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fab5bda, org.springframework.security.web.session.SessionManagementFilter@5ca766f3, org.springframework.security.web.access.ExceptionTranslationFilter@68985d8e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79c04674]
+2021-04-11 14:43:35.583  INFO 7912 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 14:43:35.891  INFO 7912 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 14:43:38.468  INFO 7912 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 14:43:38.587  INFO 7912 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 14:43:38.602  INFO 7912 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 15.793 seconds (JVM running for 20.498)
+2021-04-11 14:43:48.267  INFO 7912 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 14:43:48.267  INFO 7912 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 14:43:48.267  INFO 7912 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-11 14:43:48.620 DEBUG 7912 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 14:43:48.660 DEBUG 7912 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 1(Long)
+2021-04-11 14:43:48.763 DEBUG 7912 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 14:43:48.779 DEBUG 7912 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 14:43:48.779 DEBUG 7912 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 1(Long)
+2021-04-11 14:43:48.819 DEBUG 7912 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 14:43:48.957 DEBUG 7912 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:43:48.957 DEBUG 7912 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 1(Long), -1(Long)
+2021-04-11 14:43:48.974 DEBUG 7912 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : <==      Total: 2
+2021-04-11 14:43:48.974 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:43:48.974 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 78(Long)
+2021-04-11 14:43:48.974 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 14:43:48.982 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:43:48.982 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 79(Long)
+2021-04-11 14:43:48.982 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:43:48.982 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:43:48.982 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 84(Long)
+2021-04-11 14:43:48.982 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 14:43:48.990 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:43:48.990 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 85(Long)
+2021-04-11 14:43:48.990 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:43:48.990  INFO 7912 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 14:45:54.751 DEBUG 7912 --- [http-nio-8080-exec-5] c.g.b.dao.BlogDao.listBlogBySearchQuery  : ==>  Preparing: select t_type.name,t_blog.* from t_blog Join t_type on t_type.id=t_blog.typeId where t_blog.title like ? or t_blog.content like ? or t_blog.description like ?; 
+2021-04-11 14:45:54.751 DEBUG 7912 --- [http-nio-8080-exec-5] c.g.b.dao.BlogDao.listBlogBySearchQuery  : ==> Parameters: %前端开发%(String), %前端开发%(String), %前端开发%(String)
+2021-04-11 14:45:54.767 DEBUG 7912 --- [http-nio-8080-exec-5] c.g.b.dao.BlogDao.listBlogBySearchQuery  : <==      Total: 1
+2021-04-11 14:45:54.767  INFO 7912 --- [http-nio-8080-exec-5] com.gjy.boke.aspect.LogAspect            : Result result
+2021-04-11 14:45:56.861 DEBUG 7912 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 14:45:56.861 DEBUG 7912 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 113(Long)
+2021-04-11 14:45:56.893 DEBUG 7912 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 14:45:56.893 DEBUG 7912 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 14:45:56.893 DEBUG 7912 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 113(Long)
+2021-04-11 14:45:56.901 DEBUG 7912 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 14:45:56.917 DEBUG 7912 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:45:56.917 DEBUG 7912 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 113(Long), -1(Long)
+2021-04-11 14:45:56.917 DEBUG 7912 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : <==      Total: 1
+2021-04-11 14:45:56.925 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:45:56.925 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 113(Long), 80(Long)
+2021-04-11 14:45:56.925 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 2
+2021-04-11 14:45:56.933 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:45:56.933 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 113(Long), 81(Long)
+2021-04-11 14:45:56.933 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:45:56.933 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:45:56.933 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 113(Long), 82(Long)
+2021-04-11 14:45:56.933 DEBUG 7912 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:45:56.933  INFO 7912 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 14:46:43.703 DEBUG 7912 --- [http-nio-8080-exec-3] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 14:46:43.703 DEBUG 7912 --- [http-nio-8080-exec-3] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 7(Long)
+2021-04-11 14:46:43.808 DEBUG 7912 --- [http-nio-8080-exec-3] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 14:46:43.808 DEBUG 7912 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 14:46:43.808 DEBUG 7912 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 7(Long)
+2021-04-11 14:46:43.815 DEBUG 7912 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 14:46:43.815 DEBUG 7912 --- [http-nio-8080-exec-3] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:46:43.815 DEBUG 7912 --- [http-nio-8080-exec-3] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 7(Long), -1(Long)
+2021-04-11 14:46:43.823 DEBUG 7912 --- [http-nio-8080-exec-3] listCommentByBlogIdInParentCommentIdNull : <==      Total: 3
+2021-04-11 14:46:43.823 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:46:43.823 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 73(Long)
+2021-04-11 14:46:43.831 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 2
+2021-04-11 14:46:43.831 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:46:43.831 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 76(Long)
+2021-04-11 14:46:43.831 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:46:43.839 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:46:43.839 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 77(Long)
+2021-04-11 14:46:43.839 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:46:43.839 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:46:43.839 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 86(Long)
+2021-04-11 14:46:43.839 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:46:43.839 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:46:43.839 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 87(Long)
+2021-04-11 14:46:43.847 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 14:46:43.847 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:46:43.847 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 88(Long)
+2021-04-11 14:46:43.847 DEBUG 7912 --- [http-nio-8080-exec-3] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:46:43.847  INFO 7912 --- [http-nio-8080-exec-3] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 14:47:14.096  INFO 7912 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 14:47:14.127  INFO 7912 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 14:47:14.143  INFO 7912 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-11 14:47:14.154  INFO 7912 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-11 14:48:21.766  INFO 11844 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 11844 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 14:48:21.782 DEBUG 11844 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 14:48:21.782  INFO 11844 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 14:48:21.924  INFO 11844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 14:48:21.924  INFO 11844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 14:48:23.591  INFO 11844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:48:23.591  INFO 11844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 14:48:23.684  INFO 11844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 0 JPA repository interfaces.
+2021-04-11 14:48:23.716  INFO 11844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:48:23.716  INFO 11844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 14:48:23.794  INFO 11844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 0 Redis repository interfaces.
+2021-04-11 14:48:25.433  INFO 11844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 14:48:25.449  INFO 11844 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 14:48:25.449  INFO 11844 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 14:48:25.465  INFO 11844 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 14:48:25.465  INFO 11844 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 14:48:25.465  INFO 11844 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 14:48:25.465  INFO 11844 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 14:48:25.849  INFO 11844 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 14:48:25.849  INFO 11844 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3925 ms
+2021-04-11 14:48:26.524  INFO 11844 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-11 14:48:28.483  INFO 11844 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 14:48:28.593  INFO 11844 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-11 14:48:28.918  INFO 11844 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-11 14:48:29.196  INFO 11844 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 14:48:29.550  INFO 11844 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 14:48:29.581  INFO 11844 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 14:48:29.756  WARN 11844 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 14:48:32.598  INFO 11844 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4952efd0, org.springframework.security.web.context.SecurityContextPersistenceFilter@49620c9e, org.springframework.security.web.header.HeaderWriterFilter@28b1ef79, org.springframework.security.web.csrf.CsrfFilter@3b83736c, org.springframework.security.web.authentication.logout.LogoutFilter@519e8582, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2d34b21c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64ee7efe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a0b3c4e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d326ee7, org.springframework.security.web.session.SessionManagementFilter@715da4e4, org.springframework.security.web.access.ExceptionTranslationFilter@3bd931df, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e435e38]
+2021-04-11 14:48:33.223  INFO 11844 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 14:48:33.633  INFO 11844 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 14:48:36.446  INFO 11844 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 14:48:36.527  INFO 11844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 14:48:36.543  INFO 11844 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 16.256 seconds (JVM running for 20.362)
+2021-04-11 14:48:43.221  INFO 11844 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 14:48:43.222  INFO 11844 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 14:48:43.224  INFO 11844 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-11 14:48:43.611 DEBUG 11844 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 14:48:43.658 DEBUG 11844 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 7(Long)
+2021-04-11 14:48:43.690 DEBUG 11844 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 14:48:43.697 DEBUG 11844 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 14:48:43.697 DEBUG 11844 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 7(Long)
+2021-04-11 14:48:43.738 DEBUG 11844 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 14:48:43.891 DEBUG 11844 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:48:43.891 DEBUG 11844 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 7(Long), -1(Long)
+2021-04-11 14:48:43.899 DEBUG 11844 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : <==      Total: 3
+2021-04-11 14:48:43.907 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:48:43.907 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 73(Long)
+2021-04-11 14:48:43.907 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 2
+2021-04-11 14:48:43.907 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:48:43.907 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 76(Long)
+2021-04-11 14:48:43.915 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:48:43.915 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:48:43.915 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 77(Long)
+2021-04-11 14:48:43.915 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:48:43.923 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:48:43.923 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 86(Long)
+2021-04-11 14:48:43.923 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:48:43.923 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:48:43.923 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 87(Long)
+2021-04-11 14:48:43.931 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 14:48:43.931 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:48:43.931 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 88(Long)
+2021-04-11 14:48:43.931 DEBUG 11844 --- [http-nio-8080-exec-1] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 14:48:43.939  INFO 11844 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 14:49:16.678  INFO 11844 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 14:49:16.725  INFO 11844 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 14:49:16.725  INFO 11844 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-11 14:49:16.742  INFO 11844 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-11 14:51:47.975  INFO 12128 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 12128 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 14:51:47.991 DEBUG 12128 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 14:51:47.991  INFO 12128 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 14:51:48.116  INFO 12128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 14:51:48.116  INFO 12128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 14:51:49.738  INFO 12128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:51:49.738  INFO 12128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 14:51:49.832  INFO 12128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 0 JPA repository interfaces.
+2021-04-11 14:51:49.864  INFO 12128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:51:49.864  INFO 12128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 14:51:49.958  INFO 12128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 0 Redis repository interfaces.
+2021-04-11 14:51:52.264  INFO 12128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 14:51:52.279  INFO 12128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 14:51:52.279  INFO 12128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 14:51:52.295  INFO 12128 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 14:51:52.295  INFO 12128 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 14:51:52.295  INFO 12128 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 14:51:52.295  INFO 12128 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 14:51:52.705  INFO 12128 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 14:51:52.705  INFO 12128 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4574 ms
+2021-04-11 14:51:53.738  INFO 12128 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-11 14:51:55.580  INFO 12128 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 14:51:55.690  INFO 12128 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-11 14:51:55.955  INFO 12128 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-11 14:51:56.205  INFO 12128 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 14:51:56.533  INFO 12128 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 14:51:56.565  INFO 12128 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 14:51:59.064  WARN 12128 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 14:51:59.657  INFO 12128 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 14:51:59.990  INFO 12128 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 14:52:01.235  INFO 12128 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d264a800-3bb8-47df-a09b-9826e64bc1a9
+
+2021-04-11 14:52:01.943  INFO 12128 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4932cbb7, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ffe1fd2, org.springframework.security.web.header.HeaderWriterFilter@4289a0a1, org.springframework.security.web.csrf.CsrfFilter@78cbd78e, org.springframework.security.web.authentication.logout.LogoutFilter@3e71c3af, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ca5526f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@496f48bd, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@37c8e85d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@528e1b6f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20b05f46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6cbde431, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b6fab28, org.springframework.security.web.session.SessionManagementFilter@21d0223b, org.springframework.security.web.access.ExceptionTranslationFilter@28a3799, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61208473]
+2021-04-11 14:52:03.303  INFO 12128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 14:52:03.400  INFO 12128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 14:52:03.415  INFO 12128 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 16.87 seconds (JVM running for 20.816)
+2021-04-11 14:52:12.285  INFO 12128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 14:52:12.285  INFO 12128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 14:52:12.285  INFO 12128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-11 14:54:11.531  INFO 12128 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 14:54:11.565  INFO 12128 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 14:54:11.581  INFO 12128 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-11 14:54:11.581  INFO 12128 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-11 14:54:45.116  INFO 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 1352 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 14:54:45.132 DEBUG 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 14:54:45.132  INFO 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 14:54:45.257  INFO 1352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 14:54:45.257  INFO 1352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 14:54:46.906  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:54:46.906  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 14:54:47.003  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 0 JPA repository interfaces.
+2021-04-11 14:54:47.034  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 14:54:47.050  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 14:54:47.112  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces.
+2021-04-11 14:54:48.619  INFO 1352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 14:54:48.634  INFO 1352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 14:54:48.634  INFO 1352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 14:54:48.650  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 14:54:48.650  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 14:54:48.650  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 14:54:48.650  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 14:54:48.978  INFO 1352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 14:54:48.978  INFO 1352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3705 ms
+2021-04-11 14:54:49.683  INFO 1352 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-11 14:54:51.475  INFO 1352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 14:54:51.584  INFO 1352 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-11 14:54:51.912  INFO 1352 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-11 14:54:52.240  INFO 1352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 14:54:52.626  INFO 1352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 14:54:52.642  INFO 1352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 14:54:52.829  WARN 1352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 14:54:55.783  INFO 1352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42f322af, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d3f4304, org.springframework.security.web.header.HeaderWriterFilter@572bb9f5, org.springframework.security.web.csrf.CsrfFilter@5dca0edd, org.springframework.security.web.authentication.logout.LogoutFilter@6be55cd5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45afa454, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31eec31b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5da30c6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1426e4b6, org.springframework.security.web.session.SessionManagementFilter@564a7bcc, org.springframework.security.web.access.ExceptionTranslationFilter@18e62dc7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@dbd78e3]
+2021-04-11 14:54:56.205  INFO 1352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 14:54:56.470  INFO 1352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 14:54:59.014  INFO 1352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 14:54:59.122  INFO 1352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 14:54:59.153  INFO 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 15.411 seconds (JVM running for 19.323)
+2021-04-11 14:55:12.479  INFO 1352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 14:55:12.479  INFO 1352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 14:55:12.479  INFO 1352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-11 14:55:12.862 DEBUG 1352 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 14:55:12.912 DEBUG 1352 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 14:55:12.976 DEBUG 1352 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 14:55:12.976 DEBUG 1352 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-11 14:55:12.976 DEBUG 1352 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-11 14:55:12.984 DEBUG 1352 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-11 14:55:12.984 DEBUG 1352 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-11 14:55:12.984 DEBUG 1352 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-11 14:55:12.992 DEBUG 1352 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-11 14:55:13.000 DEBUG 1352 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-11 14:55:13.000 DEBUG 1352 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-11 14:55:13.008 DEBUG 1352 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-11 14:55:13.016 DEBUG 1352 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-11 14:55:13.016 DEBUG 1352 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-11 14:55:13.016 DEBUG 1352 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-11 14:55:13.016  INFO 1352 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-11 14:55:13.860 DEBUG 1352 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 14:55:13.868 DEBUG 1352 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 14:55:13.876 DEBUG 1352 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 14:55:13.884 DEBUG 1352 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-11 14:55:13.884 DEBUG 1352 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-11 14:55:13.884 DEBUG 1352 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-11 14:55:13.892 DEBUG 1352 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-11 14:55:13.892 DEBUG 1352 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-11 14:55:13.900 DEBUG 1352 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-11 14:55:13.908 DEBUG 1352 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-11 14:55:13.908 DEBUG 1352 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-11 14:55:13.924 DEBUG 1352 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-11 14:55:13.924 DEBUG 1352 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-11 14:55:13.924 DEBUG 1352 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-11 14:55:13.924 DEBUG 1352 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-11 14:55:13.924  INFO 1352 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-11 14:55:35.384 DEBUG 1352 --- [http-nio-8080-exec-4] .g.b.d.U.selectUserByUsernameAndPassword : ==>  Preparing: select * from t_user where username=? and password=?; 
+2021-04-11 14:55:35.384 DEBUG 1352 --- [http-nio-8080-exec-4] .g.b.d.U.selectUserByUsernameAndPassword : ==> Parameters: 跃(String), bcbe3365e6ac95ea2c0343a2395834dd(String)
+2021-04-11 14:55:35.400 DEBUG 1352 --- [http-nio-8080-exec-4] .g.b.d.U.selectUserByUsernameAndPassword : <==      Total: 1
+2021-04-11 14:55:37.366 DEBUG 1352 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 14:55:37.366 DEBUG 1352 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 14:55:37.374 DEBUG 1352 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 14:55:37.374 DEBUG 1352 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-11 14:55:37.374 DEBUG 1352 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-11 14:55:37.382 DEBUG 1352 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-11 14:55:37.382 DEBUG 1352 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-11 14:55:37.382 DEBUG 1352 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-11 14:55:37.390 DEBUG 1352 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-11 14:55:37.390 DEBUG 1352 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-11 14:55:37.390 DEBUG 1352 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-11 14:55:37.406 DEBUG 1352 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-11 14:55:37.406 DEBUG 1352 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-11 14:55:37.406 DEBUG 1352 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-11 14:55:37.414 DEBUG 1352 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-11 14:55:37.414  INFO 1352 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-11 14:55:38.534 DEBUG 1352 --- [http-nio-8080-exec-10] c.g.boke.dao.TypeDao.getAllTypeAndBlog   : ==>  Preparing: SELECT t_type.*,t_blog.`id`,t_blog.`title`,t_blog.`typeId` FROM t_type left JOIN t_blog ON t_blog.`typeId`=t_type.`id` 
+2021-04-11 14:55:38.534 DEBUG 1352 --- [http-nio-8080-exec-10] c.g.boke.dao.TypeDao.getAllTypeAndBlog   : ==> Parameters: 
+2021-04-11 14:55:38.545 DEBUG 1352 --- [http-nio-8080-exec-10] c.g.boke.dao.TypeDao.getAllTypeAndBlog   : <==      Total: 25
+2021-04-11 14:55:38.545 DEBUG 1352 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 14:55:38.545 DEBUG 1352 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 14:55:38.561 DEBUG 1352 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 14:55:38.561  INFO 1352 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result types
+2021-04-11 14:55:43.559 DEBUG 1352 --- [http-nio-8080-exec-2] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 14:55:43.559 DEBUG 1352 --- [http-nio-8080-exec-2] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 9(Long)
+2021-04-11 14:55:43.625 DEBUG 1352 --- [http-nio-8080-exec-2] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 14:55:43.625 DEBUG 1352 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 14:55:43.625 DEBUG 1352 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 9(Long)
+2021-04-11 14:55:43.633 DEBUG 1352 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 14:55:43.769 DEBUG 1352 --- [http-nio-8080-exec-2] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 14:55:43.769 DEBUG 1352 --- [http-nio-8080-exec-2] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 9(Long), -1(Long)
+2021-04-11 14:55:43.777 DEBUG 1352 --- [http-nio-8080-exec-2] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 14:55:43.777  INFO 1352 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 15:01:45.061 ERROR 1352 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.security.web.firewall.RequestRejectedException: The request was rejected because the URL contained a potentially malicious String "//"
+	at org.springframework.security.web.firewall.StrictHttpFirewall.rejectedBlocklistedUrls(StrictHttpFirewall.java:456)
+	at org.springframework.security.web.firewall.StrictHttpFirewall.getFirewalledRequest(StrictHttpFirewall.java:429)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:196)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-04-11 15:01:55.945 DEBUG 1352 --- [http-nio-8080-exec-4] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 15:01:55.947 DEBUG 1352 --- [http-nio-8080-exec-4] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 9(Long)
+2021-04-11 15:01:55.975 DEBUG 1352 --- [http-nio-8080-exec-4] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 15:01:55.976 DEBUG 1352 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 15:01:55.976 DEBUG 1352 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 9(Long)
+2021-04-11 15:01:55.984 DEBUG 1352 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 15:01:55.989 DEBUG 1352 --- [http-nio-8080-exec-4] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:01:55.989 DEBUG 1352 --- [http-nio-8080-exec-4] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 9(Long), -1(Long)
+2021-04-11 15:01:55.993 DEBUG 1352 --- [http-nio-8080-exec-4] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 15:01:55.993  INFO 1352 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 15:02:46.008 DEBUG 1352 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 15:02:46.010 DEBUG 1352 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 15:02:46.022 DEBUG 1352 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 15:02:46.024 DEBUG 1352 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-11 15:02:46.025 DEBUG 1352 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-11 15:02:46.033 DEBUG 1352 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-11 15:02:46.034 DEBUG 1352 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-11 15:02:46.035 DEBUG 1352 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-11 15:02:46.040 DEBUG 1352 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-11 15:02:46.041 DEBUG 1352 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-11 15:02:46.042 DEBUG 1352 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-11 15:02:46.049 DEBUG 1352 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-11 15:02:46.053 DEBUG 1352 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-11 15:02:46.053 DEBUG 1352 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-11 15:02:46.053 DEBUG 1352 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-11 15:02:46.053  INFO 1352 --- [http-nio-8080-exec-3] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-11 15:03:18.741  INFO 1352 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 15:03:18.783 ERROR 1352 --- [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "blog": An error happened during template parsing (template: "class path resource [templates/blog.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1394)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1139)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1078)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:115)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "blog.title" (template: "blog" - line 5, col 12)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 89 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "blog.title" (template: "blog" - line 5, col 12)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 91 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'title' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 116 common frames omitted
+
+2021-04-11 15:03:18.789 ERROR 1352 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'title' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1394)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1139)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1078)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:115)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-04-11 15:21:42.856 DEBUG 1352 --- [http-nio-8080-exec-6] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 15:21:42.856 DEBUG 1352 --- [http-nio-8080-exec-6] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 9(Long)
+2021-04-11 15:21:42.971 DEBUG 1352 --- [http-nio-8080-exec-6] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 15:21:42.972 DEBUG 1352 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 15:21:42.972 DEBUG 1352 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 9(Long)
+2021-04-11 15:21:42.989 DEBUG 1352 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 15:21:42.991 DEBUG 1352 --- [http-nio-8080-exec-6] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:21:42.992 DEBUG 1352 --- [http-nio-8080-exec-6] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 9(Long), -1(Long)
+2021-04-11 15:21:42.994 DEBUG 1352 --- [http-nio-8080-exec-6] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 15:21:42.996  INFO 1352 --- [http-nio-8080-exec-6] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 15:21:47.619  INFO 1352 --- [Thread-27] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 15:21:47.724  INFO 1352 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 15:21:47.859  INFO 1352 --- [Thread-27] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-11 15:21:47.875  INFO 1352 --- [Thread-27] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-11 15:21:48.739  INFO 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 1352 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 15:21:48.739 DEBUG 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 15:21:48.740  INFO 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 15:21:50.655  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 15:21:50.661  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 15:21:50.860  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 197 ms. Found 0 JPA repository interfaces.
+2021-04-11 15:21:50.868  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 15:21:50.868  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 15:21:51.022  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 0 Redis repository interfaces.
+2021-04-11 15:21:52.405  INFO 1352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 15:21:52.405  INFO 1352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 15:21:52.411  INFO 1352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 15:21:52.413  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 15:21:52.413  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 15:21:52.413  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 15:21:52.413  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 15:21:52.656  INFO 1352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 15:21:52.656  INFO 1352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3897 ms
+2021-04-11 15:21:53.318  INFO 1352 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2021-04-11 15:21:53.544  INFO 1352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 15:21:53.570  INFO 1352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 15:21:53.604  INFO 1352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 15:21:53.606  INFO 1352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 15:21:53.817  WARN 1352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 15:21:55.520  INFO 1352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12f3e6fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@584f23a5, org.springframework.security.web.header.HeaderWriterFilter@75b759bb, org.springframework.security.web.csrf.CsrfFilter@31493a84, org.springframework.security.web.authentication.logout.LogoutFilter@46d3da27, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@24dce08e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d4b065f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@127ef6cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@284f079, org.springframework.security.web.session.SessionManagementFilter@20aaa02e, org.springframework.security.web.access.ExceptionTranslationFilter@7b7fcfdc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1de053db]
+2021-04-11 15:21:56.080  INFO 1352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 15:21:56.273  INFO 1352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 15:21:57.615  INFO 1352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 15:21:57.686  INFO 1352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 15:21:57.704  INFO 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 9.27 seconds (JVM running for 1637.871)
+2021-04-11 15:21:57.717  INFO 1352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-11 15:22:07.555  INFO 1352 --- [Thread-35] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 15:22:07.568  INFO 1352 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 15:22:07.570  INFO 1352 --- [Thread-35] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2021-04-11 15:22:07.672  INFO 1352 --- [Thread-35] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2021-04-11 15:22:08.837  INFO 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 1352 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 15:22:08.839 DEBUG 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 15:22:08.839  INFO 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 15:22:10.617  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 15:22:10.619  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 15:22:10.767  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 159 ms. Found 0 JPA repository interfaces.
+2021-04-11 15:22:10.785  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 15:22:10.785  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 15:22:10.923  INFO 1352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142 ms. Found 0 Redis repository interfaces.
+2021-04-11 15:22:12.058  INFO 1352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 15:22:12.060  INFO 1352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 15:22:12.061  INFO 1352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 15:22:12.063  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 15:22:12.063  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 15:22:12.063  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 15:22:12.064  INFO 1352 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 15:22:12.313  INFO 1352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 15:22:12.313  INFO 1352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3463 ms
+2021-04-11 15:22:13.078  INFO 1352 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2021-04-11 15:22:13.297  INFO 1352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 15:22:13.324  INFO 1352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 15:22:13.355  INFO 1352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 15:22:13.357  INFO 1352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 15:22:13.549  WARN 1352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 15:22:14.829  INFO 1352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a51a1a9, org.springframework.security.web.context.SecurityContextPersistenceFilter@42810af4, org.springframework.security.web.header.HeaderWriterFilter@39e5af3d, org.springframework.security.web.csrf.CsrfFilter@308b94c0, org.springframework.security.web.authentication.logout.LogoutFilter@60f86647, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5c112bed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15345330, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1bc9aec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77539fdd, org.springframework.security.web.session.SessionManagementFilter@2e40a668, org.springframework.security.web.access.ExceptionTranslationFilter@2f3f0ba7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b9133e8]
+2021-04-11 15:22:15.262  INFO 1352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 15:22:15.445  INFO 1352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 15:22:16.639  INFO 1352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 15:22:16.697  INFO 1352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 15:22:16.716  INFO 1352 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 8.273 seconds (JVM running for 1656.883)
+2021-04-11 15:22:16.719  INFO 1352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-11 15:22:16.732  INFO 1352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 15:22:16.732  INFO 1352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 15:22:16.732  INFO 1352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-11 15:38:24.323  INFO 17952 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 17952 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 15:38:24.344 DEBUG 17952 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 15:38:24.345  INFO 17952 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 15:38:24.512  INFO 17952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 15:38:24.512  INFO 17952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 15:38:28.249  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 15:38:28.249  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 15:38:28.546  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 250 ms. Found 0 JPA repository interfaces.
+2021-04-11 15:38:28.616  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 15:38:28.620  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 15:38:28.878  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 221 ms. Found 0 Redis repository interfaces.
+2021-04-11 15:38:32.496  INFO 17952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 15:38:32.546  INFO 17952 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 15:38:32.547  INFO 17952 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 15:38:32.556  INFO 17952 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 15:38:32.556  INFO 17952 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 15:38:32.561  INFO 17952 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 15:38:32.578  INFO 17952 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 15:38:33.330  INFO 17952 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 15:38:33.331  INFO 17952 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8819 ms
+2021-04-11 15:38:34.528  INFO 17952 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-11 15:38:39.581  INFO 17952 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 15:38:39.893  INFO 17952 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-11 15:38:41.725  INFO 17952 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-11 15:38:42.129  INFO 17952 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 15:38:45.644  INFO 17952 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 15:38:45.740  INFO 17952 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 15:38:47.010  WARN 17952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 15:38:50.747  INFO 17952 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c416e6c, org.springframework.security.web.context.SecurityContextPersistenceFilter@30ad9404, org.springframework.security.web.header.HeaderWriterFilter@30ba39a5, org.springframework.security.web.csrf.CsrfFilter@65200b7a, org.springframework.security.web.authentication.logout.LogoutFilter@71d1778c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@37b6785d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44ab33f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48366ffc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b4daee6, org.springframework.security.web.session.SessionManagementFilter@7fe2e27f, org.springframework.security.web.access.ExceptionTranslationFilter@4297bb69, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44267bb5]
+2021-04-11 15:38:51.263  INFO 17952 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 15:38:51.625  INFO 17952 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 15:38:55.228  INFO 17952 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 15:38:55.320  INFO 17952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 15:38:55.345  INFO 17952 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 34.528 seconds (JVM running for 44.879)
+2021-04-11 15:39:00.197  INFO 17952 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 15:39:00.198  INFO 17952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 15:39:00.206  INFO 17952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-04-11 15:39:00.876 DEBUG 17952 --- [http-nio-8080-exec-1] c.g.boke.dao.TypeDao.getAllTypeAndBlog   : ==>  Preparing: SELECT t_type.*,t_blog.`id`,t_blog.`title`,t_blog.`typeId` FROM t_type left JOIN t_blog ON t_blog.`typeId`=t_type.`id` 
+2021-04-11 15:39:00.986 DEBUG 17952 --- [http-nio-8080-exec-1] c.g.boke.dao.TypeDao.getAllTypeAndBlog   : ==> Parameters: 
+2021-04-11 15:39:01.115 DEBUG 17952 --- [http-nio-8080-exec-1] c.g.boke.dao.TypeDao.getAllTypeAndBlog   : <==      Total: 25
+2021-04-11 15:39:01.116 DEBUG 17952 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 15:39:01.116 DEBUG 17952 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 15:39:01.161 DEBUG 17952 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 15:39:01.164  INFO 17952 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result types
+2021-04-11 15:39:11.028 DEBUG 17952 --- [http-nio-8080-exec-3] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 15:39:11.036 DEBUG 17952 --- [http-nio-8080-exec-3] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 9(Long)
+2021-04-11 15:39:11.072 DEBUG 17952 --- [http-nio-8080-exec-3] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 15:39:11.073 DEBUG 17952 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 15:39:11.076 DEBUG 17952 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 9(Long)
+2021-04-11 15:39:11.085 DEBUG 17952 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 15:39:11.377 DEBUG 17952 --- [http-nio-8080-exec-3] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:39:11.378 DEBUG 17952 --- [http-nio-8080-exec-3] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 9(Long), -1(Long)
+2021-04-11 15:39:11.385 DEBUG 17952 --- [http-nio-8080-exec-3] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 15:39:11.388  INFO 17952 --- [http-nio-8080-exec-3] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 15:41:06.870 DEBUG 17952 --- [http-nio-8080-exec-5] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 15:41:06.872 DEBUG 17952 --- [http-nio-8080-exec-5] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 4(Long)
+2021-04-11 15:41:06.955 DEBUG 17952 --- [http-nio-8080-exec-5] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 15:41:06.956 DEBUG 17952 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 15:41:06.956 DEBUG 17952 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 4(Long)
+2021-04-11 15:41:06.966 DEBUG 17952 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 15:41:06.977 DEBUG 17952 --- [http-nio-8080-exec-5] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:41:06.979 DEBUG 17952 --- [http-nio-8080-exec-5] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 4(Long), -1(Long)
+2021-04-11 15:41:06.981 DEBUG 17952 --- [http-nio-8080-exec-5] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 15:41:06.981  INFO 17952 --- [http-nio-8080-exec-5] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 15:41:16.652 DEBUG 17952 --- [http-nio-8080-exec-8] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 15:41:16.654 DEBUG 17952 --- [http-nio-8080-exec-8] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 2(Long)
+2021-04-11 15:41:16.668 DEBUG 17952 --- [http-nio-8080-exec-8] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 15:41:16.669 DEBUG 17952 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 15:41:16.671 DEBUG 17952 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 2(Long)
+2021-04-11 15:41:16.678 DEBUG 17952 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 15:41:16.681 DEBUG 17952 --- [http-nio-8080-exec-8] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:41:16.682 DEBUG 17952 --- [http-nio-8080-exec-8] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 2(Long), -1(Long)
+2021-04-11 15:41:16.686 DEBUG 17952 --- [http-nio-8080-exec-8] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 15:41:16.687  INFO 17952 --- [http-nio-8080-exec-8] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 15:58:31.952 DEBUG 17952 --- [http-nio-8080-exec-9] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 15:58:31.952 DEBUG 17952 --- [http-nio-8080-exec-9] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 2(Long)
+2021-04-11 15:58:32.054 DEBUG 17952 --- [http-nio-8080-exec-9] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 15:58:32.055 DEBUG 17952 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 15:58:32.055 DEBUG 17952 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 2(Long)
+2021-04-11 15:58:32.060 DEBUG 17952 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 15:58:32.065 DEBUG 17952 --- [http-nio-8080-exec-9] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:58:32.104 DEBUG 17952 --- [http-nio-8080-exec-9] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 2(Long), -1(Long)
+2021-04-11 15:58:32.105 DEBUG 17952 --- [http-nio-8080-exec-9] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 15:58:32.105  INFO 17952 --- [http-nio-8080-exec-9] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 15:58:38.960 DEBUG 17952 --- [http-nio-8080-exec-7] c.g.boke.dao.TypeDao.getAllTypeAndBlog   : ==>  Preparing: SELECT t_type.*,t_blog.`id`,t_blog.`title`,t_blog.`typeId` FROM t_type left JOIN t_blog ON t_blog.`typeId`=t_type.`id` 
+2021-04-11 15:58:38.965 DEBUG 17952 --- [http-nio-8080-exec-7] c.g.boke.dao.TypeDao.getAllTypeAndBlog   : ==> Parameters: 
+2021-04-11 15:58:38.970 DEBUG 17952 --- [http-nio-8080-exec-7] c.g.boke.dao.TypeDao.getAllTypeAndBlog   : <==      Total: 25
+2021-04-11 15:58:38.979 DEBUG 17952 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-11 15:58:38.983 DEBUG 17952 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-11 15:58:39.002 DEBUG 17952 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-11 15:58:39.005  INFO 17952 --- [http-nio-8080-exec-7] com.gjy.boke.aspect.LogAspect            : Result types
+2021-04-11 15:58:46.828 DEBUG 17952 --- [http-nio-8080-exec-6] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 15:58:46.830 DEBUG 17952 --- [http-nio-8080-exec-6] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 3(Long)
+2021-04-11 15:58:46.938 DEBUG 17952 --- [http-nio-8080-exec-6] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 15:58:46.940 DEBUG 17952 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 15:58:46.941 DEBUG 17952 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 3(Long)
+2021-04-11 15:58:46.946 DEBUG 17952 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 15:58:46.950 DEBUG 17952 --- [http-nio-8080-exec-6] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:58:46.951 DEBUG 17952 --- [http-nio-8080-exec-6] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 3(Long), -1(Long)
+2021-04-11 15:58:46.954 DEBUG 17952 --- [http-nio-8080-exec-6] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 15:58:46.955  INFO 17952 --- [http-nio-8080-exec-6] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 15:58:59.558 DEBUG 17952 --- [http-nio-8080-exec-4] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 15:58:59.560 DEBUG 17952 --- [http-nio-8080-exec-4] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 1(Long)
+2021-04-11 15:58:59.620 DEBUG 17952 --- [http-nio-8080-exec-4] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 15:58:59.621 DEBUG 17952 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 15:58:59.621 DEBUG 17952 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 1(Long)
+2021-04-11 15:58:59.621 DEBUG 17952 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 15:58:59.631 DEBUG 17952 --- [http-nio-8080-exec-4] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:58:59.633 DEBUG 17952 --- [http-nio-8080-exec-4] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 1(Long), -1(Long)
+2021-04-11 15:58:59.645 DEBUG 17952 --- [http-nio-8080-exec-4] listCommentByBlogIdInParentCommentIdNull : <==      Total: 2
+2021-04-11 15:58:59.649 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:58:59.649 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 78(Long)
+2021-04-11 15:58:59.655 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 15:58:59.656 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:58:59.656 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 79(Long)
+2021-04-11 15:58:59.656 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 15:58:59.656 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:58:59.663 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 84(Long)
+2021-04-11 15:58:59.667 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-04-11 15:58:59.670 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 15:58:59.672 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 1(Long), 85(Long)
+2021-04-11 15:58:59.675 DEBUG 17952 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-11 15:58:59.676  INFO 17952 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 16:01:50.990  INFO 17952 --- [Thread-68] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 16:01:51.055  INFO 17952 --- [Thread-68] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 16:01:51.066  INFO 17952 --- [Thread-68] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-11 16:01:51.077  INFO 17952 --- [Thread-68] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-11 16:01:51.665  INFO 17952 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 17952 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 16:01:51.668 DEBUG 17952 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 16:01:51.668  INFO 17952 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 16:01:52.897  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 16:01:52.900  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 16:01:53.051  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 0 JPA repository interfaces.
+2021-04-11 16:01:53.064  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 16:01:53.065  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 16:01:53.185  INFO 17952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 0 Redis repository interfaces.
+2021-04-11 16:01:54.249  INFO 17952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 16:01:54.259  INFO 17952 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 16:01:54.262  INFO 17952 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 16:01:54.265  INFO 17952 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 16:01:54.267  INFO 17952 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 16:01:54.267  INFO 17952 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 16:01:54.268  INFO 17952 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 16:01:54.513  INFO 17952 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 16:01:54.513  INFO 17952 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2832 ms
+2021-04-11 16:01:54.898  INFO 17952 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2021-04-11 16:01:55.116  INFO 17952 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 16:01:55.132  INFO 17952 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 16:01:55.151  INFO 17952 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 16:01:55.151  INFO 17952 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 16:01:55.259  WARN 17952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 16:01:57.540  INFO 17952 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33b9a61d, org.springframework.security.web.context.SecurityContextPersistenceFilter@67374d17, org.springframework.security.web.header.HeaderWriterFilter@6edaab9e, org.springframework.security.web.csrf.CsrfFilter@6a591c11, org.springframework.security.web.authentication.logout.LogoutFilter@7e3aab0c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@fafa8c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e4e624c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@573b840, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5264d51f, org.springframework.security.web.session.SessionManagementFilter@45ac6827, org.springframework.security.web.access.ExceptionTranslationFilter@36bdf3be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@633c99f5]
+2021-04-11 16:01:58.100  INFO 17952 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 16:01:58.386  INFO 17952 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 16:01:59.418  INFO 17952 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 16:01:59.464  INFO 17952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 16:01:59.474  INFO 17952 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 7.988 seconds (JVM running for 1429.009)
+2021-04-11 16:01:59.478  INFO 17952 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-11 16:02:04.039  INFO 17952 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 16:02:04.041  INFO 17952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 16:02:04.042  INFO 17952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-11 16:02:04.098 DEBUG 17952 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 16:02:04.099 DEBUG 17952 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 15(Long)
+2021-04-11 16:02:04.193 DEBUG 17952 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 16:02:04.193 DEBUG 17952 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 16:02:04.193 DEBUG 17952 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 15(Long)
+2021-04-11 16:02:04.202 DEBUG 17952 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 16:02:04.245 DEBUG 17952 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 16:02:04.245 DEBUG 17952 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 15(Long), -1(Long)
+2021-04-11 16:02:04.245 DEBUG 17952 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 16:02:04.245  INFO 17952 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 16:03:17.236  INFO 17952 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 16:03:17.243  INFO 17952 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 16:03:17.246  INFO 17952 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2021-04-11 16:03:17.248  INFO 17952 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2021-04-11 16:03:40.507  INFO 15300 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 15300 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-11 16:03:40.515 DEBUG 15300 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-11 16:03:40.515  INFO 15300 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-11 16:03:40.662  INFO 15300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 16:03:40.664  INFO 15300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 16:03:42.701  INFO 15300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 16:03:42.702  INFO 15300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-11 16:03:42.844  INFO 15300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 0 JPA repository interfaces.
+2021-04-11 16:03:42.886  INFO 15300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-11 16:03:42.887  INFO 15300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-11 16:03:42.978  INFO 15300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 0 Redis repository interfaces.
+2021-04-11 16:03:45.114  INFO 15300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-11 16:03:45.143  INFO 15300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 16:03:45.143  INFO 15300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 16:03:45.150  INFO 15300 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-11 16:03:45.151  INFO 15300 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-11 16:03:45.152  INFO 15300 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-11 16:03:45.162  INFO 15300 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-11 16:03:45.577  INFO 15300 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 16:03:45.578  INFO 15300 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4911 ms
+2021-04-11 16:03:46.481  INFO 15300 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-11 16:03:50.290  INFO 15300 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-11 16:03:50.565  INFO 15300 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-11 16:03:51.001  INFO 15300 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-11 16:03:51.429  INFO 15300 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-11 16:03:52.033  INFO 15300 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-11 16:03:52.071  INFO 15300 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 16:03:52.298  WARN 15300 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-11 16:03:55.673  INFO 15300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79e3037f, org.springframework.security.web.context.SecurityContextPersistenceFilter@765d567c, org.springframework.security.web.header.HeaderWriterFilter@7ed8b44e, org.springframework.security.web.csrf.CsrfFilter@f660034, org.springframework.security.web.authentication.logout.LogoutFilter@2e981e22, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f6fced, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77a35fa0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec29d01, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d492f92, org.springframework.security.web.session.SessionManagementFilter@29f8cc80, org.springframework.security.web.access.ExceptionTranslationFilter@54c8ba7d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@340a079a]
+2021-04-11 16:03:56.167  INFO 15300 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 16:03:56.477  INFO 15300 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 16:03:59.134  INFO 15300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 16:03:59.222  INFO 15300 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-11 16:03:59.246  INFO 15300 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 20.113 seconds (JVM running for 24.818)
+2021-04-11 16:04:07.591  INFO 15300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 16:04:07.592  INFO 15300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 16:04:07.596  INFO 15300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-04-11 16:04:08.086 DEBUG 15300 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-11 16:04:08.162 DEBUG 15300 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 15(Long)
+2021-04-11 16:04:08.218 DEBUG 15300 --- [http-nio-8080-exec-1] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-11 16:04:08.229 DEBUG 15300 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-11 16:04:08.230 DEBUG 15300 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 15(Long)
+2021-04-11 16:04:08.282 DEBUG 15300 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-11 16:04:08.490 DEBUG 15300 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 16:04:08.492 DEBUG 15300 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 15(Long), -1(Long)
+2021-04-11 16:04:08.500 DEBUG 15300 --- [http-nio-8080-exec-1] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 16:04:08.503  INFO 15300 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-11 16:04:50.763 DEBUG 15300 --- [http-nio-8080-exec-8] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-11 16:04:50.772 DEBUG 15300 --- [http-nio-8080-exec-8] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 2(Long), -1(Long)
+2021-04-11 16:04:50.788 DEBUG 15300 --- [http-nio-8080-exec-8] listCommentByBlogIdInParentCommentIdNull : <==      Total: 0
+2021-04-11 16:04:54.163 DEBUG 15300 --- [http-nio-8080-exec-8] .B.updateBlogCommentCountsAddOneByBlogId : ==>  Preparing: update t_blog set commentCount=commentCount+1 where id=?; 
+2021-04-11 16:04:54.167 DEBUG 15300 --- [http-nio-8080-exec-8] .B.updateBlogCommentCountsAddOneByBlogId : ==> Parameters: 2(Long)
+2021-04-11 16:04:54.177 DEBUG 15300 --- [http-nio-8080-exec-8] .B.updateBlogCommentCountsAddOneByBlogId : <==    Updates: 1
+2021-04-11 16:05:01.243  INFO 15300 --- [http-nio-8080-exec-8] com.gjy.boke.aspect.LogAspect            : Result blog :: commentList
+2021-04-11 16:23:42.411  INFO 15300 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 16:23:42.443  INFO 15300 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-11 16:23:42.443  INFO 15300 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-11 16:23:42.443  INFO 15300 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

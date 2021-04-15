@@ -38,13 +38,13 @@ public class WebConfig implements WebMvcConfigurer{
 
     }*/
 //注册拦截器
-  /*  @Override
+    @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns("/admin/**")
                 .excludePathPatterns("/admin/login")
                 .excludePathPatterns("/admin");
-    }*/
+    }
 
 
 }
