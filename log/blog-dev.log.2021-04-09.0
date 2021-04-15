@@ -1,0 +1,511 @@
+2021-04-09 15:33:13.792  INFO 17232 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 17232 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-09 15:33:13.808 DEBUG 17232 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 15:33:13.808  INFO 17232 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-09 15:33:13.886  INFO 17232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-09 15:33:13.901  INFO 17232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-09 15:33:15.261  INFO 17232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 15:33:15.261  INFO 17232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 15:33:15.339  INFO 17232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 0 JPA repository interfaces.
+2021-04-09 15:33:15.354  INFO 17232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 15:33:15.354  INFO 17232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 15:33:15.417  INFO 17232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+2021-04-09 15:33:16.463  INFO 17232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-09 15:33:16.479  INFO 17232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-09 15:33:16.479  INFO 17232 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-09 15:33:16.479  INFO 17232 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-09 15:33:16.479  INFO 17232 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-09 15:33:16.479  INFO 17232 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-09 15:33:16.510  INFO 17232 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-09 15:33:16.745  INFO 17232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-09 15:33:16.745  INFO 17232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2844 ms
+2021-04-09 15:33:17.166  INFO 17232 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 15:33:18.777  INFO 17232 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 15:33:18.871  INFO 17232 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 15:33:19.183  INFO 17232 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 15:33:19.433  INFO 17232 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 15:33:19.730  INFO 17232 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 15:33:19.746  INFO 17232 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 15:33:19.870  WARN 17232 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 15:33:21.198  INFO 17232 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46bb5962, org.springframework.security.web.context.SecurityContextPersistenceFilter@5cfb20a, org.springframework.security.web.header.HeaderWriterFilter@9180dd9, org.springframework.security.web.csrf.CsrfFilter@42bffbdf, org.springframework.security.web.authentication.logout.LogoutFilter@6efbc569, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@786ab521, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@247fedbb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c5ddd07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@307ebcef, org.springframework.security.web.session.SessionManagementFilter@225b7ef4, org.springframework.security.web.access.ExceptionTranslationFilter@2322f30a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f11c30e]
+2021-04-09 15:33:21.417  INFO 17232 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 15:33:21.542  INFO 17232 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 15:33:23.432  INFO 17232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-09 15:33:23.479  INFO 17232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-09 15:33:23.495  INFO 17232 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 10.762 seconds (JVM running for 13.867)
+2021-04-09 15:33:51.646  INFO 17232 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-09 15:33:51.647  INFO 17232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-09 15:33:51.649  INFO 17232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-04-09 15:33:51.823 DEBUG 17232 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-09 15:33:51.839 DEBUG 17232 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-09 15:33:51.875 DEBUG 17232 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-09 15:33:51.875 DEBUG 17232 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-09 15:33:51.875 DEBUG 17232 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-09 15:33:51.875 DEBUG 17232 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-09 15:33:51.875 DEBUG 17232 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-09 15:33:51.875 DEBUG 17232 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-09 15:33:51.891 DEBUG 17232 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-09 15:33:51.891 DEBUG 17232 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-09 15:33:51.891 DEBUG 17232 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-09 15:33:51.891 DEBUG 17232 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-09 15:33:51.891 DEBUG 17232 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-09 15:33:51.891 DEBUG 17232 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-09 15:33:51.891 DEBUG 17232 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-09 15:33:51.891  INFO 17232 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-09 15:33:52.405 DEBUG 17232 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-09 15:33:52.405 DEBUG 17232 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-09 15:33:52.411 DEBUG 17232 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-09 15:33:52.412 DEBUG 17232 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-09 15:33:52.412 DEBUG 17232 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-09 15:33:52.414 DEBUG 17232 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-09 15:33:52.415 DEBUG 17232 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-09 15:33:52.415 DEBUG 17232 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-09 15:33:52.420 DEBUG 17232 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-09 15:33:52.421 DEBUG 17232 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-09 15:33:52.421 DEBUG 17232 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-09 15:33:52.429 DEBUG 17232 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-09 15:33:52.431 DEBUG 17232 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-09 15:33:52.431 DEBUG 17232 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-09 15:33:52.433 DEBUG 17232 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-09 15:33:52.434  INFO 17232 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-09 19:55:12.435  WARN 8476 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 19:55:12.467  INFO 8476 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 8476 (started by GJY in C:\Java workspace\boke)
+2021-04-09 19:55:12.468 DEBUG 8476 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 19:55:12.468  INFO 8476 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 19:55:13.816  INFO 8476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 19:55:13.820  INFO 8476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 19:55:13.895  INFO 8476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 0 JPA repository interfaces.
+2021-04-09 19:55:13.920  INFO 8476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 19:55:13.922  INFO 8476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 19:55:13.981  INFO 8476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+2021-04-09 19:55:15.761  INFO 8476 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 19:55:18.466  INFO 8476 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 19:55:18.606  INFO 8476 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 19:55:18.924  INFO 8476 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 19:55:19.216  INFO 8476 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 19:55:19.615  INFO 8476 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 19:55:19.634  INFO 8476 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 19:55:19.865  WARN 8476 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 19:55:22.041  INFO 8476 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@553fbe94, org.springframework.security.web.context.SecurityContextPersistenceFilter@abc7005, org.springframework.security.web.header.HeaderWriterFilter@53e28097, org.springframework.security.web.csrf.CsrfFilter@56478522, org.springframework.security.web.authentication.logout.LogoutFilter@37cf91d8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1c7843c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63c84d31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9f2376f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6abe62bb, org.springframework.security.web.session.SessionManagementFilter@75f4d8a8, org.springframework.security.web.access.ExceptionTranslationFilter@7878bbdb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e7eba9f]
+2021-04-09 19:55:22.804  INFO 8476 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 19:55:23.043  INFO 8476 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 19:55:23.993  INFO 8476 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 12.432 seconds (JVM running for 14.633)
+2021-04-09 19:55:27.030  INFO 8476 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 19:55:27.281  INFO 8476 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 19:55:27.286  INFO 8476 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 19:55:27.293  INFO 8476 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 19:59:41.542  WARN 22036 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 19:59:41.572  INFO 22036 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 22036 (started by GJY in C:\Java workspace\boke)
+2021-04-09 19:59:41.573 DEBUG 22036 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 19:59:41.573  INFO 22036 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 19:59:42.810  INFO 22036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 19:59:42.814  INFO 22036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 19:59:42.888  INFO 22036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 0 JPA repository interfaces.
+2021-04-09 19:59:42.908  INFO 22036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 19:59:42.911  INFO 22036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 19:59:42.967  INFO 22036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+2021-04-09 19:59:44.525  INFO 22036 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 19:59:47.194  INFO 22036 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 19:59:47.298  INFO 22036 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 19:59:47.557  INFO 22036 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 19:59:47.797  INFO 22036 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 19:59:48.148  INFO 22036 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 19:59:48.167  INFO 22036 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 19:59:48.374  WARN 22036 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 19:59:50.415  INFO 22036 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1dbff71c, org.springframework.security.web.context.SecurityContextPersistenceFilter@563263a, org.springframework.security.web.header.HeaderWriterFilter@5d800a56, org.springframework.security.web.csrf.CsrfFilter@6591f8ea, org.springframework.security.web.authentication.logout.LogoutFilter@25d0b918, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@11c3d22f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e794f53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@102af1bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@93ce24d, org.springframework.security.web.session.SessionManagementFilter@315cf170, org.springframework.security.web.access.ExceptionTranslationFilter@5af38a4a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@717a8a76]
+2021-04-09 19:59:51.175  INFO 22036 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 19:59:51.420  INFO 22036 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 19:59:52.395  INFO 22036 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 11.812 seconds (JVM running for 13.804)
+2021-04-09 19:59:55.471  INFO 22036 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 19:59:55.625  INFO 22036 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 19:59:55.628  INFO 22036 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 19:59:55.634  INFO 22036 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 20:00:33.292  WARN 13080 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 20:00:33.329  INFO 13080 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 13080 (started by GJY in C:\Java workspace\boke)
+2021-04-09 20:00:33.330 DEBUG 13080 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 20:00:33.330  INFO 13080 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 20:00:34.662  INFO 13080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:00:34.666  INFO 13080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 20:00:34.757  INFO 13080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 0 JPA repository interfaces.
+2021-04-09 20:00:34.796  INFO 13080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:00:34.800  INFO 13080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 20:00:34.869  INFO 13080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+2021-04-09 20:00:36.528  INFO 13080 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 20:00:39.193  INFO 13080 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 20:00:39.302  INFO 13080 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 20:00:39.570  INFO 13080 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 20:00:39.814  INFO 13080 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 20:00:40.170  INFO 13080 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 20:00:40.201  INFO 13080 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:00:40.420  WARN 13080 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 20:00:42.589  INFO 13080 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1884e671, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d800a56, org.springframework.security.web.header.HeaderWriterFilter@3c71cf3e, org.springframework.security.web.csrf.CsrfFilter@2fa212df, org.springframework.security.web.authentication.logout.LogoutFilter@389a1e34, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e7eba9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@315cf170, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69ba72da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c7843c3, org.springframework.security.web.session.SessionManagementFilter@5af38a4a, org.springframework.security.web.access.ExceptionTranslationFilter@3b9c9b8b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ce7490a]
+2021-04-09 20:00:43.370  INFO 13080 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:00:43.626  INFO 13080 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 20:00:44.645  INFO 13080 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 12.336 seconds (JVM running for 14.54)
+2021-04-09 20:00:48.081  INFO 13080 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:00:48.210  INFO 13080 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:00:48.213  INFO 13080 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 20:00:48.219  INFO 13080 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 20:02:51.734  WARN 21060 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 20:02:51.761  INFO 21060 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 21060 (started by GJY in C:\Java workspace\boke)
+2021-04-09 20:02:51.761 DEBUG 21060 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 20:02:51.762  INFO 21060 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 20:02:52.959  INFO 21060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:02:52.963  INFO 21060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 20:02:53.037  INFO 21060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 0 JPA repository interfaces.
+2021-04-09 20:02:53.062  INFO 21060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:02:53.064  INFO 21060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 20:02:53.119  INFO 21060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2021-04-09 20:02:54.686  INFO 21060 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 20:02:57.335  INFO 21060 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 20:02:57.430  INFO 21060 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 20:02:57.706  INFO 21060 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 20:02:57.972  INFO 21060 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 20:02:58.322  INFO 21060 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 20:02:58.337  INFO 21060 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:02:58.564  WARN 21060 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 20:03:00.788  INFO 21060 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b841713, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b9c9b8b, org.springframework.security.web.header.HeaderWriterFilter@1d2046bb, org.springframework.security.web.csrf.CsrfFilter@16e907b6, org.springframework.security.web.authentication.logout.LogoutFilter@797f97e3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7573c7b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@248d3a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1be77a76, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fef1e6b, org.springframework.security.web.session.SessionManagementFilter@fd87c22, org.springframework.security.web.access.ExceptionTranslationFilter@500ec769, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51e94b7d]
+2021-04-09 20:03:01.653  INFO 21060 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:03:01.918  INFO 21060 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 20:03:02.956  INFO 21060 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 12.136 seconds (JVM running for 14.054)
+2021-04-09 20:03:06.320  INFO 21060 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:03:06.457  INFO 21060 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:03:06.462  INFO 21060 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 20:03:06.468  INFO 21060 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 20:04:55.962  WARN 21888 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 20:04:55.992  INFO 21888 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 21888 (started by GJY in C:\Java workspace\boke)
+2021-04-09 20:04:55.992 DEBUG 21888 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 20:04:55.992  INFO 21888 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 20:04:57.255  INFO 21888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:04:57.259  INFO 21888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 20:04:57.332  INFO 21888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 0 JPA repository interfaces.
+2021-04-09 20:04:57.355  INFO 21888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:04:57.357  INFO 21888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 20:04:57.412  INFO 21888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 Redis repository interfaces.
+2021-04-09 20:04:58.993  INFO 21888 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 20:05:01.602  INFO 21888 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 20:05:01.715  INFO 21888 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 20:05:01.974  INFO 21888 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 20:05:02.224  INFO 21888 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 20:05:02.582  INFO 21888 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 20:05:02.600  INFO 21888 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:05:02.821  WARN 21888 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 20:05:04.861  INFO 21888 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@121cf6f4, org.springframework.security.web.context.SecurityContextPersistenceFilter@69ba72da, org.springframework.security.web.header.HeaderWriterFilter@25f7cc38, org.springframework.security.web.csrf.CsrfFilter@59f7c106, org.springframework.security.web.authentication.logout.LogoutFilter@5feb82b3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1d585fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@abc7005, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@302da330, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cdc4070, org.springframework.security.web.session.SessionManagementFilter@53e28097, org.springframework.security.web.access.ExceptionTranslationFilter@1be77a76, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c754401]
+2021-04-09 20:05:05.640  INFO 21888 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:05:05.862  INFO 21888 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 20:05:06.862  INFO 21888 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 11.81 seconds (JVM running for 13.746)
+2021-04-09 20:05:10.480  INFO 21888 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:05:10.610  INFO 21888 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:05:10.614  INFO 21888 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 20:05:10.619  INFO 21888 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 20:43:39.590  WARN 14856 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 20:43:39.617  INFO 14856 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 14856 (started by GJY in C:\Java workspace\boke)
+2021-04-09 20:43:39.618 DEBUG 14856 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 20:43:39.618  INFO 14856 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 20:43:40.939  INFO 14856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:43:40.939  INFO 14856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 20:43:41.017  INFO 14856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 0 JPA repository interfaces.
+2021-04-09 20:43:41.048  INFO 14856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:43:41.048  INFO 14856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 20:43:41.095  INFO 14856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+2021-04-09 20:43:42.858  INFO 14856 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 20:43:45.652  INFO 14856 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 20:43:45.752  INFO 14856 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 20:43:46.020  INFO 14856 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 20:43:46.291  INFO 14856 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 20:43:46.635  INFO 14856 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 20:43:46.666  INFO 14856 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:43:46.905  WARN 14856 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 20:43:49.002  INFO 14856 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a54638b, org.springframework.security.web.context.SecurityContextPersistenceFilter@636e4bf8, org.springframework.security.web.header.HeaderWriterFilter@1ff463bb, org.springframework.security.web.csrf.CsrfFilter@3d132bb6, org.springframework.security.web.authentication.logout.LogoutFilter@3568ea59, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@97b5e6a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e1a9173, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@563263a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d8f2eec, org.springframework.security.web.session.SessionManagementFilter@7769d9b6, org.springframework.security.web.access.ExceptionTranslationFilter@3b33fff9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5fc1e4fb]
+2021-04-09 20:43:49.885  INFO 14856 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:43:50.136  INFO 14856 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 20:43:51.179  INFO 14856 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 12.563 seconds (JVM running for 14.77)
+2021-04-09 20:43:53.793  INFO 14856 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:43:53.929  INFO 14856 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:43:53.933  INFO 14856 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 20:43:53.940  INFO 14856 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 20:44:17.560  WARN 9716 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 20:44:17.592  INFO 9716 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 9716 (started by GJY in C:\Java workspace\boke)
+2021-04-09 20:44:17.593 DEBUG 9716 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 20:44:17.594  INFO 9716 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 20:44:18.872  INFO 9716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:44:18.878  INFO 9716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 20:44:18.963  INFO 9716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 0 JPA repository interfaces.
+2021-04-09 20:44:18.999  INFO 9716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:44:19.002  INFO 9716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 20:44:19.075  INFO 9716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 0 Redis repository interfaces.
+2021-04-09 20:44:20.711  INFO 9716 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 20:44:23.351  INFO 9716 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 20:44:23.477  INFO 9716 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 20:44:23.745  INFO 9716 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 20:44:23.984  INFO 9716 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 20:44:24.342  INFO 9716 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 20:44:24.360  INFO 9716 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:44:24.535  WARN 9716 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 20:44:26.649  INFO 9716 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@553fbe94, org.springframework.security.web.context.SecurityContextPersistenceFilter@abc7005, org.springframework.security.web.header.HeaderWriterFilter@53e28097, org.springframework.security.web.csrf.CsrfFilter@56478522, org.springframework.security.web.authentication.logout.LogoutFilter@37cf91d8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1c7843c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63c84d31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9f2376f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6abe62bb, org.springframework.security.web.session.SessionManagementFilter@75f4d8a8, org.springframework.security.web.access.ExceptionTranslationFilter@7878bbdb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e7eba9f]
+2021-04-09 20:44:27.437  INFO 9716 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:44:27.731  INFO 9716 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 20:44:28.816  INFO 9716 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 12.246 seconds (JVM running for 14.29)
+2021-04-09 20:44:31.453  INFO 9716 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:44:31.683  INFO 9716 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:44:31.687  INFO 9716 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 20:44:31.693  INFO 9716 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 20:45:46.447  WARN 2836 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 20:45:46.475  INFO 2836 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 2836 (started by GJY in C:\Java workspace\boke)
+2021-04-09 20:45:46.475 DEBUG 2836 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 20:45:46.476  INFO 2836 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 20:45:47.725  INFO 2836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:45:47.728  INFO 2836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 20:45:47.809  INFO 2836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 0 JPA repository interfaces.
+2021-04-09 20:45:47.831  INFO 2836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 20:45:47.833  INFO 2836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 20:45:47.889  INFO 2836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 Redis repository interfaces.
+2021-04-09 20:45:49.530  INFO 2836 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 20:45:52.079  INFO 2836 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 20:45:52.176  INFO 2836 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 20:45:52.434  INFO 2836 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 20:45:52.670  INFO 2836 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 20:45:53.032  INFO 2836 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 20:45:53.049  INFO 2836 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:45:53.248  WARN 2836 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 20:45:55.278  INFO 2836 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d949bc4, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e794f53, org.springframework.security.web.header.HeaderWriterFilter@315cf170, org.springframework.security.web.csrf.CsrfFilter@279c4e3b, org.springframework.security.web.authentication.logout.LogoutFilter@7ffcb232, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7d8f2eec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69ba72da, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56cd5d76, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7079f8f0, org.springframework.security.web.session.SessionManagementFilter@25f7cc38, org.springframework.security.web.access.ExceptionTranslationFilter@4ca0b9b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@97b5e6a]
+2021-04-09 20:45:56.073  INFO 2836 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:45:56.342  INFO 2836 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 20:45:57.346  INFO 2836 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 11.849 seconds (JVM running for 13.757)
+2021-04-09 20:46:02.001  INFO 2836 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 20:46:02.130  INFO 2836 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 20:46:02.133  INFO 2836 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 20:46:02.139  INFO 2836 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 21:19:34.745  WARN 6316 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 21:19:34.778  INFO 6316 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 6316 (started by GJY in C:\Java workspace\boke)
+2021-04-09 21:19:34.778 DEBUG 6316 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 21:19:34.779  INFO 6316 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 21:19:36.037  INFO 6316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:19:36.037  INFO 6316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 21:19:36.115  INFO 6316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 0 JPA repository interfaces.
+2021-04-09 21:19:36.131  INFO 6316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:19:36.131  INFO 6316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 21:19:36.194  INFO 6316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 Redis repository interfaces.
+2021-04-09 21:19:37.796  INFO 6316 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 21:19:40.372  INFO 6316 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 21:19:40.471  INFO 6316 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 21:19:40.732  INFO 6316 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 21:19:40.989  INFO 6316 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 21:19:41.337  INFO 6316 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 21:19:41.354  INFO 6316 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:19:41.545  WARN 6316 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 21:19:43.519  INFO 6316 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29c25bbc, org.springframework.security.web.context.SecurityContextPersistenceFilter@797f97e3, org.springframework.security.web.header.HeaderWriterFilter@2e1ba142, org.springframework.security.web.csrf.CsrfFilter@5dd747c1, org.springframework.security.web.authentication.logout.LogoutFilter@7462ba4b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1dbff71c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77cd235b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@204b0f07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30704f85, org.springframework.security.web.session.SessionManagementFilter@595ec862, org.springframework.security.web.access.ExceptionTranslationFilter@6e794f53, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fee14b]
+2021-04-09 21:19:44.292  INFO 6316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:19:44.524  INFO 6316 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 21:19:45.455  INFO 6316 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 11.659 seconds (JVM running for 13.548)
+2021-04-09 21:19:49.883  INFO 6316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:19:50.107  INFO 6316 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:19:50.111  INFO 6316 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 21:19:50.117  INFO 6316 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 21:36:15.508  WARN 6556 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 21:36:15.524  INFO 6556 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 6556 (started by GJY in C:\Java workspace\boke)
+2021-04-09 21:36:15.524 DEBUG 6556 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 21:36:15.524  INFO 6556 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 21:36:16.772  INFO 6556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:36:16.778  INFO 6556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 21:36:16.863  INFO 6556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 0 JPA repository interfaces.
+2021-04-09 21:36:16.894  INFO 6556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:36:16.897  INFO 6556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 21:36:16.961  INFO 6556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 0 Redis repository interfaces.
+2021-04-09 21:36:18.660  INFO 6556 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 21:36:21.194  INFO 6556 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 21:36:21.304  INFO 6556 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 21:36:21.562  INFO 6556 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 21:36:21.814  INFO 6556 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 21:36:22.173  INFO 6556 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 21:36:22.189  INFO 6556 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:36:22.423  WARN 6556 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 21:36:24.500  INFO 6556 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1dbff71c, org.springframework.security.web.context.SecurityContextPersistenceFilter@563263a, org.springframework.security.web.header.HeaderWriterFilter@5d800a56, org.springframework.security.web.csrf.CsrfFilter@6591f8ea, org.springframework.security.web.authentication.logout.LogoutFilter@25d0b918, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@11c3d22f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e794f53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@102af1bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@93ce24d, org.springframework.security.web.session.SessionManagementFilter@315cf170, org.springframework.security.web.access.ExceptionTranslationFilter@5af38a4a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@717a8a76]
+2021-04-09 21:36:25.285  INFO 6556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:36:25.519  INFO 6556 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 21:36:26.512  INFO 6556 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 11.867 seconds (JVM running for 13.809)
+2021-04-09 21:36:31.569  INFO 6556 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:36:31.696  INFO 6556 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:36:31.700  INFO 6556 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 21:36:31.706  INFO 6556 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 21:42:06.906  WARN 14920 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 21:42:06.941  INFO 14920 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 14920 (started by GJY in C:\Java workspace\boke)
+2021-04-09 21:42:06.941 DEBUG 14920 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 21:42:06.941  INFO 14920 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 21:42:08.240  INFO 14920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:42:08.244  INFO 14920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 21:42:08.322  INFO 14920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 0 JPA repository interfaces.
+2021-04-09 21:42:08.345  INFO 14920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:42:08.348  INFO 14920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 21:42:08.402  INFO 14920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 Redis repository interfaces.
+2021-04-09 21:42:09.994  INFO 14920 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 21:42:12.553  INFO 14920 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 21:42:12.655  INFO 14920 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 21:42:12.947  INFO 14920 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 21:42:13.210  INFO 14920 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 21:42:13.579  INFO 14920 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 21:42:13.598  INFO 14920 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:42:13.787  WARN 14920 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 21:42:16.158  INFO 14920 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1884e671, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d800a56, org.springframework.security.web.header.HeaderWriterFilter@3c71cf3e, org.springframework.security.web.csrf.CsrfFilter@2fa212df, org.springframework.security.web.authentication.logout.LogoutFilter@389a1e34, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e7eba9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@315cf170, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69ba72da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c7843c3, org.springframework.security.web.session.SessionManagementFilter@5af38a4a, org.springframework.security.web.access.ExceptionTranslationFilter@3b9c9b8b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ce7490a]
+2021-04-09 21:42:16.985  INFO 14920 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:42:17.219  INFO 14920 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 21:42:18.283  INFO 14920 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 12.306 seconds (JVM running for 14.278)
+2021-04-09 21:42:23.331  INFO 14920 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:42:23.469  INFO 14920 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:42:23.477  INFO 14920 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 21:42:23.484  INFO 14920 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 21:45:27.104  WARN 13492 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 21:45:27.136  INFO 13492 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 13492 (started by GJY in C:\Java workspace\boke)
+2021-04-09 21:45:27.136 DEBUG 13492 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 21:45:27.136  INFO 13492 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 21:45:28.408  INFO 13492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:45:28.408  INFO 13492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 21:45:28.487  INFO 13492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 0 JPA repository interfaces.
+2021-04-09 21:45:28.503  INFO 13492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:45:28.518  INFO 13492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 21:45:28.565  INFO 13492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 Redis repository interfaces.
+2021-04-09 21:45:30.170  INFO 13492 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 21:45:33.124  INFO 13492 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 21:45:33.235  INFO 13492 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 21:45:33.551  INFO 13492 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 21:45:33.836  INFO 13492 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 21:45:34.197  INFO 13492 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 21:45:34.216  INFO 13492 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:45:34.421  WARN 13492 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 21:45:36.698  INFO 13492 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c7843c3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1be77a76, org.springframework.security.web.header.HeaderWriterFilter@636e4bf8, org.springframework.security.web.csrf.CsrfFilter@3cf8a235, org.springframework.security.web.authentication.logout.LogoutFilter@204b0f07, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2df71be0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7878bbdb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e1ba142, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5158a9f7, org.springframework.security.web.session.SessionManagementFilter@7e1a9173, org.springframework.security.web.access.ExceptionTranslationFilter@7769d9b6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4768b95c]
+2021-04-09 21:45:37.505  INFO 13492 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:45:37.756  INFO 13492 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 21:45:38.807  INFO 13492 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 12.674 seconds (JVM running for 14.959)
+2021-04-09 21:45:43.850  INFO 13492 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:45:43.975  INFO 13492 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:45:43.990  INFO 13492 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 21:45:43.999  INFO 13492 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-09 21:55:10.020  WARN 1356 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-09 21:55:10.036  INFO 1356 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 1356 (started by GJY in C:\Java workspace\boke)
+2021-04-09 21:55:10.036 DEBUG 1356 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-09 21:55:10.036  INFO 1356 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-09 21:55:11.325  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:55:11.325  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 21:55:11.403  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 0 JPA repository interfaces.
+2021-04-09 21:55:11.434  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-09 21:55:11.434  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-09 21:55:11.481  INFO 1356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+2021-04-09 21:55:13.110  INFO 1356 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-09 21:55:15.665  INFO 1356 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 21:55:15.769  INFO 1356 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-09 21:55:16.040  INFO 1356 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-09 21:55:16.321  INFO 1356 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-09 21:55:16.678  INFO 1356 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 21:55:16.697  INFO 1356 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:55:16.909  WARN 1356 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 21:55:18.951  INFO 1356 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c8f047a, org.springframework.security.web.context.SecurityContextPersistenceFilter@7878bbdb, org.springframework.security.web.header.HeaderWriterFilter@7e1a9173, org.springframework.security.web.csrf.CsrfFilter@238ad211, org.springframework.security.web.authentication.logout.LogoutFilter@359865a2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3fef1e6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@563263a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@595ec862, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4387d2f4, org.springframework.security.web.session.SessionManagementFilter@5d800a56, org.springframework.security.web.access.ExceptionTranslationFilter@3c71cf3e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7573c7b5]
+2021-04-09 21:55:19.758  INFO 1356 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:55:20.004  INFO 1356 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-09 21:55:20.985  INFO 1356 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 11.916 seconds (JVM running for 14.038)
+2021-04-09 21:55:25.958  INFO 1356 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 21:55:26.077  INFO 1356 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 21:55:26.093  INFO 1356 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-09 21:55:26.093  INFO 1356 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

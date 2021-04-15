@@ -19,8 +19,10 @@
     <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon"/>
     <!--网站图标error中-->
     <link rel="shortcut icon" href="../static/favicon.ico" th:href="@{/static/favicon.ico}"/>
+
 </head>
 <body>
+
 <!--导航-->
 <nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
         <div class="ui container">
@@ -43,26 +45,35 @@
                         <i onclick="document.forms['search'].submit()" class=" search link icon"></i>
                     </div>
                 </form>
-                &nbsp;
-                &nbsp;
-               <!-- &lt;!&ndash;写文章&ndash;&gt;
-                <button class="ui blue button m-margin-tb-tiny" ><font style="color: white">写文章</font></button>
-                &nbsp;
-                &nbsp;
-                &lt;!&ndash;登录按钮&ndash;&gt;
-                <button class="ui olive button m-margin-tb-tiny" th:if="${session.user}==null"><font style="color:
-                white">登录</font></button>-->
+            </div>
 
-                <!--用户头像-->
-                <!--<div class="ui horizontal list" th:if="${session.user}">
-                    <a class="ui olive image label">
-                        <img th:src="@{${session.user.avatar}}" width="150em" height="100em"> <font
-                            style="vertical-align: inherit;"><font
-                            style="vertical-align: inherit;" th:text="${session.user.nickname}">
-                        乔
-                    </font></font></a>
-                </div>-->
-                <!--下拉图标-->
+            <div  class="right m-item item m-mobile-hide" th:if="${session.user}!=null" >
+                <!--系统通知-->
+                <a class="item" th:href="@{/messageList/{id}(id=${session.user.getId()})}">
+                    <i class="bullhorn icon"></i>动态
+                    <div class="floating ui red label">22</div>
+                </a>
+
+            </div>
+
+            <div  class="right m-item item m-mobile-hide" th:if="${session.user}!=null" >
+                <!--系统通知-->
+                <a class="item" th:href="@{/messageList/{id}(id=${session.user.getId()})}">
+                    <i class="bullhorn icon"></i>收藏
+                    <div class="floating ui red label">22</div>
+                </a>
+            </div>
+
+            <div  class="right m-item item m-mobile-hide" th:if="${session.user}==null">
+                <!--登录or注册-->
+                <a class="item" id="loginBtn" th:href="@{/alllogin}">
+                    <i class="button icon"></i>注册/登录
+                </a>
+            </div>
+
+
+            <div  class="right m-item item m-mobile-hide" id="notic">
+                <!--用户头像下拉图标-->
                 <div class="right m-item m-mobile-hide menu" th:if="${session.user}">
                     <div class="ui dropdown item ">
                         <div class="text">
@@ -74,7 +85,7 @@
                         <i class="dropdown icon"></i>
                         <!--下拉菜单-->
                         <div class="menu">
-                            <a href="#" th:href="@{/loginOut}" class="item">注销</a>
+                            <a href="#" th:href="@{/logout}" class="item">注销</a>
                         </div>
                     </div>
                 </div>
@@ -153,6 +164,15 @@
     </div>
 </footer>
 <script>
+    /*消息提示关闭初始化*/
+    $('.message .close')
+        .on('click', function() {
+            $(this)
+                .closest('.message')
+                .transition('fade')
+            ;
+        })
+    ;
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
@@ -162,6 +182,13 @@
             on : 'hover'
         });
 </script>
+
+<script>
+    $('#notic').mouseover(function(){
+        alert("message")
+    });
+</script>
+
 </body>
 
 </html>

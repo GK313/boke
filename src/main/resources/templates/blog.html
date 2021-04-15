@@ -618,7 +618,6 @@ h5,h6{font-size:1em;}
             </div>
             <!--发布留言-->
             <div id="comment-form" class="ui form">
-
                 <input name="blogid" type="hidden" th:value="${blog.id}">
                 <input name="parentcommentid" type="hidden" value="-1">
                 <div class="field m-mobile-wide">
@@ -817,7 +816,8 @@ h5,h6{font-size:1em;}
         on: 'click',
         position: 'bottom center'
     });
-    //右底部锚点按钮，弹出卫星二维码
+
+    //右底部锚点按钮，弹出微信二维码
     $('.wechat').popup({
         popup: $('.wechat-qr'),
         position: 'left center'
@@ -852,6 +852,8 @@ h5,h6{font-size:1em;}
 
         }
     })
+
+
 
 </script>
 <script>
@@ -895,6 +897,7 @@ h5,h6{font-size:1em;}
     $("#comment-btn").click(function () {
         var boo = $('.ui.form').form('validate form');
         if (boo) {
+            console.log("发送");
             postDate();
         } else {
 
@@ -903,13 +906,14 @@ h5,h6{font-size:1em;}
 
     //将表单数据发送到后端
     function postDate() {
-        $("#comment-contain").load(/*[@{/comment/send}]*/"/comment/save", {
+        $("#comment-contain").load(/*[[@{/comment/save}]]*/"/comment/save", {
             "content": $("[name='content']").val(),
             "nickname": $("[name='nickname']").val(),
             "email": $("[name='email']").val(),
             "blogid": $("[name='blogid']").val(),
             "parentcommentid": $("[name='parentcommentid']").val()
-            /*page:$("[name='page']").val()*/, function(responseTxt, statusTxt, xhr) {
+            /*page:$("[name='page']").val()*/,
+            function(responseTxt, statusTxt, xhr) {
                 $(window).scrollTo($('#comment-contain'), 500);
                 clearContent();
                 $("[name='content']").attr("placeholder", "请输入评论...");
@@ -934,8 +938,10 @@ h5,h6{font-size:1em;}
 
     /*进入blog页面时自动加载评论列表*/
     $(function () {
-        $("#comment-contain").load(/*[[@{/commentList/{blogId}(id=${blog.id})}]]*/"commentList/7");
+        $("#comment-contain").load(/*[[@{/comment/commentList/{blogId}(id=${blog.id})}]]*/"/commentList/7)");
     });
+
 </script>
+
 </body>
 </html>

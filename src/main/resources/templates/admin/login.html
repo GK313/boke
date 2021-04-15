@@ -26,29 +26,66 @@
             <div class="column">
                 <h2 class="ui teal image header">
                     <!--<img src="../../static/image/header.png" th:src="@{/image/header.png}" class="image"-->
-                    <div class="content">
-                        管理后台登录
-                    </div>
                 </h2>
                 <form class="ui large form" method="post" action="#" th:action="@{/login}">
                     <div class="ui stacked segment">
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class="user icon"></i>
-                                <input type="text" name="username" placeholder="用户名">
+                        <h2 class="ui image header">
+                            <!--<img src="../../static/image/header.png" th:src="@{/image/header.png}" class="image"-->
+                            <div class="content">
+                                <span style="color: forestgreen;">管理后台登录</span>
+                            </div>
+                        </h2>
+                        <br>
+                        <br>
+                        <!--密码登录-->
+                        <div class="requiredPassword">
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="user icon"></i>
+                                    <input type="text" name="username" placeholder="用户名">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="lock icon"></i>
+                                    <input type="password" name="password" placeholder="密码">
+                                </div>
                             </div>
                         </div>
-                        <div class="field">
-                            <div class="ui left icon input">
-                                <i class="lock icon"></i>
-                                <input type="password" name="password" placeholder="密码">
-                            </div>
-                        </div>
+
+                        <h4 class="ui left aligned header" style="color:#b0b0b0;">
+                            新手机号将自动注册
+                        </h4>
+
                         <button class="ui fluid large teal submit button">登录</button>
+
+                        <div class="ui left aligned checkbox">
+                            <h4 class="ui left aligned header" style="color:#b0b0b0;">10天之内免登录</h4>
+                        </div>
+
+
+                        <div class="center aligned grid">
+                            <div class="column">
+                                <a href="#" id="noPassd" class="ui left aligned header" style="color:forestgreen;"
+                                >
+                                    免密码登录</a>
+                                <a href="#" class="ui left aligned header" style="color:#b0b0b0;">|</a>
+                                <a href="#" id="passwd" class="ui left aligned header" style="color:#b0b0b0;">密码登录</a>
+                                <a href="#" class="ui left aligned header" style="color:#b0b0b0 ;">|</a>
+                                <a href="#" class="ui left aligned header" style="color:#b0b0b0;">微信登录</a>
+                            </div>
+                        </div>
+
+                        <h4 class="center aligned grid" style="color:#b0b0b0;">
+                            继续即代表同意<a style="color: forestgreen">《服务条款》</a>和<a
+                                style="color: forestgreen">《隐私政策》</a>
+                        </h4>
+
                     </div>
                     <!--用户名密码输入错误提示-->
                     <div class="ui error mini message"></div>
-                    <div class="ui mini negative message " th:unless="${#strings.isEmpty(message)}" th:text="${message}"></div>
+                    <div class="ui mini negative message " th:unless="${#strings.isEmpty(message)}"
+                         th:text="${message}"></div>
 
                 </form>
 

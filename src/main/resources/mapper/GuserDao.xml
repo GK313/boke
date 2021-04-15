@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gjy.boke.dao.GuserDao">
+  <resultMap id="BaseResultMap" type="com.gjy.boke.entity.Guser">
+    <id column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="passwd" jdbcType="VARCHAR" property="passwd" />
+    <result column="avator" jdbcType="VARCHAR" property="avator" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    phone, passwd, avator, `name`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_guser
+    where phone = #{phone,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_guser
+    where phone = #{phone,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="phone" keyProperty="phone" parameterType="com.gjy.boke.entity.Guser" useGeneratedKeys="true">
+    insert into t_guser (passwd, avator, `name`
+      )
+    values (#{passwd,jdbcType=VARCHAR}, #{avator,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="phone" keyProperty="phone" parameterType="com.gjy.boke.entity.Guser" useGeneratedKeys="true">
+    insert into t_guser
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="passwd != null">
+        passwd,
+      </if>
+      <if test="avator != null">
+        avator,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="passwd != null">
+        #{passwd,jdbcType=VARCHAR},
+      </if>
+      <if test="avator != null">
+        #{avator,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gjy.boke.entity.Guser">
+    update t_guser
+    <set>
+      <if test="passwd != null">
+        passwd = #{passwd,jdbcType=VARCHAR},
+      </if>
+      <if test="avator != null">
+        avator = #{avator,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where phone = #{phone,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gjy.boke.entity.Guser">
+    update t_guser
+    set passwd = #{passwd,jdbcType=VARCHAR},
+      avator = #{avator,jdbcType=VARCHAR},
+      `name` = #{name,jdbcType=VARCHAR}
+    where phone = #{phone,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -30,6 +30,10 @@ public class indexController {
 
     @RequestMapping("/")
     public String index(Model model){
+        //判断当前是否登录，如果已经登录，根据用户id从缓存中查询出当前用户所订阅的分类名称
+        //用户订阅某个分类时，以该分类的名称为队列与direct模式的交换机进行绑定，routing key为分类的名称
+
+
         //采用分页获取所有博客信息
         List<Blog> blogs = blogService.getAllBlog();
         //获取每个分类下的博客数量降序的前n条分类信息
@@ -164,6 +168,11 @@ public class indexController {
             return "index::bloglistSearched";
     }
 
+    @GetMapping("/messageList/{id}")
+    public String getMessage(@PathVariable Long id){
+        System.out.println(id);
+        return "message";
 
+    }
 
 }

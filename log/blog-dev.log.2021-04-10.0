@@ -1,0 +1,1049 @@
+2021-04-10 14:18:12.206  INFO 3916 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 3916 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 14:18:12.221 DEBUG 3916 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 14:18:12.221  INFO 3916 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 14:18:12.299  INFO 3916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 14:18:12.299  INFO 3916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 14:18:13.487  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 14:18:13.487  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 14:18:13.565  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 0 JPA repository interfaces.
+2021-04-10 14:18:13.580  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 14:18:13.580  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 14:18:13.643  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces.
+2021-04-10 14:18:14.768  INFO 3916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 14:18:14.768  INFO 3916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 14:18:14.783  INFO 3916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 14:18:14.783  INFO 3916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 14:18:14.783  INFO 3916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 14:18:14.783  INFO 3916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 14:18:14.799  INFO 3916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 14:18:15.033  INFO 3916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 14:18:15.033  INFO 3916 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2734 ms
+2021-04-10 14:18:15.455  INFO 3916 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 14:18:17.020  INFO 3916 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 14:18:17.098  INFO 3916 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 14:18:17.348  INFO 3916 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 14:18:17.535  INFO 3916 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 14:18:17.801  INFO 3916 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 14:18:17.817  INFO 3916 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 14:18:17.926  WARN 3916 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 14:18:18.988  INFO 3916 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46bb5962, org.springframework.security.web.context.SecurityContextPersistenceFilter@5cfb20a, org.springframework.security.web.header.HeaderWriterFilter@9180dd9, org.springframework.security.web.csrf.CsrfFilter@42bffbdf, org.springframework.security.web.authentication.logout.LogoutFilter@6efbc569, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@786ab521, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@247fedbb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c5ddd07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@307ebcef, org.springframework.security.web.session.SessionManagementFilter@225b7ef4, org.springframework.security.web.access.ExceptionTranslationFilter@2322f30a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f11c30e]
+2021-04-10 14:18:19.191  INFO 3916 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 14:18:19.332  INFO 3916 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 14:18:20.699  INFO 3916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 14:18:20.746  INFO 3916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 14:18:20.761  INFO 3916 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 9.351 seconds (JVM running for 12.001)
+2021-04-10 14:22:40.010  INFO 3916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 14:22:40.011  INFO 3916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 14:22:40.014  INFO 3916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-04-10 14:22:40.438 DEBUG 3916 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 14:22:40.484 DEBUG 3916 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 14:22:40.558 DEBUG 3916 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 14:22:40.561 DEBUG 3916 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 14:22:40.562 DEBUG 3916 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 14:22:40.565 DEBUG 3916 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 14:22:40.567 DEBUG 3916 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 14:22:40.568 DEBUG 3916 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 14:22:40.578 DEBUG 3916 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 14:22:40.581 DEBUG 3916 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 14:22:40.582 DEBUG 3916 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 14:22:40.594 DEBUG 3916 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 14:22:40.596 DEBUG 3916 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 14:22:40.597 DEBUG 3916 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 14:22:40.600 DEBUG 3916 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 14:22:40.601  INFO 3916 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 14:23:42.985  INFO 3916 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 14:59:20.944  INFO 3916 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 14:59:20.991  INFO 3916 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 14:59:20.991  INFO 3916 --- [Thread-19] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 14:59:20.991  INFO 3916 --- [Thread-19] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 14:59:21.350  INFO 3916 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 3916 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 14:59:21.350 DEBUG 3916 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 14:59:21.350  INFO 3916 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 14:59:22.162  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 14:59:22.162  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 14:59:22.256  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 0 JPA repository interfaces.
+2021-04-10 14:59:22.272  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 14:59:22.272  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 14:59:22.350  INFO 3916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 0 Redis repository interfaces.
+2021-04-10 14:59:22.912  INFO 3916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 14:59:22.912  INFO 3916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 14:59:22.912  INFO 3916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 14:59:22.912  INFO 3916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 14:59:22.912  INFO 3916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 14:59:22.912  INFO 3916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 14:59:22.912  INFO 3916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 14:59:23.006  INFO 3916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 14:59:23.006  INFO 3916 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1640 ms
+2021-04-10 14:59:23.100  WARN 3308 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-10 14:59:23.147  INFO 3308 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 3308 (started by GJY in C:\Java workspace\boke)
+2021-04-10 14:59:23.147 DEBUG 3308 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 14:59:23.147  INFO 3308 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-10 14:59:23.193  INFO 3916 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2021-04-10 14:59:23.287  INFO 3916 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 14:59:23.303  INFO 3916 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 14:59:23.318  INFO 3916 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 14:59:23.318  INFO 3916 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 14:59:23.412  WARN 3916 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 14:59:23.850  INFO 3916 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39cea44a, org.springframework.security.web.context.SecurityContextPersistenceFilter@22fc3c09, org.springframework.security.web.header.HeaderWriterFilter@42c08e35, org.springframework.security.web.csrf.CsrfFilter@75c0b903, org.springframework.security.web.authentication.logout.LogoutFilter@53a6cde1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@dba9b69, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20831462, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66749761, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1740d2c2, org.springframework.security.web.session.SessionManagementFilter@52049feb, org.springframework.security.web.access.ExceptionTranslationFilter@3536e975, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@118743c1]
+2021-04-10 14:59:24.068  INFO 3916 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 14:59:24.162  INFO 3916 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 14:59:24.544  INFO 3916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 14:59:24.575  INFO 3916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 14:59:24.575  INFO 3916 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 3.339 seconds (JVM running for 2475.82)
+2021-04-10 14:59:24.575  INFO 3916 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-10 14:59:24.762  INFO 3308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 14:59:24.762  INFO 3308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 14:59:24.840  INFO 3308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 0 JPA repository interfaces.
+2021-04-10 14:59:24.856  INFO 3308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 14:59:24.872  INFO 3308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 14:59:24.934  INFO 3308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+2021-04-10 14:59:26.780  INFO 3308 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 14:59:29.406  INFO 3308 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 14:59:29.537  INFO 3308 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 14:59:29.865  INFO 3308 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 14:59:30.147  INFO 3308 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 14:59:30.561  INFO 3308 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 14:59:30.584  INFO 3308 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 14:59:30.814  WARN 3308 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 14:59:33.236  INFO 3308 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d949bc4, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e794f53, org.springframework.security.web.header.HeaderWriterFilter@315cf170, org.springframework.security.web.csrf.CsrfFilter@279c4e3b, org.springframework.security.web.authentication.logout.LogoutFilter@7ffcb232, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7d8f2eec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69ba72da, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56cd5d76, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7079f8f0, org.springframework.security.web.session.SessionManagementFilter@25f7cc38, org.springframework.security.web.access.ExceptionTranslationFilter@4ca0b9b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@97b5e6a]
+2021-04-10 14:59:34.256  INFO 3308 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 14:59:34.606  INFO 3308 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 14:59:35.914  INFO 3308 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 13.819 seconds (JVM running for 16.4)
+2021-04-10 14:59:41.998  INFO 3308 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 14:59:42.129  INFO 3308 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 14:59:42.133  INFO 3308 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 14:59:42.141  INFO 3308 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:03:42.625  INFO 14940 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 14940 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:03:42.625 DEBUG 14940 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:03:42.625  INFO 14940 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:03:42.672  INFO 14940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:03:42.672  INFO 14940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:03:43.615  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:03:43.615  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:03:43.693  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:03:43.709  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:03:43.709  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:03:43.756  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:03:44.680  INFO 14940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:03:44.696  INFO 14940 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:03:44.696  INFO 14940 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:03:44.696  INFO 14940 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:03:44.696  INFO 14940 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:03:44.696  INFO 14940 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:03:44.711  INFO 14940 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:03:44.930  INFO 14940 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:03:44.930  INFO 14940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2258 ms
+2021-04-10 15:03:45.291  INFO 14940 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:03:46.566  INFO 14940 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:03:46.629  INFO 14940 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:03:46.773  INFO 14940 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:03:46.914  INFO 14940 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:03:47.104  INFO 14940 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:03:47.119  INFO 14940 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:03:47.213  WARN 14940 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:03:48.121  INFO 14940 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b8d2724, org.springframework.security.web.context.SecurityContextPersistenceFilter@1773d551, org.springframework.security.web.header.HeaderWriterFilter@60b1ea3c, org.springframework.security.web.csrf.CsrfFilter@1f6a57f6, org.springframework.security.web.authentication.logout.LogoutFilter@4bc3ea54, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@512233b3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51ee7487, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@486daee3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c25628a, org.springframework.security.web.session.SessionManagementFilter@72c88bd7, org.springframework.security.web.access.ExceptionTranslationFilter@d693a5a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13215a08]
+2021-04-10 15:03:48.308  INFO 14940 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:03:48.417  INFO 14940 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:03:49.680  INFO 14940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:03:49.733  INFO 14940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:03:49.749  INFO 14940 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 7.969 seconds (JVM running for 10.428)
+2021-04-10 15:04:45.671  INFO 14940 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:04:45.671  INFO 14940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:04:45.673  INFO 14940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-10 15:04:58.837  INFO 14940 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:06:56.771  INFO 14940 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:06:57.002  INFO 14940 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:06:57.017  INFO 14940 --- [Thread-20] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:06:57.017  INFO 14940 --- [Thread-20] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:06:57.282  INFO 14940 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 14940 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:06:57.282 DEBUG 14940 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:06:57.282  INFO 14940 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:06:57.688  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:06:57.688  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:06:57.735  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:06:57.751  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:06:57.751  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:06:57.782  INFO 14940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:06:58.113  INFO 14940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:06:58.113  INFO 14940 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:06:58.113  INFO 14940 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:06:58.113  INFO 14940 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:06:58.113  INFO 14940 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:06:58.113  INFO 14940 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:06:58.113  INFO 14940 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:06:58.191  INFO 14940 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:06:58.191  INFO 14940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 909 ms
+2021-04-10 15:06:58.284  INFO 14940 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2021-04-10 15:06:58.348  INFO 14940 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:06:58.348  INFO 14940 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:06:58.364  INFO 14940 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:06:58.364  INFO 14940 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:06:58.411  WARN 14940 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:06:58.676  INFO 14940 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32eedf1, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c8c3af7, org.springframework.security.web.header.HeaderWriterFilter@1b30b6f2, org.springframework.security.web.csrf.CsrfFilter@bd06f41, org.springframework.security.web.authentication.logout.LogoutFilter@14f8dd93, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f8f28d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14703acb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a698991, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bd5cb5, org.springframework.security.web.session.SessionManagementFilter@442eff54, org.springframework.security.web.access.ExceptionTranslationFilter@19482d80, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c374c9d]
+2021-04-10 15:06:58.774  INFO 14940 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:06:58.820  INFO 14940 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:06:59.086  INFO 14940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:06:59.102  INFO 14940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:06:59.102  INFO 14940 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 1.894 seconds (JVM running for 199.789)
+2021-04-10 15:06:59.102  INFO 14940 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-10 15:07:04.497  INFO 14940 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:07:04.501  INFO 14940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:07:04.503  INFO 14940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-10 15:07:08.941  INFO 14940 --- [http-nio-8080-exec-7] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:07:30.236  INFO 12680 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 12680 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:07:30.239 DEBUG 12680 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:07:30.239  INFO 12680 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:07:30.292  INFO 12680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:07:30.292  INFO 12680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:07:31.242  INFO 12680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:07:31.243  INFO 12680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:07:31.308  INFO 12680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:07:31.325  INFO 12680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:07:31.326  INFO 12680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:07:31.378  INFO 12680 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:07:32.252  INFO 12680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:07:32.263  INFO 12680 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:07:32.263  INFO 12680 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:07:32.266  INFO 12680 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:07:32.266  INFO 12680 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:07:32.267  INFO 12680 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:07:32.271  INFO 12680 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:07:32.481  INFO 12680 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:07:32.481  INFO 12680 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2188 ms
+2021-04-10 15:07:32.828  INFO 12680 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:07:34.087  INFO 12680 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:07:34.141  INFO 12680 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:07:34.286  INFO 12680 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:07:34.419  INFO 12680 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:07:34.608  INFO 12680 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:07:34.623  INFO 12680 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:07:34.715  WARN 12680 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:07:35.620  INFO 12680 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a162a48, org.springframework.security.web.context.SecurityContextPersistenceFilter@2a5785f7, org.springframework.security.web.header.HeaderWriterFilter@289fe87, org.springframework.security.web.csrf.CsrfFilter@485a27a5, org.springframework.security.web.authentication.logout.LogoutFilter@4f828c58, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68d9962c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42d06cf1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e6aff08, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d1c5e43, org.springframework.security.web.session.SessionManagementFilter@63cf3504, org.springframework.security.web.access.ExceptionTranslationFilter@74c6bca4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cc97a22]
+2021-04-10 15:07:35.815  INFO 12680 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:07:35.937  INFO 12680 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:07:37.276  INFO 12680 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:07:37.322  INFO 12680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:07:37.335  INFO 12680 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 7.862 seconds (JVM running for 10.107)
+2021-04-10 15:07:53.492  INFO 12680 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:07:53.492  INFO 12680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:07:53.494  INFO 12680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-10 15:07:53.645 DEBUG 12680 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:07:53.661 DEBUG 12680 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:07:53.723 DEBUG 12680 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:07:53.724 DEBUG 12680 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:07:53.725 DEBUG 12680 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:07:53.727 DEBUG 12680 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:07:53.728 DEBUG 12680 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:07:53.729 DEBUG 12680 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:07:53.738 DEBUG 12680 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:07:53.740 DEBUG 12680 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:07:53.740 DEBUG 12680 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:07:53.747 DEBUG 12680 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:07:53.749 DEBUG 12680 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:07:53.750 DEBUG 12680 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:07:53.753 DEBUG 12680 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:07:53.754  INFO 12680 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:07:54.176 DEBUG 12680 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:07:54.176 DEBUG 12680 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:07:54.185 DEBUG 12680 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:07:54.186 DEBUG 12680 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:07:54.187 DEBUG 12680 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:07:54.190 DEBUG 12680 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:07:54.190 DEBUG 12680 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:07:54.191 DEBUG 12680 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:07:54.199 DEBUG 12680 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:07:54.201 DEBUG 12680 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:07:54.202 DEBUG 12680 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:07:54.216 DEBUG 12680 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:07:54.217 DEBUG 12680 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:07:54.218 DEBUG 12680 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:07:54.222 DEBUG 12680 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:07:54.222  INFO 12680 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:08:06.448  INFO 12680 --- [http-nio-8080-exec-5] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:08:22.791  INFO 744 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 744 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:08:22.796 DEBUG 744 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:08:22.797  INFO 744 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:08:22.922  INFO 744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:08:22.923  INFO 744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:08:24.851  INFO 744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:08:24.852  INFO 744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:08:24.957  INFO 744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:08:24.987  INFO 744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:08:24.990  INFO 744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:08:25.066  INFO 744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:08:26.600  INFO 744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:08:26.617  INFO 744 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:08:26.618  INFO 744 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:08:26.622  INFO 744 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:08:26.622  INFO 744 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:08:26.623  INFO 744 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:08:26.629  INFO 744 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:08:26.954  INFO 744 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4029 ms
+2021-04-10 15:09:19.265  INFO 10880 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 10880 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:09:19.271 DEBUG 10880 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:09:19.272  INFO 10880 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:09:19.399  INFO 10880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:09:19.400  INFO 10880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:09:20.792  INFO 10880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:09:20.793  INFO 10880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:09:20.871  INFO 10880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:09:20.893  INFO 10880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:09:20.895  INFO 10880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:09:20.955  INFO 10880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:09:22.115  INFO 10880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:09:22.130  INFO 10880 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:09:22.130  INFO 10880 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:09:22.134  INFO 10880 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:09:22.134  INFO 10880 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:09:22.134  INFO 10880 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:09:22.140  INFO 10880 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:09:22.444  INFO 10880 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:09:22.445  INFO 10880 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3042 ms
+2021-04-10 15:09:22.989  INFO 10880 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:09:24.514  INFO 10880 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:09:24.588  INFO 10880 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:09:24.792  INFO 10880 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:09:24.978  INFO 10880 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:09:25.240  INFO 10880 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:09:25.260  INFO 10880 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:09:25.377  WARN 10880 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:10:06.516  INFO 10880 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59afd15f, org.springframework.security.web.context.SecurityContextPersistenceFilter@46b68c4c, org.springframework.security.web.header.HeaderWriterFilter@183e09e9, org.springframework.security.web.csrf.CsrfFilter@3730c274, org.springframework.security.web.authentication.logout.LogoutFilter@2df512, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5bf6c3e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2eb27db9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bc88821, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a091026, org.springframework.security.web.session.SessionManagementFilter@718859b6, org.springframework.security.web.access.ExceptionTranslationFilter@2c0121d0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@158be3ee]
+2021-04-10 15:10:06.819  INFO 10880 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:10:07.013  INFO 10880 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:10:08.975  INFO 10880 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:10:09.037  INFO 10880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:10:09.053  INFO 10880 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 51.287 seconds (JVM running for 54.298)
+2021-04-10 15:10:10.387  INFO 10880 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:10:10.418  INFO 10880 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:10:10.418  INFO 10880 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:10:10.434  INFO 10880 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:10:38.244  INFO 17908 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 17908 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:10:38.244 DEBUG 17908 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:10:38.244  INFO 17908 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:10:38.322  INFO 17908 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:10:38.322  INFO 17908 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:10:39.576  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:10:39.576  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:10:39.654  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:10:39.669  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:10:39.669  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:10:39.732  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:10:40.970  INFO 17908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:10:40.986  INFO 17908 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:10:40.986  INFO 17908 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:10:41.002  INFO 17908 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:10:41.002  INFO 17908 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:10:41.002  INFO 17908 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:10:41.002  INFO 17908 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:10:41.298  INFO 17908 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:10:41.298  INFO 17908 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2976 ms
+2021-04-10 15:10:41.895  INFO 17908 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:10:43.826  INFO 17908 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:10:43.920  INFO 17908 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:10:44.186  INFO 17908 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:10:44.392  INFO 17908 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:10:44.695  INFO 17908 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:10:44.711  INFO 17908 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:10:44.853  WARN 17908 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:10:46.517  INFO 17908 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7faef0e3, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a5383d0, org.springframework.security.web.header.HeaderWriterFilter@43852b1a, org.springframework.security.web.csrf.CsrfFilter@170f59e0, org.springframework.security.web.authentication.logout.LogoutFilter@42fb4727, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@138f4720, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64114f95, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6da5ea64, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b8a5073, org.springframework.security.web.session.SessionManagementFilter@76bcc1e5, org.springframework.security.web.access.ExceptionTranslationFilter@58f45790, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@435f8e4c]
+2021-04-10 15:10:46.851  INFO 17908 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:10:47.052  INFO 17908 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:10:48.900  INFO 17908 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:10:48.959  INFO 17908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:10:48.978  INFO 17908 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 11.617 seconds (JVM running for 14.233)
+2021-04-10 15:10:49.062  INFO 17908 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:10:49.062  INFO 17908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:10:49.064  INFO 17908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-10 15:10:49.275 DEBUG 17908 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:10:49.300 DEBUG 17908 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:10:49.341 DEBUG 17908 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:10:49.343 DEBUG 17908 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:10:49.344 DEBUG 17908 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:10:49.347 DEBUG 17908 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:10:49.348 DEBUG 17908 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:10:49.348 DEBUG 17908 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:10:49.356 DEBUG 17908 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:10:49.358 DEBUG 17908 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:10:49.358 DEBUG 17908 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:10:49.367 DEBUG 17908 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:10:49.368 DEBUG 17908 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:10:49.368 DEBUG 17908 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:10:49.369 DEBUG 17908 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:10:49.370  INFO 17908 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:11:39.265  INFO 17908 --- [http-nio-8080-exec-3] com.gjy.boke.aspect.LogAspect            : Result logins
+2021-04-10 15:13:37.148  INFO 17908 --- [Thread-24] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:13:37.319  INFO 17908 --- [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:13:37.345  INFO 17908 --- [Thread-24] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:13:37.354  INFO 17908 --- [Thread-24] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:13:37.763  INFO 17908 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 17908 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:13:37.763 DEBUG 17908 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:13:37.764  INFO 17908 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:13:38.340  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:13:38.340  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:13:38.395  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:13:38.406  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:13:38.406  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:13:38.463  INFO 17908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:13:38.817  INFO 17908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:13:38.818  INFO 17908 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:13:38.819  INFO 17908 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:13:38.819  INFO 17908 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:13:38.819  INFO 17908 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:13:38.819  INFO 17908 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:13:38.820  INFO 17908 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:13:38.887  INFO 17908 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:13:38.887  INFO 17908 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1110 ms
+2021-04-10 15:13:38.997  INFO 17908 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2021-04-10 15:13:39.056  INFO 17908 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:13:39.072  INFO 17908 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:13:39.072  INFO 17908 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:13:39.072  INFO 17908 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:13:39.137  WARN 17908 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:13:39.599  INFO 17908 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54625bd9, org.springframework.security.web.context.SecurityContextPersistenceFilter@50209bdf, org.springframework.security.web.header.HeaderWriterFilter@4927a038, org.springframework.security.web.csrf.CsrfFilter@5e7bea02, org.springframework.security.web.authentication.logout.LogoutFilter@310c5dd2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@418f4f9b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@127d6e7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@662f3a69, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ce485ed, org.springframework.security.web.session.SessionManagementFilter@510a5006, org.springframework.security.web.access.ExceptionTranslationFilter@28dd5855, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@573ab52c]
+2021-04-10 15:13:39.719  INFO 17908 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:13:39.771  INFO 17908 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:13:40.091  INFO 17908 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:13:40.107  INFO 17908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:13:40.112  INFO 17908 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 2.483 seconds (JVM running for 185.367)
+2021-04-10 15:13:40.113  INFO 17908 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-10 15:13:42.377  INFO 17908 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:13:42.379  INFO 17908 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:13:42.385  INFO 17908 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2021-04-10 15:14:15.646  INFO 17908 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result logins
+2021-04-10 15:14:17.661  INFO 17908 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:14:17.771  INFO 17908 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:14:17.771  INFO 17908 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2021-04-10 15:14:17.771  INFO 17908 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2021-04-10 15:16:51.315  WARN 12460 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-10 15:16:51.342  INFO 12460 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 12460 (started by GJY in C:\Java workspace\boke)
+2021-04-10 15:16:51.343 DEBUG 12460 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:16:51.343  INFO 12460 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-10 15:16:52.572  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:16:52.575  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:16:52.647  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:16:52.667  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:16:52.670  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:16:52.725  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:16:54.268  INFO 12460 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:16:56.850  INFO 12460 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:16:56.959  INFO 12460 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:16:57.225  INFO 12460 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:16:57.490  INFO 12460 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:16:57.840  INFO 12460 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:16:57.871  INFO 12460 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:16:58.075  WARN 12460 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:17:00.135  INFO 12460 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30704f85, org.springframework.security.web.context.SecurityContextPersistenceFilter@56cd5d76, org.springframework.security.web.header.HeaderWriterFilter@abc7005, org.springframework.security.web.csrf.CsrfFilter@1bdafb01, org.springframework.security.web.authentication.logout.LogoutFilter@4b09d1c3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@93ce24d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@302da330, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f68756d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b99c937, org.springframework.security.web.session.SessionManagementFilter@63c84d31, org.springframework.security.web.access.ExceptionTranslationFilter@75f4d8a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11c3d22f]
+2021-04-10 15:17:00.968  INFO 12460 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:17:01.234  INFO 12460 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:17:02.284  INFO 12460 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 11.853 seconds (JVM running for 13.831)
+2021-04-10 15:17:07.998  INFO 12460 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:17:08.130  INFO 12460 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:17:08.133  INFO 12460 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:17:08.139  INFO 12460 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:17:54.801  WARN 15948 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-10 15:17:54.836  INFO 15948 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 15948 (started by GJY in C:\Java workspace\boke)
+2021-04-10 15:17:54.837 DEBUG 15948 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:17:54.837  INFO 15948 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-10 15:17:56.110  INFO 15948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:17:56.115  INFO 15948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:17:56.206  INFO 15948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:17:56.244  INFO 15948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:17:56.248  INFO 15948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:17:56.332  INFO 15948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:17:58.330  INFO 15948 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:18:01.290  INFO 15948 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:18:01.412  INFO 15948 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:18:01.758  INFO 15948 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:18:02.118  INFO 15948 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:18:02.611  INFO 15948 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:18:02.638  INFO 15948 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:18:02.888  WARN 15948 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:18:06.005  INFO 15948 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71f437d7, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c1df0e9, org.springframework.security.web.header.HeaderWriterFilter@4407fea2, org.springframework.security.web.csrf.CsrfFilter@593354fa, org.springframework.security.web.authentication.logout.LogoutFilter@7bfc36d5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35e357b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@768e40af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ffe8a82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5186c801, org.springframework.security.web.session.SessionManagementFilter@54ed249f, org.springframework.security.web.access.ExceptionTranslationFilter@113a6636, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7eb774c3]
+2021-04-10 15:18:07.201  INFO 15948 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:18:07.668  INFO 15948 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:18:09.314  INFO 15948 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 15.438 seconds (JVM running for 17.78)
+2021-04-10 15:18:16.116  INFO 15948 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:18:16.249  INFO 15948 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:18:16.253  INFO 15948 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:18:16.259  INFO 15948 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:19:12.574  INFO 15896 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 15896 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:19:12.578 DEBUG 15896 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:19:12.578  INFO 15896 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:19:12.644  INFO 15896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:19:12.644  INFO 15896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:19:13.679  INFO 15896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:19:13.680  INFO 15896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:19:13.746  INFO 15896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:19:13.762  INFO 15896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:19:13.762  INFO 15896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:19:13.809  INFO 15896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:19:14.821  INFO 15896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:19:14.837  INFO 15896 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:19:14.837  INFO 15896 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:19:14.837  INFO 15896 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:19:14.837  INFO 15896 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:19:14.837  INFO 15896 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:19:14.837  INFO 15896 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:19:15.057  INFO 15896 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:19:15.057  INFO 15896 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2412 ms
+2021-04-10 15:19:15.514  INFO 15896 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:19:16.952  INFO 15896 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:19:17.014  INFO 15896 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:19:17.233  INFO 15896 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:19:17.389  INFO 15896 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:19:17.609  INFO 15896 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:19:17.625  INFO 15896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:19:17.734  WARN 15896 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:19:18.883  INFO 15896 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6995630f, org.springframework.security.web.context.SecurityContextPersistenceFilter@13986567, org.springframework.security.web.header.HeaderWriterFilter@14a07c7d, org.springframework.security.web.csrf.CsrfFilter@2ec27066, org.springframework.security.web.authentication.logout.LogoutFilter@5a0672c3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5a713ecf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7081c09f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@357efd1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3af079d8, org.springframework.security.web.session.SessionManagementFilter@76bf98f8, org.springframework.security.web.access.ExceptionTranslationFilter@30390659, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56b984ad]
+2021-04-10 15:19:19.117  INFO 15896 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:19:19.242  INFO 15896 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:19:20.605  INFO 15896 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:19:20.654  INFO 15896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:19:20.670  INFO 15896 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 8.936 seconds (JVM running for 11.324)
+2021-04-10 15:19:29.478  INFO 15896 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:19:29.478  INFO 15896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:19:29.480  INFO 15896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-10 15:19:38.966 DEBUG 15896 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:19:38.982 DEBUG 15896 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:19:38.996 DEBUG 15896 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:19:38.996 DEBUG 15896 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:19:39.035 DEBUG 15896 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:19:39.036 DEBUG 15896 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:19:39.037 DEBUG 15896 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:19:39.037 DEBUG 15896 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:19:39.037 DEBUG 15896 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:19:39.037 DEBUG 15896 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:19:39.039 DEBUG 15896 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:19:39.039 DEBUG 15896 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:19:39.040 DEBUG 15896 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:19:39.040 DEBUG 15896 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:19:39.040 DEBUG 15896 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:19:39.040 DEBUG 15896 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:19:39.047 DEBUG 15896 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:19:39.049 DEBUG 15896 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:19:39.049 DEBUG 15896 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:19:39.049 DEBUG 15896 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:19:39.050 DEBUG 15896 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:19:39.050 DEBUG 15896 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:19:39.057 DEBUG 15896 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:19:39.058 DEBUG 15896 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:19:39.059 DEBUG 15896 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:19:39.060 DEBUG 15896 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:19:39.060 DEBUG 15896 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:19:39.060 DEBUG 15896 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:19:39.061 DEBUG 15896 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:19:39.062  INFO 15896 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:19:39.062 DEBUG 15896 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:19:39.063  INFO 15896 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:19:50.577 DEBUG 15896 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:19:50.578 DEBUG 15896 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:19:50.584 DEBUG 15896 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:19:50.585 DEBUG 15896 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:19:50.585 DEBUG 15896 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:19:50.587 DEBUG 15896 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:19:50.588 DEBUG 15896 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:19:50.589 DEBUG 15896 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:19:50.593 DEBUG 15896 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:19:50.594 DEBUG 15896 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:19:50.594 DEBUG 15896 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:19:50.602 DEBUG 15896 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:19:50.603 DEBUG 15896 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:19:50.604 DEBUG 15896 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:19:50.605 DEBUG 15896 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:21:04.487  INFO 15896 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:21:04.878 DEBUG 15896 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:21:04.879 DEBUG 15896 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:21:04.884 DEBUG 15896 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:21:04.887 DEBUG 15896 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:21:04.888 DEBUG 15896 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:21:04.891 DEBUG 15896 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:21:04.892 DEBUG 15896 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:21:04.892 DEBUG 15896 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:21:04.896 DEBUG 15896 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:21:04.897 DEBUG 15896 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:21:04.897 DEBUG 15896 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:21:04.901 DEBUG 15896 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:21:04.902 DEBUG 15896 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:21:04.902 DEBUG 15896 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:21:04.903 DEBUG 15896 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:21:04.904  INFO 15896 --- [http-nio-8080-exec-5] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:21:04.926 DEBUG 15896 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:21:04.926 DEBUG 15896 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:21:04.932 DEBUG 15896 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:21:04.933 DEBUG 15896 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:21:04.933 DEBUG 15896 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:21:04.935 DEBUG 15896 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:21:04.936 DEBUG 15896 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:21:04.937 DEBUG 15896 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:21:04.943 DEBUG 15896 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:21:04.944 DEBUG 15896 --- [http-nio-8080-exec-8] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:21:04.944 DEBUG 15896 --- [http-nio-8080-exec-8] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:21:04.949 DEBUG 15896 --- [http-nio-8080-exec-8] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:21:04.949 DEBUG 15896 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:21:04.950 DEBUG 15896 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:21:04.951 DEBUG 15896 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:21:04.952  INFO 15896 --- [http-nio-8080-exec-8] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:21:06.629  INFO 15896 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:21:06.756  INFO 15896 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:21:06.760  INFO 15896 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:21:06.766  INFO 15896 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:21:32.455  INFO 19448 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 19448 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:21:32.459 DEBUG 19448 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:21:32.459  INFO 19448 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:21:32.537  INFO 19448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:21:32.537  INFO 19448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:21:33.590  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:21:33.591  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:21:33.655  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:21:33.674  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:21:33.676  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:21:33.728  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:21:34.717  INFO 19448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:21:34.730  INFO 19448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:21:34.730  INFO 19448 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:21:34.733  INFO 19448 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:21:34.733  INFO 19448 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:21:34.734  INFO 19448 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:21:34.738  INFO 19448 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:21:34.958  INFO 19448 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:21:34.958  INFO 19448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2419 ms
+2021-04-10 15:21:35.393  INFO 19448 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:21:36.711  INFO 19448 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:21:36.777  INFO 19448 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:21:36.955  INFO 19448 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:21:37.114  INFO 19448 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:21:37.339  INFO 19448 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:21:37.355  INFO 19448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:21:37.461  WARN 19448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:21:38.588  INFO 19448 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5098229a, org.springframework.security.web.context.SecurityContextPersistenceFilter@15f849f5, org.springframework.security.web.header.HeaderWriterFilter@166e7948, org.springframework.security.web.csrf.CsrfFilter@23a4da9b, org.springframework.security.web.authentication.logout.LogoutFilter@580fb860, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@19ab4a08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f4a481d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42f91d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35297d84, org.springframework.security.web.session.SessionManagementFilter@20251ef7, org.springframework.security.web.access.ExceptionTranslationFilter@564a7eae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c990d03]
+2021-04-10 15:21:38.806  INFO 19448 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:21:38.942  INFO 19448 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:21:40.259  INFO 19448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:21:40.309  INFO 19448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:21:40.321  INFO 19448 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 8.725 seconds (JVM running for 11.12)
+2021-04-10 15:22:14.049  INFO 19448 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:22:14.049  INFO 19448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:22:14.051  INFO 19448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-04-10 15:22:19.982 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:22:20.005 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:22:20.037 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:22:20.039 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:22:20.039 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:22:20.041 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:22:20.042 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:22:20.042 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:22:20.049 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:22:20.051 DEBUG 19448 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:22:20.051 DEBUG 19448 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:22:20.059 DEBUG 19448 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:22:20.060 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:22:20.060 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:22:20.062 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:22:20.062  INFO 19448 --- [http-nio-8080-exec-3] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:23:03.372 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:23:03.373 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:23:03.454 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:23:06.876 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:23:06.878 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:23:06.885 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:23:08.108 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:23:08.112 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:23:08.155 DEBUG 19448 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:23:29.170 DEBUG 19448 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:23:29.172 DEBUG 19448 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:23:29.207 DEBUG 19448 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:23:30.450 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:23:30.451 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:23:30.454 DEBUG 19448 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:23:41.201  INFO 19448 --- [http-nio-8080-exec-3] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:28:45.197  INFO 19448 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:28:45.423  WARN 6392 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-10 15:28:45.438  INFO 19448 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:28:45.438  INFO 19448 --- [Thread-22] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:28:45.438  INFO 19448 --- [Thread-22] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:28:45.485  INFO 6392 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 6392 (started by GJY in C:\Java workspace\boke)
+2021-04-10 15:28:45.485 DEBUG 6392 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:28:45.485  INFO 6392 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-10 15:28:45.813  INFO 19448 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 19448 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:28:45.813 DEBUG 19448 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:28:45.813  INFO 19448 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:28:46.452  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:28:46.452  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:28:46.514  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:28:46.530  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:28:46.530  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:28:46.561  INFO 19448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:28:46.899  INFO 6392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:28:46.899  INFO 6392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:28:46.977  INFO 19448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:28:46.977  INFO 19448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:28:46.977  INFO 19448 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:28:46.977  INFO 19448 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:28:46.977  INFO 19448 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:28:46.977  INFO 19448 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:28:46.977  INFO 19448 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:28:46.992  INFO 6392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:28:47.024  INFO 6392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:28:47.024  INFO 6392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:28:47.055  INFO 19448 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:28:47.055  INFO 19448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1226 ms
+2021-04-10 15:28:47.086  INFO 6392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:28:47.212  INFO 19448 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2021-04-10 15:28:47.270  INFO 19448 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:28:47.285  INFO 19448 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:28:47.301  INFO 19448 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:28:47.301  INFO 19448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:28:47.363  WARN 19448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:28:47.832  INFO 19448 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6beaebbc, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a14be65, org.springframework.security.web.header.HeaderWriterFilter@54b5b5b7, org.springframework.security.web.csrf.CsrfFilter@7a8e1038, org.springframework.security.web.authentication.logout.LogoutFilter@5f5bf07b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63793b75, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@224d11a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7bc5d4e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5467b69b, org.springframework.security.web.session.SessionManagementFilter@4091699f, org.springframework.security.web.access.ExceptionTranslationFilter@4c99633, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ff42bf]
+2021-04-10 15:28:47.973  INFO 19448 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:28:48.019  INFO 19448 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:28:48.347  INFO 19448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:28:48.363  INFO 19448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:28:48.379  INFO 19448 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 2.662 seconds (JVM running for 439.178)
+2021-04-10 15:28:48.379  INFO 19448 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-10 15:28:48.863  INFO 6392 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:28:51.463  INFO 6392 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:28:51.556  INFO 6392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:28:51.853  INFO 6392 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:28:52.150  INFO 6392 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:28:52.587  INFO 6392 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:28:52.603  INFO 6392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:28:52.822  WARN 6392 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:28:55.584  INFO 6392 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b99c937, org.springframework.security.web.context.SecurityContextPersistenceFilter@77cd235b, org.springframework.security.web.header.HeaderWriterFilter@595ec862, org.springframework.security.web.csrf.CsrfFilter@7aa3857b, org.springframework.security.web.authentication.logout.LogoutFilter@18811c42, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d949bc4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3568ea59, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@359865a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@26c59348, org.springframework.security.web.session.SessionManagementFilter@102af1bb, org.springframework.security.web.access.ExceptionTranslationFilter@69ba72da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a54638b]
+2021-04-10 15:28:56.527  INFO 6392 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:28:56.910  INFO 6392 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:28:57.943  INFO 6392 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 13.464 seconds (JVM running for 15.563)
+2021-04-10 15:29:05.336  INFO 6392 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:29:05.571  INFO 6392 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:29:05.571  INFO 6392 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:29:05.586  INFO 6392 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:32:53.730  INFO 19448 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:32:53.730  INFO 19448 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:32:53.730  INFO 19448 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2021-04-10 15:32:53.730  INFO 19448 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2021-04-10 15:33:00.202  INFO 21616 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 21616 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:33:00.202 DEBUG 21616 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:33:00.202  INFO 21616 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:33:00.264  INFO 21616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:33:00.264  INFO 21616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:33:01.192  INFO 21616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:33:01.192  INFO 21616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:33:01.254  INFO 21616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:33:01.270  INFO 21616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:33:01.286  INFO 21616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:33:01.332  INFO 21616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:33:02.218  INFO 21616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:33:02.233  INFO 21616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:33:02.233  INFO 21616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:33:02.233  INFO 21616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:33:02.233  INFO 21616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:33:02.233  INFO 21616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:33:02.233  INFO 21616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:33:02.452  INFO 21616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:33:02.452  INFO 21616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2188 ms
+2021-04-10 15:33:02.829  INFO 21616 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:33:04.126  INFO 21616 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:33:04.172  INFO 21616 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:33:04.315  INFO 21616 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:33:04.455  INFO 21616 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:33:04.645  INFO 21616 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:33:04.645  INFO 21616 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:33:04.756  WARN 21616 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:33:05.655  INFO 21616 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1301fd0, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f3c8af3, org.springframework.security.web.header.HeaderWriterFilter@794cbb0a, org.springframework.security.web.csrf.CsrfFilter@6c3b6b23, org.springframework.security.web.authentication.logout.LogoutFilter@5195ba58, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3f55c633, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@503404b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@406611d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13e7f0f2, org.springframework.security.web.session.SessionManagementFilter@77df9e83, org.springframework.security.web.access.ExceptionTranslationFilter@6f70352f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61cf354b]
+2021-04-10 15:33:05.862  INFO 21616 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:33:05.987  INFO 21616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:33:07.209  INFO 21616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:33:07.251  INFO 21616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:33:07.267  INFO 21616 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 7.801 seconds (JVM running for 10.068)
+2021-04-10 15:33:36.853  INFO 21616 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:33:36.853  INFO 21616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:33:36.855  INFO 21616 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-10 15:33:37.054 DEBUG 21616 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:33:37.077 DEBUG 21616 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:33:37.106 DEBUG 21616 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:33:37.108 DEBUG 21616 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:33:37.108 DEBUG 21616 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:33:37.111 DEBUG 21616 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:33:37.111 DEBUG 21616 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:33:37.112 DEBUG 21616 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:33:37.117 DEBUG 21616 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:33:37.118 DEBUG 21616 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:33:37.118 DEBUG 21616 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:33:37.126 DEBUG 21616 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:33:37.127 DEBUG 21616 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:33:37.127 DEBUG 21616 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:33:37.128 DEBUG 21616 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:33:37.129  INFO 21616 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:33:37.555 DEBUG 21616 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:33:37.555 DEBUG 21616 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:33:37.564 DEBUG 21616 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:33:37.565 DEBUG 21616 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:33:37.566 DEBUG 21616 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:33:37.568 DEBUG 21616 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:33:37.569 DEBUG 21616 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:33:37.570 DEBUG 21616 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:33:37.580 DEBUG 21616 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:33:37.582 DEBUG 21616 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:33:37.582 DEBUG 21616 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:33:37.599 DEBUG 21616 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:33:37.601 DEBUG 21616 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:33:37.603 DEBUG 21616 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:33:37.606 DEBUG 21616 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:33:37.606  INFO 21616 --- [http-nio-8080-exec-3] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:34:05.493 DEBUG 21616 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:34:05.494 DEBUG 21616 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:34:05.499 DEBUG 21616 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:34:05.500 DEBUG 21616 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:34:05.500 DEBUG 21616 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:34:05.502 DEBUG 21616 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:34:05.502 DEBUG 21616 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:34:05.502 DEBUG 21616 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:34:05.505 DEBUG 21616 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:34:05.506 DEBUG 21616 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:34:05.506 DEBUG 21616 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:34:05.511 DEBUG 21616 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:34:05.511 DEBUG 21616 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:34:05.511 DEBUG 21616 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:34:05.512 DEBUG 21616 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:34:05.596  INFO 21616 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:34:53.883 DEBUG 21616 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:34:53.886 DEBUG 21616 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:34:53.892 DEBUG 21616 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:34:53.894 DEBUG 21616 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:34:53.895 DEBUG 21616 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:34:53.899 DEBUG 21616 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:34:53.900  INFO 21616 --- [http-nio-8080-exec-6] com.gjy.boke.aspect.LogAspect            : Result tags
+2021-04-10 15:35:05.290 DEBUG 21616 --- [http-nio-8080-exec-10] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-10 15:35:05.291 DEBUG 21616 --- [http-nio-8080-exec-10] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 5(Long)
+2021-04-10 15:35:05.335 DEBUG 21616 --- [http-nio-8080-exec-10] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-10 15:35:05.337 DEBUG 21616 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-10 15:35:05.337 DEBUG 21616 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 5(Long)
+2021-04-10 15:35:05.339 DEBUG 21616 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-10 15:35:05.433 DEBUG 21616 --- [http-nio-8080-exec-10] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-10 15:35:05.434 DEBUG 21616 --- [http-nio-8080-exec-10] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 5(Long), -1(Long)
+2021-04-10 15:35:05.444 DEBUG 21616 --- [http-nio-8080-exec-10] listCommentByBlogIdInParentCommentIdNull : <==      Total: 1
+2021-04-10 15:35:05.445 DEBUG 21616 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-10 15:35:05.446 DEBUG 21616 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 5(Long), 71(Long)
+2021-04-10 15:35:05.448 DEBUG 21616 --- [http-nio-8080-exec-10] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-10 15:35:05.449  INFO 21616 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-10 15:35:43.287 DEBUG 21616 --- [http-nio-8080-exec-5] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-04-10 15:35:43.289 DEBUG 21616 --- [http-nio-8080-exec-5] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 5(Long)
+2021-04-10 15:35:43.337 DEBUG 21616 --- [http-nio-8080-exec-5] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-04-10 15:35:43.338 DEBUG 21616 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-04-10 15:35:43.338 DEBUG 21616 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 5(Long)
+2021-04-10 15:35:43.340 DEBUG 21616 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-04-10 15:35:43.341 DEBUG 21616 --- [http-nio-8080-exec-5] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-10 15:35:43.341 DEBUG 21616 --- [http-nio-8080-exec-5] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 5(Long), -1(Long)
+2021-04-10 15:35:43.343 DEBUG 21616 --- [http-nio-8080-exec-5] listCommentByBlogIdInParentCommentIdNull : <==      Total: 1
+2021-04-10 15:35:43.343 DEBUG 21616 --- [http-nio-8080-exec-5] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-04-10 15:35:43.343 DEBUG 21616 --- [http-nio-8080-exec-5] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 5(Long), 71(Long)
+2021-04-10 15:35:43.344 DEBUG 21616 --- [http-nio-8080-exec-5] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-04-10 15:35:43.345  INFO 21616 --- [http-nio-8080-exec-5] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-04-10 15:36:50.920  INFO 13400 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 13400 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:36:50.920 DEBUG 13400 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:36:50.920  INFO 13400 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:36:51.000  INFO 13400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:36:51.000  INFO 13400 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:36:52.034  INFO 13400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:36:52.049  INFO 13400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:36:52.112  INFO 13400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:36:52.127  INFO 13400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:36:52.127  INFO 13400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:36:52.174  INFO 13400 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:36:53.175  INFO 13400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:36:53.191  INFO 13400 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:36:53.191  INFO 13400 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:36:53.191  INFO 13400 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:36:53.191  INFO 13400 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:36:53.191  INFO 13400 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:36:53.191  INFO 13400 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:36:53.410  INFO 13400 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:36:53.410  INFO 13400 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2410 ms
+2021-04-10 15:36:53.820  INFO 13400 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:36:55.151  INFO 13400 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:36:55.229  INFO 13400 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:36:55.385  INFO 13400 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:36:55.561  INFO 13400 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:36:55.782  INFO 13400 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:36:55.798  INFO 13400 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:36:55.891  WARN 13400 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:36:57.029  INFO 13400 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21ee32a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c1e6d25, org.springframework.security.web.header.HeaderWriterFilter@3fe8074d, org.springframework.security.web.csrf.CsrfFilter@3b83d029, org.springframework.security.web.authentication.logout.LogoutFilter@4f1967fd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@11480ad0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ff97c61, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f084e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ad21837, org.springframework.security.web.session.SessionManagementFilter@793974fe, org.springframework.security.web.access.ExceptionTranslationFilter@1fe42124, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b709123]
+2021-04-10 15:36:57.249  INFO 13400 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:36:57.390  INFO 13400 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:36:58.706  INFO 13400 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:36:58.753  INFO 13400 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:36:58.769  INFO 13400 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 8.735 seconds (JVM running for 11.137)
+2021-04-10 15:37:09.217  INFO 13400 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:37:09.217  INFO 13400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:37:09.219  INFO 13400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-10 15:37:09.403 DEBUG 13400 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:37:09.426 DEBUG 13400 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:37:09.458 DEBUG 13400 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:37:09.460 DEBUG 13400 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:37:09.460 DEBUG 13400 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:37:09.462 DEBUG 13400 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:37:09.463 DEBUG 13400 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:37:09.464 DEBUG 13400 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:37:09.469 DEBUG 13400 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:37:09.470 DEBUG 13400 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:37:09.470 DEBUG 13400 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:37:09.477 DEBUG 13400 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:37:09.478 DEBUG 13400 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:37:09.478 DEBUG 13400 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:37:09.479 DEBUG 13400 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:37:09.480  INFO 13400 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:37:37.981 DEBUG 13400 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:37:37.982 DEBUG 13400 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:37:37.989 DEBUG 13400 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:37:38.374 DEBUG 13400 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:37:38.374 DEBUG 13400 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:37:38.376 DEBUG 13400 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:37:38.718 DEBUG 13400 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:37:38.718 DEBUG 13400 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:37:38.723 DEBUG 13400 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:37:38.724 DEBUG 13400 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:37:38.724 DEBUG 13400 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:37:38.729 DEBUG 13400 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:37:38.729 DEBUG 13400 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:37:38.729 DEBUG 13400 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:37:38.731 DEBUG 13400 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:38:44.896  INFO 13400 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:38:47.840  INFO 13400 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:38:47.973  INFO 13400 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:38:47.978  INFO 13400 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:38:47.985  INFO 13400 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:44:04.667  WARN 19344 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Download/maven_repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Download/maven_repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2021-04-10 15:44:04.682  INFO 19344 --- [main] com.gjy.boke.BokeApplicationTests        : Starting BokeApplicationTests using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 19344 (started by GJY in C:\Java workspace\boke)
+2021-04-10 15:44:04.682 DEBUG 19344 --- [main] com.gjy.boke.BokeApplicationTests        : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:44:04.682  INFO 19344 --- [main] com.gjy.boke.BokeApplicationTests        : The following profiles are active: dev
+2021-04-10 15:44:05.931  INFO 19344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:44:05.931  INFO 19344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:44:06.026  INFO 19344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:44:06.042  INFO 19344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:44:06.042  INFO 19344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:44:06.104  INFO 19344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:44:07.658  INFO 19344 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:44:10.213  INFO 19344 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:44:10.322  INFO 19344 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:44:10.591  INFO 19344 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:44:10.841  INFO 19344 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:44:11.201  INFO 19344 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:44:11.219  INFO 19344 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:44:11.406  WARN 19344 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:44:13.423  INFO 19344 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1de12397, org.springframework.security.web.context.SecurityContextPersistenceFilter@3568ea59, org.springframework.security.web.header.HeaderWriterFilter@102af1bb, org.springframework.security.web.csrf.CsrfFilter@37806be6, org.springframework.security.web.authentication.logout.LogoutFilter@32b95de, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@121cf6f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@173b1af1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25d0b918, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f5f5bc9, org.springframework.security.web.session.SessionManagementFilter@56cd5d76, org.springframework.security.web.access.ExceptionTranslationFilter@abc7005, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e886caf]
+2021-04-10 15:44:14.192  INFO 19344 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:44:14.426  INFO 19344 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:44:15.399  INFO 19344 --- [main] com.gjy.boke.BokeApplicationTests        : Started BokeApplicationTests in 11.622 seconds (JVM running for 13.521)
+2021-04-10 15:44:21.139  INFO 19344 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:44:21.264  INFO 19344 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:44:21.282  INFO 19344 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-04-10 15:44:21.282  INFO 19344 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-04-10 15:44:44.428  INFO 20284 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 20284 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-10 15:44:44.428 DEBUG 20284 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-10 15:44:44.428  INFO 20284 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-10 15:44:44.491  INFO 20284 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:44:44.491  INFO 20284 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:44:45.639  INFO 20284 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:44:45.640  INFO 20284 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:44:45.706  INFO 20284 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 0 JPA repository interfaces.
+2021-04-10 15:44:45.726  INFO 20284 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-10 15:44:45.728  INFO 20284 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-10 15:44:45.785  INFO 20284 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 0 Redis repository interfaces.
+2021-04-10 15:44:46.761  INFO 20284 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-10 15:44:46.773  INFO 20284 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:44:46.773  INFO 20284 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-10 15:44:46.776  INFO 20284 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-10 15:44:46.776  INFO 20284 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 15:44:46.777  INFO 20284 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 15:44:46.781  INFO 20284 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-10 15:44:46.989  INFO 20284 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:44:46.989  INFO 20284 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2498 ms
+2021-04-10 15:44:47.359  INFO 20284 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 15:44:48.654  INFO 20284 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:44:48.710  INFO 20284 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-10 15:44:48.861  INFO 20284 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:44:48.996  INFO 20284 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-10 15:44:49.191  INFO 20284 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:44:49.205  INFO 20284 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:44:49.303  WARN 20284 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:44:50.210  INFO 20284 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@458d30bb, org.springframework.security.web.context.SecurityContextPersistenceFilter@4543cd1, org.springframework.security.web.header.HeaderWriterFilter@4aa87d02, org.springframework.security.web.csrf.CsrfFilter@1ac2806f, org.springframework.security.web.authentication.logout.LogoutFilter@3e8ef6d3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1779baa8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1221953b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12be6c43, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6288a38d, org.springframework.security.web.session.SessionManagementFilter@6cad887b, org.springframework.security.web.access.ExceptionTranslationFilter@5fae9272, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d143ada]
+2021-04-10 15:44:50.413  INFO 20284 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:44:50.522  INFO 20284 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-10 15:44:51.777  INFO 20284 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:44:51.824  INFO 20284 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-10 15:44:51.840  INFO 20284 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 8.218 seconds (JVM running for 10.54)
+2021-04-10 15:44:55.861  INFO 20284 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:44:55.862  INFO 20284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:44:55.865  INFO 20284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-04-10 15:44:56.045 DEBUG 20284 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:44:56.070 DEBUG 20284 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:44:56.097 DEBUG 20284 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:44:56.099 DEBUG 20284 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:44:56.100 DEBUG 20284 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:44:56.101 DEBUG 20284 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:44:56.102 DEBUG 20284 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:44:56.103 DEBUG 20284 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:44:56.112 DEBUG 20284 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:44:56.114 DEBUG 20284 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:44:56.114 DEBUG 20284 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:44:56.120 DEBUG 20284 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:44:56.121 DEBUG 20284 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:44:56.121 DEBUG 20284 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:44:56.122 DEBUG 20284 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:44:56.123  INFO 20284 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-10 15:45:12.026 DEBUG 20284 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-10 15:45:12.027 DEBUG 20284 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-10 15:45:12.032 DEBUG 20284 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-10 15:45:12.033 DEBUG 20284 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-10 15:45:12.033 DEBUG 20284 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-10 15:45:12.034 DEBUG 20284 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-10 15:45:12.035 DEBUG 20284 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-10 15:45:12.035 DEBUG 20284 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-10 15:45:12.039 DEBUG 20284 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-10 15:45:12.040 DEBUG 20284 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-10 15:45:12.040 DEBUG 20284 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-10 15:45:12.044 DEBUG 20284 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-10 15:45:12.045 DEBUG 20284 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-10 15:45:12.045 DEBUG 20284 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-10 15:45:12.046 DEBUG 20284 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-10 15:45:12.230  INFO 20284 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result index

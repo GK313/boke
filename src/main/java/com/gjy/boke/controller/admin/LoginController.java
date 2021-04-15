@@ -24,6 +24,11 @@ public class LoginController {
         return "admin/login";
     }
 
+    @RequestMapping("alllogin")
+    public String allLogin(){
+        return "logins";
+    }
+
 
     /**
      * 用户登录校验
@@ -47,10 +52,10 @@ public class LoginController {
 
     }
 
-    @GetMapping("/loginOut")
+    @GetMapping("/logout")
     public String loginOut(HttpSession session){
         //清空session
         session.removeAttribute("user");
-        return "redirect:/admin";
+        return "logins";
     }
 }

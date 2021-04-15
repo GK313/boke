@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录/注册</title>
+    <!--适配移动端-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--一CDN方式引入Semantic UI-->
+    <!--<link rel="stylesheet" href="../../static/semantic/semantic.min.css" th:href="@{/semantic/semantic.min.css}">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
+    <!--引入editor.md的css样式-->
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.css"
+          th:href="@{/lib/editormd/css/editormd.css}"/>
+    <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="m-container-small m-padded-tb-massive" style="max-width:40em !important;">
+    <div class="ui container">
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <form class="ui large form" method="post" th:action="@{/logins}">
+                    <div class="ui stacked segment">
+                        <h2 class="ui image header">
+                            <!--<img src="../../static/image/header.png" th:src="@{/image/header.png}" class="image"-->
+                            <div class="content">
+                                <span style="color: forestgreen;">注册登录</span>
+                            </div>
+                        </h2>
+                        <br>
+                        <br>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="phone icon"></i>
+                                <input type="text" name="phone" placeholder="手机号码">
+                            </div>
+                        </div>
+                        <!--免密码登录(默认)-->
+                        <div class="noPassword">
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="shield alternate icon"></i>
+                                    <input type="text" name="code" placeholder="请输入验证码">
+                                    <button class="right attached ui button">发送验证码</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--密码登录-->
+                        <div class="requiredPassword" style="display: none">
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="lock icon"></i>
+                                    <input type="password" name="password" value="000" placeholder="密码">
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="ui left aligned header" style="color:#b0b0b0;">
+                            新手机号将自动注册
+                        </h4>
+                        <button class="ui fluid large teal submit button">登录</button>
+                        <br>
+
+                        <!--<div class="ui mycheckbox">
+                            <h4 class="ui left aligned header" style="color:#b0b0b0;">10天之内免登录</h4>
+                        </div>-->
+
+                        <div class="required inline field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden">
+                                <label style="color:#b0b0b0;font-weight: bold">10天之内免登录</label>
+                            </div>
+                        </div>
+
+                        <div class="center aligned grid">
+                            <div class="column">
+                                <a href="#" id="noPassd" class="ui left aligned header" style="color:forestgreen;"
+                                >
+                                    免密码登录</a>
+                                <a href="#" class="ui left aligned header" style="color:#b0b0b0;">|</a>
+                                <a href="#" id="passwd" class="ui left aligned header" style="color:#b0b0b0;">密码登录</a>
+                                <a href="#" class="ui left aligned header" style="color:#b0b0b0;">|</a>
+                                <a href="#" class="ui left aligned header" style="color:#b0b0b0;">微信登录</a>
+                            </div>
+                        </div>
+
+                        <h4 class="center aligned grid" style="color:#b0b0b0;">
+                            继续即代表同意<a style="color: forestgreen">《服务条款》</a>和<a
+                                style="color: forestgreen">《隐私政策》</a>
+                        </h4>
+
+                    </div>
+                    <!--用户名密码输入错误提示-->
+                    <div class="ui error mini message"></div>
+                    <div class="ui mini negative message " th:unless="${#strings.isEmpty(message)}"
+                         th:text="${message}">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--以CDN方式引入jQuery-->
+<script src="../../static/jQuery/jquery-3.4.1.min.js" th:src="@{/jQuery/jquery-3.4.1.min.js}"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--引入editor.md-->
+<script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
+<script>
+    /*表单验证*/
+    $('.ui.form').form({
+        fields: {
+            /*指定username和password的验证规则*/
+            username: {
+                indentifier: 'username',
+                rules: [{
+                    type: 'empty',
+                    /*提示信息*/
+                    prompt: '请输入用户名',
+
+                }]
+            },
+
+            password: {
+                indentifier: 'password',
+                rules: [{
+                    type: 'empty',
+                    /*提示信息*/
+                    prompt: '请输入密码',
+
+                }]
+            }
+        }
+    })
+</script>
+<script>
+    $('.ui.checkbox')
+        .checkbox()
+    ;
+    $('#noPassd').click(function () {
+        $('#passwd').css("color", "#b0b0b0");
+        //隐藏密码登录输入框
+        $('.requiredPassword').hide()
+
+        $('#noPassd').css("color", "forestgreen");
+        //显示免密码登录输入框
+        $('.noPassword').show();
+    })
+
+    $('#passwd').click(function () {
+        $('#passwd').css("color", "forestgreen");
+        //隐藏免密码登录输入框
+        $('.noPassword').hide();
+
+        $('#noPassd').css("color", "#b0b0b0");
+        //显示密码登录
+        $('.requiredPassword').show();
+    })
+
+</script>
+</body>
+</html>

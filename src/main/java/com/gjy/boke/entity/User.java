@@ -101,4 +101,7 @@ public class User implements Serializable {
     public void setUpdatetime(Date updatetime) {
         this.updatetime = updatetime;
     }
+
+
+
 }

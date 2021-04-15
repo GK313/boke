@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--一CDN方式引入Semantic UI-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}" >
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
     <title>博客管理</title>
 </head>
 <body>
@@ -37,10 +37,34 @@
                     <i class="dropdown icon"></i>
                     <!--下拉菜单-->
                     <div class="menu">
-                        <a href="#" th:href="@{/loginOut}" class="item">注销</a>
+                        <a href="#" th:href="@{/logout}" class="item">注销</a>
                     </div>
                 </div>
             </div>
+
+            <div  class="right m-item item m-mobile-hide" th:if="${session.user}!=null" >
+                <!--系统通知-->
+                <a class="item" th:href="@{/messageList/{id}(id=${session.user.getId()})}">
+                    <i class="bullhorn icon"></i>动态
+                    <div class="floating ui red label">22</div>
+                </a>
+
+            </div>
+
+            <div  class="right m-item item m-mobile-hide" th:if="${session.user}!=null" >
+                <!--系统通知-->
+                <a class="item" th:href="@{/messageList/{id}(id=${session.user.getId()})}">
+                    <i class="bullhorn icon"></i>收藏
+                    <div class="floating ui red label">22</div>
+                </a>
+            </div>
+            <div  class="right m-item item m-mobile-hide" th:if="${session.user}==null">
+                <!--登录or注册-->
+                <a class="item">
+                    <i class="button icon"></i>注册/登录
+                </a>
+            </div>
+
         </div>
     </div>
 
@@ -51,15 +75,23 @@
 
 </nav>
 
+
 <!--中间内容-->
-<div class="m-container-small m-padded-tb-big">
+<div class="m-container-small m-padded-tb-big" >
+    <!--<div class="m-right-fix" id="messageList" style="display: none">
+        <div class="some-wrapping-div">
+            <div class="ui custom button" style="">Show custom popup</div>
+        </div>
+    </div>-->
+
     <div class="ui container">
         <div class="ui success large message ">
             <h2>Hi,</h2>
             <h2>欢迎登录</h2>
         </div>
         <!--首页图片-->
-        <img class="ui rounded bordered fluid image" src="../../static/image/backgroud.jpg" th:src="@{https://picsum.photos/id/26/4209/2769}">
+        <img class="ui rounded bordered fluid image" src="../../static/image/backgroud.jpg"
+             th:src="@{https://picsum.photos/id/26/4209/2769}">
     </div>
 </div>
 
@@ -85,7 +117,8 @@
                         <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced ">
                             关注公众号
                         </div>
-                        <img src="../../static/image/wechat.png" th:src="@{/image/wechat.png}" class="ui m-margin-top rounded image"
+                        <img src="../../static/image/wechat.png" th:src="@{/image/wechat.png}"
+                             class="ui m-margin-top rounded image"
                              alt=""
                              style="width:
                         110px">
@@ -100,7 +133,8 @@
                         <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced ">
                             问题交流（QQ群）
                         </div>
-                        <img src="../../static/image/wechat.png" th:src="@{/image/wechat.png}" class="ui m-margin-top rounded image"
+                        <img src="../../static/image/wechat.png" th:src="@{/image/wechat.png}"
+                             class="ui m-margin-top rounded image"
                              alt=""
                              style="width: 110px">
                     </div>
@@ -148,21 +182,30 @@
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
+
     /*初始化下拉列表*/
     $('.ui.dropdown')
         .dropdown({
-            on : 'hover'
+            on: 'hover'
         });
 
     /*消息提示关闭初始化*/
     $('.message .close')
-        .on('click', function() {
+        .on('click', function () {
             $(this)
                 .closest('.message')
                 .transition('fade')
             ;
-        })
-    ;
+        });
+
+   /* $('#notic').mouseover(function (){
+        alert("mmm")
+    })*/
+    /*$('#notic').popup({
+        popup:$('#messageList'),
+        position:'right center'
+    })*/
+
 </script>
 </body>
 </html>

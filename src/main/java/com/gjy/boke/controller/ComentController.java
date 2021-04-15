@@ -31,10 +31,12 @@ public class ComentController {
     //发布评论后，更新评论列表（查询博文下的评论列表）
     @GetMapping("/commentList/{blogId}")
     public String Comments(@PathVariable Long blogId, Model model){
+        System.out.println(blogId+"更新评论列表");
         //根据blogId获取该博客下的CommentList
         List<Comment> comments = commentService.listCommentByBlogIdParentIdNull(blogId, null);
         //新增评论后，应当将当前博客的评论数+1
         blogService.updateBlogCommentCountsAddOneByBlogId(blogId);
+
         model.addAttribute("comments",comments);
         return "blog :: commentList";
     }
@@ -42,6 +44,7 @@ public class ComentController {
     //新增评论
     @PostMapping("/save")
     public String pstComment(Comment comment, HttpSession session){
+        System.out.println(comment+"新增评论成功");
         User user=(User) session.getAttribute("user");
         if(user!=null){
             comment.setAvatar(user.getAvatar());
@@ -50,6 +53,7 @@ public class ComentController {
             comment.setNickname(user.getNickname());
         }
         int i = commentService.saveComment(comment);
+
 
         //新增成功后重定向到commentList下，并查询出评论列表并局部刷新commentList
         return "redirect:/comment/commentList/"+comment.getBlogid();

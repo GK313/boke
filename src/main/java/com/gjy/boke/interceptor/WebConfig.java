@@ -27,24 +27,24 @@ public class WebConfig implements WebMvcConfigurer{
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/","/login.html","/login","/webjars/**","/asserts/**");
+                .excludePathPatterns("/","/logins.html","/login","/webjars/**","/asserts/**");
     }
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("login");
-        registry.addViewController("/login.html").setViewName("login");
+        registry.addViewController("/logins.html").setViewName("login");
         registry.addViewController("/dashboard.html").setViewName("dashboard");
 
     }*/
 //注册拦截器
-    @Override
+  /*  @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns("/admin/**")
                 .excludePathPatterns("/admin/login")
                 .excludePathPatterns("/admin");
-    }
+    }*/
 
 
 }

@@ -33,7 +33,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+    </div>
 
      <!--设置手机端时隐藏导航内容-->
     <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
@@ -291,7 +291,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <!--置顶图标-->
@@ -381,6 +380,18 @@
         .dropdown({
             on : 'hover'
         });
+
+
+    /*消息提示关闭初始化*/
+    $('.message .close')
+        .on('click', function() {
+            $(this)
+                .closest('.message')
+                .transition('fade')
+            ;
+        })
+    ;
+
 </script>
 <script>
     function listArticle(obj){
@@ -411,6 +422,7 @@
     }
 
 </script>
+
 
 </body>
 </html>

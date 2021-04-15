@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * 登录拦截器
  */
 public class LoginInterceptor extends HandlerInterceptorAdapter {
-    @Override
+    /*@Override
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response,
                              Object handler) throws Exception {
@@ -24,5 +24,5 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
         }
         //从Session中获取的User不为空，继续执行
         return true;
-    }
+    }*/
 }

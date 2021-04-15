@@ -1,0 +1,56 @@
+2021-04-02 14:12:26.827  INFO 18336 --- [restartedMain] com.gjy.boke.BokeApplication             : Starting BokeApplication using Java 1.8.0_261 on DESKTOP-5CK6HAN with PID 18336 (C:\Java workspace\boke\target\classes started by GJY in C:\Java workspace\boke)
+2021-04-02 14:12:26.837 DEBUG 18336 --- [restartedMain] com.gjy.boke.BokeApplication             : Running with Spring Boot v2.4.1, Spring v5.3.2
+2021-04-02 14:12:26.839  INFO 18336 --- [restartedMain] com.gjy.boke.BokeApplication             : The following profiles are active: dev
+2021-04-02 14:12:26.921  INFO 18336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-02 14:12:26.921  INFO 18336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-02 14:12:28.062  INFO 18336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-02 14:12:28.132  INFO 18336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 0 JPA repository interfaces.
+2021-04-02 14:12:29.146  INFO 18336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-02 14:12:29.158  INFO 18336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-02 14:12:29.161  INFO 18336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-02 14:12:29.163  INFO 18336 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-04-02 14:12:29.163  INFO 18336 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-02 14:12:29.163  INFO 18336 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-02 14:12:29.183  INFO 18336 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-04-02 14:12:29.433  INFO 18336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-02 14:12:29.436  INFO 18336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2512 ms
+2021-04-02 14:12:29.970  INFO 18336 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-02 14:12:31.467  INFO 18336 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-02 14:12:31.579  INFO 18336 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-04-02 14:12:31.899  INFO 18336 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-02 14:12:32.147  INFO 18336 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-02 14:12:32.486  INFO 18336 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-02 14:12:32.501  INFO 18336 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-02 14:12:32.595  WARN 18336 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-02 14:12:33.434  INFO 18336 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52af8e0f, org.springframework.security.web.context.SecurityContextPersistenceFilter@df71ab6, org.springframework.security.web.header.HeaderWriterFilter@342c0976, org.springframework.security.web.csrf.CsrfFilter@4d54981, org.springframework.security.web.authentication.logout.LogoutFilter@7aa8edb7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5e301d27, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d323f4a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d73e710, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2aa96956, org.springframework.security.web.session.SessionManagementFilter@525e2a04, org.springframework.security.web.access.ExceptionTranslationFilter@58f83121, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42fa41fa]
+2021-04-02 14:12:33.641  INFO 18336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-02 14:12:33.770  INFO 18336 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-02 14:12:34.757  INFO 18336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-02 14:12:34.805  INFO 18336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-02 14:12:34.817  INFO 18336 --- [restartedMain] com.gjy.boke.BokeApplication             : Started BokeApplication in 8.979 seconds (JVM running for 11.441)
+2021-04-02 14:12:42.636  INFO 18336 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-02 14:12:42.637  INFO 18336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-02 14:12:42.638  INFO 18336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-02 14:12:45.551 DEBUG 18336 --- [http-nio-8080-exec-10] .g.b.d.U.selectUserByUsernameAndPassword : ==>  Preparing: select * from t_user where username=? and password=?; 
+2021-04-02 14:12:45.576 DEBUG 18336 --- [http-nio-8080-exec-10] .g.b.d.U.selectUserByUsernameAndPassword : ==> Parameters: 跃(String), bcbe3365e6ac95ea2c0343a2395834dd(String)
+2021-04-02 14:12:45.711 DEBUG 18336 --- [http-nio-8080-exec-10] .g.b.d.U.selectUserByUsernameAndPassword : <==      Total: 1
+2021-04-02 14:12:47.685 DEBUG 18336 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-04-02 14:12:47.686 DEBUG 18336 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-04-02 14:12:47.720 DEBUG 18336 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-04-02 14:12:47.721 DEBUG 18336 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-04-02 14:12:47.722 DEBUG 18336 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-04-02 14:12:47.730 DEBUG 18336 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-04-02 14:12:47.731 DEBUG 18336 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-04-02 14:12:47.732 DEBUG 18336 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-04-02 14:12:47.745 DEBUG 18336 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-04-02 14:12:47.746 DEBUG 18336 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-04-02 14:12:47.747 DEBUG 18336 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-04-02 14:12:47.752 DEBUG 18336 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-04-02 14:12:47.753 DEBUG 18336 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-04-02 14:12:47.754 DEBUG 18336 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-04-02 14:12:47.754 DEBUG 18336 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-04-02 14:12:47.755  INFO 18336 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result index
+2021-04-02 14:18:46.704  INFO 18336 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result message
+2021-04-02 14:18:48.796  INFO 18336 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result message
+2021-04-02 14:18:50.852  INFO 18336 --- [http-nio-8080-exec-5] com.gjy.boke.aspect.LogAspect            : Result message
+2021-04-02 14:18:53.373  INFO 18336 --- [http-nio-8080-exec-8] com.gjy.boke.aspect.LogAspect            : Result message

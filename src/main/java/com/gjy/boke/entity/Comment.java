@@ -138,4 +138,22 @@ public class Comment implements Serializable {
     public void setAdmincomment(Boolean admincomment) {
         this.admincomment = admincomment;
     }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", nickname='" + nickname + '\'' +
+                ", email='" + email + '\'' +
+                ", content='" + content + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", createtime=" + createtime +
+                ", blogid=" + blogid +
+                ", parentcommentid=" + parentcommentid +
+                ", parentnickname='" + parentnickname + '\'' +
+                ", admincomment=" + admincomment +
+                ", replyComments=" + replyComments +
+                ", parentComment=" + parentComment +
+                '}';
+    }
 }

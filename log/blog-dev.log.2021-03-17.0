@@ -1,0 +1,422 @@
+2021-03-17 00:01:08.640 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:01:08.652 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:01:08.657 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:01:08.658 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:01:08.658 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:01:08.660 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:01:08.661 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:01:08.662 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:01:08.666 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:01:08.668 DEBUG 2788 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:01:08.668 DEBUG 2788 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:01:08.673 DEBUG 2788 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:01:08.674 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:01:08.674 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:01:08.675 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:01:08.676  INFO 2788 --- [http-nio-8080-exec-3] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:01:21.973  INFO 2788 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result message
+2021-03-17 00:01:25.256  INFO 2788 --- [http-nio-8080-exec-8] com.gjy.boke.aspect.LogAspect            : Result message
+2021-03-17 00:01:27.136 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:01:27.137 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:01:27.142 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:01:27.143 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:01:27.143 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:01:27.144 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:01:27.145 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:01:27.145 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:01:27.147 DEBUG 2788 --- [http-nio-8080-exec-3] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:01:27.148 DEBUG 2788 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:01:27.148 DEBUG 2788 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:01:27.152 DEBUG 2788 --- [http-nio-8080-exec-3] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:01:27.152 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:01:27.153 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:01:27.153 DEBUG 2788 --- [http-nio-8080-exec-3] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:01:27.154  INFO 2788 --- [http-nio-8080-exec-3] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:02:07.255 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.dao.BlogDao.listBlogBySearchQuery  : ==>  Preparing: select t_type.name,t_blog.* from t_blog Join t_type on t_type.id=t_blog.typeId where t_blog.title like ? or t_blog.content like ? or t_blog.description like ?; 
+2021-03-17 00:02:07.255 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.dao.BlogDao.listBlogBySearchQuery  : ==> Parameters: %%(String), %%(String), %%(String)
+2021-03-17 00:02:07.259 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.dao.BlogDao.listBlogBySearchQuery  : <==      Total: 18
+2021-03-17 00:02:07.260  INFO 2788 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result result
+2021-03-17 00:07:24.216 DEBUG 2788 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:07:24.217 DEBUG 2788 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:07:24.221 DEBUG 2788 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:07:24.222 DEBUG 2788 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:07:24.223 DEBUG 2788 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:07:24.224 DEBUG 2788 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:07:24.225 DEBUG 2788 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:07:24.225 DEBUG 2788 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:07:24.229 DEBUG 2788 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:07:24.231 DEBUG 2788 --- [http-nio-8080-exec-6] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:07:24.232 DEBUG 2788 --- [http-nio-8080-exec-6] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:07:24.235 DEBUG 2788 --- [http-nio-8080-exec-6] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:07:24.235 DEBUG 2788 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:07:24.236 DEBUG 2788 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:07:24.237 DEBUG 2788 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:07:24.237  INFO 2788 --- [http-nio-8080-exec-6] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:08:38.190 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:08:38.191 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:08:38.199 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:08:38.200 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:08:38.200 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:08:38.203 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:08:38.204 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:08:38.204 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:08:38.208 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:08:38.209 DEBUG 2788 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:08:38.209 DEBUG 2788 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:08:38.217 DEBUG 2788 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:08:38.219 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:08:38.219 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:08:38.220 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:08:38.221  INFO 2788 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:09:05.058 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:09:05.059 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:09:05.062 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:09:05.062 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:09:05.063 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:09:05.066 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:09:05.067 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:09:05.067 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:09:05.072 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:09:05.073 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:09:05.073 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:09:05.076 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:09:05.077 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:09:05.077 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:09:05.078 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:09:05.078  INFO 2788 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:10:15.992 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:10:15.993 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:10:16.001 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:10:16.002 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:10:16.002 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:10:16.005 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:10:16.005 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:10:16.005 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:10:16.009 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:10:16.010 DEBUG 2788 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:10:16.010 DEBUG 2788 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:10:16.017 DEBUG 2788 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:10:16.018 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:10:16.018 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:10:16.019 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:10:16.020  INFO 2788 --- [http-nio-8080-exec-5] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:11:16.703 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:11:16.703 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:11:16.707 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:11:16.708 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:11:16.708 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:11:16.711 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:11:16.712 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:11:16.712 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:11:16.718 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:11:16.719 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:11:16.719 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:11:16.722 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:11:16.723 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:11:16.723 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:11:16.724 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:11:16.725  INFO 2788 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:11:42.392 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:11:42.393 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:11:42.400 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:11:42.402 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:11:42.402 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:11:42.405 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:11:42.406 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:11:42.406 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:11:42.409 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:11:42.412 DEBUG 2788 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:11:42.412 DEBUG 2788 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:11:42.419 DEBUG 2788 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:11:42.420 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:11:42.420 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:11:42.422 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:11:42.423  INFO 2788 --- [http-nio-8080-exec-5] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:12:40.010 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:12:40.010 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:12:40.013 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:12:40.014 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:12:40.014 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:12:40.017 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:12:40.018 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:12:40.018 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:12:40.021 DEBUG 2788 --- [http-nio-8080-exec-4] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:12:40.022 DEBUG 2788 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:12:40.022 DEBUG 2788 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:12:40.025 DEBUG 2788 --- [http-nio-8080-exec-4] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:12:40.025 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:12:40.025 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:12:40.026 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:12:40.027  INFO 2788 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:13:40.116 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:13:40.117 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:13:40.126 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:13:40.127 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:13:40.127 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:13:40.133 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:13:40.134 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:13:40.134 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:13:40.142 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:13:40.144 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:13:40.144 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:13:40.153 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:13:40.154 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:13:40.154 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:13:40.156 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:13:40.157  INFO 2788 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:14:15.924  INFO 2788 --- [http-nio-8080-exec-8] com.gjy.boke.aspect.LogAspect            : Result message
+2021-03-17 00:14:18.212 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:14:18.213 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:14:18.216 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:14:18.217 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:14:18.218 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:14:18.220 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:14:18.221 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:14:18.221 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:14:18.226 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:14:18.226 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:14:18.226 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:14:18.229 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:14:18.231 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:14:18.231 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:14:18.233 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:14:18.233  INFO 2788 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:14:20.121 DEBUG 2788 --- [http-nio-8080-exec-4] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==>  Preparing: update t_blog set views=views+1 where id=?; 
+2021-03-17 00:14:20.122 DEBUG 2788 --- [http-nio-8080-exec-4] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : ==> Parameters: 7(Long)
+2021-03-17 00:14:20.193 DEBUG 2788 --- [http-nio-8080-exec-4] c.g.b.d.B.updateBlogViewsAddOneByBlogId  : <==    Updates: 1
+2021-03-17 00:14:20.195 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogById     : ==>  Preparing: select *from t_blog where id=?; 
+2021-03-17 00:14:20.196 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogById     : ==> Parameters: 7(Long)
+2021-03-17 00:14:20.200 DEBUG 2788 --- [http-nio-8080-exec-4] com.gjy.boke.dao.BlogDao.GetBlogById     : <==      Total: 1
+2021-03-17 00:14:20.387 DEBUG 2788 --- [http-nio-8080-exec-4] listCommentByBlogIdInParentCommentIdNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-03-17 00:14:20.387 DEBUG 2788 --- [http-nio-8080-exec-4] listCommentByBlogIdInParentCommentIdNull : ==> Parameters: 7(Long), -1(Long)
+2021-03-17 00:14:20.394 DEBUG 2788 --- [http-nio-8080-exec-4] listCommentByBlogIdInParentCommentIdNull : <==      Total: 3
+2021-03-17 00:14:20.395 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-03-17 00:14:20.395 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 73(Long)
+2021-03-17 00:14:20.397 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 2
+2021-03-17 00:14:20.399 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-03-17 00:14:20.399 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 76(Long)
+2021-03-17 00:14:20.401 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-03-17 00:14:20.401 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-03-17 00:14:20.402 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 77(Long)
+2021-03-17 00:14:20.403 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-03-17 00:14:20.405 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-03-17 00:14:20.405 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 86(Long)
+2021-03-17 00:14:20.406 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-03-17 00:14:20.407 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-03-17 00:14:20.407 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 87(Long)
+2021-03-17 00:14:20.408 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 1
+2021-03-17 00:14:20.410 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==>  Preparing: select *from t_comment where blogId=? and parentCommentId=? ORDER BY createTime Asc; 
+2021-03-17 00:14:20.410 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : ==> Parameters: 7(Long), 88(Long)
+2021-03-17 00:14:20.412 DEBUG 2788 --- [http-nio-8080-exec-4] tCommentByBlogIdInParentCommentIdNotNull : <==      Total: 0
+2021-03-17 00:14:20.412  INFO 2788 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result blog
+2021-03-17 00:15:21.507 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:15:21.508 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:15:21.514 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:15:21.516 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:15:21.517 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:15:21.519 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:15:21.520 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:15:21.520 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:15:21.522 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:15:21.523 DEBUG 2788 --- [http-nio-8080-exec-8] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:15:21.523 DEBUG 2788 --- [http-nio-8080-exec-8] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:15:21.528 DEBUG 2788 --- [http-nio-8080-exec-8] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:15:21.530 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:15:21.531 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:15:21.534 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:15:21.535  INFO 2788 --- [http-nio-8080-exec-8] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:15:58.992 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:15:58.994 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:15:59.006 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:15:59.007 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:15:59.008 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:15:59.010 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:15:59.011 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:15:59.011 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:15:59.017 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:15:59.018 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:15:59.018 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:15:59.023 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:15:59.024 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:15:59.024 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:15:59.026 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:15:59.026  INFO 2788 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:16:16.356 DEBUG 2788 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:16:16.358 DEBUG 2788 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:16:16.368 DEBUG 2788 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:16:16.369 DEBUG 2788 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:16:16.370 DEBUG 2788 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:16:16.373 DEBUG 2788 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:16:16.374 DEBUG 2788 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:16:16.374 DEBUG 2788 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:16:16.378 DEBUG 2788 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:16:16.379 DEBUG 2788 --- [http-nio-8080-exec-9] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:16:16.381 DEBUG 2788 --- [http-nio-8080-exec-9] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:16:16.387 DEBUG 2788 --- [http-nio-8080-exec-9] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:16:16.389 DEBUG 2788 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:16:16.389 DEBUG 2788 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:16:16.391 DEBUG 2788 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:16:16.391  INFO 2788 --- [http-nio-8080-exec-9] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:16:28.461 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:16:28.464 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:16:28.468 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:16:28.469 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:16:28.470 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:16:28.472 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:16:28.473 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:16:28.473 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:16:28.476 DEBUG 2788 --- [http-nio-8080-exec-5] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:16:28.477 DEBUG 2788 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:16:28.477 DEBUG 2788 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:16:28.483 DEBUG 2788 --- [http-nio-8080-exec-5] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:16:28.484 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:16:28.485 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:16:28.486 DEBUG 2788 --- [http-nio-8080-exec-5] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:16:28.487  INFO 2788 --- [http-nio-8080-exec-5] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:16:51.044 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:16:51.045 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:16:51.056 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:16:51.057 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:16:51.059 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:16:51.062 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:16:51.063 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:16:51.065 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:16:51.070 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:16:51.072 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:16:51.073 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:16:51.077 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:16:51.079 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:16:51.079 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:16:51.082 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:16:51.083  INFO 2788 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:17:22.785 DEBUG 2788 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:17:22.786 DEBUG 2788 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:17:22.790 DEBUG 2788 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:17:22.790 DEBUG 2788 --- [http-nio-8080-exec-7] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:17:22.791 DEBUG 2788 --- [http-nio-8080-exec-7] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:17:22.792 DEBUG 2788 --- [http-nio-8080-exec-7] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:17:22.793 DEBUG 2788 --- [http-nio-8080-exec-7] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:17:22.793 DEBUG 2788 --- [http-nio-8080-exec-7] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:17:22.795 DEBUG 2788 --- [http-nio-8080-exec-7] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:17:22.797 DEBUG 2788 --- [http-nio-8080-exec-7] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:17:22.797 DEBUG 2788 --- [http-nio-8080-exec-7] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:17:22.802 DEBUG 2788 --- [http-nio-8080-exec-7] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:17:22.803 DEBUG 2788 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:17:22.803 DEBUG 2788 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:17:22.804 DEBUG 2788 --- [http-nio-8080-exec-7] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:17:22.804  INFO 2788 --- [http-nio-8080-exec-7] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:18:00.079 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:18:00.081 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:18:00.087 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:18:00.088 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:18:00.088 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:18:00.090 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:18:00.090 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:18:00.090 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:18:00.092 DEBUG 2788 --- [http-nio-8080-exec-8] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:18:00.093 DEBUG 2788 --- [http-nio-8080-exec-8] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:18:00.093 DEBUG 2788 --- [http-nio-8080-exec-8] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:18:00.099 DEBUG 2788 --- [http-nio-8080-exec-8] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:18:00.100 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:18:00.100 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:18:00.101 DEBUG 2788 --- [http-nio-8080-exec-8] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:18:00.102  INFO 2788 --- [http-nio-8080-exec-8] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:18:50.724  INFO 2788 --- [http-nio-8080-exec-4] com.gjy.boke.aspect.LogAspect            : Result message
+2021-03-17 00:19:05.486 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:19:05.486 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:19:05.489 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:19:05.489 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:19:05.489 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:19:05.490 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:19:05.490 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:19:05.491 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:19:05.492 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:19:05.493 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:19:05.493 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:19:05.495 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:19:05.495 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:19:05.496 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:19:05.497 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:19:05.497  INFO 2788 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:19:34.581 DEBUG 2788 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:19:34.582 DEBUG 2788 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:19:34.583 DEBUG 2788 --- [http-nio-8080-exec-9] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:19:34.584 DEBUG 2788 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:19:34.584 DEBUG 2788 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:19:34.586 DEBUG 2788 --- [http-nio-8080-exec-9] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:19:34.587  INFO 2788 --- [http-nio-8080-exec-9] com.gjy.boke.aspect.LogAspect            : Result tags
+2021-03-17 00:20:04.412 DEBUG 2788 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:20:04.413 DEBUG 2788 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:20:04.417 DEBUG 2788 --- [http-nio-8080-exec-6] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:20:04.418 DEBUG 2788 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:20:04.418 DEBUG 2788 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:20:04.421 DEBUG 2788 --- [http-nio-8080-exec-6] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:20:04.422  INFO 2788 --- [http-nio-8080-exec-6] com.gjy.boke.aspect.LogAspect            : Result tags
+2021-03-17 00:20:13.361 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:20:13.362 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:20:13.367 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:20:13.370 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:20:13.370 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:20:13.371 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:20:13.372 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:20:13.372 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:20:13.373 DEBUG 2788 --- [http-nio-8080-exec-1] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:20:13.373 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:20:13.373 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:20:13.375 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:20:13.376 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:20:13.376 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:20:13.377 DEBUG 2788 --- [http-nio-8080-exec-1] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:20:13.377  INFO 2788 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:20:27.522 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:20:27.522 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:20:27.525 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:20:27.525 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:20:27.526 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:20:27.527 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:20:27.527 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:20:27.527 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:20:27.529 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:20:27.530 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:20:27.530 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:20:27.533 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:20:27.534 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:20:27.534 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:20:27.535 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:20:27.536  INFO 2788 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:20:39.750 DEBUG 2788 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:20:39.752 DEBUG 2788 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:20:39.758 DEBUG 2788 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:20:39.759 DEBUG 2788 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:20:39.759 DEBUG 2788 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:20:39.761 DEBUG 2788 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:20:39.762 DEBUG 2788 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:20:39.763 DEBUG 2788 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:20:39.767 DEBUG 2788 --- [http-nio-8080-exec-2] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:20:39.767 DEBUG 2788 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:20:39.767 DEBUG 2788 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:20:39.770 DEBUG 2788 --- [http-nio-8080-exec-2] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:20:39.770 DEBUG 2788 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:20:39.771 DEBUG 2788 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:20:39.772 DEBUG 2788 --- [http-nio-8080-exec-2] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:20:39.772  INFO 2788 --- [http-nio-8080-exec-2] com.gjy.boke.aspect.LogAspect            : Result index
+2021-03-17 00:21:18.574 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.dao.BlogDao.listBlogBySearchQuery  : ==>  Preparing: select t_type.name,t_blog.* from t_blog Join t_type on t_type.id=t_blog.typeId where t_blog.title like ? or t_blog.content like ? or t_blog.description like ?; 
+2021-03-17 00:21:18.575 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.dao.BlogDao.listBlogBySearchQuery  : ==> Parameters: %Spring%(String), %Spring%(String), %Spring%(String)
+2021-03-17 00:21:18.579 DEBUG 2788 --- [http-nio-8080-exec-1] c.g.b.dao.BlogDao.listBlogBySearchQuery  : <==      Total: 11
+2021-03-17 00:21:18.580  INFO 2788 --- [http-nio-8080-exec-1] com.gjy.boke.aspect.LogAspect            : Result result
+2021-03-17 00:21:31.726 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==>  Preparing: SELECT t_type.name,t_blog.* FROM t_blog JOIN t_type ON t_type.id=t_blog.typeId ; 
+2021-03-17 00:21:31.727 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : ==> Parameters: 
+2021-03-17 00:21:31.733 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetAllBlog      : <==      Total: 18
+2021-03-17 00:21:31.736 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==>  Preparing: SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5 
+2021-03-17 00:21:31.737 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : ==> Parameters: 
+2021-03-17 00:21:31.740 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getBlogTypeQuery  : <==      Total: 5
+2021-03-17 00:21:31.741 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==>  Preparing: SELECT t_blog.id as bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id` RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` 
+2021-03-17 00:21:31.741 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : ==> Parameters: 
+2021-03-17 00:21:31.745 DEBUG 2788 --- [http-nio-8080-exec-10] c.gjy.boke.dao.BlogDao.getTagInBlogList  : <==      Total: 38
+2021-03-17 00:21:31.748 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==>  Preparing: SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9; 
+2021-03-17 00:21:31.748 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : ==> Parameters: 
+2021-03-17 00:21:31.754 DEBUG 2788 --- [http-nio-8080-exec-10] c.g.b.d.B.GetBlogByUpdateTimeLimit       : <==      Total: 9
+2021-03-17 00:21:31.755 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==>  Preparing: SELECT COUNT(*) FROM t_blog WHERE published!='草稿' 
+2021-03-17 00:21:31.755 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : ==> Parameters: 
+2021-03-17 00:21:31.756 DEBUG 2788 --- [http-nio-8080-exec-10] com.gjy.boke.dao.BlogDao.GetBlogNumber   : <==      Total: 1
+2021-03-17 00:21:31.757  INFO 2788 --- [http-nio-8080-exec-10] com.gjy.boke.aspect.LogAspect            : Result index
