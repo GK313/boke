@@ -49,28 +49,29 @@
                     <i class="bookmark icon"></i>分类
                 </div>
                 <div class="right aligned column">
-                    共<h3 class="ui orange header m-inline-block" th:text="${types.size()}">12</h3>个
+                    共<h3 class="ui olive header m-inline-block" th:text="${types.size()}">12</h3>个
                 </div>
             </div>
         </div>
         <!--放置分类segment-->
-        <div class="ui attached orange segment m-padded-tb-large">
+        <div class="ui attached olive segment m-padded-tb-large">
             <!--分类-->
             <div class="ui labeled button m-margin-tb-tiny" th:each="type:${types}">
 
-                <a  href="" th:href="@{${type.id}}"   class="ui  basic large label m-margin-tb-tiny"
-                   th:text="${type.name}"  th:classappend="${type.id==activeTypeId} ? 'teal'">
+                <a  href="" th:href="@{${type.id}}"   class="ui basic large label m-margin-tb-tiny"
+                   th:text="${type.name}"  th:classappend="${type.id==activeTypeId} ? 'olive'">
                     SpringBoot</a>
 
                 <!--该分类下的博文数量-->
-                <div class="ui basic left pointing label" th:classappend="${type.id==activeTypeId} ? 'teal'"
+                <div class="ui  basic left pointing label" th:classappend="${type.id==activeTypeId} ? 'olive'"
                      th:text="${#arrays.length(type.blogs)}">23</div>
             </div>
 
         </div>
 
         <!-- 分类所对应的博客列表-->
-        <div class="ui top attached teal segment" th:fragment="blogListByType">
+        <div class="ui top attached olive segment" th:fragment="blogListByType">
+            <!--消息-->
             <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
                 <i class="close icon"></i>
                 <div class="header">提示：</div>
@@ -107,7 +108,7 @@
                                 </div>
                             </div>
                             <div class="right aligned five wide column">
-                                <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin"
+                                <a href="#" target="_blank" class="ui olive basic label m-padded-tiny m-text-thin"
                                    th:text="${blog.type.name}">好文</a>
                             </div>
                         </div>
@@ -129,10 +130,10 @@
         <div class="ui bottom attached segment">
             <div class="ui middle aligned two column grid">
                 <div class="column">
-                    <a href="#" class="ui mini teal basic button">上一页</a>
+                    <a href="#" class="ui mini olive basic button">上一页</a>
                 </div>
                 <div class="right aligned column">
-                    <a  href="#" class="ui mini teal basic button">下一页</a>
+                    <a  href="#" class="ui mini olive basic button">下一页</a>
                 </div>
             </div>
         </div>
@@ -218,6 +219,11 @@
     $('.menu.toggle').click(function(){
         $('.m-item').toggleClass('m-mobile-hide');
     });
+    /*初始化下拉列表*/
+    $('.ui.dropdown')
+        .dropdown({
+            on : 'hover'
+        });
 </script>
 <script>
     function listBlogByType(obj){

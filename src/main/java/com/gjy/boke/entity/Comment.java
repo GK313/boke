@@ -1,5 +1,6 @@
 package com.gjy.boke.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Table;
@@ -23,7 +24,8 @@ public class Comment implements Serializable {
     private String content;
 
     private String avatar;
-    @DateTimeFormat
+
+    @JsonFormat(pattern = "yyyy-MM-dd-HH-mm-ss",timezone="Asia/Shanghai")
     private Date createtime;
 
     private Long blogid;

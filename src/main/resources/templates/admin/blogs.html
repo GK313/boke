@@ -13,19 +13,62 @@
 <!--导航-->
 <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
-        <div class="ui inverted secondary stackable menu">
-            <h2 class="ui olive header item" style="font-family: STSong">博客管理</h2>
-            <a href="#" th:href="@{/admin/index}" class="m-item item m-mobile-hide"><i
+        <div class="ui inverted secondary stackable menu" style="display: flex;justify-content: center" >
+            <h2 class="ui olive header item" style="font-family: 'Andale Mono'">不喝奶茶的Programmer</h2>
+            <a href="#" th:href="@{/admin/blogList}" class="m-item item m-mobile-hide"><i
                     class="home icon"></i>首页</a>
-            <a href="#" th:href="@{/admin/blogList}" class="active m-item item m-mobile-hide"><i
-                    class="home icon"></i>博客</a>
-            <a href="#" th:href="@{/admin/types}" class=" m-item item m-mobile-hide"><i
+            <a href="#" th:href="@{/}" class=" m-item item m-mobile-hide"><i
+                    class="list alternate outline icon"></i>文章列表</a>
+            <a href="#" th:href="@{/admin/blogList}" class="active m-item item m-mobile-hide">
+                <i class="cogs icon"></i>
+                文章管理
+            </a>
+            <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide"><i
                     class="clone outline icon"></i>分类</a>
             <a href="#" th:href="@{/admin/TagsList}" class="m-item item m-mobile-hide"><i class="clock icon"></i>标签</a>
-            <!--导航栏右头像部分-->
-            <div class="right m-item menu m-mobile-hide">
-                <div class="ui dropdown item">
+            <div class="right m-item m-mobile-hide menu">
+                <div class="ui dropdown item ">
                     <div class="text">
+                        <i class="chart pie icon"></i>
+                        统计
+                    </div>
+                    <!--下拉图标-->
+                    <i class="dropdown icon"></i>
+                    <!--下拉菜单-->
+                    <div class="menu">
+                        <a href="#" th:href="@{/statistics}" class="item">评论统计</a>
+                        <a href="#" th:href="@{/statistics}" class="item">博客统计</a>
+                        <a href="#" th:href="@{/statistics}" class="item">用户统计</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right m-item item m-mobile-hide" th:if="${session.user}!=null">
+                <!--系统通知-->
+                <a class="item" th:href="@{/inform}">
+                    <i class="bullhorn icon"></i>公告
+                    <div class="floating ui red label">22</div>
+                </a>
+            </div>
+            <div class="right m-item item m-mobile-hide" th:if="${session.user}!=null">
+                <!--收藏-->
+                <a class="item" th:href="@{/getCollection}">
+                    <i class="heart outline icon"></i>
+                    收藏
+                    <div class="floating ui red label">
+                        <span th:text="${session.collectionSize}"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="right m-item item m-mobile-hide" th:if="${session.user}==null">
+                <!--登录or注册-->
+                <a class="item">
+                    <i class="button icon"></i>注册/登录
+                </a>
+            </div>
+            <!--导航栏右头像部分-->
+            <div class="right m-item m-mobile-hide menu">
+                <div class="ui dropdown item ">
+                    <div class="text" th:if="${session.user}!=null">
                         <img class="ui avatar image" src="../../static/image/header.png"
                              th:src="@{${session.user.avatar}}">
                         <span th:text="${session.user.nickname}">GJY</span>
@@ -34,7 +77,7 @@
                     <i class="dropdown icon"></i>
                     <!--下拉菜单-->
                     <div class="menu">
-                        <a href="#" class="item">注销</a>
+                        <a href="#" th:href="@{/logout}" class="item">注销</a>
                     </div>
                 </div>
             </div>
@@ -57,7 +100,11 @@
         </div>
     </div>
 </div>
-
+<div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+    <i class="close icon"></i>
+    <div class="header">提示：</div>
+    <p th:text="${message}">操作成功</p>
+</div>
 <!--中间内容-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
@@ -126,9 +173,15 @@
                     <td th:text="${#dates.format(blog.getUpdatetime(),'yyyy-MM-dd HH:mm:ss')}">2020-11-1</td>
                     <td>
                         <a href="#" th:href="@{/admin/blog/{id}/delete(id=${blog.getId()})}"
-                           class="ui mini teal basic button">删除</a>
+                           class="ui mini red basic button">
+                            <i class="trash alternate icon"></i>
+                            删除
+                        </a>
                         <a href="#" th:href="@{/admin/blog/{id}/edit(id=${blog.getId()})}"
-                           class="ui mini red basic button">编辑</a>
+                           class="ui mini teal  basic button">
+                            <i class="edit icon"></i>
+                            编辑
+                        </a>
                     </td>
                 </tr>
                 </tbody>
@@ -150,7 +203,6 @@
                 </tfoot>
             </table>
         </div>
-
     </div>
 </div>
 
@@ -247,8 +299,7 @@
     $('select.dropdown')
         .dropdown({
             on:'hover'
-        })
-    ;
+        });
 
     //点击搜索发送ajax请求
     $("#search-btn").click(function () {

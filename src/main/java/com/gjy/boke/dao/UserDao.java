@@ -21,4 +21,11 @@ public interface UserDao extends BaseMapper<User> {
     User selectUserByUsernameAndPassword(String username,String password);
 
     Long getUserIdByName(String name);
+
+    /**
+     * 新增用户
+
+     * @return
+     */
+    Integer insertUser(User user);
 }

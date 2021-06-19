@@ -1,126 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gjy.boke.dao.BlogDao">
-  <resultMap id="BaseResultMap" type="com.gjy.boke.entity.Blog">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="content" jdbcType="VARCHAR" property="content" />
-    <result column="firstPicture" jdbcType="VARCHAR" property="firstpicture" />
-    <result column="flag" jdbcType="VARCHAR" property="flag" />
-    <result column="views" jdbcType="INTEGER" property="views" />
-    <result column="commentCount" jdbcType="INTEGER" property="commentcount" />
-    <result column="appreciation" jdbcType="CHAR" property="appreciation" />
-    <result column="shareStatement" jdbcType="CHAR" property="sharestatement" />
-    <result column="commentabled" jdbcType="CHAR" property="commentabled" />
-    <result column="published" jdbcType="CHAR" property="published" />
-    <result column="recommend" jdbcType="CHAR" property="recommend" />
-    <result column="createTime" jdbcType="DATE" property="createtime" />
-    <result column="updateTime" jdbcType="DATE" property="updatetime" />
-    <result column="typeId" jdbcType="BIGINT" property="typeid" />
-    <result column="userId" jdbcType="BIGINT" property="userid" />
-    <result column="description" jdbcType="VARCHAR" property="description" />
-    <result column="tagId" jdbcType="BIGINT" property="tagid" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.gjy.boke.entity.Blog">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="firstPicture" jdbcType="VARCHAR" property="firstpicture"/>
+        <result column="flag" jdbcType="VARCHAR" property="flag"/>
+        <result column="views" jdbcType="INTEGER" property="views"/>
+        <result column="commentCount" jdbcType="INTEGER" property="commentcount"/>
+        <result column="appreciation" jdbcType="CHAR" property="appreciation"/>
+        <result column="shareStatement" jdbcType="CHAR" property="sharestatement"/>
+        <result column="commentabled" jdbcType="CHAR" property="commentabled"/>
+        <result column="published" jdbcType="CHAR" property="published"/>
+        <result column="recommend" jdbcType="CHAR" property="recommend"/>
+        <result column="createTime" jdbcType="DATE" property="createtime"/>
+        <result column="updateTime" jdbcType="DATE" property="updatetime"/>
+        <result column="typeId" jdbcType="BIGINT" property="typeid"/>
+        <result column="userId" jdbcType="BIGINT" property="userid"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="tagId" jdbcType="BIGINT" property="tagid"/>
+    </resultMap>
 
-  <resultMap id="Blog_Type" type="com.gjy.boke.entity.Blog">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="content" jdbcType="VARCHAR" property="content" />
-    <result column="firstPicture" jdbcType="VARCHAR" property="firstpicture" />
-    <result column="flag" jdbcType="VARCHAR" property="flag" />
-    <result column="views" jdbcType="INTEGER" property="views" />
-    <result column="commentCount" jdbcType="INTEGER" property="commentcount" />
-    <result column="appreciation" jdbcType="CHAR" property="appreciation" />
-    <result column="shareStatement" jdbcType="CHAR" property="sharestatement" />
-    <result column="commentabled" jdbcType="CHAR" property="commentabled" />
-    <result column="published" jdbcType="CHAR" property="published" />
-    <result column="recommend" jdbcType="CHAR" property="recommend" />
-    <result column="createTime"  property="createtime" />
-    <result column="updateTime"  property="updatetime" />
-    <result column="typeId" jdbcType="BIGINT" property="typeid" />
-    <result column="userId" jdbcType="BIGINT" property="userid" />
-    <result column="description" jdbcType="VARCHAR" property="description" />
-    <result column="tagId" jdbcType="BIGINT" property="tagid" />
-    <!--一对多关系映射
-    <collection property="tags" ofType="com.gjy.boke.entity.Tag">
-      <id property="id" column="id"></id>
-      <result property="name" column="name"></result>
-    </collection>-->
-    <!--一对一关系映射-->
-    <association property="type" column="id" javaType="com.gjy.boke.entity.Type">
-      <id property="id" column="id"></id>
-      <result column="name" property="name"></result>
-    </association>
-  </resultMap>
-  <sql id="Base_Column_List">
+    <resultMap id="Blog_Type" type="com.gjy.boke.entity.Blog">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="firstPicture" jdbcType="VARCHAR" property="firstpicture"/>
+        <result column="flag" jdbcType="VARCHAR" property="flag"/>
+        <result column="views" jdbcType="INTEGER" property="views"/>
+        <result column="commentCount" jdbcType="INTEGER" property="commentcount"/>
+        <result column="appreciation" jdbcType="CHAR" property="appreciation"/>
+        <result column="shareStatement" jdbcType="CHAR" property="sharestatement"/>
+        <result column="commentabled" jdbcType="CHAR" property="commentabled"/>
+        <result column="published" jdbcType="CHAR" property="published"/>
+        <result column="recommend" jdbcType="CHAR" property="recommend"/>
+        <result column="createTime" property="createtime"/>
+        <result column="updateTime" property="updatetime"/>
+        <result column="typeId" jdbcType="BIGINT" property="typeid"/>
+        <result column="userId" jdbcType="BIGINT" property="userid"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="tagId" jdbcType="BIGINT" property="tagid"/>
+        <!--一对多关系映射
+        <collection property="tags" ofType="com.gjy.boke.entity.Tag">
+          <id property="id" column="id"></id>
+          <result property="name" column="name"></result>
+        </collection>-->
+        <!--一对一关系映射-->
+        <association property="type" column="id" javaType="com.gjy.boke.entity.Type">
+            <id property="id" column="id"></id>
+            <result column="name" property="name"></result>
+        </association>
+    </resultMap>
+    <sql id="Base_Column_List">
     id, title, content, firstPicture, flag, views, commentCount, appreciation, shareStatement, 
     commentabled, published, recommend, createTime, updateTime, typeId, userId, description, 
     tagId
   </sql>
 
-  <resultMap id="blog_tag" type="com.gjy.boke.entity.Blog">
-    <result property="id" column="id"></result>
-    <result property="tagids" column="tagids"></result>
-  </resultMap>
+    <resultMap id="blog_tag" type="com.gjy.boke.entity.Blog">
+        <result property="id" column="id"></result>
+        <result property="tagids" column="tagids"></result>
+    </resultMap>
 
-  <resultMap id="BlogTypeVo" type="com.gjy.boke.queryvo.BlogTypeQuery">
-  <result property="id" column="id"></result>
-  <result property="name" column="name"></result>
-  <result property="total" column="total"></result>
-</resultMap>
+    <resultMap id="BlogTypeVo" type="com.gjy.boke.queryvo.BlogTypeQuery">
+        <result property="id" column="id"></result>
+        <result property="name" column="name"></result>
+        <result property="total" column="total"></result>
+    </resultMap>
 
-  <select id="GetBlogById" resultType="com.gjy.boke.entity.Blog">
+    <select id="GetBlogById" resultType="com.gjy.boke.entity.Blog">
     select *from t_blog where id=#{id};
   </select>
-  <!--
-  问题：多表连接后的数据如何获取，返回的结果集不只是有Blog的信息，还有来自Tag，Type类的信息
-  更换主从表关系，分别查询出对应的信息（太麻烦）
-  使用MyBatis的多表连接查询
-  -->
-  <select id="GetAllBlog" resultMap="Blog_Type">
+    <!--
+    问题：多表连接后的数据如何获取，返回的结果集不只是有Blog的信息，还有来自Tag，Type类的信息
+    更换主从表关系，分别查询出对应的信息（太麻烦）
+    使用MyBatis的多表连接查询
+    -->
+    <select id="GetAllBlog" resultMap="Blog_Type">
     SELECT
     t_type.name,t_blog.* FROM
     t_blog
 	JOIN t_type ON t_type.id=t_blog.typeId ;
   </select>
-  <select id="GetBlogByTitleAndTypeNameAndRecommend" resultMap="Blog_Type">
-    SELECT t_type.name,t_blog.title,t_blog.updateTime,t_blog.recommend,t_blog.id,t_blog.published FROM t_blog
-	JOIN t_type ON t_type.id=t_blog.typeId
-	<where>
-      <if test="title!=null">
-        and t_blog.title=#{title}
-      </if>
-      <if test="name!=null">
-        and t_type.name=#{name}
-      </if>
-      <if test="recommend!=null">
-        and t_blog.recommend=#{recommend}
-      </if>
-    </where>
-  </select>
-  <select id="GetBlogByUpdateTimeLimit" resultMap="BaseResultMap">
+    <select id="GetBlogByTitleAndTypeNameAndRecommend" resultMap="Blog_Type">
+        SELECT t_type.name,t_blog.title,t_blog.updateTime,t_blog.recommend,t_blog.id,t_blog.published FROM t_blog
+        JOIN t_type ON t_type.id=t_blog.typeId
+        <where>
+            <if test="title!=null">
+                and t_blog.title=#{title}
+            </if>
+            <if test="name!=null">
+                and t_type.name=#{name}
+            </if>
+            <if test="recommend!=null">
+                and t_blog.recommend=#{recommend}
+            </if>
+        </where>
+    </select>
+    <select id="GetBlogByUpdateTimeLimit" resultMap="BaseResultMap">
     SELECT * FROM t_blog where recommend='on' ORDER BY updateTime DESC LIMIT 9;
   </select>
-  <select id="GetBlogIdAndTagids" resultMap="blog_tag">
+    <select id="GetBlogIdAndTagids" resultMap="blog_tag">
      select id,tagids from t_blog;
   </select>
-  <select id="GetBlogNumber" resultType="java.lang.Integer">
+    <select id="GetBlogNumber" resultType="java.lang.Integer">
     SELECT COUNT(*) FROM t_blog WHERE published!='草稿'
   </select>
-  <select id="getBlogTypeQuery" resultMap="BlogTypeVo">
+    <select id="getBlogTypeQuery" resultMap="BlogTypeVo">
     SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog
 	JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total DESC LIMIT 5
 
   </select>
-  <select id="GetBlogByTypeId" resultMap="Blog_Type">
+    <select id="GetBlogByTypeId" resultMap="Blog_Type">
     SELECT t_blog.*,t_type.`id`,t_type.name FROM t_blog JOIN t_type ON t_type.`id`=t_blog.`typeId` WHERE t_blog.typeId=#{typeId}
   </select>
-  <select id="getNewestBlogId" resultType="java.lang.Long">
+    <select id="getNewestBlogId" resultType="java.lang.Long">
     select t_blog.id from t_blog ORDER BY updateTime DESC LIMIT 1 ;
   </select>
 
 
-  <insert id="SaveBlog" parameterType="com.gjy.boke.entity.Blog">
+    <insert id="SaveBlog" parameterType="com.gjy.boke.entity.Blog">
         insert into t_blog (title, content, firstPicture,
       flag, views, commentCount,
       appreciation, shareStatement, commentabled,
@@ -134,10 +134,11 @@
       #{updatetime}, #{typeid}, #{userid},
       #{description}, #{tagid},#{tagids})
   </insert>
-  <insert id="insert_blog_tag">
+    <insert id="insert_blog_tag">
     insert into blog_tag value (#{param1},#{param2});
   </insert>
-  <update id="EditBlog" parameterType="com.gjy.boke.entity.Blog" >
+
+    <update id="EditBlog" parameterType="com.gjy.boke.entity.Blog">
     update t_blog
     set title = #{blog.title},
       content = #{blog.content},
@@ -159,53 +160,58 @@
       tagids=#{blog.tagids}
     where id = #{id}
   </update>
-  <update id="updateBlogCommentCountsCutOneByBlogId">
+    <update id="updateBlogCommentCountsCutOneByBlogId">
     update t_blog set commentCount=commentCount-1 where id=#{BlogId};
   </update>
-  <update id="updateBlogCommentCountsAddOneByBlogId">
+    <update id="updateBlogCommentCountsAddOneByBlogId">
     update t_blog set commentCount=commentCount+1 where id=#{BlogId};
   </update>
-  <update id="updateBlogViewsAddOneByBlogId">
+    <update id="updateBlogViewsAddOneByBlogId">
     update t_blog set views=views+1 where id=#{BlogId};
   </update>
-  <delete id="DeleteBlog" parameterType="java.lang.Long">
+    <delete id="DeleteBlog" parameterType="java.lang.Long">
     delete from t_blog where id=#{id};
   </delete>
 
+    <!--取消收藏-->
+    <delete id="deleteCollect" parameterType="java.lang.Long">
+        delete from t_collection where blogId=#{blogId} and userId=#{userId}
+    </delete>
 
-  <!--获取每个标签对应的所有博客-->
-  <resultMap id="Tag_Blog" type="com.gjy.boke.entity.Tag">
-    <id column="id" property="id"></id>
-    <result column="name" property="name"></result>
-    <collection property="blogs" ofType="com.gjy.boke.entity.Blog">
-      <id column="bid" jdbcType="BIGINT" property="id" />
-      <result column="title" jdbcType="VARCHAR" property="title" />
-      <result column="content" jdbcType="VARCHAR" property="content" />
-      <result column="firstPicture" jdbcType="VARCHAR" property="firstpicture" />
-      <result column="flag" jdbcType="VARCHAR" property="flag" />
-      <result column="views" jdbcType="INTEGER" property="views" />
-      <result column="commentCount" jdbcType="INTEGER" property="commentcount" />
-      <result column="appreciation" jdbcType="CHAR" property="appreciation" />
-      <result column="shareStatement" jdbcType="CHAR" property="sharestatement" />
-      <result column="commentabled" jdbcType="CHAR" property="commentabled" />
-      <result column="published" jdbcType="CHAR" property="published" />
-      <result column="recommend" jdbcType="CHAR" property="recommend" />
-      <result column="createTime" jdbcType="DATE" property="createtime" />
-      <result column="updateTime" jdbcType="DATE" property="updatetime" />
-      <result column="typeId" jdbcType="BIGINT" property="typeid" />
-      <result column="userId" jdbcType="BIGINT" property="userid" />
-      <result column="description" jdbcType="VARCHAR" property="description" />
-      <result column="tagId" jdbcType="BIGINT" property="tagid" />
-    </collection>
-  </resultMap>
-  <select id="getTagInBlogList" resultMap="Tag_Blog">
+
+    <!--获取每个标签对应的所有博客-->
+    <resultMap id="Tag_Blog" type="com.gjy.boke.entity.Tag">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <collection property="blogs" ofType="com.gjy.boke.entity.Blog">
+            <id column="bid" jdbcType="BIGINT" property="id"/>
+            <result column="title" jdbcType="VARCHAR" property="title"/>
+            <result column="content" jdbcType="VARCHAR" property="content"/>
+            <result column="firstPicture" jdbcType="VARCHAR" property="firstpicture"/>
+            <result column="flag" jdbcType="VARCHAR" property="flag"/>
+            <result column="views" jdbcType="INTEGER" property="views"/>
+            <result column="commentCount" jdbcType="INTEGER" property="commentcount"/>
+            <result column="appreciation" jdbcType="CHAR" property="appreciation"/>
+            <result column="shareStatement" jdbcType="CHAR" property="sharestatement"/>
+            <result column="commentabled" jdbcType="CHAR" property="commentabled"/>
+            <result column="published" jdbcType="CHAR" property="published"/>
+            <result column="recommend" jdbcType="CHAR" property="recommend"/>
+            <result column="createTime" jdbcType="DATE" property="createtime"/>
+            <result column="updateTime" jdbcType="DATE" property="updatetime"/>
+            <result column="typeId" jdbcType="BIGINT" property="typeid"/>
+            <result column="userId" jdbcType="BIGINT" property="userid"/>
+            <result column="description" jdbcType="VARCHAR" property="description"/>
+            <result column="tagId" jdbcType="BIGINT" property="tagid"/>
+        </collection>
+    </resultMap>
+    <select id="getTagInBlogList" resultMap="Tag_Blog">
      SELECT t_blog.id as
     bid,t_blog.title,t_tag.id,t_tag.name FROM t_blog
         INNER JOIN blog_tag ON blog_tag.`blogid`=t_blog.`id`
         RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid`
   </select>
-  <!--传入一个标签id，获取该标签下的所有博客-->
-  <select id="GetBlogInTagByTagId" resultMap="Tag_Blog">
+    <!--传入一个标签id，获取该标签下的所有博客-->
+    <select id="GetBlogInTagByTagId" resultMap="Tag_Blog">
     SELECT t_blog.id as
     bid,t_blog.title,t_blog.content,t_tag.id,t_tag.name,t_blog.firstpicture,t_blog.flag,t_blog.views,t_blog.commentCount,t_blog.createTime,t_blog.updateTime,t_blog.typeId,t_blog.userId,t_blog.description FROM
     t_blog
@@ -214,18 +220,56 @@
     blog_tag.`blogid`=t_blog.`id`
 			RIGHT JOIN t_tag ON t_tag.`id`=blog_tag.`tagid` where blog_tag.`tagid`=#{tagId} ;
   </select>
-  <select id="listBlogOrderByUpdateTime" resultMap="Blog_Type">
+    <select id="listBlogOrderByUpdateTime" resultMap="Blog_Type">
     SELECT t_type.name,t_blog.* FROM t_blog
 	JOIN t_type ON t_type.id=t_blog.typeId order by updatetime desc;
   </select>
-  <select id="listBlogOrderByBlogViewsAndCommentCount" resultMap="Blog_Type">
+    <select id="listBlogOrderByBlogViewsAndCommentCount" resultMap="Blog_Type">
     SELECT t_type.name,t_blog.* FROM t_blog
 	JOIN t_type ON t_type.id=t_blog.typeId ORDER BY views AND commentCount DESC;
   </select>
-  <select id="listBlogBySearchQuery" resultMap="Blog_Type">
+    <select id="listBlogBySearchQuery" resultMap="Blog_Type">
       select t_type.name,t_blog.* from t_blog Join  t_type on t_type.id=t_blog.typeId
           where t_blog.title like #{query} or t_blog.content like #{query} or t_blog.description like #{query};
 
   </select>
+
+
+    <!--收藏博客-->
+    <insert id="insertCollection">
+    INSERT INTO t_collection(blogId,userId,collectedTime) VALUE(#{blogId},#{userId},#{date})
+  </insert>
+
+    <!-- 获取收藏的文章-->
+    <select id="getCollectionsById" resultMap="Blog_Type">
+    SELECT
+    tb.*,tt.name
+    FROM
+    t_collection tc,
+    t_blog tb,
+    t_user tu,
+    t_type tt
+    WHERE
+    tc.userId=tu.id
+    AND
+    tc.blogId=tb.id
+    AND
+    tb.typeId=tt.id
+    AND
+    tu.id=#{userId}
+    order by collectedTime
+  </select>
+
+  <!--根据用户id和文章id查询收藏记录-->
+  <select id="getCollectionByBlogIdAndUserId" parameterType="java.lang.Long" resultType="java.lang.Integer">
+      select COUNT(*)
+      from
+      t_collection
+      where
+      blogId=#{blogId}
+      and
+      userId=#{userId}
+  </select>
+
 
 </mapper>

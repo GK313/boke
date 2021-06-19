@@ -1,5 +1,6 @@
 package com.gjy.boke.interceptor;
 
+import com.gjy.boke.entity.User;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,12 +17,15 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response,
                              Object handler) throws Exception {
-
-        if(request.getSession().getAttribute("user")==null){
-            response.sendRedirect("/admin");
-            //不再往下执行
-            return false;
+        User user = (User)request.getSession().getAttribute("user");
+        if(user!=null){
+            if(!user.getNickname().equals("admin")){
+                response.sendRedirect("/admin");
+                //不再往下执行
+                return false;
+            }
         }
+
         //从Session中获取的User不为空，继续执行
         return true;
     }

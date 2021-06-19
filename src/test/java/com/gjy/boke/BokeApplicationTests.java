@@ -3,22 +3,28 @@ package com.gjy.boke;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.gjy.boke.dao.BlogDao;
+import com.gjy.boke.dao.TypeDao;
 import com.gjy.boke.entity.Blog;
+import com.gjy.boke.entity.Type;
+import com.gjy.boke.entity.User;
+import com.gjy.boke.service.BlogService;
+import com.gjy.boke.service.UserService;
+import com.gjy.boke.utils.MD5Utils;
 import org.hibernate.cache.spi.SecondLevelCacheLogger;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.*;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.TimeUnit;
 
 @SpringBootTest
 class BokeApplicationTests {
+/*
 
     @Resource
     BlogDao  blogDao;
@@ -148,7 +154,21 @@ class BokeApplicationTests {
 
         //zset数据类型操作
         ZSetOperations zSetOperations = redisTemplate.opsForZSet();
+    }
+*/
+    @Resource
+    BlogService blogService;
+    @Resource
+    BlogDao blogDao;
+
+    @Resource
+    TypeDao typeDao;
+
+    @Test
+    public void test(){
 
 
     }
+
 }
+

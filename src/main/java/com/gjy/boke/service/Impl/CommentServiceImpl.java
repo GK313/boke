@@ -11,7 +11,9 @@ import javax.annotation.Resource;
 import java.lang.reflect.Array;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -30,8 +32,10 @@ public class CommentServiceImpl implements CommentService {
     private List<Comment> tempReplys = new ArrayList<>();
 
     @Override
-    public int saveComment(Comment comment) {
-        comment.setCreatetime(new Date());
+    public int saveComment(Comment comment) throws ParseException {
+        Date date = new Date();
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+        comment.setCreatetime( sf.parse(sf.format(date)));
 
         comment.setAvatar("https://picsum.photos/id/274/3824/2520");
         Long parentcommentid = comment.getParentcommentid();

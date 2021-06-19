@@ -50,6 +50,7 @@
 SELECT t_type.*,t_blog.`id`,t_blog.`title`,t_blog.`typeId`
     FROM t_type left JOIN t_blog ON t_blog.`typeId`=t_type.`id`
   </select>
+
   <delete id="deleteTypeById">
     delete from t_type where id=#{id};
   </delete>
@@ -75,5 +76,6 @@ SELECT t_type.*,t_blog.`id`,t_blog.`title`,t_blog.`typeId`
   <update id="updateTypeByName">
     UPDATE t_type SET NAME=#{name} where id=#{id};
   </update>
+
 
 </mapper>

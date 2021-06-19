@@ -9,26 +9,72 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
     <title>博客管理</title>
+    <script src="https://code.highcharts.com.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/modules/data.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/modules/drilldown.js"></script>
 </head>
 <body>
 <!--导航-->
 <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
-        <div class="ui inverted secondary stackable menu">
-            <h2 class="ui olive header item" style="font-family: STSong">博客管理</h2>
-            <a href="#" th:href="@{/admin/blogList}" class="active m-item item m-mobile-hide"><i
-                    class="home icon"></i>管理员首页</a>
+        <div class="ui inverted secondary stackable menu" style="display: flex;justify-content: center" >
+            <h2 class="ui olive header item" style="font-family: 'Andale Mono'">不喝奶茶的Programmer</h2>
+            <a href="#" th:href="@{/admin/blogList}" class="m-item item m-mobile-hide"><i
+                    class="home icon"></i>首页</a>
             <a href="#" th:href="@{/}" class=" m-item item m-mobile-hide"><i
-                    class="home icon"></i>博文列表</a>
-            <a href="#" th:href="@{/admin/blogList}" class="m-item item m-mobile-hide"><i class="home icon"></i>博客</a>
-
-            <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类
+                    class="list alternate outline icon"></i>文章列表</a>
+            <a href="#" th:href="@{/admin/blogList}" class=" m-item item m-mobile-hide">
+                <i class="cogs icon"></i>
+                文章管理
             </a>
+            <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide"><i
+                    class="clone outline icon"></i>分类</a>
             <a href="#" th:href="@{/admin/TagsList}" class="m-item item m-mobile-hide"><i class="clock icon"></i>标签</a>
-            <!--导航栏右头像部分-->
             <div class="right m-item m-mobile-hide menu">
                 <div class="ui dropdown item ">
                     <div class="text">
+                        <i class="chart pie icon"></i>
+                        统计
+                    </div>
+                    <!--下拉图标-->
+                    <i class="dropdown icon"></i>
+                    <!--下拉菜单-->
+                    <div class="menu">
+                        <a href="#" th:href="@{/statistics}" class="item">评论统计</a>
+                        <a href="#" th:href="@{/statistics}" class="item">博客统计</a>
+                        <a href="#" th:href="@{/statistics}" class="item">用户统计</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right m-item item m-mobile-hide" th:if="${session.user}!=null">
+                <!--系统通知-->
+                <a class="item" th:href="@{/inform}">
+                    <i class="bullhorn icon"></i>公告
+                    <div class="floating ui red label">22</div>
+                </a>
+            </div>
+            <div class="right m-item item m-mobile-hide" th:if="${session.user}!=null">
+                <!--收藏-->
+                <a class="item" th:href="@{/getCollection}">
+                    <i class="heart outline icon"></i>
+                    收藏
+                    <div class="floating ui red label">
+                        <span th:text="${session.collectionSize}"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="right m-item item m-mobile-hide" th:if="${session.user}==null">
+                <!--登录or注册-->
+                <a class="item">
+                    <i class="button icon"></i>注册/登录
+                </a>
+            </div>
+            <!--导航栏右头像部分-->
+            <div class="right m-item m-mobile-hide menu">
+                <div class="ui dropdown item ">
+                    <div class="text" th:if="${session.user}!=null">
                         <img class="ui avatar image" src="../../static/image/header.png"
                              th:src="@{${session.user.avatar}}">
                         <span th:text="${session.user.nickname}">GJY</span>
@@ -41,30 +87,6 @@
                     </div>
                 </div>
             </div>
-
-            <div  class="right m-item item m-mobile-hide" th:if="${session.user}!=null" >
-                <!--系统通知-->
-                <a class="item" th:href="@{/messageList/{id}(id=${session.user.getId()})}">
-                    <i class="bullhorn icon"></i>动态
-                    <div class="floating ui red label">22</div>
-                </a>
-
-            </div>
-
-            <div  class="right m-item item m-mobile-hide" th:if="${session.user}!=null" >
-                <!--系统通知-->
-                <a class="item" th:href="@{/messageList/{id}(id=${session.user.getId()})}">
-                    <i class="bullhorn icon"></i>收藏
-                    <div class="floating ui red label">22</div>
-                </a>
-            </div>
-            <div  class="right m-item item m-mobile-hide" th:if="${session.user}==null">
-                <!--登录or注册-->
-                <a class="item">
-                    <i class="button icon"></i>注册/登录
-                </a>
-            </div>
-
         </div>
     </div>
 
@@ -74,7 +96,6 @@
     </a>
 
 </nav>
-
 
 <!--中间内容-->
 <div class="m-container-small m-padded-tb-big" >

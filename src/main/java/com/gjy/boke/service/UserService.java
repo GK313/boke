@@ -16,4 +16,10 @@ public interface UserService {
     User checkUserByUsernameAndPassword(String username,String password);
 
     Long GetUserIdByName(String name);
+
+    /**
+     * 新增用户
+     * @return
+     */
+    Integer insertUser(User user);
 }

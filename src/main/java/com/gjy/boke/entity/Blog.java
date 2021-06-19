@@ -1,5 +1,6 @@
 package com.gjy.boke.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 import org.aspectj.bridge.IMessage;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -45,7 +46,8 @@ public class Blog implements Serializable {
 
     private String recommend="off";
 
-    @DateTimeFormat
+
+    @JsonFormat(pattern = "yyyy-MM-dd-HH-mm-ss",timezone="Asia/Shanghai")
     private Date createtime;
     @DateTimeFormat
     private Date updatetime;
@@ -247,5 +249,33 @@ public class Blog implements Serializable {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", firstpicture='" + firstpicture + '\'' +
+                ", flag='" + flag + '\'' +
+                ", views=" + views +
+                ", commentcount=" + commentcount +
+                ", appreciation='" + appreciation + '\'' +
+                ", sharestatement='" + sharestatement + '\'' +
+                ", commentabled='" + commentabled + '\'' +
+                ", published='" + published + '\'' +
+                ", recommend='" + recommend + '\'' +
+                ", createtime=" + createtime +
+                ", updatetime=" + updatetime +
+                ", typeid=" + typeid +
+                ", userid=" + userid +
+                ", description='" + description + '\'' +
+                ", tagids='" + tagids + '\'' +
+                ", tagid=" + tagid +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", comments=" + comments +
+                '}';
     }
 }

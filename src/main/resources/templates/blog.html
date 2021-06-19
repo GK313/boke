@@ -487,8 +487,19 @@ h5,h6{font-size:1em;}
             </div>
             <!--赞赏功能-->
             <div class="ui center aligned basic segment">
-                <button id="payButton" class="ui orange basic circular button">赞赏</button>
+                    <button id="payButton" class="ui orange basic circular button">赞赏</button>
+                    <input name="blogID" th:value="${blog.id}" hidden/>
+                    <input id="colflag" th:value="${collection}" hidden/>
+                    <button class="ui icon circular button" id="collect-btn">
+                        <i class="ui heart icon" id="ColIcon" th:classappend="${collection=='取消收藏'} ? 'red' : ''"></i>
+                        <span th:text="${collection}">收藏</span>
+                    </button>
             </div>
+
+
+             <p th:text="${message}" th:fragment="Message" id="collectedMessage"></p>
+
+
             <!--d点击赞赏弹出二维码-->
             <div class="ui payQR flowing popup transition hidden">
                 <div class="ui orange basic label">
@@ -511,17 +522,14 @@ h5,h6{font-size:1em;}
                 <div class="eleven wide column">
                     <!--左边作者信息-->
                     <ui class="list">
-                        <li>作者：<span>ONESTAR</span><a href="#" target="_blank">（联系作者）</a></li>
-                        <li>发表时间：<span>2020-01-02 09:08</span></li>
+                        <li>作者：<span>不喝奶茶的Programmer</span><a href="#" target="_blank">（联系作者）</a></li>
+                        <li>发表时间：<span th:text="${blog.updatetime}">2020-01-02 09:08</span></li>
                         <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
                         <li>转载声明：如果是转载栈主转载的文章，请附上原文链接</li>
                         <li>公众号转载：请在文末添加作者公众号二维码（公众号二维码见右边，欢迎关注）</li>
                     </ui>
                 </div>
-                <!--微信公众号-->
-                <div class="seven wide column">
-                    <img src="" alt="" class="ui right floated rounded bordered image" style="width: 707px">
-                </div>
+
             </div>
         </div>
 
@@ -665,7 +673,6 @@ h5,h6{font-size:1em;}
                 </ul>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -853,6 +860,21 @@ h5,h6{font-size:1em;}
         }
     })
 
+    /*初始化下拉列表*/
+    $('.ui.dropdown')
+        .dropdown({
+            on : 'hover'
+        });
+
+    /*消息提示关闭初始化*/
+    $('.message .close')
+        .on('click', function() {
+            $(this)
+                .closest('.message')
+                .transition('fade')
+            ;
+        })
+    ;
 
 
 </script>
@@ -942,6 +964,45 @@ h5,h6{font-size:1em;}
     });
 
 </script>
+<script>
+    $('#collect-btn').click(function(){
+        //判断的收藏状态
+        if($('#colflag').val()=='取消收藏'){
+            //说明该文章已经被收藏
+            deleteCollections();
+            window.location.reload();
+        }else{
+            //未收藏状态
+            collectBlog();
+            window.location.reload();
+        }
+    });
 
+    //收藏文章
+    function collectBlog(){
+        $("#collectedMessage").load(/*[@{/collect}]*/"/collect",{
+            blogId: $("[name='blogID']").val()
+        })
+
+    };
+
+    //取消收藏
+    function deleteCollections(){
+        $("#collectedMessage").load(/*[@{/deleteCollect}]*/"/deleteCollect",{
+            blogId: $("[name='blogID']").val()
+        })
+    };
+
+
+    /*消息提示关闭初始化*/
+    $('.message .close')
+        .on('click', function() {
+            $(this)
+                .closest('.message')
+                .transition('fade')
+            ;
+        })
+    ;
+</script>
 </body>
 </html>

@@ -78,7 +78,7 @@ public class TypeController {
     }
 
     //删除分类
-    @GetMapping("types/{id}/delete")
+    @DeleteMapping("types/{id}/delete")
     public String deleteTypeById(@PathVariable Long id,RedirectAttributes attributes) {
         int i = typeService.deleteByName(id);
         if (i == 1) {
@@ -120,7 +120,6 @@ public class TypeController {
                 attributes.addFlashAttribute("message", "操作失败");
                 return "redirect:/admin/type/input";
             }
-
         } else {
             attributes.addFlashAttribute("message", "操作失败，该分类已存在");
             //如果查询到的type不为空，说明数据库中已存在该分类名称,则重定向到types页面中，并则给出提示消息

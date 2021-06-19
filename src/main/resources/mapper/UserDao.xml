@@ -22,7 +22,10 @@
     where id = #{id,jdbcType=BIGINT}
   </select>
   <select id="selectUserByUsernameAndPassword" resultType="com.gjy.boke.entity.User">
-    select * from t_user where username=#{username} and password=#{password};
+    select * from t_user where username=#{username}
+    <if test="password!=null">
+        and password=#{password};
+    </if>
   </select>
     <select id="getUserIdByName" resultType="java.lang.Long">
       select id from t_user where username=#{name};
@@ -93,6 +96,14 @@
         #{updatetime,jdbcType=DATE},
       </if>
     </trim>
+  </insert>
+  <insert id="insertUser" keyColumn="id" keyProperty="id" parameterType="com.gjy.boke.entity.User">
+    insert into t_user (username, password,nickname,avatar,createtime) values(
+    #{username,jdbcType=VARCHAR},
+    #{password,jdbcType=VARCHAR},
+    #{nickname,jdbcType=VARCHAR},
+    #{avatar,jdbcType=VARCHAR},
+    #{createtime,jdbcType=DATE})
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.gjy.boke.entity.User">
     update t_user

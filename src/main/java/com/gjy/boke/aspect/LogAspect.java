@@ -30,7 +30,7 @@ public class LogAspect {
     public void log() {}
 
     /**
-     *在切面方方法执行前执行该前置方法
+     *在切面方法执行前执行该前置方法
      * @param joinPoint
      */
     @Before("log()")

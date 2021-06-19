@@ -6,31 +6,22 @@ package com.gjy.boke.controller.admin;
  * @Version 1.0
  */
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.gjy.boke.entity.Blog;
 import com.gjy.boke.entity.Tag;
 import com.gjy.boke.entity.Type;
 import com.gjy.boke.entity.User;
-import com.gjy.boke.queryvo.BlogQuery;
 import com.gjy.boke.service.BlogService;
-import com.gjy.boke.service.Impl.TypeServiceImpl;
 import com.gjy.boke.service.TagService;
 import com.gjy.boke.service.TypeService;
 import com.gjy.boke.service.UserService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
 
 @Controller
@@ -41,6 +32,7 @@ public class BlogController {
     private UserService userService;
     @Resource
     private BlogService blogService;
+
     @Resource
     private TypeService typeService;
     @Resource
@@ -67,7 +59,7 @@ public class BlogController {
     @PostMapping(value = "/blogSearch")
     public String blogSearch(@RequestParam String title, @RequestParam String typeName,
                              @RequestParam String recommend
-            , Model model)  {
+            , Model model) {
 
         System.out.println(typeName);
         String recommend0 = recommend.equals("true") ? "on" : null;
@@ -97,33 +89,24 @@ public class BlogController {
 
     //提交新增博客
     @PostMapping("/addBlog")
-    public String AddBlog(Blog blog, @RequestParam() String tagId, Model model, HttpSession session,
+    public String AddBlog(Blog blog, @RequestParam() String tagId, HttpSession session,
                           RedirectAttributes attributes) {
-        //根据tagid获取对应的Type实体,并将获取的实体填充到Blog的type属性中
-        blog.setType(typeService.getTypeById(blog.getTypeid()));
-        //从session中获取userid,并填充到Blog的userid属性中
-        User user = (User) session.getAttribute("user");
-        blog.setUserid(user.getId());
-        ArrayList<Tag> tags = new ArrayList<>();
-        //获取该Blog实体所关联的所有Tag标签实体
-        for (String tagid : tagId.split(",")) {
-            tags.add(tagService.getTagById(Long.parseLong(tagid)));
+        int i = blogService.saveBlog(blog, tagId, session);
+        if (i == 1) {
+            attributes.addFlashAttribute("message", "新增成功");
+        } else {
+            attributes.addFlashAttribute("message", "新增失败");
         }
-        blog.setTagids(tagId);
-        blog.setTags(tags);
-        int i = blogService.saveBlog(blog);
-        attributes.addFlashAttribute("message","新增成功");
         return "redirect:/admin/blogList";
     }
 
-
     //删除博客
     @GetMapping("/blog/{id}/delete")
-    public String deleteBlog(@PathVariable Long id,RedirectAttributes attributes) {
+    public String deleteBlog(@PathVariable Long id, RedirectAttributes attributes) {
         int i = blogService.deleteBlog(id);
         System.out.println("删除啦");
-        if(i==1){
-            attributes.addFlashAttribute("message","删除成功");
+        if (i == 1) {
+            attributes.addFlashAttribute("message", "删除成功");
         }
         return "redirect:/admin/blogList";
     }
@@ -143,24 +126,26 @@ public class BlogController {
 
     //提交修改
     @PostMapping("/addBlog/{id}")
-    public String updateblog(@PathVariable Long id, Blog blog,@RequestParam String tagId,
+    public String updateblog(@PathVariable Long id, Blog blog, @RequestParam String tagId,
                              RedirectAttributes attributes,
                              HttpSession session) {
         blog.setId(id);
         blog.setType(typeService.getTypeById(blog.getTypeid()));
-        User user = (User)session.getAttribute("user");
+        User user = (User) session.getAttribute("user");
         blog.setUserid(user.getId());
         ArrayList<Tag> tags = new ArrayList<>();
         for (String tagid : tagId.split(",")) {
             //没有选中任何一个标签的情况下，跳出当前循环,不进行类型转换
-            if(tagid=="") continue;
+            if (tagid == "") continue;
             tags.add(tagService.getTagById(Long.parseLong(tagid)));
         }
 
         blog.setTags(tags);
         blog.setTagids(tagId);
         int i = blogService.editBlog(id, blog);
-        attributes.addFlashAttribute("message","更新成功");
+        attributes.addFlashAttribute("message", "更新成功");
         return "redirect:/admin/blogList";
     }
+
+
 }

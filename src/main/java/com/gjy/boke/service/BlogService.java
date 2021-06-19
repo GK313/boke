@@ -4,6 +4,7 @@ import com.gjy.boke.entity.Blog;
 import com.gjy.boke.entity.Tag;
 import com.gjy.boke.queryvo.BlogTypeQuery;
 
+import javax.servlet.http.HttpSession;
 import java.awt.image.Kernel;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public interface BlogService {
      * @param blog
      * @return
      */
-    int saveBlog(Blog blog);
+    int saveBlog(Blog blog, String tagId, HttpSession session);
 
     /**
      * 根据主键id，修改对应的博客信息
@@ -113,4 +114,37 @@ public interface BlogService {
      * 全局搜索
      */
     List<Blog> listBlogSearchByQuery(String query);
+
+    /**
+     * 收藏博客
+     * @param blogId 文章id
+     * @param userId 用户id
+     * @return
+     */
+    int insertCollection(Long blogId, Long userId);
+
+    /**
+     * 根据用户id获取收藏的文章
+     * @param userId
+     * @return
+     */
+    List<Blog> getCollectionsById(Long userId);
+
+    /**
+     * 根据用户id和文章id查询收藏记录
+     * @param blogId
+     * @param userId
+     * @return
+     */
+    int getCollectionByBlogIdAndUserId(Long blogId, Long userId);
+
+    /**
+     * 取消收藏
+     * @param blogId
+     * @return
+     */
+    int deleteCollect(Long blogId, Long userId);
+
+
+
 }

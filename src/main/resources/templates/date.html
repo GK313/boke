@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>date</title>
+</head>
+<body>
+<form action="/getWeek">
+    /question<br>
+    <br>
+    今天是：<input type="text" name="today" id ="today" value="2021/04/29"/>
+    <br>
+    输入年：<input type="text" name="year" id="year"/>
+    <br><br>
+    <button type="submit" >猜猜星期几？</button>
+</form>
+<br>
+<div id ="result" >
+    /answer<br>
+    <br>
+    千年以后是：<span th:text="${result}"></span>
+
+</div>
+
+</body>
+</html>

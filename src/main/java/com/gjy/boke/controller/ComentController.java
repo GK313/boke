@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionActivationListener;
+import java.text.ParseException;
 import java.util.List;
 
 /**
@@ -43,8 +44,8 @@ public class ComentController {
 
     //新增评论
     @PostMapping("/save")
-    public String pstComment(Comment comment, HttpSession session){
-        System.out.println(comment+"新增评论成功");
+    public String pstComment(Comment comment, HttpSession session) throws ParseException {
+        //应该增加一个过滤器，来过滤掉一些不合适的评论
         User user=(User) session.getAttribute("user");
         if(user!=null){
             comment.setAvatar(user.getAvatar());

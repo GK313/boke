@@ -7,6 +7,7 @@ import com.gjy.boke.queryvo.BlogTypeQuery;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -147,4 +148,36 @@ public interface BlogDao  {
      * 全局搜索
      */
     List<Blog> listBlogBySearchQuery(String query);
+
+    /**
+     * 收藏博客
+     * @param blogId
+     * @param userId
+     * @return
+     */
+    int insertCollection(Long blogId, Long userId, Date date);
+
+    /**
+     * 根据用户id获取收藏的文章
+     * @param userId
+     * @return
+     */
+    List<Blog> getCollectionsById(Long userId);
+
+    /**
+     * 根据用户id和文章id查询收藏记录
+     * @param blogId
+     * @param userId
+     * @return
+     */
+    int getCollectionByBlogIdAndUserId(Long blogId, Long userId);
+
+    /**
+     * 取消收藏
+     * @param blogId
+     * @return
+     */
+    int deleteCollect(Long blogId, Long userId);
+
+
 }

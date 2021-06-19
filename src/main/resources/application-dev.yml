@@ -1,18 +1,18 @@
 spring:
   datasource:   #\u6570\u636E\u6E90\u914D\u7F6E
     type: com.alibaba.druid.pool.DruidDataSource #\u8FDE\u63A5\u6C60\u7C7B\u578B
-    password: mysql525161
+    password: root
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver #\u6570\u636E\u5E93\u9A71\u52A8\u7A0B\u5E8F\u7C7B
     url: jdbc:mysql://localhost:3306/blog?serverTimezone = Asia/Shanghai
   rabbitmq:
-    host: 111.67.196.248
+    host: 192.168.180.130
     port: 5672
     username: admin
     password: admin
     virtual-host: /
   redis:
-    host: 111.67.196.248
+    host: 192.168.180.130
     port: 6379
   #jpa:
       # hibernate:
@@ -31,7 +31,7 @@ spring:
                   PhysicalNamingStrategyStandardImpl:#mybatis\u7684\u914D\u7F6E\u5982\u4E0B
 mybatis:
   configuration:
-    map-underscore-to-camel-case: true   #\u6570\u636E\u5E93\u8868\u4E2D\u4E0B\u5212\u7EBF\u81EA\u52A8\u8F6C\u6362\u6210\u9A7C\u5CF0\u547D\u540D\u6CD5
+    map-underscore-to-camel-case: true
   mapper-locations: classpath:/mapper/**/*.xml
   type-aliases-package: com.gjy.boke.entity
 

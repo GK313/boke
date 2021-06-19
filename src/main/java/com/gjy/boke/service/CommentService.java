@@ -3,6 +3,7 @@ package com.gjy.boke.service;
 import com.gjy.boke.entity.Comment;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public interface CommentService {
      * @param comment
      * @return
      */
-    int saveComment(Comment comment);
+    int saveComment(Comment comment) throws ParseException;
 
 
     /**

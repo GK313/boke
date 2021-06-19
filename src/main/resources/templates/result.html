@@ -194,6 +194,12 @@
     $('.menu.toggle').click(function(){
         $('.m-item').toggleClass('m-mobile-hide');
     });
+
+    /*初始化下拉列表*/
+    $('.ui.dropdown')
+        .dropdown({
+            on : 'hover'
+        });
 </script>
 <script>
     function listBlogByType(obj){

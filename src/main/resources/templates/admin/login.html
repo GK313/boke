@@ -27,7 +27,7 @@
                 <h2 class="ui teal image header">
                     <!--<img src="../../static/image/header.png" th:src="@{/image/header.png}" class="image"-->
                 </h2>
-                <form class="ui large form" method="post" action="#" th:action="@{/login}">
+                <form class="ui large form" method="post" th:action="@{/login}">
                     <div class="ui stacked segment">
                         <h2 class="ui image header">
                             <!--<img src="../../static/image/header.png" th:src="@{/image/header.png}" class="image"-->
@@ -42,7 +42,7 @@
                             <div class="field">
                                 <div class="ui left icon input">
                                     <i class="user icon"></i>
-                                    <input type="text" name="username" placeholder="用户名">
+                                    <input type="text" name="username"  placeholder="用户名/手机号">
                                 </div>
                             </div>
                             <div class="field">
@@ -66,9 +66,7 @@
 
                         <div class="center aligned grid">
                             <div class="column">
-                                <a href="#" id="noPassd" class="ui left aligned header" style="color:forestgreen;"
-                                >
-                                    免密码登录</a>
+                                <a href="#" id="noPassd" class="ui left aligned header" style="color:forestgreen;">免密码登录</a>
                                 <a href="#" class="ui left aligned header" style="color:#b0b0b0;">|</a>
                                 <a href="#" id="passwd" class="ui left aligned header" style="color:#b0b0b0;">密码登录</a>
                                 <a href="#" class="ui left aligned header" style="color:#b0b0b0 ;">|</a>
@@ -86,7 +84,6 @@
                     <div class="ui error mini message"></div>
                     <div class="ui mini negative message " th:unless="${#strings.isEmpty(message)}"
                          th:text="${message}"></div>
-
                 </form>
 
             </div>
@@ -125,6 +122,8 @@
             }
         }
     })
+
+
 </script>
 </body>
 </html>

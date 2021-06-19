@@ -265,7 +265,7 @@ body{
     margin: auto !important;
 }
 .m-container-small {
-    max-width: 60em !important;
+    max-width: 200em !important;
     margin: auto !important;
 }
 
@@ -304,6 +304,7 @@ body{
     .m-mobile-hide {
         display: none !important;
         padding-right: 0 !important;
+        margin-right: 5px;
     }
     .m-mobile-show {
         display: block !important;
