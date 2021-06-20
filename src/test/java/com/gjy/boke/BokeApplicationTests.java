@@ -1,15 +1,20 @@
 package com.gjy.boke;
 
 
+import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.gjy.boke.dao.BlogDao;
 import com.gjy.boke.dao.TypeDao;
 import com.gjy.boke.entity.Blog;
 import com.gjy.boke.entity.Type;
 import com.gjy.boke.entity.User;
+import com.gjy.boke.queryvo.BlogTypeQuery;
+import com.gjy.boke.queryvo.BtVo;
 import com.gjy.boke.service.BlogService;
+import com.gjy.boke.service.TypeService;
 import com.gjy.boke.service.UserService;
 import com.gjy.boke.utils.MD5Utils;
+import net.minidev.json.JSONArray;
 import org.hibernate.cache.spi.SecondLevelCacheLogger;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.TimeUnit;
@@ -164,11 +170,20 @@ class BokeApplicationTests {
     @Resource
     TypeDao typeDao;
 
+    @Resource
+    TypeService typeService;
+    @Resource
+    RedisTemplate redisTemplate;
+
     @Test
     public void test(){
-
-
+        HyperLogLogOperations log = redisTemplate.opsForHyperLogLog();
+        Long visit = log.size("visit");
+        System.out.println(Integer.parseInt(visit+""));
+        Long generalUser = log.size("generalUser");
+        System.out.println(generalUser);
     }
+
 
 }
 

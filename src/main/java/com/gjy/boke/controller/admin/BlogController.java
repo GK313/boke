@@ -147,5 +147,8 @@ public class BlogController {
         return "redirect:/admin/blogList";
     }
 
-
+    @RequestMapping("/statistics")
+    public String goStatistics(){
+        return "/admin/statistics";
+    }
 }

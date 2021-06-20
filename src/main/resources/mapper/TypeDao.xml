@@ -51,6 +51,25 @@ SELECT t_type.*,t_blog.`id`,t_blog.`title`,t_blog.`typeId`
     FROM t_type left JOIN t_blog ON t_blog.`typeId`=t_type.`id`
   </select>
 
+  <resultMap id="BtVo" type="com.gjy.boke.queryvo.BtVo">
+    <result property="name" column="name"></result>
+    <result property="views" column="views"></result>
+  </resultMap>
+
+  <!--统计每个分类下的所有文章的浏览总数-->
+  <select id="getBtVoList" resultMap="BtVo">
+    SELECT
+    tt.name,
+    SUM(tb.views) as views
+    FROM
+    t_blog tb,
+    t_type tt
+    WHERE
+    tb.typeId=tt.id
+    GROUP BY tt.id
+    ORDER BY tt.id
+  </select>
+
   <delete id="deleteTypeById">
     delete from t_type where id=#{id};
   </delete>
@@ -76,6 +95,7 @@ SELECT t_type.*,t_blog.`id`,t_blog.`title`,t_blog.`typeId`
   <update id="updateTypeByName">
     UPDATE t_type SET NAME=#{name} where id=#{id};
   </update>
+
 
 
 </mapper>

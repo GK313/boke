@@ -6,11 +6,15 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.core.HyperLogLogOperations;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
@@ -22,6 +26,9 @@ import java.util.Arrays;
 public class LogAspect {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Resource
+    private RedisTemplate redisTemplate;
 
     /**
      * 切面，以下配置的是截获controller目录下的所有方法
@@ -46,6 +53,10 @@ public class LogAspect {
         Object[] args = joinPoint.getArgs();
         ResultLog requestLog = new ResultLog(url, ip, classMethod, args);
         System.out.println("Request {} "+requestLog);
+
+        //统计系统UV,游客需根据ip地址进行统计，普通用户根据用户id进行统计
+        HyperLogLogOperations log = redisTemplate.opsForHyperLogLog();
+        log.add("tourist",ip);
 
     }
 

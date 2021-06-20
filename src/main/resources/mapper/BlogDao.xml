@@ -138,38 +138,38 @@
     insert into blog_tag value (#{param1},#{param2});
   </insert>
 
-    <update id="EditBlog" parameterType="com.gjy.boke.entity.Blog">
-    update t_blog
-    set title = #{blog.title},
-      content = #{blog.content},
-      firstPicture = #{blog.firstpicture},
-      flag = #{blog.flag},
-      views = #{blog.views},
-      commentCount = #{blog.commentcount},
-      appreciation = #{blog.appreciation},
-      shareStatement = #{blog.sharestatement},
-      commentabled = #{blog.commentabled},
-      published = #{blog.published},
-      recommend = #{blog.recommend},
-      createTime = #{blog.createtime},
-      updateTime = #{blog.updatetime},
-      typeId = #{blog.typeid},
-      userId = #{blog.userid},
-      description = #{blog.description},
-      tagId = #{blog.tagid},
-      tagids=#{blog.tagids}
-    where id = #{id}
-  </update>
+<update id="EditBlog" parameterType="com.gjy.boke.entity.Blog">
+update t_blog
+set title = #{blog.title},
+  content = #{blog.content},
+  firstPicture = #{blog.firstpicture},
+  flag = #{blog.flag},
+  views = #{blog.views},
+  commentCount = #{blog.commentcount},
+  appreciation = #{blog.appreciation},
+  shareStatement = #{blog.sharestatement},
+  commentabled = #{blog.commentabled},
+  published = #{blog.published},
+  recommend = #{blog.recommend},
+  createTime = #{blog.createtime},
+  updateTime = #{blog.updatetime},
+  typeId = #{blog.typeid},
+  userId = #{blog.userid},
+  description = #{blog.description},
+  tagId = #{blog.tagid},
+  tagids=#{blog.tagids}
+where id = #{id}
+</update>
     <update id="updateBlogCommentCountsCutOneByBlogId">
     update t_blog set commentCount=commentCount-1 where id=#{BlogId};
   </update>
     <update id="updateBlogCommentCountsAddOneByBlogId">
     update t_blog set commentCount=commentCount+1 where id=#{BlogId};
   </update>
-    <update id="updateBlogViewsAddOneByBlogId">
+  <update id="updateBlogViewsAddOneByBlogId">
     update t_blog set views=views+1 where id=#{BlogId};
   </update>
-    <delete id="DeleteBlog" parameterType="java.lang.Long">
+  <delete id="DeleteBlog" parameterType="java.lang.Long">
     delete from t_blog where id=#{id};
   </delete>
 
@@ -270,6 +270,24 @@
       and
       userId=#{userId}
   </select>
+    <!--获取每个分类对应的文章数量-->
+    <select id="getTypeBlogNumber" resultMap="BlogTypeVo">
+        SELECT t_type.`name`,t_type.id,COUNT(*) AS 'total' FROM t_blog
+	JOIN t_type ON t_type.`id`=t_blog.`typeId` GROUP BY t_blog.`typeId` ORDER BY total
+    </select>
+
+    <resultMap id="SimpleMap" type="com.gjy.boke.entity.Blog">
+        <result column="title" property="title"></result>
+    </resultMap>
+
+    <!--统计词云，根据文章描述-->
+    <select id="getTitle" resultMap="SimpleMap">
+        SELECT
+            t_blog.`description`,
+            t_blog.title
+            FROM
+            t_blog
+    </select>
 
 
 </mapper>

@@ -7,10 +7,10 @@ import com.gjy.boke.service.BlogService;
 import com.gjy.boke.service.CommentService;
 import com.gjy.boke.service.TagService;
 import com.gjy.boke.service.TypeService;
+import com.gjy.boke.utils.ViewsUtil;
 import jdk.nashorn.internal.runtime.logging.Logger;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.data.redis.core.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.CollectionUtils;
@@ -40,6 +40,9 @@ public class indexController {
 
     @Resource
     private RedisTemplate redisTemplate;
+
+    @Resource
+    ViewsUtil viewsUtil;
 
     @RequestMapping("/")
     public String index(Model model,HttpSession session) {
@@ -107,6 +110,10 @@ public class indexController {
         if(session.getAttribute("user")!=null){
             User user = (User)session.getAttribute("user");
             session.setAttribute("collectionSize",blogService.getCollectionsById(user.getId()).size());
+            if(user.getNickname()!="admin"){
+                //不将admin计入用户活跃量
+                viewsUtil.setViews(user.getId());
+            }
         }
         return "index";
     }

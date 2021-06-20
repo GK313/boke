@@ -179,5 +179,15 @@ public interface BlogDao  {
      */
     int deleteCollect(Long blogId, Long userId);
 
+    /**
+     * 获取每个分类对应的文章数量
+     *
+     */
+    List<BlogTypeQuery> getTypeBlogNumber();
 
+    /**
+     * 获取文章的描述
+     * @return
+     */
+    List<Blog> getTitle();
 }

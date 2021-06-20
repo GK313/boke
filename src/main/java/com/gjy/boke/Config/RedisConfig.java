@@ -43,6 +43,8 @@ public class RedisConfig {
         redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);
         //hash的value序列化方式采用jackson
         redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);
+        //set
+
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }

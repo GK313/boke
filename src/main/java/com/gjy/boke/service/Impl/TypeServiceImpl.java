@@ -1,7 +1,10 @@
 package com.gjy.boke.service.Impl;
 
+import com.gjy.boke.dao.BlogDao;
 import com.gjy.boke.dao.TypeDao;
+import com.gjy.boke.entity.Blog;
 import com.gjy.boke.entity.Type;
+import com.gjy.boke.queryvo.BlogTypeQuery;
 import com.gjy.boke.service.TypeService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -21,6 +25,8 @@ public class TypeServiceImpl implements TypeService {
     @Resource
     private TypeDao typeDao;
 
+    @Resource
+    private BlogDao blogDao;
 
     @Override
     public int saveType(String name) {

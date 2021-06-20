@@ -146,5 +146,9 @@ public interface BlogService {
     int deleteCollect(Long blogId, Long userId);
 
 
-
+    /**
+     * 统计词云
+     * @return
+     */
+    String getBlogTitle();
 }

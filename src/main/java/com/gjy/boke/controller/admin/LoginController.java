@@ -38,12 +38,6 @@ public class LoginController {
     }
 
 
-    @RequestMapping("/statistics")
-    public String goStatistics(){
-        return "/admin/statistics";
-    }
-
-
 
     /**
      * 用户登录校验
@@ -54,12 +48,12 @@ public class LoginController {
     public String login(@RequestParam String username, @RequestParam String password, HttpSession session,
                         RedirectAttributes attributes) {
         User user = userService.checkUserByUsernameAndPassword(username, password);
-        session.setAttribute("collectionSize",blogService.getCollectionsById(user.getId()).size());
         //判断是否已经注册、是普通用户还是admin
         //普通用户跳转到系统首页
         //管理员跳转到管理后台首页
         //注册用用户名，昵称随机生成
         if (user != null && user.getNickname().equals("admin")) {
+            session.setAttribute("collectionSize",blogService.getCollectionsById(user.getId()).size());
             //管理员跳转到管理后台首页
             //不把密码传递到前端
             user.setPassword(null);
@@ -79,6 +73,7 @@ public class LoginController {
         } else if (user != null && user.getNickname() != "admin") {
             //普通用户跳转到系统首页
             session.setAttribute("user", user);
+            session.setAttribute("collectionSize",blogService.getCollectionsById(user.getId()).size());
             return "redirect:/";
         }else{
             //因为是重定向，所以需要使用RedirectAttribute将message传递到前端，用Model无法实现

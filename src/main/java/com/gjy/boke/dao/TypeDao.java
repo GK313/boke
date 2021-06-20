@@ -1,6 +1,7 @@
 package com.gjy.boke.dao;
 
 import com.gjy.boke.entity.Type;
+import com.gjy.boke.queryvo.BtVo;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
@@ -89,6 +90,10 @@ public interface TypeDao {
      */
     List<Type> getAllTypeAndBlog();
 
-
+    /**
+     * 统计每个分类下的所有文章的浏览总数
+     * @return
+     */
+    List<BtVo> getBtVoList();
 
 }

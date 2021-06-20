@@ -4,6 +4,7 @@ import com.gjy.boke.entity.Type;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -76,5 +77,6 @@ public interface TypeService {
      * 获取所有分类和对应的博客
      */
     List<Type> getAllTypeAndBlog();
+
 
 }

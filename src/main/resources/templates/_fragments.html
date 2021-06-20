@@ -50,7 +50,7 @@
             <div class="right m-item item m-mobile-hide" th:if="${session.user}!=null">
                 <!--系统通知-->
                 <a class="item" th:href="@{/inform}" th:classappend="${n==6} ? 'active'">
-                    <i class="bullhorn icon"></i>公告
+                    <i class="red bullhorn icon"></i>公告
                     <div class="floating ui red label">1</div>
                 </a>
 
@@ -60,7 +60,7 @@
                  >
                 <!--系统通知-->
                 <a class="item" th:href="@{/getCollection}" th:classappend="${n==7} ? 'active'">
-                    <i class="heart outline icon"></i>
+                    <i class="red heart  icon"></i>
                     收藏
                     <div class="floating ui red label">
                         <span th:text="${session.collectionSize}"></span>
@@ -90,6 +90,8 @@
                         <!--下拉菜单-->
                         <div class="menu">
                             <a href="#" th:href="@{/logout}" class="item">注销</a>
+                            <a href="#" th:href="@{/admin/blogList}" class="item"
+                               th:unless="${session.user.username!='admin'}">返回后台</a>
                         </div>
                     </div>
                 </div>

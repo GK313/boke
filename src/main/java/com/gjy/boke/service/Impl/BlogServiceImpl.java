@@ -47,7 +47,7 @@ public class BlogServiceImpl implements BlogService {
     public Blog getBlogById(Long id) {
         Blog blog = blogDao.GetBlogById(id);
         Blog b = new Blog();
-        BeanUtils.copyProperties(blog,b);
+        BeanUtils.copyProperties(blog, b);
         b.setContent(MarkdownUtil.markdownToHtmlExtensions(blog.getContent()));
         return b;
     }
@@ -62,7 +62,7 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public int saveBlog(Blog blog,String tagId,HttpSession session) {
+    public int saveBlog(Blog blog, String tagId, HttpSession session) {
         //根据tagid获取对应的Type实体,并将获取的实体填充到Blog的type属性中
         blog.setType(typeService.getTypeById(blog.getTypeid()));
         //从session中获取userid,并填充到Blog的userid属性中
@@ -78,11 +78,12 @@ public class BlogServiceImpl implements BlogService {
 
         blog.setUpdatetime(new Date());
         blog.setCreatetime(new Date());
-        blog.setViews(0);;
+        blog.setViews(0);
+        ;
         blog.setCommentcount(0);
         //新增博客前将redis的博客数据清空
         ValueOperations ops = redisTemplate.opsForValue();
-        ops.set("blogs",null);
+        ops.set("blogs", null);
         int i = blogDao.SaveBlog(blog);
         //获取最新的博客的id
         Long newBlogid = blogDao.getNewestBlogId();
@@ -90,19 +91,19 @@ public class BlogServiceImpl implements BlogService {
         //(1)遍历当前博客的tagids
         String[] tagids = blog.getTagids().split(",");
         for (String tagid : tagids) {
-            blogDao.insert_blog_tag(newBlogid,Long.parseLong(tagid));
+            blogDao.insert_blog_tag(newBlogid, Long.parseLong(tagid));
         }
         //查询最新的博客数据，保存到redis中
-        ops.set("blogs",blogDao.GetAllBlog());
+        ops.set("blogs", blogDao.GetAllBlog());
         //将新增的文章投递到交换机,新增的文章还没有id，所以需要获取插入数据库后的文章信息
         Blog blog1 = blogDao.listBlogOrderByUpdateTime().get(0);
         System.out.println(blog1.toString());
-        rabbitTemplate.convertAndSend("inform",blog1);
+        rabbitTemplate.convertAndSend("inform", blog1);
         return i;
     }
 
     @Override
-    public int  editBlog(Long id, Blog newblog) {
+    public int editBlog(Long id, Blog newblog) {
         //获取未更新的blog信息
         Blog oldblog = blogDao.GetBlogById(id);
         System.out.println(oldblog.getCommentcount());
@@ -121,7 +122,7 @@ public class BlogServiceImpl implements BlogService {
         //(1)遍历当前博客的tagids
         String[] tagids = newblog.getTagids().split(",");
         for (String tagid : tagids) {
-            blogDao.insert_blog_tag(id,Long.parseLong(tagid));
+            blogDao.insert_blog_tag(id, Long.parseLong(tagid));
         }
         return i;
     }
@@ -133,14 +134,14 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public List<Blog> getBlogByTitleAndTypeNameAndRecommend(String title, String name, String recommend) {
-        return blogDao.GetBlogByTitleAndTypeNameAndRecommend(title,name,recommend);
+        return blogDao.GetBlogByTitleAndTypeNameAndRecommend(title, name, recommend);
     }
 
     @Override
     public List<Blog> getBlogByUpdateTimeLimit() {
         List<Blog> blogLimits = blogDao.GetBlogByUpdateTimeLimit();
         ValueOperations<String, Object> ops = redisTemplate.opsForValue();
-        ops.set("blogLimits",blogLimits);
+        ops.set("blogLimits", blogLimits);
         return blogLimits;
     }
 
@@ -153,7 +154,7 @@ public class BlogServiceImpl implements BlogService {
     public List<BlogTypeQuery> getBlogTypeQueryVO() {
         List<BlogTypeQuery> types = blogDao.getBlogTypeQuery();
         ValueOperations<String, Object> ops = redisTemplate.opsForValue();
-        ops.set("types",types);
+        ops.set("types", types);
         return types;
     }
 
@@ -199,24 +200,26 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public List<Blog> listBlogSearchByQuery(String query) {
-        String query2="%"+query+"%";
+        String query2 = "%" + query + "%";
         return blogDao.listBlogBySearchQuery(query2);
     }
 
     /**
      * 收藏博客
+     *
      * @param blogId 文章id
      * @param userId 用户id
      * @return
      */
     @Override
     public int insertCollection(Long blogId, Long userId) {
-        return blogDao.insertCollection(blogId,userId,new Date());
+        return blogDao.insertCollection(blogId, userId, new Date());
     }
 
 
     /**
      * 根据用户id获取收藏的文章
+     *
      * @param userId
      * @return
      */
@@ -227,6 +230,7 @@ public class BlogServiceImpl implements BlogService {
 
     /**
      * 根据用户id和文章id查询收藏记录
+     *
      * @param blogId
      * @param userId
      * @return
@@ -238,11 +242,27 @@ public class BlogServiceImpl implements BlogService {
 
     /**
      * 取消收藏
+     *
      * @param blogId
      * @return
      */
     @Override
     public int deleteCollect(Long blogId, Long userId) {
-        return blogDao.deleteCollect(blogId,userId);
+        return blogDao.deleteCollect(blogId, userId);
+    }
+
+    /**
+     * 词云统计
+     *
+     * @return
+     */
+    @Override
+    public String getBlogTitle() {
+        List<Blog> list = blogDao.getTitle();
+        String str = null;
+        for (Blog blog : list) {
+            str += blog.getTitle() + ",";
+        }
+        return str;
     }
 }

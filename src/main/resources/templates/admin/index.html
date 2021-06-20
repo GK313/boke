@@ -21,10 +21,8 @@
     <div class="ui container">
         <div class="ui inverted secondary stackable menu" style="display: flex;justify-content: center" >
             <h2 class="ui olive header item" style="font-family: 'Andale Mono'">不喝奶茶的Programmer</h2>
-            <a href="#" th:href="@{/admin/blogList}" class="m-item item m-mobile-hide"><i
+            <a href="#" th:href="@{/}" class="m-item item m-mobile-hide"><i
                     class="home icon"></i>首页</a>
-            <a href="#" th:href="@{/}" class=" m-item item m-mobile-hide"><i
-                    class="list alternate outline icon"></i>文章列表</a>
             <a href="#" th:href="@{/admin/blogList}" class=" m-item item m-mobile-hide">
                 <i class="cogs icon"></i>
                 文章管理
@@ -42,23 +40,21 @@
                     <i class="dropdown icon"></i>
                     <!--下拉菜单-->
                     <div class="menu">
-                        <a href="#" th:href="@{/statistics}" class="item">评论统计</a>
-                        <a href="#" th:href="@{/statistics}" class="item">博客统计</a>
-                        <a href="#" th:href="@{/statistics}" class="item">用户统计</a>
+                        <a href="#" th:href="@{/admin/statistics}" class="item">系统统计</a>
                     </div>
                 </div>
             </div>
             <div class="right m-item item m-mobile-hide" th:if="${session.user}!=null">
                 <!--系统通知-->
                 <a class="item" th:href="@{/inform}">
-                    <i class="bullhorn icon"></i>公告
+                    <i class="red bullhorn icon"></i>公告
                     <div class="floating ui red label">22</div>
                 </a>
             </div>
             <div class="right m-item item m-mobile-hide" th:if="${session.user}!=null">
                 <!--收藏-->
                 <a class="item" th:href="@{/getCollection}">
-                    <i class="heart outline icon"></i>
+                    <i class="red heart icon"></i>
                     收藏
                     <div class="floating ui red label">
                         <span th:text="${session.collectionSize}"></span>
