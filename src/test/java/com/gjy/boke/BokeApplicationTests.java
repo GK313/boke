@@ -10,6 +10,7 @@ import com.gjy.boke.entity.Type;
 import com.gjy.boke.entity.User;
 import com.gjy.boke.queryvo.BlogTypeQuery;
 import com.gjy.boke.queryvo.BtVo;
+import com.gjy.boke.queryvo.CollectCountVO;
 import com.gjy.boke.service.BlogService;
 import com.gjy.boke.service.TypeService;
 import com.gjy.boke.service.UserService;
@@ -177,11 +178,9 @@ class BokeApplicationTests {
 
     @Test
     public void test(){
-        HyperLogLogOperations log = redisTemplate.opsForHyperLogLog();
-        Long visit = log.size("visit");
-        System.out.println(Integer.parseInt(visit+""));
-        Long generalUser = log.size("generalUser");
-        System.out.println(generalUser);
+        Blog blog = blogDao.mostCommentBlog();
+        System.out.println(blog.getCommentcount());
+        System.out.println(blog.getTitle());
     }
 
 

@@ -257,7 +257,7 @@ where id = #{id}
     tb.typeId=tt.id
     AND
     tu.id=#{userId}
-    order by collectedTime
+    order by collectedTime DESC
   </select>
 
   <!--根据用户id和文章id查询收藏记录-->
@@ -287,6 +287,51 @@ where id = #{id}
             t_blog.title
             FROM
             t_blog
+    </select>
+    <!--统计收藏数-->
+    <select id="getCollectCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM t_collection
+    </select>
+    <!--统计被收藏最多的文章-->
+    <select id="mostFavoriteBlog" resultType="com.gjy.boke.queryvo.CollectCountVO">
+        SELECT
+        tb.title,COUNT(*) AS total
+        FROM
+        t_collection tc,
+        t_blog tb
+        WHERE
+        tb.id=tc.blogId
+        GROUP BY blogId
+        ORDER BY total DESC LIMIT 1
+    </select>
+    <!--评论最多的文章-->
+    <select id="mostCommentBlog" resultType="com.gjy.boke.entity.Blog">
+         SELECT
+         tb.title,
+         tb.commentCount
+         FROM
+         t_blog tb
+         ORDER BY
+         tb.commentCount
+         DESC LIMIT 1
+    </select>
+    <!--获取最热文章-->
+    <select id="getHotBlog" resultType="com.gjy.boke.entity.Blog">
+        SELECT
+        tb.title,
+        tb.commentCount,
+        tb.views
+        FROM
+        t_blog tb
+        ORDER BY
+        tb.commentCount
+        AND
+        tb.views
+        DESC LIMIT 1
+    </select>
+    <!--获取总浏览量-->
+    <select id="getViewCount" resultType="java.lang.Integer">
+        SELECT SUM(views) AS total FROM t_blog
     </select>
 
 

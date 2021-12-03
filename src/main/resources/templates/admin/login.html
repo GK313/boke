@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>博客管理登录</title>
+    <title>登录</title>
     <!--适配移动端-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--一CDN方式引入Semantic UI-->
@@ -32,7 +32,7 @@
                         <h2 class="ui image header">
                             <!--<img src="../../static/image/header.png" th:src="@{/image/header.png}" class="image"-->
                             <div class="content">
-                                <span style="color: forestgreen;">管理后台登录</span>
+                                <span style="color: forestgreen;">登录or注册</span>
                             </div>
                         </h2>
                         <br>
@@ -54,10 +54,10 @@
                         </div>
 
                         <h4 class="ui left aligned header" style="color:#b0b0b0;">
-                            新手机号将自动注册
+                            新用户自动注册
                         </h4>
 
-                        <button class="ui fluid large teal submit button">登录</button>
+                        <button class="ui fluid large teal submit button" id="loginBtn">登录</button>
 
                         <div class="ui left aligned checkbox">
                             <h4 class="ui left aligned header" style="color:#b0b0b0;">10天之内免登录</h4>
@@ -66,9 +66,9 @@
 
                         <div class="center aligned grid">
                             <div class="column">
-                                <a href="#" id="noPassd" class="ui left aligned header" style="color:forestgreen;">免密码登录</a>
+                                <a href="#" id="noPassd" class="ui left aligned header" style="color:#b0b0b0;">免密码登录</a>
                                 <a href="#" class="ui left aligned header" style="color:#b0b0b0;">|</a>
-                                <a href="#" id="passwd" class="ui left aligned header" style="color:#b0b0b0;">密码登录</a>
+                                <a href="#" id="passwd" class="ui left aligned header" style="color:forestgreen;" >密码登录</a>
                                 <a href="#" class="ui left aligned header" style="color:#b0b0b0 ;">|</a>
                                 <a href="#" class="ui left aligned header" style="color:#b0b0b0;">微信登录</a>
                             </div>
@@ -122,8 +122,6 @@
             }
         }
     })
-
-
 </script>
 </body>
 </html>

@@ -6,6 +6,7 @@ import com.gjy.boke.entity.Tag;
 import com.gjy.boke.entity.User;
 import com.gjy.boke.exception.NotFoundException;
 import com.gjy.boke.queryvo.BlogTypeQuery;
+import com.gjy.boke.queryvo.CollectCountVO;
 import com.gjy.boke.service.BlogService;
 import com.gjy.boke.service.TagService;
 import com.gjy.boke.service.TypeService;
@@ -79,7 +80,6 @@ public class BlogServiceImpl implements BlogService {
         blog.setUpdatetime(new Date());
         blog.setCreatetime(new Date());
         blog.setViews(0);
-        ;
         blog.setCommentcount(0);
         //新增博客前将redis的博客数据清空
         ValueOperations ops = redisTemplate.opsForValue();
@@ -129,6 +129,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public int deleteBlog(Long id) {
+        //先删除中间表的数据
         return blogDao.DeleteBlog(id);
     }
 
@@ -264,5 +265,50 @@ public class BlogServiceImpl implements BlogService {
             str += blog.getTitle() + ",";
         }
         return str;
+    }
+
+    /**
+     * 统计收藏数
+     * @return
+     */
+    @Override
+    public int getCollectCount() {
+        return blogDao.getCollectCount();
+    }
+
+    /**
+     * 统计被收藏最多的文章
+     * @return
+     */
+    @Override
+    public CollectCountVO mostFavoriteBlog() {
+        return blogDao.mostFavoriteBlog();
+    }
+
+    /**
+     * 评论最多的文章
+     * @return
+     */
+    @Override
+    public Blog mostCommentBlog() {
+        return blogDao.mostCommentBlog();
+    }
+
+    /**
+     * 获取最热文章
+     * @return
+     */
+    @Override
+    public Blog getHotBlog() {
+        return blogDao.getHotBlog();
+    }
+
+    /**
+     * 获取总浏览量
+     * @return
+     */
+    @Override
+    public int getViewCount() {
+        return blogDao.getViewCount();
     }
 }

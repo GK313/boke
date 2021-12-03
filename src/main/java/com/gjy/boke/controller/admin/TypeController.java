@@ -78,7 +78,7 @@ public class TypeController {
     }
 
     //删除分类
-    @DeleteMapping("types/{id}/delete")
+    @GetMapping("types/{id}/delete")
     public String deleteTypeById(@PathVariable Long id,RedirectAttributes attributes) {
         int i = typeService.deleteByName(id);
         if (i == 1) {

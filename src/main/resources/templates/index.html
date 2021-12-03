@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <!--使用——fragments.html中定义的片段-->
 <head th:replace="_fragments:: head(~{::title})">
-    <title>boke - 生命不息,代码不止</title>
+    <title>不喝奶茶的Programmer</title>
     <meta charset="UTF-8">
     <!--适配移动端-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -64,8 +64,14 @@
             <div class="eleven wide column">
                 <!--头部-->
                 <div class="ui top attached  menu">
-                    <a class="item" id="hot"  onclick=listArticle(this)>热门</a>
-                    <a class="item" id="new" onclick=listArticle(this)>最新</a>
+                    <a class="item" id="hot"  onclick=listArticle("hot")>
+                        <i class="red hotjar icon"></i>
+                        热门
+                    </a>
+                    <a class="item" id="new" onclick=listArticle("new")>
+                        <i class="red sort numeric up icon"></i>
+                        最新
+                    </a>
                     <input type="hidden" id="searchCondition" name="searchCondition">
                 </div>
                 <!--点击选择热门或者最新，用ajax更新局部博客列表-->
@@ -212,6 +218,10 @@
                     </div>
                 </div>
 
+                <div class="ui segments m-margin-top-large">
+                    广告位招租
+                </div>
+
                 <!--二维码-->
                 <h4 class="ui horizontal divider header m-margin-top-large"><span style="color: whitesmoke">扫码关注我</span></h4>
                 <div class="ui centered card " style="width:11em">
@@ -324,10 +334,10 @@
 </script>
 <script>
     function listArticle(obj){
-        //查询条件
-        var con = obj.text;
-        $('#searchCondition').val(con);
-        if(con=="热门"){
+        console.log(obj)
+        $('#searchCondition').val(obj);
+
+        if(obj=="hot"){
             $('#new').removeClass("active olive item")
             $('#new').addClass("item")
             $('#hot').removeClass("item")

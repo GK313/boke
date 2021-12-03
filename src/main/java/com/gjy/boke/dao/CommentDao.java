@@ -68,4 +68,10 @@ public interface CommentDao {
      * @return
      */
     int deleteCommentByBlogIdAndCommentId(Long BlogId,Long CommentId);
+
+    /**
+     * 统计评论数量
+     * @return
+     */
+    int getCommentCount();
 }

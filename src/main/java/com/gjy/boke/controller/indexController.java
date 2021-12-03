@@ -48,14 +48,13 @@ public class indexController {
     public String index(Model model,HttpSession session) {
         //判断当前是否登录，如果已经登录，根据用户id从缓存中查询出当前用户所订阅的分类名称
         //用户订阅某个分类时，以该分类的名称为队列与direct模式的交换机进行绑定，routing key为分类的名称
+
         //先查看redis中是否已经存在数据
         ValueOperations<String, Object> ops = redisTemplate.opsForValue();
         List<Blog> blogs=(List<Blog>)ops.get("blogs");
         List<BlogTypeQuery> types =(List<BlogTypeQuery>)ops.get("types");
         List<Blog> blogLimits = (List<Blog>)ops.get("blogLimits");
-        if (CollectionUtils.isEmpty(blogs)
-                && CollectionUtils.isEmpty(types)
-                && CollectionUtils.isEmpty(blogLimits)){
+        if (blogs!=null && types!=null && blogLimits!=null){
             //取出存放在里面的博客数据
             blogs = (List<Blog>) ops.get("blogs");
             types = (List<BlogTypeQuery>) ops.get("types");
@@ -67,6 +66,9 @@ public class indexController {
             types = blogService.getBlogTypeQueryVO();
             //按照更新时间查询前9条博客信息(设置为推荐的博客)
             blogLimits = blogService.getBlogByUpdateTimeLimit();
+            ops.set("blogs",blogs);;
+            ops.set("types",types);;
+            ops.set("blogLimits",blogLimits);;
         }
 
         //获取标签中对应的博客及其数量
@@ -217,9 +219,8 @@ public class indexController {
 
     @PostMapping("/searchBlog")
     public String getBlogs(@RequestParam String searchCondition, Model model) {
-
         //判断是要根据那个条件显示博客
-        if (searchCondition.equals("热门")) {
+        if (searchCondition.equals("hot")) {
             //获取热门的文章集合
             List<Blog> blogs = blogService.ListBlogOrderByBlogViewsAndCommentCount();
             model.addAttribute("blogs", blogs);

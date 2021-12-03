@@ -40,4 +40,10 @@ public interface CommentService {
      * @return
      */
     void deleteCommentByBlogIdAndCommentId(Long BlogId,Long CommentId);
+
+    /**
+     * 统计评论数量
+     * @return
+     */
+    int getCommentCount();
 }

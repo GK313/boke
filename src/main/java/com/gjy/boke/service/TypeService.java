@@ -79,4 +79,9 @@ public interface TypeService {
     List<Type> getAllTypeAndBlog();
 
 
+    /**
+     * 统计分类数量
+     * @return
+     */
+    int getTypeCount();
 }

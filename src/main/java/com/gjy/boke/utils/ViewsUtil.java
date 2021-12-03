@@ -29,9 +29,8 @@ public class ViewsUtil {
         String week = sdf.format(new Date());
         //hyperLoglog用来统计每一天的访问量
         HyperLogLogOperations ofhll = redisTemplate.opsForHyperLogLog();
-        //hash用来存放一周7天的访问量
+        //hash用来存放普通用户一周7天的访问量
         HashOperations hash = redisTemplate.opsForHash();
-
 
 
         if(week.equals("星期日")){

@@ -96,4 +96,9 @@ public interface TypeDao {
      */
     List<BtVo> getBtVoList();
 
+    /**
+     * 统计分类数量
+     * @return
+     */
+    int getTypeCount();
 }

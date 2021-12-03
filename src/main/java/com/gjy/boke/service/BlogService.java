@@ -3,6 +3,7 @@ package com.gjy.boke.service;
 import com.gjy.boke.entity.Blog;
 import com.gjy.boke.entity.Tag;
 import com.gjy.boke.queryvo.BlogTypeQuery;
+import com.gjy.boke.queryvo.CollectCountVO;
 
 import javax.servlet.http.HttpSession;
 import java.awt.image.Kernel;
@@ -151,4 +152,34 @@ public interface BlogService {
      * @return
      */
     String getBlogTitle();
+
+    /**
+     * 统计收藏数
+     * @return
+     */
+    int getCollectCount();
+
+    /**
+     * 统计被收藏最多的文章
+     * @return
+     */
+    CollectCountVO mostFavoriteBlog();
+
+    /**
+     * 评论最多的文章
+     * @return
+     */
+    Blog mostCommentBlog();
+
+    /**
+     * 获取最热文章
+     * @return
+     */
+    Blog getHotBlog();
+
+    /**
+     * 统计总浏览量
+     * @return
+     */
+    int getViewCount();
 }

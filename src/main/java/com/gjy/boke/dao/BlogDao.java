@@ -4,6 +4,7 @@ import com.gjy.boke.entity.Blog;
 import com.gjy.boke.entity.Tag;
 import com.gjy.boke.queryvo.BlogQuery;
 import com.gjy.boke.queryvo.BlogTypeQuery;
+import com.gjy.boke.queryvo.CollectCountVO;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
@@ -190,4 +191,34 @@ public interface BlogDao  {
      * @return
      */
     List<Blog> getTitle();
+
+    /**
+     * 统计收藏数
+     * @return
+     */
+    int getCollectCount();
+
+    /**
+     * 统计被收藏最多的文章
+     * @return
+     */
+    CollectCountVO mostFavoriteBlog();
+
+    /**
+     * 评论最多的文章
+     * @return
+     */
+    Blog mostCommentBlog();
+
+    /***
+     * 获取最热文章
+     * @return
+     */
+    Blog getHotBlog();
+
+    /**
+     * 获取总浏览量
+     * @return
+     */
+    int getViewCount();
 }

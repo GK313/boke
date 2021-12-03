@@ -485,17 +485,27 @@ h5,h6{font-size:1em;}
             <div class="m-padded-lr-responsive">
                 <div class="ui basic teal left pointing label">SprigBoot</div>
             </div>
-            <!--赞赏功能-->
+
+            <!--赞赏、收藏功能-->
             <div class="ui center aligned basic segment">
                     <button id="payButton" class="ui orange basic circular button">赞赏</button>
                     <input name="blogID" th:value="${blog.id}" hidden/>
                     <input id="colflag" th:value="${collection}" hidden/>
+                    <input id="nologin" th:value="${session.user}" hidden/>
                     <button class="ui icon circular button" id="collect-btn">
-                        <i class="ui heart icon" id="ColIcon" th:classappend="${collection=='取消收藏'} ? 'red' : ''"></i>
+                        <i class="ui heart icon" id="ColIcon"
+                           th:classappend="${collection=='取消收藏'} ? 'red' : ''"></i>
                         <span th:text="${collection}">收藏</span>
                     </button>
             </div>
-
+            <!--未登录收藏提示-->
+            <div class="ui info message" id="loginMessage" hidden>
+                <i class="close icon"></i>
+                <div class="header">
+                    <li>登录或注册后再收藏你喜欢的文章吧</li>
+                    <li><a th:href="@{/admin}">点击登录或注册</a></li>
+                </div>
+            </div>
 
              <p th:text="${message}" th:fragment="Message" id="collectedMessage"></p>
 
@@ -533,7 +543,7 @@ h5,h6{font-size:1em;}
             </div>
         </div>
 
-        <!--留言区域-->
+        <!--留言列表区域-->
         <!--应该根据当前博客的commentabled属性，判断当前博文是否支持评论，不支持的话不显示留言区域-->
         <div class="ui bottom attached segment" th:if="${blog.commentabled}=='on'">
             <div id="comment-contain" class="ui bottom attached segment">
@@ -554,11 +564,11 @@ h5,h6{font-size:1em;}
                                 <div class="content">
                                     <a class="author" th:text="${comment.nickname}">Matter</a>
                                     <div class="ui mini basic teal left pointing label m-padded-mini"
-                                         th:if="${comment.getAdmincomment()}">博主
+                                         th:if="${comment.getAdmincomment()}">作者
                                     </div>
                                     <div class="metadata">
                                         <span class="date"
-                                              th:text="${#dates.format(comment.createtime ,'yyyy-MM-dd HH:mm:ss')}">昨天上午12
+                                              th:text="${#dates.format(comment.createtime ,'yyyy-MM-dd')}">昨天上午12
                                             :30</span>
                                     </div>
                                     <div class="text">
@@ -574,7 +584,7 @@ h5,h6{font-size:1em;}
                                         <a class="delete" href="#"
                                            th:href="@{/comment/operate/{param1}/{param2}/delete(param1=${comment.blogid},param2=${comment.id})}"
                                            onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')"
-                                           th:if="${session.user}">删除</a>
+                                           th:if="${session.user.nickname}=='admin'">删除</a>
                                     </div>
                                 </div>
                                 <!--子留言-->
@@ -613,7 +623,7 @@ h5,h6{font-size:1em;}
                                                 <a class="delete" href="#"
                                                    th:href="@{/comment/operate/{param1}/{param2}/delete(param1=${reply.blogid},param2=${reply.id})}"
                                                    onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')"
-                                                   th:if="${session.user}">删除</a>
+                                                   th:if="${session.user.nickname}=='admin'">删除</a>
                                             </div>
                                         </div>
                                     </div>
@@ -629,7 +639,15 @@ h5,h6{font-size:1em;}
                 <input name="blogid" type="hidden" th:value="${blog.id}">
                 <input name="parentcommentid" type="hidden" value="-1">
                 <div class="field m-mobile-wide">
-                    <textarea name="content" placeholder="请输入评论信息"></textarea>
+                    <textarea name="content" placeholder="登录后评论"></textarea>
+                </div>
+                <!--未登录评论提示-->
+                <div class="ui info message" id="commentMessage" hidden>
+                    <i class="close icon"></i>
+                    <div class="header">
+                        <li>登录或注册后再留下你的足迹吧</li>
+                        <li><a th:href="@{/admin}">点击登录或注册</a></li>
+                    </div>
                 </div>
                 <!--输入留言者姓名和邮箱-->
                 <div class="fields">
@@ -649,6 +667,7 @@ h5,h6{font-size:1em;}
                                    th:value="${session.user}!=null ? ${session.user.email}">
                         </div>
                     </div>
+                    <input id="isExitUser" th:value="${session.user}" hidden/>
                     <!--提交留言信息-->
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <button type="button" id="comment-btn"
@@ -675,7 +694,6 @@ h5,h6{font-size:1em;}
         </div>
     </div>
 </div>
-
 
 <!--右底部锚点按钮-->
 <div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
@@ -919,8 +937,18 @@ h5,h6{font-size:1em;}
     $("#comment-btn").click(function () {
         var boo = $('.ui.form').form('validate form');
         if (boo) {
-            console.log("发送");
-            postDate();
+            console.log($('#isExitUser').val())
+            //判断是否已经登录
+            if($('#isExitUser').val()==''){
+                //未登录
+                $('#commentMessage').show();
+                //禁用button
+                $('#comment-btn').attr("disabled", "disabled")
+                return ;
+            }else{
+                postDate();
+            }
+
         } else {
 
         }
@@ -966,6 +994,13 @@ h5,h6{font-size:1em;}
 </script>
 <script>
     $('#collect-btn').click(function(){
+        //判断是否已经登录
+        if ($('#nologin').val()==''){
+            $('#loginMessage').show()
+            //未登录
+            return;
+        }
+
         //判断的收藏状态
         if($('#colflag').val()=='取消收藏'){
             //说明该文章已经被收藏

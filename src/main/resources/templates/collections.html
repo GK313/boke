@@ -43,7 +43,7 @@
 </nav>
 
 <!--中间内容-->
-<div id="waypoint" class="m-container-small m-padded-tb-big animated animate fadeIn">
+<div id="waypoint" class="m-padded-tb-big animated fadeIn">
     <!--适应移动端-->
     <div class="ui container">
         <div class="ui attached segment">
@@ -54,12 +54,13 @@
                     收藏
                 </a>
             </div>
-            <!--收藏列表-->
+
             <div class="ui success message" th:if="${session.collectionSize==0}">
                 <i class="close icon"></i>
                 <div class="header">提示：</div>
                 <p>收藏栏空空的、快去遨游知识的海洋吧。。。</p>
             </div>
+            <!--收藏列表-->
             <div class="ui padded segment m-padded-tb-large m-opacity" th:each="blog:${blogs}">
                 <div class="ui large aligned mobile reversed stackable grid" >
                     <!--博文信息-->
@@ -101,21 +102,20 @@
                     </div>
                     <!--博文图片-->
                     <div class="five wide column">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                        <a href="#"  target="_blank">
                             <img src="/image/backgroud.jpg" th:src="@{${blog.firstpicture}}" alt=""
-                                 class="ui rounded image">
+                                 class="ui rounded image" th:href="@{/blog/{id}(id=${blog.id})}">
                         </a>
                     </div>
 
                 </div>
             </div>
-
         </div>
     </div>
 
 </div>
 
-<!--置顶图标-->
+
 <div class="m-padded-tb-large m-fixed m-right-bottom">
     <a href="#" class="ui icon button"><i class="chevron up icon"></i> </a>
 </div>

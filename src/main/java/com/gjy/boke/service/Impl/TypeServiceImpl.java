@@ -90,5 +90,12 @@ public class TypeServiceImpl implements TypeService {
         return typeDao.getAllTypeAndBlog();
     }
 
-
+    /**
+     * 统计分类数量
+     * @return
+     */
+    @Override
+    public int getTypeCount() {
+        return typeDao.getTypeCount();
+    }
 }

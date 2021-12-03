@@ -1,18 +1,20 @@
 package com.gjy.boke.controller;
 
-import com.gjy.boke.dao.CommentDao;
 import com.gjy.boke.entity.Blog;
 import com.gjy.boke.entity.Comment;
 import com.gjy.boke.entity.User;
 import com.gjy.boke.service.BlogService;
 import com.gjy.boke.service.CommentService;
+import com.gjy.boke.utils.SensitiveUtil;
 import org.springframework.stereotype.Controller;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+
 import javax.servlet.http.HttpSession;
-import javax.servlet.http.HttpSessionActivationListener;
+
 import java.text.ParseException;
 import java.util.List;
 
@@ -28,6 +30,9 @@ public class ComentController {
     private CommentService commentService;
     @Resource
     private BlogService blogService;
+    @Resource
+    SensitiveUtil sensitiveUtil;
+
 
     //发布评论后，更新评论列表（查询博文下的评论列表）
     @GetMapping("/commentList/{blogId}")
@@ -46,15 +51,15 @@ public class ComentController {
     @PostMapping("/save")
     public String pstComment(Comment comment, HttpSession session) throws ParseException {
         //应该增加一个过滤器，来过滤掉一些不合适的评论
+       comment.setContent( sensitiveUtil.sensitiveReplace(comment.getContent()));
         User user=(User) session.getAttribute("user");
-        if(user!=null){
+        if(user!=null && "admin".equals(user.getNickname())){
             comment.setAvatar(user.getAvatar());
             //设置comment为博主评论标记
             comment.setAdmincomment(true);
             comment.setNickname(user.getNickname());
         }
         int i = commentService.saveComment(comment);
-
 
         //新增成功后重定向到commentList下，并查询出评论列表并局部刷新commentList
         return "redirect:/comment/commentList/"+comment.getBlogid();

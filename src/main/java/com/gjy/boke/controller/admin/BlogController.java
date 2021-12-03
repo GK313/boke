@@ -104,7 +104,6 @@ public class BlogController {
     @GetMapping("/blog/{id}/delete")
     public String deleteBlog(@PathVariable Long id, RedirectAttributes attributes) {
         int i = blogService.deleteBlog(id);
-        System.out.println("删除啦");
         if (i == 1) {
             attributes.addFlashAttribute("message", "删除成功");
         }

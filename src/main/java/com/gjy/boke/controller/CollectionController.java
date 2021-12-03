@@ -4,9 +4,11 @@ import com.gjy.boke.dao.TypeDao;
 import com.gjy.boke.entity.Blog;
 import com.gjy.boke.entity.User;
 import com.gjy.boke.queryvo.BtVo;
+import com.gjy.boke.queryvo.CollectCountVO;
 import com.gjy.boke.service.BlogService;
-import jdk.nashorn.internal.ir.CallNode;
-import org.springframework.data.redis.core.BoundHashOperations;
+import com.gjy.boke.service.CommentService;
+import com.gjy.boke.service.TagService;
+import com.gjy.boke.service.TypeService;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.HyperLogLogOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -17,9 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Author GJY
@@ -32,7 +32,12 @@ public class CollectionController {
     BlogService  blogService;
     @Resource
     RedisTemplate redisTemplate;
-
+    @Resource
+    CommentService commentService;
+    @Resource
+    TypeService typeService;
+    @Resource
+    TagService tagService;
     @Resource
     TypeDao typeDao;
 
@@ -112,7 +117,7 @@ public class CollectionController {
         HyperLogLogOperations log = redisTemplate.opsForHyperLogLog();
         HashOperations hash = redisTemplate.opsForHash();
 
-        //游客访问量
+        //游客访问量，根据ip+session（session不存在user）来判断是否为游客
         Long ts = log.size("tourist");
         //普通用户访问量
 
@@ -139,6 +144,57 @@ public class CollectionController {
         result.add(list2);
         return result;
     }
+
+    //排行榜1
+    @RequestMapping("/leaderBoard")
+    @ResponseBody
+    public ArrayList<Integer> leaderBoard(){
+        //统计收藏数量
+        int collectCount = blogService.getCollectCount();
+        //统计评论数量
+        int commentCount = commentService.getCommentCount();
+        //统计浏览量
+        int viewCount = blogService.getViewCount();
+        //统计文章数量
+        int blogCount = blogService.getBlogNumber();
+        //统计标签数量
+        int tagCount = tagService.GetTagNumber();
+        //统计分类数量
+        int typeCount = typeService.getTypeCount();
+
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(collectCount);list.add(commentCount);list.add(viewCount);list.add(blogCount);list.add(tagCount);list.add(typeCount);
+        return list;
+    }
+
+    //排行榜2
+    @RequestMapping("/leaderBoard1")
+    @ResponseBody
+    public LinkedList<HashMap<String,Integer>> leaderBoard1(){
+        LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
+        //统计被收藏最多的文章
+        CollectCountVO collectCountVO = blogService.mostFavoriteBlog();
+        //统计评论最多的文章
+        Blog blog = blogService.mostCommentBlog();
+        //统计评论和浏览最多的文章
+        Blog hotBlog = blogService.getHotBlog();
+        LinkedList<HashMap<String, Integer>> list = new LinkedList<>();
+
+        HashMap<String, Integer> map1 = new HashMap<>();
+        map1.put(collectCountVO.getTitle(),collectCountVO.getTotal());
+        list.add(map1);
+
+        HashMap<String, Integer> map2 = new HashMap<>();
+        map2.put(blog.getTitle(),blog.getCommentcount());
+        list.add(map2);
+
+        HashMap<String, Integer> map3 = new HashMap<>();
+        map3.put(hotBlog.getTitle(),hotBlog.getViews());
+        list.add(map3);
+        return list;
+
+    }
+
 
 }
 

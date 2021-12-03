@@ -33,9 +33,9 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public int saveComment(Comment comment) throws ParseException {
-        Date date = new Date();
-        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
-        comment.setCreatetime( sf.parse(sf.format(date)));
+        /*Date date = new Date();
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");*/
+        comment.setCreatetime( new Date());
 
         comment.setAvatar("https://picsum.photos/id/274/3824/2520");
         Long parentcommentid = comment.getParentcommentid();
@@ -44,7 +44,6 @@ public class CommentServiceImpl implements CommentService {
             //如果当前的评论的getParentcommentid不为-1，即不为默认值，则该评论有父评论
             //根据parentcommentid找出该当前评论的父评论
             comment.setParentComment(commentDao.getCommentById(parentcommentid));
-           //如果是博主来回复评论或则博主发表评论则需将Comment中的AdminComment属性设置为true
         }else{
             comment.setParentComment(null);
         }
@@ -131,6 +130,12 @@ public class CommentServiceImpl implements CommentService {
         }
     }
 
-
-
+    /**
+     * 统计评论数量
+     * @return
+     */
+    @Override
+    public int getCommentCount() {
+        return commentDao.getCommentCount();
+    }
 }

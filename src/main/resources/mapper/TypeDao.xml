@@ -69,8 +69,12 @@ SELECT t_type.*,t_blog.`id`,t_blog.`title`,t_blog.`typeId`
     GROUP BY tt.id
     ORDER BY tt.id
   </select>
+  <!--统计分类数量-->
+    <select id="getTypeCount" resultType="java.lang.Integer">
+      SELECT COUNT(*) FROM t_type
+    </select>
 
-  <delete id="deleteTypeById">
+    <delete id="deleteTypeById">
     delete from t_type where id=#{id};
   </delete>
 

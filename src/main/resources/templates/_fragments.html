@@ -35,7 +35,7 @@
                     class="tags icon"></i>标签</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"
                th:href="@{/type/typeBlog}"><i
-                    class="clock icon"></i>分类</a>
+                    class="tasks icon"></i>分类</a>
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i>关于我</a>
             <!--搜索框-->
             <div class="right m-item item m-mobile-hide">
@@ -90,7 +90,7 @@
                         <!--下拉菜单-->
                         <div class="menu">
                             <a href="#" th:href="@{/logout}" class="item">注销</a>
-                            <a href="#" th:href="@{/admin/blogList}" class="item"
+                            <a href="#" th:href="@{/admin/statistics}" class="item"
                                th:unless="${session.user.username!='admin'}">返回后台</a>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
 
             <div class="four wide column">
                 <div style="font-size: large;font-weight: bold"
-                     class="ui inverted  m-text-thin m-text-spaced m-margin-top">客栈信息
+                     class="ui inverted  m-text-thin m-text-spaced m-margin-top">博客信息
                 </div>
                 <!--<p id="htmer_time" class="item m-text-thin"></p>-->
                 <div id="blog-message">

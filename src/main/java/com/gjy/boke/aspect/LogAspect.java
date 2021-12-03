@@ -46,6 +46,7 @@ public class LogAspect {
         ServletRequestAttributes sr= (ServletRequestAttributes)RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = sr.getRequest();
         String url = String.valueOf(request.getRequestURL());
+        System.out.println(url);
         String ip = request.getRemoteAddr();
         //通过切面对象获取拦截到的是哪一个方法
         String classMethod = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();

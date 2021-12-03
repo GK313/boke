@@ -97,6 +97,11 @@
       select *from t_comment where blogId=#{blogId};
     </select>
 
+    <!--统计评论数量-->
+    <select id="getCommentCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM t_comment
+    </select>
+
 
     <!--<select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
       select
